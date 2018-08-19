@@ -294,6 +294,10 @@ i .fa {
 
 .work-process {
   padding: 50px 0; }
+  .work-process h1 {
+    margin: 10px 10px 30px; }
+  .work-process p {
+    margin: 10px 10px 50px; }
 
 .services {
   padding: 50px 0;

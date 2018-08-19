@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title></title>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+</head>
+<body>
+      <nav class="navbar navbar-expand-md fixed-top m-auto align-items-center header" id="header">
+        <!-- <div class="container"> -->
+    		<a class="navbar-brand" href="index.html">
+    			<img class="header__logo" src="img/logo.png">
+    		</a>
+    	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    	    <span class="navbar-toggler-icon d-flex justify-content-center align-items-center">
+    	    	<i class="fas fa-bars"></i>
+    	    </span>
+    	  </button>
+    	  <div class="collapse navbar-collapse " id="navbarNav">
+    	    <ul class="header__link-wrapper align-items-flex-start navbar-nav mr-auto"id="menu">
+    	      <li class="nav-item">
+    	        <a class="nav-link header__link text-uppercase crane" href="#features">features <span class="sr-only">(current)</span></a>
+    	      </li>
+    	      <li class="nav-item">
+    	        <a class="nav-link header__link text-uppercase crane" href="#pricing">pricing</a>
+    	      </li>
+    	      <li class="nav-item">
+    	        <a class="nav-link header__link text-uppercase crane" href="#screenshots">screenshots</a>
+    	      </li>
+    	      <li class="nav-item">
+    	        <a class="nav-link header__link text-uppercase crane" href="#testimonials">testimonials</a>
+    	      </li>
+    	      <li class="nav-item">
+    	        <a class="nav-link header__link text-uppercase crane" href="#subscribe">subscribe</a>
+    	      </li>
+    	    </ul>
+    	    <ul class="header__social-wrapper align-items-center navbar-nav ml-auto">
+    	    	<li class="nav-item">
+    	    		<a class="nav-link header__social-icon" href="facebook.com">
+    	    			<i class="fab fa-facebook-f"></i>
+    	    		</a>
+    	    	</li>
+    	    	<li class="nav-item">
+    	    		<a class="nav-link header__social-icon" href="twitter.com">
+    	    			<i class="fab fa-twitter"></i>
+    	    		</a>
+    	    	</li>
+    	    	<li class="nav-item">
+    	    		<a class="nav-link header__social-icon" href="google.com">
+    	    			<i class="fab fa-google-plus-g"></i>
+    	    		</a>
+    	    	</li>
+    	    </ul>
+    	  </div>
+    	<!-- </div>		   -->
+    </nav>
+
+    <section class="content">
+        <section>
+        	<div id="hero">
+        		<div class="container">
+        			<div class="row text-center m-auto justify-content-center">
+        				<h1 class="hero__headline">The perfect template to showcase your awesome product and service.</h1>
+        				<p class="hero__text">Aenean condimentum, lacus sit amet luctus lobortis, dolores et quas molestias excepturi
+                       enim tellus ultrices elit, amet consequat enim elit noneas sit amet luctu.
+                       Quis nostrum exercitationem ullam corporis suscipit laboriosam.</p>
+        			</div>
+        			<div class="row text-center m-auto justify-content-center">
+        				 <div class="hero__buttons-wrapper">
+        	               	<button class="btn hero__button-trial">FREE TRIAL</button>
+        	               	<button class="btn hero__button-learn-more">LEARN MORE</button>
+                       </div>
+        			</div>
+        			<div class="row m-auto justify-content-center">
+        				<img id="#hero-img"  class="hero-image img-fluid" src="img/hero-image.png">
+        			</div>
+        		</div>
+        	</div>
+        </section>
+        <section id="features">
+        	<div id="features">
+        		<div class="container">
+        			<div class="row m-auto">
+        				<div class="features__items-reversed">
+        					<img class="features__image" src="img/feature-image-1.png">
+        					<div class="features__text-wrapper">
+        						<h3>Simple, Clean and Modern Design.</h3>
+        						<p>Lorem ipsum dolor sit amet, ea eum labitur scripserit, illum complectitur deterruisset at pro. Odio quaeque reformidans est eu, expetendis intellegebat has ut, viderer invenire ut his. Has molestie percipit an. Falli volumus efficiantur sed id, ad vel noster propriae. Ius ut etiam vivendo, graeci iudicabit constituto at mea. No soleat fabulas prodesset vel, ut quo solum dicunt.
+                    Nec et amet vidisse mentitum. Cibo mutat nulla ei eam.</p>
+        					</div>
+        				</div>
+        				<!-- <div class="col-lg-6 col-md-12">
+        					<img class="features__image" src="/img/feature-image-1.png">
+        				</div>
+        				<div class="col-lg-6 col-md-12">
+        					<div class="features__text-wrapper">
+        						<h3>Simple, Clean and Modern Design.</h3>
+        						<p>Lorem ipsum dolor sit amet, ea eum labitur scripserit, illum complectitur deterruisset at pro. Odio quaeque reformidans est eu, expetendis intellegebat has ut, viderer invenire ut his. Has molestie percipit an. Falli volumus efficiantur sed id, ad vel noster propriae. Ius ut etiam vivendo, graeci iudicabit constituto at mea. No soleat fabulas prodesset vel, ut quo solum dicunt.
+                    Nec et amet vidisse mentitum. Cibo mutat nulla ei eam.</p>
+        					</div>
+        				</div> -->
+        			</div>
+        			<div class="row m-auto">
+        				<div class="features__items">
+        					<div class="features__text-wrapper">
+        						<h3>Fully Responsive.</h3>
+        						<p>Aenean condimentum, lacus sit amet luctus lobortis, dolores et quas molestias excepturi
+                    enim tellus ultrices elit, amet consequat enim elit noneas sit amet luctu.
+                    Quis nostrum exercitationem ullam corporis suscipit laboriosam.Our library is continually refreshed with the latest on web technology
+                    so you'll never fall behind. Quis nostrum exercitationem ullam corporis suscipit laboriosam.
+                    </p>
+        					</div>
+        					<img class="features__image" src="img/feature-image-2.png">
+        				</div>
+        				<!-- <div class="col-lg-6 col-md-12">
+        					<div class="features__text-wrapper">
+        						<h3>Fully Responsive.</h3>
+        						<p>Aenean condimentum, lacus sit amet luctus lobortis, dolores et quas molestias excepturi
+                    enim tellus ultrices elit, amet consequat enim elit noneas sit amet luctu.
+                    Quis nostrum exercitationem ullam corporis suscipit laboriosam.Our library is continually refreshed with the latest on web technology
+                    so you'll never fall behind. Quis nostrum exercitationem ullam corporis suscipit laboriosam.
+                    </p>
+        					</div>
+        				</div>
+        				<div class="col-lg-6 col-md-12">
+        					<img class="features__image" src="/img/feature-image-2.png">
+        				</div> -->
+        			</div>
+        			<div class="row m-auto">
+        				<div class="features__items-reversed">
+        					<img class="features__image img-fluid" src="img/feature-image-3.png">
+        					<div class="features__text-wrapper">
+        						<h3>Cross-Browser Compatible.</h3>
+        						<p>Lorem ipsum dolor sit amet, ea eum labitur scripserit, illum complectitur deterruisset at pro. Odio quaeque reformidans est eu, expetendis intellegebat has ut, viderer invenire ut his. Has molestie percipit an. Falli volumus efficiantur sed id, ad vel noster propriae. Ius ut etiam vivendo, graeci iudicabit constituto at mea. No soleat fabulas prodesset vel, ut quo solum dicunt.
+                    Nec et amet vidisse mentitum. Cibo mutat nulla ei eam.
+                    
+                    </p>
+        				</div>
+        				</div>
+        				<!-- <div class="col-lg-6 col-md-12">
+        					<img class="features__image" src="/img/feature-image-3.png">
+        				</div>
+        				<div class="col-lg-6 col-md-12">
+        					<div class="features__text-wrapper">
+        						<h3>Cross-Browser Compatible.</h3>
+        						<p>Lorem ipsum dolor sit amet, ea eum labitur scripserit, illum complectitur deterruisset at pro. Odio quaeque reformidans est eu, expetendis intellegebat has ut, viderer invenire ut his. Has molestie percipit an. Falli volumus efficiantur sed id, ad vel noster propriae. Ius ut etiam vivendo, graeci iudicabit constituto at mea. No soleat fabulas prodesset vel, ut quo solum dicunt.
+                    Nec et amet vidisse mentitum. Cibo mutat nulla ei eam.
+                    
+                    </p>
+        				</div> -->
+        			</div>
+        			<div class="row m-auto">
+        				<div class="features__items">
+        					<div class="features__text-wrapper">
+        						<h3>Video Support.</h3>
+        						<p>Aenean condimentum, lacus sit amet luctus lobortis, dolores et quas molestias excepturi
+                    enim tellus ultrices elit, amet consequat enim elit noneas sit amet luctu.
+                    Quis nostrum exercitationem ullam corporis suscipit laboriosam. No soleat fabulas prodesset vel, ut quo solum dicunt. Nec et amet vidisse mentitum. Cibo mutat nulla ei eam.
+                    </p>
+        				</div>
+        				<div class="embed-responsive embed-responsive-16by9">
+        					<iframe class="features__image embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/DQuhA5ZCV9M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+        				
+        				</div>
+        				<!-- <div class="col-lg-6 col-md-12">
+        					<div class="features__text-wrapper">
+        						<h3>Video Support.</h3>
+        						<p>Aenean condimentum, lacus sit amet luctus lobortis, dolores et quas molestias excepturi
+                    enim tellus ultrices elit, amet consequat enim elit noneas sit amet luctu.
+                    Quis nostrum exercitationem ullam corporis suscipit laboriosam. No soleat fabulas prodesset vel, ut quo solum dicunt. Nec et amet vidisse mentitum. Cibo mutat nulla ei eam.
+                    </p>
+        				</div>
+        				</div>
+        				<div class="col-lg-6 col-md-12">
+        					<iframe class="features__image" width="560" height="315" src="https://www.youtube.com/embed/DQuhA5ZCV9M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        					</div> -->
+        			
+        	</div>
+        </section>
+        <section id="pricing">
+        	<div class="container">
+        		<div class="row m-auto text-center justify-content-center">
+        			<div class="pricing__head">
+        				<h1>Pricing Tables.</h1>
+        				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+                 eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                 voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+                 voluptatem sequi nesciunt.
+                 </p>
+        			</div>
+        		</div>
+        		<div class="row m-auto text-center pricing__items">
+        			<div class="col-lg-3 col-md-12">
+        				<div class="price__block">
+        					<h3 class="text-uppercase">
+        						<i class="fa fa-cog"></i>
+        						STARTER</h3>
+        					<p>FRE<span>per month</span></p>
+        					<ul class="pricing__features">
+        						<li>1GB Storage</li>
+        						<li>5GB Bandwidth</li>
+        						<li>2 Domains</li>
+        						<li>3 Databases</li>
+        						<li>1 FTP Account</li>
+        						<li>25 Email Accounts</li>
+        					</ul>
+        					<button class="btn">sign up</button>
+        				</div>
+        			</div>
+        			<div class="col-lg-3 col-md-12">
+        				<div class="price__block text-center">
+        					<h3 class="text-uppercase">
+        						<i class="fa fa-thumbs-up"></i>
+        						Standard</h3>
+        					<p>$9.99<span>per month</span></p>
+        					<ul class="pricing__features">
+        						<li>3GB Storage</li>
+        						<li>10GB Bandwidth</li>
+        						<li>3 Domains</li>
+        						<li>5 Databases</li>
+        						<li>3 FTP Account</li>
+        						<li>30 Email Accounts</li>
+        					</ul>
+        					<button class="btn">sign up</button>
+        				</div>
+        			</div>
+        			<div class="col-lg-3 col-md-12">
+        				<div class="price__block text-center">
+        					<h3 class="text-uppercase">
+        						<i class="fa fa-star"></i>
+        						premium</h3>
+        					<p>$19.99<span>per month</span></p>
+        					<ul class="pricing__features">
+        						<li>10GB Storage</li>
+        						<li>25GB Bandwidth</li>
+        						<li>5 Domains</li>
+        						<li>10 Databases</li>
+        						<li>10 FTP Account</li>
+        						<li>50 Email Accounts</li>
+        					</ul>
+        					<button class="btn">sign up</button>
+        				</div>
+        			</div>
+        			<div class="col-lg-3 col-md-12">
+        				<div class="price__block text-center">
+        					<h3 class="text-uppercase">
+        						<i class="fa fa-trophy"></i>
+        						ultimate</h3>
+        					<p>$29.99<span>per month</span></p>
+        					<ul class="pricing__features">
+        						<li>30GB Storage</li>
+        						<li>unlimited Bandwidth</li>
+        						<li>10 Domains</li>
+        						<li>15 Databases</li>
+        						<li>10 FTP Account</li>
+        						<li>50 Email Accounts</li>
+        					</ul>
+        					<button class="btn">sign up</button>
+        				</div>
+        			</div>
+        	</div>
+        </section>
+        <section id="call-to-action">
+        	<div class="raw m-auto text-center">
+        		<div class="call-to-action__item">
+        			<i class="fas fa-upload"></i>
+        			<div class="call-to-action__link">
+        				<h2><a href="#">
+        					Host This Template on Dreamhost.
+        				</a></h2>
+        				<p>Looking for an awesome and reliable webhosting? Try
+        					<a href="#">dreamhost. </a>Get <span>$50 off</span> when you sign up with the promocode </p>
+        			</div>
+        			<button class="btn">Sign Up Now</button>
+        		</div>
+        	</div>
+        	
+        </section>
+        <section id="screenshots">
+        	<div class="container">
+        		<div class="row m-auto text-center justify-content-center">
+        			<div class="pricing__head">
+        				<h1>Product Screenshots.</h1>
+        				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
+                 eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
+                 voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+                 </p>
+        			</div>
+        		</div>
+        		<div class="row">
+        			<div class="screenshots__items">
+        				<div class="screenshots__items-box">
+        					<a href="/img/screenshots/big/b-screenshot1.jpg" data-toggle="lightbox">
+        						<img class="img-fluid" src="img/screenshots/screenshot1.jpg">
+        					</a>
+        					<div class="overlay"></div>
+        				</div>
+        				<div class="screenshots__items-box">
+        					<a href="/img/screenshots/big/b-screenshot2.jpg" data-toggle="lightbox">
+        						<img class="img-fluid" src="img/screenshots/screenshot2.jpg">
+        					</a>
+        				</div>
+        				<div class="screenshots__items-box">
+        					<a href="/img/screenshots/big/b-screenshot3.jpg" data-toggle="lightbox">
+        						<img class="img-fluid" src="img/screenshots/screenshot3.jpg">
+        					</a>
+        				</div>
+        				<div class="screenshots__items-box">
+        					<a href="/img/screenshots/big/b-screenshot4.jpg" data-toggle="lightbox">
+        						<img class="img-fluid" src="img/screenshots/screenshot4.jpg">
+        					</a>
+        				</div>
+        				<div class="screenshots__items-box">
+        					<a href="/img/screenshots/big/b-screenshot5.jpg" data-toggle="lightbox">
+        						<img class="img-fluid" src="img/screenshots/screenshot5.jpg">
+        					</a>
+        				</div>
+        				<div class="screenshots__items-box">
+        					<a href="/img/screenshots/big/b-screenshot5.jpg" data-toggle="lightbox">
+        						<img class="img-fluid" src="img/screenshots/screenshot6.jpg">
+        					</a>
+        				</div>
+        				<div class="screenshots__items-box">
+        					<a href="/img/screenshots/big/b-screenshot7.jpg" data-toggle="lightbox">
+        						<img class="img-fluid" src="img/screenshots/screenshot7.jpg">
+        					</a>
+        				</div>
+        				<div class="screenshots__items-box">
+        					<a href="/img/screenshots/big/b-screenshot8.jpg" data-toggle="lightbox">
+        						<img class="img-fluid" src="img/screenshots/screenshot8.jpg">
+        					</a>
+        				</div>
+        			</div>
+        		</div>
+        		</div>
+        	</div>
+        </section>
+        
+        <!-- <script type="text/javascript">
+        	$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                        event.preventDefault();
+                        $(this).ekkoLightbox();
+                    });
+        </script> -->
+        <section id="testimonials">
+        	<div class="container">
+        		<div class="row justify-content-center m-auto text-center">
+        			<i class="quote-left fa fa-quote-left"></i>
+        			<h1>What People Are Saying.</h1>
+        			<div class="testimonials__wrapper">
+        				<div class="testimonials__slider">
+        					<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+        	                   Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+        	                   nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+        	                   </p>
+                            <p class="testimonials__author">Mr. Adobe</p>
+        				</div>
+        				<div class="testimonials__slider">
+        					<p>Your work is going to fill a large part of your life, and the only way to be truly satisfied is
+                               to do what you believe is great work. And the only way to do great work is to love what you do.
+                               If you haven't found it yet, keep looking. Don't settle. As with all matters of the heart, you'll know when you find it.
+        	                   </p>
+                            <p class="testimonials__author">Steve Jobs</p>
+        				</div>
+        			</div>
+        			<i class="quote-right fa fa-quote-right"></i>
+        		</div>	
+        	</div>
+        </section>
+        
+        <!-- 	<script type="text/javascript">
+        		$(document).ready(function(){
+              $('.testimonials__wrapper').slick({
+                arrows: false,
+                dots: true,
+              });
+            });
+        	</script> -->
+        <section id="subscribe">
+        	<div class="container">
+        		<div class="row m-auto justify-content-center text-center">
+        			<div class="subscribe__text-box">
+        				<h1>MailChimp signup form.</h1>
+        				<p>Adding your own MailChimp powered email sign-up is easy.
+                    Grab the super slim code from your MailChimp account and drop the code here. Lastly, remove the link and style tags
+                    that comes with the embedded code and your good to go. All styling is within our stylesheet.</p>
+                    <form class="subscribe__form">
+                    		<input class="subscribe__email btn" type="email" name="" placeholder="email adress">
+                    		<input class="subscribe__submit btn" type="submit" name="">
+                    </form>
+                    <p>
+                    	<small>We never share your information or use it to spam you.</small>
+                    </p>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+
+    </section>
+    
+    <section id="footer">
+        <div class="container">
+        	<div class="row m-auto">
+        		<div class="col-lg-4 col-md-12">
+        			<div class="footer__text">
+        				<img src="img/footer-logo.png">
+        				<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+    			            Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+    			            nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+    			            </p>
+        			</div>
+        		</div>
+        		<div class="col-lg-1 col-md-12"></div>
+        		<div class="col-lg-2 col-md-12">
+        			<div class="footer__info-wrap">
+        				<i class="fas fa-map-marker-alt"></i>
+        				<h3>Come Visit</h3>
+        				<p>1600 Amphitheatre Parkway Mountain View, CA 94043 US</p>
+        			</div>
+        		</div>
+        		<div class="col-lg-2 col-md-12">
+        			<div class="footer__info-wrap">
+        				<i class="fas fa-users"></i>
+        				<h3>social</h3>
+        				<ul>
+        					<li>
+        						<a href="">Facebook</a>
+        					</li>
+        					<li>
+        						<a href="">Twitter</a>
+        					</li>
+        					<li>
+        						<a href="">GooglePlus</a>
+        					</li>
+        				</ul>
+        			</div>
+        		</div>
+        		<div class="col-lg-2 col-md-12">
+        			<div class="footer__info-wrap">
+        				<i class="fas fa-envelope"></i>
+        				<h3>contact</h3>
+        				<ul>
+        					<li>647.343.8234</li>
+        					<li>123.456.7890</li>
+        					<li>someone@woosite.com</li>
+        				</ul>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="row m-auto" id="go-up">
+        		<p class="copyrights">© 2014 Woo | Design by <a class="copyright-link" href="http://www.styleshout.com/">Styleshout</a> </p>
+        	</div>
+        	<div class="go-up">
+        		<a href="#hero" class="crane"><i class="fas fa-angle-up"></i></a>
+        		
+        	</div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="/js/waypoints.js"></script>
+    <script type="text/javascript" src="/js/imageLightbox.js"></script>
+    <script type="text/javascript" src="/js/slider.js"></script>
+    <script type="text/javascript" src="js/smooth-scroll.js"></script>
+</body>
+</html>
