@@ -5,7 +5,30 @@
 	margin: 0;
 	padding: 0;
 }
-
+body {
+	position: relative;
+}
+.hidden-shadow {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #94949378;
+	display: none;
+	z-index: 9999;
+}
+.notification-box {
+	max-width: 350px;
+	margin: auto;
+	position: sticky;
+	top: 14%;
+	background-color: #fff;
+	padding: 40px;
+    text-align: center;
+    border: 3px solid #a8ca3f;
+    border-radius: 10px;
+    font-size: 24px;
+	font-weight: 600;
+}
 .wrapper {
 	width: 100%;
 	max-width: 1170px;
@@ -58,6 +81,18 @@
 	margin: 0;
 	position: relative;*/
 }
+@media screen and (max-width: 874px) {
+	.block1::after {
+	content: "";
+	background-image: url('../images/header-bottom.png');
+	background-size: cover;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 4vh;
+}
+}
 /*.block1::after {
 	content: "";
 	background-image: url('../images/header-bottom.png');
@@ -81,6 +116,7 @@
 		justify-content: center;
 	}
 }
+
 .block1__recomendation-wrap {
 	padding: 0 15px 30px;
 }
@@ -126,7 +162,7 @@
 }
 .block1__product-left img {
 	position: absolute;
-	top: 66%;
+	top: 69%;
     left: 9%;
 }
 @media screen and (max-width: 767px) {
@@ -178,6 +214,11 @@
 @media screen and (max-width: 735px) {
 .block1__product-text-wrap {
 	padding: 93px 96px 60px;;
+	}
+}
+@media screen and (max-width: 464px) {
+	.block1__product-text-wrap {
+		padding: 19px 8px 60px;
 	}
 }
 .block1__product-text-wrap h3 {
@@ -313,10 +354,17 @@
     margin-top: 6px;
     box-sizing: initial;
     position: relative;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 13px;
 }
 .block1__product-form button:hover {
-	background-color: #e89723;
-	box-shadow: 0px 0px 2px 6px #e89723;
+	background-color: #ff6b00;
+	box-shadow: 0px 0px 2px 6px #ff6b00;
+}
+.block1__order-button-small-text {
+	font-size: 14px;
+	font-weight: bold;
 }
 .block1__product-form h5 {
 	font-size: 20px;
@@ -435,23 +483,101 @@ img.block1__product-form-inner {
 	font-size: 20px;
 	margin: 15px 5px;
 }
+@media screen and (max-width: 476px) {
+	.fungus-info__heading p {
+		margin: 28px 5px 5px; 
+	}
+}
+@media screen and (max-width: 767px) {
+	.fungus-info__description-wrap {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 35px;
+	}
+}
+.blue-dash-image {
+	margin-left: 29px;
+}
+@media screen and (max-width: 1050px) {
+	.blue-dash-image {
+		margin-left: 12px;
+}
+}
 .fungus-info__description-picture {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
 }
+@media screen and (max-width: 992px) {
+	.fungus-info__description-picture {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+@media screen and (max-width: 767px) {
+	.fungus-info__description-picture {
+		align-items: center;
+		text-align: center;
+	}
+}
 .fungus-info__description-picture p {
 	max-width: 119px;
 	font-size: 18px;
 	font-weight: 700;
+	padding: 0 13px;
+}
+@media screen and (max-width: 992px) {
+	.fungus-info__description-picture p {
+		max-width: 250px;
+		margin-top: 20px;
+		padding: 0 7px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.fungus-info__description-picture p {
+		max-width: 299px;
+	}
 }
 .fungus-info__description-text {
 	max-width: 285px;
 	margin-left: 29px;
 }
+@media screen and (max-width: 1050px) {
+	.fungus-info__description-text {
+		margin-left: 4%;
+	}
+}
+@media screen and (max-width: 992px) {
+	.fungus-info__description-text {
+		max-width: 250px;
+		margin-left: 0;
+		padding: 0 7px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.fungus-info__description-text {
+		max-width: 299px;
+		text-align: center;
+		margin-top: 15px;
+
+	}
+}
+/*@media screen and (max-width: 940px) {
+	.fungus-info__description-text {
+		margin-left: 0%;
+	}
+}
+@media screen and (max-width: 840px) {
+	.fungus-info__description-text {
+		margin-left: -13%;
+		padding: 0 16px;
+	}
+}*/
 .fungus-info__description-text-extra {
-	margin-top: 23px;
+	/*margin-top: 23px;*/
 }
 .fungus-info__conclusion {
 	margin-top: 57px;
@@ -473,6 +599,13 @@ img.block1__product-form-inner {
  background: linear-gradient(to right,transparent 0%, #f4d3bb 0%,#f4d3bb 42%, rgba(214,214,214,0) 42%, rgba(201,201,201,0) 58%,#f4d3bb 58%, #f4d3bb 100%, transparent 100%);
  border-top-right-radius: 15px;
  border-top-left-radius: 15px;
+}
+@media screen and (max-width: 512px) {
+	.fungus-info__conclusion::before {
+		 background: -webkit-linear-gradient(to right,transparent 0.5%, #a7c93d 0.5%,#a7c93d 36%, #a7c93d 43%, rgba(214,214,214,0) 42%, rgba(201,201,201,0) 59%,#a7c93d 59%, #a7c93d 99.5%, transparent 99.5%);
+ background: -o-linear-gradient(to right,transparent 0.5%, #a7c93d 0.5%,#a7c93d 36%, #a7c93d 43%, rgba(214,214,214,0) 42%, rgba(201,201,201,0) 59%,#a7c93d 59%, #a7c93d 99.5%, transparent 99.5%);
+ background: linear-gradient(to right,transparent 0%, #f4d3bb 0%,#f4d3bb 35%, rgba(214,214,214,0) 35%, rgba(201,201,201,0) 65%,#f4d3bb 65%, #f4d3bb 100%, transparent 100%);
+	}
 }
 .fungus-info__conclusion img {
 	margin-top: -25px;
@@ -667,6 +800,12 @@ img.block1__product-form-inner {
 .why-us__heading p {
 	color: #444;
 	font-size: 18px;
+	font-weight: 600;
+}
+@media screen and (max-width: 412px) {
+	.why-us__heading p {
+		margin-top: 44px;
+	}
 }
 .why-us-example {
 	padding: 81px 0 2px;
@@ -678,7 +817,7 @@ img.block1__product-form-inner {
 	justify-content: flex-start;
 	align-items: center;
 	text-align: center;
-	background: wheat;
+	background: #fff;
 	border: 4px solid #f64d01;
 	border-radius: 15px;
 	padding: 30px 0;
@@ -791,14 +930,14 @@ img.why-us__image-middle {
 	.howto__product-wrap {
 		justify-content: center;
 		align-items: center;
-		margin: 30px 10px;
+		margin: 30px auto;
 	}
 }
 @media screen and (max-width: 792px) {
 	.howto__instruction-wrap {
 		justify-content: center;
 		align-items: center;
-		margin: 30px 10px;
+		margin: 30px auto;
 	}
 }
 .howto__instruction-box {
@@ -812,18 +951,25 @@ img.why-us__image-middle {
 	.howto__instruction-box {
 		max-width: 403px;
    		margin: auto;
+   		margin-top: 14px;
+	}
+}
+@media screen and (max-width: 767px) {
+.howto__instruction-box {
+	margin-top: 40px;
 	}
 }
 @media screen and (max-width: 576px) {
 .howto__instruction-box {
 	flex-direction: column;
 	max-width: 403px;
-    margin: auto;
 	}
 }
 .howto__instruction-icon-box {
 	width: 113px;
+	min-width: 113px;
 	height: 113px;
+	min-height: 113px; 
 	border: 9px solid #f64d01;
 	border-radius: 50%;
 	box-shadow: 0px 0px 0px 9px #ede5dabd;

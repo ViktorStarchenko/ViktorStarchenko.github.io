@@ -16,7 +16,15 @@
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 <body>
+		<div class="hidden-shadow">
+				<div class="notification-box">
+					<p>Спасибо за Ваш заказ.</p>
+					<p>В ближайшее время мы свяжемся с вами.</p>
+				</div>
+		</div>
+
 	<section class="block1 container-fluid m-0">
+		
 		<img class="block1__product-left-image img-fluid" src="images/block1-product-left-back.png" alt="">
 		<div class="wrapper row m-auto">
 			<div class=" block1__header col-md-12">
@@ -46,34 +54,6 @@
 				</div>
 			</div>
 		</div>
-
-<!-- 		<div class="block1__recomendation-wrap wrapper row m-auto">
-			<div class="block1__recomendation-box col-md-4"></div>
-			<div class="block1__recomendation-box col-md-2">
-				<div class="block1__recomendation-name">
-					<img src="images/block1-recomentadion-1.png" alt="block1-recomentadion-1.png">
-					<h5>Микоцин</h5>
-				</div>
-			</div>
-			<div class="block1__recomendation-box col-md-2">
-				<div class="block1__recomendation-text">
-					<img src="images/block1-recomentadion-text-1.png" alt="">
-					<p>№1 Для избавления <br>от любого типа грибка</p>
-				</div>
-			</div>
-			<div class="block1__recomendation-box col-md-2">
-				<div class="block1__recomendation-text">
-					<img src="images/block1-recomentadion-text-2.png" alt="">
-					<p>Рекомендован <br>дерматологами  </p>
-				</div>
-			</div>
-			<div class="block1__recomendation-box col-md-2">
-			<div class="block1__recomendation-text">
-					<img src="images/block1-recomentadion-text-3.png" alt="">
-					<p>13000+ довольных <br>клиентов за 2018 год  </p>
-				</div>
-			</div>
-		</div> -->
 		<div class="block1__product-wrap wrapper row m-auto">
 			<div class="block1__product-left col-md-5 col-sm-12">
 				<img class="img-fluid" src="images/299.png" alt="block1-product-left-item.png">
@@ -124,7 +104,7 @@
 							<input class="form-control" type="text" name="phone" placeholder="Телефон">
 						</div>
 						<div class="form-group">
-							<button class="btn" type="button">Заказать<small>со скидкой</small></button>
+							<button class="block1__order-button btn" type="button">Заказать<br><span class="block1__order-button-small-text">со скидкой</span></button>
 						</div>
 						<p class="block1__product-form-text-sale">Осталось <span class="block1__product-form-text-green">10</span> упаковок<br> со скидкой</p>
 						<div class="block1__product-secured-data">
@@ -136,7 +116,7 @@
 			</div>
 		</div>
 	</section>
-	<!-- <section style="padding: 200px; background-color: wheat"></section> -->
+
 	<section class="fungus-info  container-fluid">
 		<div class="wrapper row m-auto text-center">
 			<div class="fungus-info__heading col-md-12">
@@ -152,7 +132,7 @@
 						<img src="images/info-1.png" alt="">
 						<p>Сложным формам аллергии</p>
 					</div>
-					<img src="" alt="">
+					<img class="blue-dash-image" src="images/blue-dash.png" alt="">
 					<p class="fungus-info__description-text">Может появится сильная реакция на на привычную пищу, одежду, средства гигиены </p>
 				</div>
 			</div>
@@ -162,6 +142,7 @@
 						<img src="images/info-2.png" alt="">
 						<p>Потере ногтя и ампутации пальца </p>
 					</div>
+					<img class="blue-dash-image" src="images/blue-dash.png" alt="">
 					<p class="fungus-info__description-text fungus-info__description-text-extra">После полного разрушения ногтя грибок распространяется на палец, что приводит к его ампутации </p>
 				</div>
 			</div>
@@ -171,7 +152,7 @@
 						<img src="images/info-3.png" alt="">
 						<p>Тяжелому поражению  внутренних органов </p>
 					</div>
-					<img src="" alt="">
+					<img class="blue-dash-image" src="images/blue-dash.png" alt="">
 					<p class="fungus-info__description-text">Может привести к повреждениям мозга, слепоте, отказу печени, почек и сердца</p>
 				</div>
 			</div>
@@ -184,6 +165,7 @@
 			
 		</div>
 	</section>
+
 	<section class="reasons container-fluid">
 		<div class="wrapper row m-auto text-center">
 			<div class="reasons__heading col-md-12">
@@ -340,15 +322,7 @@
 			</div>
 		</div>
 	</section>
-	 <!-- <div class="container">
-        <div class="rounded">bla bla bla</div>
-        <div class="digged"> <br/><br/>or yada yada yada </div>
-    </div>
-    <div>
-    	<div class="outter">
-    		<div class="inner"></div>	
-    	</div>
-    </div> -->
-	<footer class="container-fluid" style="padding: 200px; background: black"></footer>
+
+	<script src="js/main.js"></script>
 </body>
 </html>
