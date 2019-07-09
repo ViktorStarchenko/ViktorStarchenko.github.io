@@ -701,7 +701,7 @@ img.block1__product-form-inner {
 }
 @media screen and (max-width: 767px) {
 	.fungus-info__description-text {
-		max-width: 299px;
+		max-width: 95%;
 		text-align: center;
 		margin-top: 15px;
 
