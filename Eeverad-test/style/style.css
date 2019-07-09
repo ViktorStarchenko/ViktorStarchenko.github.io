@@ -837,15 +837,19 @@ img.block1__product-form-inner {
 		padding-top: 12px;
 	}
 }
-@media screen and (max-width: 578px) {
+@media screen and (max-width: 767px) {
 	.reasons__heading {
 		margin-top: -83px;
+	}
+}
+@media screen and (max-width: 578px) {
+	.reasons__heading {
 		padding-top: 25px;
 	}
 }
 @media screen and (max-width: 380px) {
 	.reasons__heading {
-		margin-top: -60px;
+		margin-top: -63px;
 		padding-top: 25px;
 	}
 }
