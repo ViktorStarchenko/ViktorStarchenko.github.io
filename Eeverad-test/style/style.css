@@ -772,7 +772,22 @@ img.block1__product-form-inner {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 20vh;
+	height: 9%;
+}
+@media screen and (max-width: 1440px) {
+	.reasons::before {
+		height: 7%;
+	}
+}
+@media screen and (max-width: 992px) {
+	.reasons::before {
+		height: 6%;
+	}
+}
+@media screen and (max-width: 767px) {
+	.reasons::before {
+		height: 3%;
+	}
 }
 .reasons::after {
 	content: "";
@@ -782,11 +797,16 @@ img.block1__product-form-inner {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	height: 11vh;
+	height: 6%;
 }
 @media screen and (max-width: 1440px) {
 	.reasons::after {
-		height: 7vh;
+		height: 4%;
+	}
+}
+@media screen and (max-width: 767px) {
+	.reasons::after {
+		height: 2%;
 	}
 }
 /*.reasons::before {
@@ -808,7 +828,14 @@ img.block1__product-form-inner {
 }
 @media screen and (max-width: 578px) {
 	.reasons__heading {
-		padding-top: 0px;
+		margin-top: -83px;
+		padding-top: 25px;
+	}
+}
+@media screen and (max-width: 380px) {
+	.reasons__heading {
+		margin-top: -60px;
+		padding-top: 25px;
 	}
 }
 .reasons__heading h3 {
@@ -1065,11 +1092,16 @@ img.why-us__image-middle {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 11vh;
+	height: 14%;
 }
 @media screen and (max-width: 1082px) {
 	.howto::before {
-		height: 12vh;
+		height: 8%;
+	}
+}
+@media screen and (max-width: 767px) {
+	.howto::before {
+		height: 5%
 	}
 }
 .howto__heading {
