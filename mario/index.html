@@ -78,13 +78,13 @@
 		var i = 1;
 
 		setInterval(function(){
-			drawMario('9.png', i, 18);
+			drawMario('10.png', i, 10);
 			if (i >= 6 ) {
 				i = 1;
 			} {
 				i+=1;
 			}							
-		}, 200)	;
+		}, 100)	;
 			
 
 		function drawMario(image, num, speed){
@@ -95,8 +95,8 @@
 			ctx.imageSmoothingQuality = "high";
 			marioImage.onload = function () {
 				ctx.clearRect(0,0,400,136);
-				ctx.drawImage(marioImage, 50*num, 0, 50, 50, x, 86, 50, 50);
-				console.log(50*num);
+				ctx.drawImage(marioImage, 38*num, 0, 38, 50, x, 86, 38, 50);
+				console.log(38*num);
 				if(x >= cw) {				
 					// console.log('true')
 					x = 0;
