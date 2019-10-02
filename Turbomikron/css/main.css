@@ -1685,7 +1685,7 @@ background-color: #92c944;
     display: grid;
     -ms-grid-columns: 1fr 15px 1fr 15px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                grid-template-areas:
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            grid-template-areas:
         ". . .";
     grid-gap: 40px;
 }
@@ -1704,7 +1704,7 @@ background-color: #92c944;
             grid-template-columns: 1fr;
         -ms-grid-rows: 1fr 40px 1fr 40px 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    grid-template-areas: "." "." ".";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                grid-template-areas: "." "." ".";
     }
 }
 
@@ -1927,8 +1927,8 @@ background-color: #92c944;
     .services__items {
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    -ms-grid-rows: auto 51px auto 51px auto 51px auto 51px auto 51px auto 51px auto 51px auto;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        grid-template-areas: "."
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                -ms-grid-rows: auto 51px auto 51px auto 51px auto 51px auto 51px auto 51px auto 51px auto;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    grid-template-areas: "."
                             "."
                             "."
                             "."
@@ -2125,6 +2125,12 @@ background-color: #92c944;
 .why-us__banner-img {
     height: 932px;
     width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .why-us__banner-img {
+        height: 806px;
+    }
 }
 
 .why-us__banner-content {
@@ -2341,8 +2347,6 @@ background-color: #92c944;
     padding: 80px 0 40px;
 }
 
-
-
 .why-us-2__text {
     margin-bottom: 50px;
     font-size: 17px;
@@ -2471,10 +2475,24 @@ background-color: #92c944;
     height: 932px;
     position: relative;
 }
+
+@media screen and (max-width: 768px) {
+    .offer-banner {
+        height: 806px
+    }
+}
+
 .offer-banner__img {
     height: 932px;
     width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+    .offer-banner__img {
+        height: 806px
+    }
+}
+
 .offer-banner__mystery-img {
     position: absolute;
     top: 20%;
