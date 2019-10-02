@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/main.css">	
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/owlcarousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owlcarousel/owl.theme.default.min.css">
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <a href="/"><img alt="" src="img/logo.png"></a>
+        </div>
+        <div class="header-menu">
+            <div id="main-menu">
+                <nav>
+                    <ul class="menu__list">
+                        <li class="sub">
+                        	<a href="/turbiny">Турбины</a>
+                        	<img src="img/nav-arrow.png" alt="">
+                            <ul class="flex-column">
+                                <li class=""><a href="/remont-turbin-dlya-spectehniki">Ремонт турбин для спецтехники</a></li>
+                                <li class=""><a href="/kupit-kartridzh">Купить картридж</a></li>
+                                <li class=""><a href="/remont-turbin">Каталог турбин</a></li>
+                                <li class=""><a href="/prodazha-turbin">Продажа турбин</a></li>
+                                <li class=""><a href="/articles/view_list">Все о турбинах</a></li>
+                                <li class=""><a href="/sto">СТО</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub">
+                        	<a href="/remont-toplyvnoi">Ремонт ТНВД</a>
+                        	<img src="img/nav-arrow.png" alt="">
+                            <ul class="flex-column">
+                                <li class=""><a href="/remont-tnvd-bosch-delphi-denso">Ремонт ТНВД: Bosch, Delphi, Denso, Yanmar, Siemens, Stanadyne</a></li>
+                                <li class=""><a href="/remont-forsunok-i-nasosov-common-rail">Ремонт форсунок, ремонт форсунок Common Rail (Коммон Рейл)</a></li>
+                                <li class=""><a href="/remont-nasos-forsunok-nasosnyih-sektsiy">Ремонт насос форсунок, ремонт плунжерных пар, ремонт рядных насосов</a></li>
+                                <li class=""><a href="/remont-dizeley-cummins">Ремонт дизелей Cummins ISX, L10, M11, N14, N14 plus, NT855, NTA855, QST30, QSX, QSX15</a></li>
+                                <li class=""><a href="/avto-servis">Авто сервис</a></li>
+                                <li class=""><a href="/dizel-servis">Ремонт топливной аппаратуры Киев, проверка форсунок на стенде, диагностика дизельных форсунок</a></li>
+                                <li class=""><a href="/trak-cervis">Трак Сервис</a></li>
+                                <li class=""><a href="/remont-s-h-i-spetstehniki">Ремонт с/х и спецтехники</a></li>
+                                <li class=""><a href="/remont-bort-komp">Ремонт блоков управления (бортовых компьютеров) автомобилей</a></li>
+                                <li class=""><a href="/remont-i-obsluzhivanie-dizelnyih-generatorov-dgu">Ремонт и обслуживание дизельных генераторов (ДГУ)</a></li>
+                            </ul>
+                        </li>
+                        <li class=""><a href="/remont-i-balansirovka-kardannyx-valov">Ремонт карданов</a></li>
+                        <li class=""><a href="/remont-mexatronika-dsg">Ремонт мехатроника</a></li>
+                        <li class=""><a href="/reviews/view_list">Отзывы</a></li>
+                        <li class=""><a href="/dostavka">Доставка</a></li>
+                        <li class=""><a href="/kontakty">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <button aria-label="hamburger" class="hamburger hamburger--spin" id="hamburger-btn" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span>
+        </button>
+    </div>
+    <div id="mobile_menu">
+        <ul class="mobile-menu__list">
+            <li class="sub">
+            	<a href="/turbiny">Турбины </a>
+            	<span class="menu_toggle"></span>
+                <ul class="dropdown">
+                    <li class=""><a href="/remont-turbin-dlya-spectehniki">Ремонт турбин для спецтехники</a></li>
+                    <li class=""><a href="/kupit-kartridzh">Купить картридж</a></li>
+                    <li class=""><a href="/remont-turbin">Каталог турбин</a></li>
+                    <li class=""><a href="/prodazha-turbin">Продажа турбин</a></li>
+                    <li class=""><a href="/articles/view_list">Все о турбинах</a></li>
+                    <li class=""><a href="/sto">СТО</a></li>
+                </ul>
+            </li>
+            <li class="sub">
+            	<a href="/remont-toplyvnoi">Ремонт ТНВД</a>
+            	<span class="menu_toggle"></span>
+                <ul class="dropdown">
+                    <li class=""><a href="/remont-tnvd-bosch-delphi-denso">Ремонт ТНВД: Bosch, Delphi, Denso, Yanmar, Siemens, Stanadyne</a></li>
+                    <li class=""><a href="/remont-forsunok-i-nasosov-common-rail">Ремонт форсунок, ремонт форсунок Common Rail (Коммон Рейл)</a></li>
+                    <li class=""><a href="/remont-nasos-forsunok-nasosnyih-sektsiy">Ремонт насос форсунок, ремонт плунжерных пар, ремонт рядных насосов</a></li>
+                    <li class=""><a href="/remont-dizeley-cummins">Ремонт дизелей Cummins ISX, L10, M11, N14, N14 plus, NT855, NTA855, QST30, QSX, QSX15</a></li>
+                    <li class=""><a href="/avto-servis">Авто сервис</a></li>
+                    <li class=""><a href="/dizel-servis">Ремонт топливной аппаратуры Киев, проверка форсунок на стенде, диагностика дизельных форсунок</a></li>
+                    <li class=""><a href="/trak-cervis">Трак Сервис</a></li>
+                    <li class=""><a href="/remont-s-h-i-spetstehniki">Ремонт с/х и спецтехники</a></li>
+                    <li class=""><a href="/remont-bort-komp">Ремонт блоков управления (бортовых компьютеров) автомобилей</a></li>
+                    <li class=""><a href="/remont-i-obsluzhivanie-dizelnyih-generatorov-dgu">Ремонт и обслуживание дизельных генераторов (ДГУ)</a></li>
+                </ul>
+            </li>
+            <li class=""><a href="/remont-i-balansirovka-kardannyx-valov">Ремонт карданов</a></li>
+            <li class=""><a href="/remont-mexatronika-dsg">Ремонт мехатроника</a></li>
+            <li class=""><a href="/reviews/view_list">Отзывы</a></li>
+            <li class=""><a href="/dostavka">Доставка</a></li>
+            <li class=""><a href="/kontakty">Контакты</a></li>
+        </ul>
+    </div>
+    <div id="menu-shadow"></div>
+<!--     <div id="fixed-right"><span class="toggle-fixed-right"><em></em></span>
+        <div class="right-wrap phones-wrap">
+            <ul>
+                <li><a href="tel:+380931706495"><span>(093)</span> 170-64-95</a></li>
+                <li><a href="tel:+380671034925"><span>(067)</span> 103-49-25</a></li>
+            </ul><a class="toggle-callback-modal" href="#"><i class="fa fa-phone"></i> <span>Обратный звонок</span></a></div>
+    </div> -->
+<!--     <div class="callback-modal">
+        <div class="modal-close"><a class="modal-close-link" href="" title="Закрыть">×</a></div>
+        <div class="modal-top">
+            <div class="modal-title"><span>Обратный звонок</span></div>
+        </div>
+        <div class="modal-content">
+            <form action="/mail_callback" method="POST">
+                <input name="csrfmiddlewaretoken" type="hidden" value="IisCdlArFrAsMsU1ugYFP8QlnL2AzFtyYusm8GPi9jSnSgwdxfnEHGsp2qpPK3JC">
+                <input id="callback-modal-name" name="name" placeholder="Имя" type="text">
+                <input id="callback-modal-phone" name="phone" placeholder="Телефон" type="tel">
+                <div class="g-recaptcha" data-sitekey="6LddKq0UAAAAAHVZZzrbsR8Ry8nv7FKtz3Ypw5Rh">
+                    <div style="width: 304px; height: 78px;">
+                        <div>
+                            <iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LddKq0UAAAAAHVZZzrbsR8Ry8nv7FKtz3Ypw5Rh&amp;co=aHR0cHM6Ly90dXJib21pY3Jvbi5jb206NDQz&amp;hl=ru&amp;v=Zy-zVXWdnDW6AUZkKlojAKGe&amp;size=normal&amp;cb=kohmgnf58wgq" width="304" height="78" role="presentation" name="a-34127nitazsa" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+                        </div>
+                        <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                    </div>
+                </div>
+                <button class="btn" id="callback_modal_submit" type="submit">Отправить заявку</button>
+            </form>
+        </div>
+    </div> -->
+</header>
+
+
+<main>
+	<section>
+		<div class="hero">
+		  <div class="hero__item">
+		  	<div class="hero__text-box flex-column">
+		  		<h4>КАПИТАЛЬНЫЙ РЕМОНТ ТУРБИН<br> ABB PERKINS KOMATSU GARRETT CATERPILLAR IHI HOLSET</h4>
+		  		<div class="hero__buttom-box flex-row">
+	  				<button type="button" class="button-wrapper">Получить консультацию</button>
+	  				<a href="/kontakty"	 class="button-wrapper">Контакты</a>
+		  		</div>
+		  	</div>
+		  </div>
+		</div> 
+	</section>
+
+	<section class="about-us">
+		<div class="container">
+			<div class="about-us__wrapper">
+
+				<div class="about-us__description flex-column">
+					<h4 class="about-us__description-heading">Завод по ремонту турбин и тнвд.<br> 
+						<b>Ремонт турбин и продажа турбин в Киеве и во всех регионах Украины</b>
+					</h4>
+					<div class="about-us__description-text flex-row">
+						<img class="about-us__arrow-img" src="img/long-arrow.png" alt="">
+						<p>Завод ТурбоМикрон - лидер по обслуживанию, продаже и ремонту турбин любой сложности. Мы продаем и ремонтируем турбины для легковых, грузовых авто,  сельскохозяйственной, строительной, карьерной техники, катеров, а так-же силовых энергетических установок.</p>
+					</div>
+				</div>
+
+				<div class="about-us__items flex-column">
+					<div class="about-us__items-wrap flex-row">
+						<div class="about-us__item-box flex-column">
+							<div class="about-us__item-img-wrap">
+								<img class="about-us__item-img" src="img/about-us-item1.png" alt="">
+							</div>
+							<div class="about-us__item-title-wrap">
+								<h4>ГАЗОВЫЕ ТУРБИНЫ</h4>
+							</div>
+							<div class="about-us__item-desc-wrap">
+								<img class="about-us__item-desc-arrow" src="img/short-arrow.png" alt="">
+								<p>Сертифицированное обслуживание газопоршневых электростанций ГПУ, ГПЭС, ГПГУ оснащеных турбинами ABB, IHI, CAT.
+								</p>
+							</div>
+							
+						</div>
+						<div class="about-us__item-box flex-column">
+							<div class="about-us__item-img-wrap">
+								<img class="about-us__item-img" class="about-us__item-img" src="img/about-us-item2.png" alt="">
+							</div>
+							<div class="about-us__item-title-wrap">
+								<h4>ДИЗЕЛЬНЫЕ ГЕНЕРАТОРЫ С ИСПОЛЬЗОВАНИЕМ ТУРБОКОПМРЕССОРОВ ABB TPS</h4>
+							</div>
+							<div class="about-us__item-desc-wrap">
+								<img class="about-us__item-desc-arrow" src="img/short-arrow.png" alt="">
+								<p>Гарантийное обслуживание востановленных турбин для газопоршневых электростанций и когенерационных установок. Выполнения работ по месту установки с возможностью транспортировки до диагностического стенда.
+								</p>
+							</div>
+
+						</div>
+						<div class="about-us__item-box flex-column">
+							<div class="about-us__item-img-wrap">
+								<img class="about-us__item-img" src="img/about-us-item3.png" alt="">
+							</div>
+							<div class="about-us__item-title-wrap">
+								<h4>ТУРБИНЫ ГАЗОПОРШНЕВЫХ ДВИГАТЕЛЕЙ MWM, PERKINS, GEJES, WARTSILA</h4>
+							</div>
+							<div class="about-us__item-desc-wrap">
+								<img class="about-us__item-desc-arrow" src="img/short-arrow.png" alt="">
+								<p>У нас обслуживают дизельные генераторы для частных производств химической, текстильной, строительной, газовой и нефтяной промышленности.
+								</p>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>	
+	</section>
+
+	<section class="our-brands">
+		<div class="container">
+			<div class="our-brands-wrapper flex-column">
+				<div class="our-brands__arrows-wrap flex-row">
+					<img src="img/about-arrow-prev.png" alt="">
+					<img src="img/about-arrow-next.png" alt="">
+				</div>
+
+				<div class="our-brands-list flex-row">
+					<div class="our-brands-item">
+						<img src="img/brands/abb.png" alt="">
+					</div>
+
+					<div class="our-brands__separator"></div>
+
+					<div class="our-brands-item">
+						<img src="img/brands/cat.png" alt="">
+					</div>
+
+					<div class="our-brands__separator"></div>
+
+					<div class="our-brands-item">
+						<img src="img/brands/siemens.png" alt="">
+					</div>
+
+					<div class="our-brands__separator"></div>
+
+					<div class="our-brands-item">
+						<img src="img/brands/ihi.png" alt="">
+					</div>
+
+					<div class="our-brands__separator"></div>
+
+					<div class="our-brands-item">
+						<img src="img/brands/garrett.png" alt="">
+					</div>
+
+					<div class="our-brands__separator"></div>
+
+					<div class="our-brands-item">
+						<img src="img/brands/holset.png" alt="">
+					</div>
+
+					<div class="our-brands__separator"></div>
+
+					<div class="our-brands-item">
+						<img src="img/brands/komatsu.png" alt="">
+					</div>
+				</div>
+				<div class="our-brands__arrows-wrap flex-row">
+					<img src="img/about-arrow-prev.png" alt="">
+					<img src="img/about-arrow-next.png" alt="">
+				</div>
+			</div>
+		</div>		
+	</section>
+
+	<section class="service">
+		<div class="container">
+			<div class="service__wrapper">
+				<div class="service__text-box">
+					<h4 class="service__text-heading">ОБСЛУЖИВАЕМЫЕ ТУРБОНАГНЕТАТЕЛИ</h4>
+					<p class="service__text-text">Наш центр по ремонту и диагностике турбин ТурбоМикрон осуществляет сервисное обслуживание:</p>
+				</div>
+				<div class="services__items">
+
+					<div class="service__item-wrap">
+						<div class="service__item-img-box">
+							<img src="img/service/service1.png" alt="">
+						</div>
+						<div class="service__item-title-box">
+							Ремонт ABB RR131
+						</div>
+						<div class="service__item-button">
+							<button class="service__button-wrapper">Подробней</button>
+						</div>
+					</div>
+
+					<div class="service__item-wrap">
+						<div class="service__item-img-box">
+							<img src="img/service/service2.png" alt="">
+						</div>
+						<div class="service__item-title-box">
+							Ремонт ABB RR131
+						</div>
+						<div class="service__item-button">
+							<button class="service__button-wrapper">Подробней</button>
+						</div>
+					</div>
+
+					<div class="service__item-wrap">
+						<div class="service__item-img-box">
+							<img src="img/service/service3.png" alt="">
+						</div>
+						<div class="service__item-title-box">
+							Ремонт ABB RR131
+						</div>
+						<div class="service__item-button">
+							<button class="service__button-wrapper">Подробней</button>
+						</div>
+					</div>
+
+					<div class="service__item-wrap">
+						<div class="service__item-img-box">
+							<img src="img/service/service4.png" alt="">
+						</div>
+						<div class="service__item-title-box">
+							Ремонт ABB RR131
+						</div>
+						<div class="service__item-button">
+							<button class="service__button-wrapper">Подробней</button>
+						</div>
+					</div>
+
+					<div class="service__item-wrap">
+						<div class="service__item-img-box">
+							<img src="img/service/service5.png" alt="">
+						</div>
+						<div class="service__item-title-box">
+							Ремонт ABB RR131
+						</div>
+						<div class="service__item-button">
+							<button class="service__button-wrapper">Подробней</button>
+						</div>
+					</div>
+
+					<div class="service__item-wrap">
+						<div class="service__item-img-box">
+							<img src="img/service/service6.png" alt="">
+						</div>
+						<div class="service__item-title-box">
+							Ремонт ABB RR131
+						</div>
+						<div class="service__item-button">
+							<button class="service__button-wrapper">Подробней</button>
+						</div>
+					</div>
+
+					<div class="service__item-wrap">
+						<div class="service__item-img-box">
+							<img src="img/service/service7.png" alt="">
+						</div>
+						<div class="service__item-title-box">
+							Ремонт ABB RR131
+						</div>
+						<div class="service__item-button">
+							<button class="service__button-wrapper">Подробней</button>
+						</div>
+					</div>
+
+					<div class="service__item-wrap">
+						<div class="service__item-img-box">
+							<img src="img/service/service8.png" alt="">
+						</div>
+						<div class="service__item-title-box">
+							Ремонт ABB RR131
+						</div>
+						<div class="service__item-button">
+							<button class="service__button-wrapper">Подробней</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="why-us">
+		<div class="why-us__wrapper">
+			
+			<div class="why-us__banner-wrap" >
+				<img class="why-us__banner-img" src="img/2-layers.png" alt="image">
+				<div class="why-us__banner-content flex-column">
+					<div class="why-us__banner-heading">
+						<h4>Почему ТурбоМикрон?</h4>
+						<p>Профессиональный, быстрый и качественный ремонт турбин европейских брендов! </p>
+					</div>
+					<div class="why-us__banner-text flex-row">
+						<img class="to-tilt" src="img/mystery.png" alt="">
+						<p>Хотите, чтобы вам установили исключительно оригинальные запчасти на оборудование с гарантией?</p>
+					</div>
+					<div class="why-us__banner-button-box flex-row">
+						<img id="away-left" сlass="why-us__banner-arrow-prev" src="img/about-arrow-prev.png" alt="">
+						<button id="why-us__banner-button" type="button" class="button-wrapper">Заказать звонок</button>
+						<img id="away-right" сlass="why-us__banner-arrow-next " src="img/about-arrow-next.png" alt="">
+					</div>	
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+	<section class="why-us-2">
+		<div class="container">
+			<div class="why-us-2__wrapper">
+				<div class="why-us-2__text">
+					<p>Компания ООО «ТурбоМикрон»  выполнит все необходимые ремонтные работы, произведет капитальное, гарантийное и постгарантийное сервисное обслуживание по  наиболее низким ценам в РФ. К тому же есть возможность доставки турбины из самых труднодоступных мест нашей страны. Мы организуем проведение капитальных  ремонтных работ с турбинами ABB, Siemens, Komatsu, Caterpillar, Holset, IHI, Garret для энергодобывающих и энерговырабатывающих предприятий, использующих ДГУ,  ГТД, ГПТУ, ГТУ непосредственно на предприятии. Возможности нашей компании включают в себя ремонт судовых турбин и турбин для тепловозов. Другое оборудование,  которое подлежит ремонту, – это турбины для любой тяжелой техники – строительной, землеройной, карьерных самосвалов, аграрной спецтехники, турбокомпрессоров для буровых и нефтедобывающих установок. Основным обслуживанием являются турбины ABB серий VTR, VTC, TPS, TPR 61, TPL-B, TPL-A, RR, PTL. Исключение составляют турбины для легковых автомобилей. Этим занимаются другие компании.
+					</p>
+				</div>
+				<div class="why-us-2__img-wrap flex-row">
+					<img src="img/why/why-1.png" alt="">
+					<img src="img/why/why-2.png" alt="">
+					<img src="img/why/why-3.png" alt="">
+					<img src="img/why/why-4.png" alt="">
+					<img src="img/why/why-5.png" alt="">
+				</div>
+				<div class="why-us-2__text">
+					<p>При выполнении работ по капитальному ремонту или сервисному обслуживанию турбин, для выверки дисбаланса на максимальных оборотах, мы используем Turbotechnics  VSR 300, который входит в одобренный перечень диагностического оборудования от производителей Garrett, IHI, Caterpillar. На время диагностики, турбокомпрессор выводят в горячий режим, создающий имитацию работы на двигателе в смешанных режимах. Проверка показывает: существуют ли утечки масла, замеряется температура и скорость прохождения маслянного потока через картридж.
+					</p>
+				</div>
+				<div class="why-us-2__important-wrap flex-column">
+					<p>Одним из наиважнейших диагностических стендов явлется TB COMFORT САВ 820 ( SCHENCK ) производства Германия:</p>
+					<div class="why-us-2__important-box flex-row">
+						<img class="to-tilt image-tilt" src="img/important.png" alt="">
+						<p>Высокая точность измерения и эффективность Безопасное и простое обращение Балансировка в двух плоскостях Бесступенчатый привод Большой размерный и весовой диапазон роторов Эргономичная рабочая высота Промышленный ПК с сенсорным экраном CAB 820 Защитный кожух типа C60 в соответствии с ISO 7475</p>
+					</div>
+				</div>
+				<div class="why-us-2__text">
+					<p>TB Сomfort был разработан специально для балансировки турбокомпрессора с высочайшей точностью - колеса турбины с валом и непосредственно колеса компрессора. Набор необходимых спецификаций для балансировки роторов турбокомпрессора, имеются в полном объеме и охватывают огромный диапазон размеров и весов турбонагнетателей. TB Comfort имеет сенсорный экран на измерительном блоке САВ 820 и оснащен электронной системой управления приводом. Бесступенчатая ​​регулировка скорости облегчает управление скоростью в режиме балансировки. Встроенные функции обеспечивают более высокую эфективность и точность балансировки: больше работы в одно и то же время, с минимальными погрешностями в отношении точности измерений.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="offer-banner">
+		<div class="offer-banner__wrapper">
+			<img class="offer-banner__img" src="img/2-layers8.png" alt="image">
+			<img class="offer-banner__mystery-img" src="img/offer-mystery.png" alt="">
+			<div class="offer-banner__content flex-column">
+				<h4 class="offer-banner__heading">ЧТО ИМЕННО ПРЕДЛАГАЕТ «ТУРБОМИКРОН» СВОИМ КЛИЕНТАМ</h4>
+				<p class="offer-banner__text">ПРИ НЕИСПРАВНОСТИ ТУРБИН ABB ИЛИ SIEMENS</p>
+				<p class="offer-banner__list"> техобслуживание турбокомпрессоров ABB; <br>
+					техобслуживание модулей данной марки;<br>
+					работы по восстановлению работоспособности турбокомпрессоров ABB;<br>
+					решение проблем транспортировки турбин для произведения ремонта;<br>
+					выполнение плановых ремонтных работ элементов турбокомпрессоров.</p>
+				<div class="offer__banner-button-box flex-row">
+					<img src="img/about-arrow-prev.png" alt="">
+					<button id="button-aab" class="button-wrapper">AAB</button>
+					<button id="button-siemens" class="button-wrapper">SIEMENS</button>
+					<img src="img/about-arrow-next.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="offer-description">
+		<div class="container">
+			<div class="offer-description__wrapper offer-description__wrapper_aab">
+				<div class="offer-description__text">
+					<p>Бренд ABB – символ надежности и длительной бесперебойной эксплуатации оборудования. Несмотря на высокий уровень качества этой техники поломки все равно происходят. Своевременный ремонт таких турбин очень важен, но здесь есть нюанс.</p>
+				</div>
+				<div class="offer-description__text">
+					<p>Как правило, их довольно затруднительно доставить в сервисный центр. Проблема возникает из-за размеров турбокомпрессора, а также из-за удаленности на большие расстояния самого предприятия. В таком случае рекомендуется обратиться в компанию ООО «Реалремтурбо», которая имеет большой опыт в решении подобных вопросов. Вам предоставят услуги транспортировки турбины даже из самых отдаленных уголков страны в сервисный центр компании. В наличии всегда есть все необходимые запчасти для ремонта. Отремонтированные турбины проходят многоступенчатый ревизионный контроль и только после этого передаются заказчику.</p>
+				</div>
+				<div class="offer-description__text">
+					<p>Кроме того ТурбоМикрон располагает ремкомплектами для капитального ремонта, которые рекомендованы изготовителем ABB для TPS 52E01, TPSF32, TPS F32, TPS52. Правильная диагностика причины выхода из строя турбокомпрессора способствует эффективному устранению поломки. При этом можно повысить ресурс оборудования, а также снизить затраты на ремонтные и сервисные работы.</p>
+				</div>
+			</div>
+			<div class="offer-description__wrapper offer-description__wrapper_siemens">
+				<div class="offer-description__text">
+					<p>Бренд SIEMENS – рыба рыба и рыбаа. рыба на рыба рыба рыба рыба рыба рыба все рыба рыба. Своевременный рыба таких рыба очень рыба, но рыба есть рыба.</p>
+				</div>
+<!-- 				<div class="offer-description__text">
+					<p>Как правило, их довольно затруднительно доставить в сервисный центр. Проблема возникает из-за размеров турбокомпрессора, а также из-за удаленности на большие расстояния самого предприятия. В таком случае рекомендуется обратиться в компанию ООО «Реалремтурбо», которая имеет большой опыт в решении подобных вопросов. Вам предоставят услуги транспортировки турбины даже из самых отдаленных уголков страны в сервисный центр компании. В наличии всегда есть все необходимые запчасти для ремонта. Отремонтированные турбины проходят многоступенчатый ревизионный контроль и только после этого передаются заказчику.</p>
+				</div> -->
+				<div class="offer-description__text">
+					<p>Кроме того рыба располагает рыба для рыба рыба, рыба рыба рыба рыба для рыба рыба, рыба, рыба рыба, рыба. Правильная рыба причины выхода из рыба рыба способствует рыба рыба поломки. рыба рыба рыба повысить рыба рыба, а рыба рыба рыба на рыба и рыба работы.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+<footer style="height: 400px; background-color: wheat"></footer>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="js/mobile-menu.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"></script>
+<script src="js/parallax.js"></script>
+<script src="js/tabs.js"></script>
+<script src="js/waypoints.js"></script>
+
+
+</body>
+</html>
