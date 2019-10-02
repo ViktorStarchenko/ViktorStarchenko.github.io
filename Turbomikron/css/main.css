@@ -1676,6 +1676,18 @@ background-color: #92c944;
     max-height: 149px;
 }
 
+@media screen and (max-width: 992px) {
+    .about-us__item-img-wrap {
+        max-height: 99px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-us__item-img-wrap {
+        max-height: 149px;
+    }
+}
+
 .about-us__item-img {
     width: 100%;
     height: 100%;
@@ -1685,7 +1697,7 @@ background-color: #92c944;
     display: grid;
     -ms-grid-columns: 1fr 15px 1fr 15px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            grid-template-areas:
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            grid-template-areas:
         ". . .";
     grid-gap: 40px;
 }
@@ -1704,7 +1716,7 @@ background-color: #92c944;
             grid-template-columns: 1fr;
         -ms-grid-rows: 1fr 40px 1fr 40px 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                grid-template-areas: "." "." ".";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                grid-template-areas: "." "." ".";
     }
 }
 
@@ -1723,7 +1735,8 @@ background-color: #92c944;
     margin-top: 15px;
 }
 .about-us__item-title-wrap h4 {
-  font-size: 20px;
+    max-width: 90%;
+  font-size: 18px;
   color: rgb(2, 2, 2);
   font-weight: bold;
   line-height: 1.2;
@@ -1737,6 +1750,12 @@ background-color: #92c944;
 @media screen and (max-width: 1200px) {
     .about-us__item-title-wrap h4 {
         font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .about-us__item-title-wrap h4 {
+        font-size: 12px;
     }
 }
 
@@ -1927,8 +1946,8 @@ background-color: #92c944;
     .services__items {
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                -ms-grid-rows: auto 51px auto 51px auto 51px auto 51px auto 51px auto 51px auto 51px auto;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    grid-template-areas: "."
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                -ms-grid-rows: auto 51px auto 51px auto 51px auto 51px auto 51px auto 51px auto 51px auto;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    grid-template-areas: "."
                             "."
                             "."
                             "."
@@ -2163,7 +2182,7 @@ background-color: #92c944;
 @media screen and (max-width: 768px) {
     .why-us__banner-heading h4 {
         font-size: 22px;
-        margin: 50px auto;
+        margin: 50px auto 25px;
         width: 90%;
     }
 }
@@ -2219,7 +2238,7 @@ background-color: #92c944;
     .why-us__banner-text p {
         max-width: 83%;
         text-align: center;
-        margin: 0 0 40px;
+        margin: 0 0 10px;
         font-size: 16px;
     }
 }
