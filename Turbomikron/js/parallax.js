@@ -11,5 +11,6 @@ var image = document.getElementsByClassName('why-us__banner-img');
 		overflow: false,
 		transition: 'cubic-bezier(.05,.47,.93,.5)',
 		orientation: 'up',
-		delay: 0.1
+		delay: 0.1,
+		
 	});
