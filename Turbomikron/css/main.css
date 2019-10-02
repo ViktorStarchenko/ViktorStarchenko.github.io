@@ -5,6 +5,295 @@
 }
 
 /*animations*/
+
+
+/*MYSTERY IMAGES ANIMATION*/
+
+@-webkit-keyframes mystery-tilt-minus {
+    0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(-25deg);
+                transform: rotate(-25deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+}
+
+@keyframes mystery-tilt-minus {
+    0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(-25deg);
+                transform: rotate(-25deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+}
+
+.mystery-tilt-minus {
+    -webkit-animation-name: mystery-tilt-minus;
+            animation-name: mystery-tilt-minus;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+}
+
+@-webkit-keyframes mystery-tilt-up {
+    0% {
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+    }
+    50% {
+        -webkit-transform: translateY(-30px);
+                transform: translateY(-30px);
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+    }
+}
+
+@keyframes mystery-tilt-up {
+    0% {
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+    }
+    50% {
+        -webkit-transform: translateY(-30px);
+                transform: translateY(-30px);
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+    }
+}
+
+.mystery-tilt-up {
+    -webkit-animation-name: mystery-tilt-up;
+            animation-name: mystery-tilt-up;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+}
+
+@-webkit-keyframes mystery-tilt-plus {
+    0% {
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+    }
+    50% {
+        -webkit-transform: translateY(-30px);
+                transform: translateY(-30px);
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+    }
+}
+
+@keyframes mystery-tilt-plus {
+    0% {
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+    }
+    50% {
+        -webkit-transform: translateY(-10px);
+                transform: translateY(-10px);
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+    }
+}
+
+.mystery-tilt-plus {
+    -webkit-animation-name: mystery-tilt-plus;
+            animation-name: mystery-tilt-plus;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+}
+
+/*MYSTERY IMAGES ANIMATION*/
+
+
+
+/*IMPORTANT IMAGES ANIMATION*/
+
+@-webkit-keyframes important-tilt-minus {
+    0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+
+    50% {
+        -webkit-transform: rotate(-20deg);
+                transform: rotate(-20deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+}
+@-webkit-keyframes important-tilt-minus {
+    0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(-20deg);
+                transform: rotate(-20deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+}
+@keyframes important-tilt-minus {
+    0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(-20deg);
+                transform: rotate(-20deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+}
+
+.important-tilt-minus {
+    -webkit-animation-name: important-tilt-minus;
+            animation-name: important-tilt-minus;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+}
+
+@-webkit-keyframes important-tilt-up {
+    0% {
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+    }
+
+    50% {
+        -webkit-transform: translateY(-30px);
+                transform: translateY(-30px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+    }
+}
+@-webkit-keyframes important-tilt-up {
+    0% {
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+    }
+    50% {
+        -webkit-transform: translateY(-30px);
+                transform: translateY(-30px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+    }
+}
+@keyframes important-tilt-up {
+    0% {
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+    }
+    50% {
+        -webkit-transform: translateY(-30px);
+                transform: translateY(-30px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0px);
+                transform: translateY(0px);
+    }
+}
+
+.important-tilt-up {
+    -webkit-animation-name: important-tilt-up;
+            animation-name: important-tilt-up;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+}
+
+
+@-webkit-keyframes important-tilt-plus {
+    0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+
+    50% {
+        -webkit-transform: rotate(10deg);
+                transform: rotate(10deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+}
+@-webkit-keyframes important-tilt-plus {
+    0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(10deg);
+                transform: rotate(10deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+}
+@keyframes important-tilt-plus {
+    0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+    50% {
+        -webkit-transform: rotate(10deg);
+                transform: rotate(10deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+    }
+}
+
+.important-tilt-plus {
+    -webkit-animation-name: important-tilt-plus;
+            animation-name: important-tilt-plus;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+}
+
+
+/*IMPORTANT IMAGES ANIMATION*/
+
+
+
 @-webkit-keyframes pref-arrow-away {
     0% {
         -webkit-transform: translateX(0);
@@ -1155,7 +1444,7 @@ background-color: #92c944;
 /*HERO*/
 
 .hero {
-    background-image: url('../img/hero-img2.png');
+    background-image: url('../img/new.png');
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -1396,7 +1685,7 @@ background-color: #92c944;
     display: grid;
     -ms-grid-columns: 1fr 15px 1fr 15px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        grid-template-areas:
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                grid-template-areas:
         ". . .";
     grid-gap: 40px;
 }
@@ -1415,7 +1704,7 @@ background-color: #92c944;
             grid-template-columns: 1fr;
         -ms-grid-rows: 1fr 40px 1fr 40px 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            grid-template-areas: "." "." ".";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    grid-template-areas: "." "." ".";
     }
 }
 
@@ -1638,8 +1927,8 @@ background-color: #92c944;
     .services__items {
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            -ms-grid-rows: auto 51px auto 51px auto 51px auto 51px auto 51px auto 51px auto 51px auto;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                grid-template-areas: "."
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    -ms-grid-rows: auto 51px auto 51px auto 51px auto 51px auto 51px auto 51px auto 51px auto;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        grid-template-areas: "."
                             "."
                             "."
                             "."
@@ -1907,7 +2196,7 @@ background-color: #92c944;
         margin-bottom: 0;        
     }
     .why-us__banner-heading p {
-        margin: auto;
+        margin: 0 auto 40px;
         max-width: 83%;font-size: 18px;
     }
 }
@@ -1924,20 +2213,88 @@ background-color: #92c944;
     .why-us__banner-text p {
         max-width: 83%;
         text-align: center;
-        margin: 40px 0;
+        margin: 0 0 40px;
         font-size: 16px;
     }
 }
-.why-us__banner-text img {
-    margin: 0 90px;
+
+.mystery-box {
+    width: 200px;
+    min-height: 205px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    margin: 0 40px;
 }
 
-@media screen and (max-width: 768px) {
+.mystery-img-left {
+    position: absolute;
+    top: 30%;
+    left: 0;
+}
+
+.mystery-img-up {
+    position: absolute;
+    top: 14px;
+    left: 33%;
+    -webkit-transform: rotate(7deg);
+            transform: rotate(7deg);
+}
+
+.mystery-img-right {
+    position: absolute;
+    right: 13px;
+    bottom: 38px;
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg);
+}
+
+
+
+.mystery-box:hover .mystery-img-left {
+    -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+    -webkit-transition: .5s;
+    transition: .5s
+}
+
+.mystery-box:hover .mystery-img-up {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+    -webkit-transition: .5s;
+    transition: .5s
+}
+
+.mystery-box:hover .mystery-img-right {
+    
+    -webkit-transform: rotate(29deg);
+            transform: rotate(29deg);
+    -webkit-transition: .5s;
+    transition: .5s;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+}
+.mystery-box img {
+    -webkit-transition-duration: .5s;
+            transition-duration: .5s
+}
+/*.why-us__banner-text img {
+    margin: 0 90px;
+}*/
+
+/*@media screen and (max-width: 768px) {
     .why-us__banner-text img {
         max-width: 100px;
         margin-top: 30px;
     }
-}
+}*/
 
 .why-us__banner-button-box {
     width: 90%;
@@ -1981,20 +2338,24 @@ background-color: #92c944;
 
 /*why-us-2*/
 .why-us-2 {
-    padding: 100px 0 40px;
+    padding: 80px 0 40px;
 }
 
 
 
 .why-us-2__text {
     margin-bottom: 50px;
-    font-size: 16px;
+    font-size: 17px;
 }
 
+
+
 .why-us-2__important-box {
+    width: 90%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    margin: 30px 0 66px;
 }
 
 @media screen and (max-width: 720px) {
@@ -2006,16 +2367,66 @@ background-color: #92c944;
     }
 }
 
+
+
 .why-us-2__important-wrap p {
-    margin-bottom: 66px;
+    /*margin-bottom: 66px;*/
     font-size: 17px;
 }
-
-.why-us-2__important-box img {
+/*изображение ! закомментировано*/
+/*.why-us-2__important-box img {
     margin: 0 66px 66px;
     -webkit-transition-duration: 1s;
             transition-duration: 1s;
+}*/
+/*изображение ! закомментировано*/
+
+.important-box {
+    max-width: 150px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    margin: 0 40px;
 }
+
+.important-box img {
+    margin: 10px;
+    -webkit-transition-duration: .5s;
+            transition-duration: .5s;
+}
+
+.important-box:hover .important-img-left {
+    -webkit-transform: rotate(-25deg);
+            transform: rotate(-25deg);
+        -webkit-transition-duration: .5s;
+            transition-duration: .5s;        
+}
+
+.important-box:hover .important-img-up {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+                -webkit-transition-duration: .5s;
+            transition-duration: .5s;
+}
+
+.important-box:hover .important-img-right {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+                -webkit-transition-duration: .5s;
+            transition-duration: .5s;
+}
+
+@media screen and (max-width: 720px) {
+    .important-box {
+        margin: 10px 0 30px;
+    }
+}
+
 
 .why-us-2__important-box p {
     
@@ -2033,13 +2444,26 @@ background-color: #92c944;
     margin-bottom: 66px
 }
 
+.why-us-2__img-wrap img {
+    max-width: 20%;
 
-@media screen and (max-width: 728px) {
+}
+
+@media screen and (min-width: 1600px) {
+    .why-us-2__img-wrap img {
+        height: 219px;
+    }
+}
+
+@media screen and (max-width: 578px) {
     .why-us-2__img-wrap img {
         width: 100%;
+        max-width: 100%;
         height: auto;
     }
 }
+
+
 
 
 /*OFFER*/
@@ -2208,6 +2632,13 @@ background-color: #92c944;
     background-color: #fff;
 }
 
+@media screen and (max-width: 1440px) {
+    .offer-description {
+        padding: 50px 0 50px;
+
+    }
+}
+
 .offer-description__text {
     color: #000000;
     font-size: 19px;
@@ -2218,6 +2649,7 @@ background-color: #92c944;
 
 .offer-description__wrapper_siemens {
     display: none;
+}
 }
 
  
