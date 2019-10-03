@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
 * {
     margin: 0;
@@ -599,6 +600,9 @@ textarea {
             align-items: center;
 }
 
+
+
+/*****************TEMPLATES**************************/
 .wrapper {
     width: 100%;
     max-width: 1680px;
@@ -662,12 +666,81 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#92c944', end
     color: #92c944;
 }
 
+.banner-heading {
+    max-width: 90%;
+    text-shadow: 1px 1px 16px black, 0 0 1em black;
+    color: #92c944;
+    font-size: 38px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3.6px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.banner-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.title-bold-small {
+    width: 90%;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.title-bold {
+    width: 80%;
+    max-width: 994px;
+    color: #000000;
+    text-align: center;
+    font-size: 31px;
+    line-height: 1.2;
+    margin: 0 auto 50px;
+    font-weight: 700;
+}
+
 .image-tilt:hover {
     -webkit-transform: rotate(-20deg);
             transform: rotate(-20deg);
     -webkit-transition-duration: 1s;
             transition-duration: 1s;
 }
+
+.text-list {
+    margin-bottom: 50px;
+}
+
+.text-list-heading {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.text-list-item {
+    font-size: 16px;
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.text-list-item:before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 6px;
+    width: 11px;
+    height: 11px;
+    background-image: url(../img/single/text-list-item.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/*****************TEMPLATES**************************/
 
 
 
@@ -686,7 +759,13 @@ header {
 
 @media screen and (min-width:1050px) {
     header {
-        height: 106px;
+        height: 86px;
+    }
+}
+
+@media screen and (max-width: 1272px) {
+    header {
+        height: 70px
     }
 }
 
@@ -730,7 +809,7 @@ header {
 
 .logo {
     height: 45px;
-    margin-top: -13px
+    margin-top: -12px
 }
 
 @media screen and (max-width: 1600px) {
@@ -750,11 +829,12 @@ header {
 
 @media screen and (max-width: 767px) {
     header .logo {
-        margin-top: -13px;
+        margin-top: -5px;
     }
 
     header .logo img {
-        margin:  8px 0
+        margin:  8px 0;
+        max-width:180px;
     }
 }
 
@@ -785,7 +865,7 @@ header {
     list-style: none;
     position: absolute;
     left: 0;
-    top: 105px;
+    top: 87px;
     background: rgba(0,0,0,.7);
     text-align: left;
     min-width: 100%;
@@ -793,6 +873,12 @@ header {
     height: -moz-fit-content;
     height: fit-content;
     display: none;
+}
+
+@media screen and (max-width: 1272px) {
+   .menu__list .sub ul {
+        top: 70px;
+   }
 }
 .menu__list .sub ul li {
     min-width: 300px;
@@ -836,7 +922,7 @@ header {
 .menu__list li {
     height: 25px;
     line-height: 25px;
-    padding: 41px 20px;
+    padding: 31px 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -863,13 +949,13 @@ background-color: #92c944;
         font-size: 12px;
     }
     .menu__list li {
-        padding: 40px 8px;
+        padding: 31px 8px;
     }
 }
 
 @media screen and (max-width: 1272px) {
     .menu__list li {
-        padding: 40px 8px;
+        padding: 22px 8px;
     }
     .menu__list li a {
         font-size: 10px;
@@ -1448,7 +1534,7 @@ background-color: #92c944;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    max-height: 715px;
+    max-height: 639px;
 }
 .hero__item {
     position: relative;
@@ -1456,12 +1542,12 @@ background-color: #92c944;
     
 }
 
-.hero__item-img {
+/*.hero__item-img {
     width: 100%;
     max-height: 715px;
     -o-object-fit: cover;
        object-fit: cover;
-}
+}*/
 
 .hero__text-box {
     top: 0;
@@ -1502,7 +1588,7 @@ background-color: #92c944;
     }
 }
 
-.hero__buttom-box {
+.hero__button-box {
     width: 100%;
     max-width: 850px;
 }
@@ -1530,7 +1616,7 @@ background-color: #92c944;
             -ms-flex-pack: end;
                 justify-content: flex-end;
     }
-    .hero__buttom-box {
+    .hero__button-box {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
@@ -1592,7 +1678,7 @@ background-color: #92c944;
 
 @media screen and (max-width: 768px) {
     .about-us__description-heading {
-        font-size: 25px;
+        font-size: 20px;
         margin-bottom: 60px;
     }
 } 
@@ -1641,7 +1727,7 @@ background-color: #92c944;
 .about-us__description-text p {
     width: calc(70% - 200px);
     max-width: 1036px;
-  font-size: 21px;
+  font-size: 18px;
   color: rgb(0, 0, 0);
   line-height: 1.2;
   text-align: left;
@@ -1656,7 +1742,7 @@ background-color: #92c944;
         font-size: 18px
     }
 }
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 768px) {
     .about-us__description-text p {
         width: calc(96% - 107px);
         text-align: center;
@@ -1697,7 +1783,7 @@ background-color: #92c944;
     display: grid;
     -ms-grid-columns: 1fr 15px 1fr 15px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                grid-template-areas:
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    grid-template-areas:
         ". . .";
     grid-gap: 40px;
 }
@@ -1716,7 +1802,7 @@ background-color: #92c944;
             grid-template-columns: 1fr;
         -ms-grid-rows: 1fr 40px 1fr 40px 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    grid-template-areas: "." "." ".";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        grid-template-areas: "." "." ".";
     }
 }
 
@@ -1761,10 +1847,10 @@ background-color: #92c944;
 
 .about-us__item-desc-wrap {
     width: 100%;
-    min-height: 140px;
+    min-height: 199px;
     border-top: 1px solid #e5e5e5;
     text-align: center;
-    padding: 40px 0;
+    padding: 10px 0;
     position: relative;
     cursor: pointer;
     display: -webkit-box;
@@ -1781,6 +1867,16 @@ background-color: #92c944;
 .about-us__item-desc-wrap p {
     display: none;
     font-size: 16px;
+}
+
+@media screen and (max-width: 992px) {
+    .about-us__item-desc-wrap p {
+        font-size: 14px;
+    }
+}
+
+.about-us__item-desc-arrow {
+    height: 56px;
 }
 
 .about-us__item-desc-wrap:hover p {
@@ -1946,8 +2042,8 @@ background-color: #92c944;
     .services__items {
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    -ms-grid-rows: auto 51px auto 51px auto 51px auto 51px auto 51px auto 51px auto 51px auto;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        grid-template-areas: "."
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        -ms-grid-rows: auto 51px auto 51px auto 51px auto 51px auto 51px auto 51px auto 51px auto;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            grid-template-areas: "."
                             "."
                             "."
                             "."
@@ -2126,7 +2222,7 @@ background-color: #92c944;
 .why-us {
     /*background-image: url('../img/2-layers.png');*/
     width: 100%;
-    height: 932px;
+    height: 639px;
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
@@ -2146,8 +2242,10 @@ background-color: #92c944;
 }
 
 .why-us__banner-img {
-    height: 932px;
+    height: 639px;
     width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 @media screen and (max-width: 768px) {
@@ -2197,7 +2295,7 @@ background-color: #92c944;
     font-size: 24px;
   color: rgb(255, 255, 255);
   line-height: 1.2;
-    margin-bottom: 50px;
+    margin: 0 auto 10px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -2210,7 +2308,7 @@ background-color: #92c944;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-bottom: 45px;
+    /*margin-bottom: 45px;*/
 }
 
 @media screen and (max-width: 768px) {
@@ -2400,6 +2498,7 @@ background-color: #92c944;
     /*margin-bottom: 66px;*/
     font-size: 17px;
 }
+
 /*изображение ! закомментировано*/
 /*.why-us-2__important-box img {
     margin: 0 66px 66px;
@@ -2456,10 +2555,15 @@ background-color: #92c944;
 
 
 .why-us-2__important-box p {
-    
     max-width: 490px;
-    width: 100%;
-    
+    width: 100%; 
+    font-size: 16px  
+}
+
+@media screen and (max-width: 768px) {
+    .why-us-2__important-box p {
+        font-size: 14px 
+    }
 }
 
 .why-us-2__img-wrap {
@@ -2495,24 +2599,26 @@ background-color: #92c944;
 
 /*OFFER*/
 .offer-banner {
-    height: 932px;
+    height: 639px;
     position: relative;
 }
 
 @media screen and (max-width: 768px) {
     .offer-banner {
-        height: 806px
+        height: 748px
     }
 }
 
 .offer-banner__img {
-    height: 932px;
+    height: 639px;
     width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 @media screen and (max-width: 768px) {
     .offer-banner__img {
-        height: 806px
+        height: 748px
     }
 }
 
@@ -2554,13 +2660,20 @@ background-color: #92c944;
     text-transform: uppercase;
     letter-spacing: 3.6px;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 1144px) {
+    .offer-banner__heading {
+        max-width: 90%;
+    }
 }
 
 @media screen and (max-width: 992px) {
     .offer-banner__heading {
         max-width: 95%;
         font-size: 26px;
+        margin-bottom: 30px;
     }
 }
 
@@ -2585,6 +2698,7 @@ background-color: #92c944;
     .offer-banner__text {
         max-width: 95%;
         font-size: 20px;
+        margin-bottom: 30px;
     }
 }
 
@@ -2602,7 +2716,7 @@ background-color: #92c944;
     font-size: 22px;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 112px;
+    margin-bottom: 50px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -2615,6 +2729,7 @@ background-color: #92c944;
     .offer-banner__list {
         max-width: 95%;
         font-size: 17px;
+        margin-bottom: 40px;
     }
 }
 
@@ -2650,6 +2765,7 @@ background-color: #92c944;
 
     .offer__banner-button-box .button-wrapper {
         max-width: 100%;
+        height: 55px;
         -webkit-box-ordinal-group: 1;
             -ms-flex-order: 0;
                 order: 0;
@@ -2689,18 +2805,662 @@ background-color: #92c944;
 
 .offer-description__text {
     color: #000000;
-    font-size: 19px;
+    font-size: 18px;
     font-weight: 400;
     margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .offer-description__text {
+        font-size: 14px;
+    }
 }
 
 
 .offer-description__wrapper_siemens {
     display: none;
 }
+
+
+
+
+/*
+****************************************************************
+*
+ SINGLE PAGE STYLES
+ * 
+ ***************************************************************
+ */
+
+ /***************HERO*/
+
+.brand-hero {
+    height: 636px;
+    position: relative;
+/*    background-image: url('../img/single/hero.png');
+    background-size: cover;
+    background-repeat: no-repeat;*/
 }
 
- 
+@media screen and (max-width: 768px) {
+    .brand-hero .banner-heading {
+        font-size: 24px;
+    }
+}
+
+.brand-hero__banner {
+    height: 639px;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+.brand-hero__inner {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+@media screen and (max-width: 992px) {
+    .brand-hero .button-wrapper {
+        width: calc(42% - 15px);
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .brand-hero .button-wrapper {
+        width: calc(42% - 15px);
+        margin: 0px auto 20px;
+        height: 55px;
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 635px) {
+    .brand-hero .button-wrapper {
+        width: calc(100% - 80px);
+    }
+}
+
+
+
+
+/***************BRAND INFO*/
+
+.brand-info {
+    padding: 50px 0;
+}
+
+
+@media screen and (max-width: 768px) {
+    .brand-info .title-bold {
+        font-size: 20px;
+        max-width: 95%;
+    }
+}
+
+.brand-info__img-box {
+    width: 132px;
+    height: 132px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 4px;
+    border: 1px solid #e5e5e5;
+    position: relative;
+    -webkit-transition-duration: .5s;
+            transition-duration: .5s;
+    margin: 20px;
+}
+
+.brand-info__img-box:hover {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+}
+
+.brand-info__img-box:before, .brand-info__img-box:after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #92c944;
+    top: 45%;
+}
+
+.brand-info__img-box:before {
+    left: -35px;
+}
+
+.brand-info__img-box:after {
+    right: -35px;
+}
+
+@media screen and (max-width: 768px) {
+    .brand-info__img-box {
+        margin: 0 20px 50px;
+    }
+}
+
+.brand-info__img {
+    width: 100%;
+
+
+}
+
+.brand-info__text {
+    max-width: 80%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .brand-info__text {
+        max-width: 95%;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+}
+
+.brand-info__text p {
+    max-width: 70%;
+    /*max-width: 1036px;*/
+    font-size: 21px;
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+    text-align: left;
+}
+
+@media screen and (max-width: 992px) {
+    .brand-info__text p {
+        max-width: calc(70% - 100px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .brand-info__text p {
+        font-size: 17px;
+        max-width: 96%;
+        text-align: center;
+    }
+}
+
+.brand-info .important-box {
+    max-width: 112px;
+}
+
+.brand-info .important-box img {
+    max-height: 60px;
+}
+
+.notation-box {
+    max-width: 1400px;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: left;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .notation-box {
+        font-size: 14px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .notation-box {
+        margin-bottom: 80px;
+    }
+}
+
+.brand-info__specialization {
+    max-width: 1241px;
+    font-weight: 700;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 50px;
+}
+.brand-info__items {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.brand-info__item-box {
+    /*max-width: 33.3%;*/
+    /*height: 390px;*/
+    position: relative;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+    border: 1px solid #e5e5e5;
+    padding: 20px;
+    margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .brand-info__item-box {
+        padding: 0;
+    }
+}
+
+/*@media screen and (max-width: 992px) {
+    .brand-info__item-box {
+        height: 176px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .brand-info__item-box {
+        height: 114px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .brand-info__item-box {
+        height: 75px;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .brand-info__item-box {
+        height: 50px;
+    }
+}*/
+
+
+
+.brand-info__item-box:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #92c944;
+    opacity: .25;
+}
+
+.brand-info__item-box:hover:before {
+    display: none
+}
+
+.brand-info__item-box img {
+    width: 100%;
+    height: auto;
+}
+
+/*@media screen and (max-width: 578px) {
+    .brand-info__item-box img {
+        width: 92%;
+    }
+}
+
+@media screen and (max-width: 578px) {
+    .brand-info__item-box img {
+        width: 100%;
+    }
+}*/
+
+
+/****************BRAND-ADVANTAGES************/
+
+.double-arrow-block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 50px;
+}
+
+.double-arrow-block img {
+    margin: 0 20px;
+}
+
+.brand-advantages__description {
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+.brand-advantages__description p {
+    margin-bottom: 25px;
+}
+
+.brand-advantagase__list-wrapper {
+    max-width: 1200px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: auto;
+
+}
+.brand-advantages__list {
+    max-width: 45%;
+}
+
+@media screen and (max-width: 768px) {
+    .brand-advantages__list {
+        max-width: 96%;
+    }
+
+    .brand-advantages__list .text-list-item {
+        font-size: 14px;
+    }
+}
+
+
+/*******************BRAND-SLIDER****************/
+.brand-slider {
+    padding: 50px 0;
+}
+
+@media screen and (max-width: 520px) {
+    .brand-slider {
+        padding: 15px 0 50px;
+    }
+}
+.brand-slider__item-box {
+    max-width: 33.3%;
+    border: 1px solid #e5e5e5;
+    margin: 20px;
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    .brand-slider__item-box {
+        margin: 6px;
+    }
+}
+
+.brand-slider__item-box img {
+    width: 100%;
+}
+
+.brand-slider__item-box:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #92c944;
+    opacity: .25;
+}
+
+.brand-slider__item-box:hover:before {
+   display: none;
+}
+
+
+/***************BRAND-REASON***************/
+
+.brand-reasons {
+    position: relative;
+}
+
+.brand-reason__heading-box {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.brand-reason__heading {
+    text-align: center;
+}
+
+.brand-reason__list-item {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .brand-reason__list-item {
+        margin-bottom: 13px;
+    }
+}
+
+.brand-reasons__banner {
+    height: 639px;
+    position: relative;
+}
+
+.brand-reasons__banner-img {
+    width: 100%;
+    height: 639px;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+.brand-reason__banner-inner {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+}
+
+.brand-reason__banner-inner .banner-heading {
+    margin-bottom: 30px;
+    max-width: 1200px;
+}
+
+.brand-reason__banner-inner .mystery-box {
+    width: 290px;
+}
+
+.brand-reason__button-box {
+    width: 100%;
+    max-width: 850px;
+    margin-bottom: 90px;
+}
+
+@media screen and (max-width: 768px) {
+    .brand-reason__button-box {
+        margin-bottom: 50px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .brand-reason__button-box {
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .brand-reason__banner-inner .banner-heading {
+        max-width: 80%;
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 992px) {
+    .brand-reason__banner-inner .banner-heading {
+        font-size: 24px;
+        /*margin-bottom: 25px;*/
+    }
+}
+
+@media screen and (max-width: 658px) {
+    .brand-reason__banner-inner .banner-heading {
+        font-size: 17px;
+        /*margin-bottom: 25px;*/
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .brand-reason__banner-inner .button-wrapper {
+        width: calc(42% - 15px);
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .brand-reason__banner-inner .button-wrapper {
+        width: calc(42% - 15px);
+        margin: 0px auto 20px;
+        height: 55px;
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 635px) {
+    .brand-reason__banner-inner .button-wrapper {
+        width: calc(100% - 80px);
+    }
+}
+
+.brand-reason-description__text {
+    padding: 40px 6px;
+    font-size: 16px;
+    text-indent: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .brand-reason-description__text {
+        font-size: 14px;
+    }
+}
+
+.brand-reason__sizes {
+    display: none;
+}
+
+
+/******************BRAND GALLERY**************/
+
+.brand-gallery__wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .brand-gallery__wrapper {
+        grid-gap: 5px;
+    }
+}
+
+.brand-gallery__item-box {
+    position: relative;
+}
+
+.brand-gallery__item-box:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #92c944;
+    opacity: .25;
+    -webkit-transition: 3s;
+
+}
+
+.brand-gallery__item-box:hover:before {
+    display: none;
+}
+
+    
+
+.brand-gallery__item-box img {
+    width: 100%;
+}
+
+
+/**********************BRAND SERVICES********************/
+
+.brand-service {
+    padding: 60px 0
+}
+.brand-service__list-box {
+    max-width: 1200px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin: 0 auto 20px;
+}
+@media screen and (max-width: 768px)  {
+    .brand-service .title-bold-small {
+        margin: 0 auto 50px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .brand-service__list-box {
+        margin: 0 auto 50px;
+    }
+}
+.brand-service__wrapper .text-list {
+    max-width: 45%;
+}
+
+@media screen and (max-width: 768px) {
+    .brand-service__wrapper .text-list {
+        max-width: 96%;
+        margin-bottom: 0;
+    }
+
+    .brand-service__wrapper .text-list-item {
+        font-size: 14px;
+    }
+}
+
+.brand-service__advice {
+    font-size: 16px;
+    text-indent: 20px;
+   
+}
+
+@media screen and (max-width: 768px) {
+    .brand-service__advice {
+        font-size: 14px;
+    }
+}
+
+.brand-service__advice p {
+     margin-bottom: 25px;
+}
+
 
 
 

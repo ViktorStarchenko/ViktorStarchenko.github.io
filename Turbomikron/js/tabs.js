@@ -20,6 +20,17 @@ $(document).ready(function() {
 
 
 
+	// BRAND-REASONS tabs
+	$('#brand-reason__equipnemt').on('click', function() {
+		$('.brand-reason__equipnemt').show()
+		$('.brand-reason__sizes').hide()
+	})
+
+	$('#brand-reason__sizes').on('click', function() {
+		$('.brand-reason__sizes').show()
+		$('.brand-reason__equipnemt').hide()
+	})
+
 
 })
 
