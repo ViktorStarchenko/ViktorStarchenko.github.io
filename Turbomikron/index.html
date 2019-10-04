@@ -10,7 +10,7 @@
 
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-
+  <link rel="stylesheet" href="css/universal-parallax.min.css"> <!-- mobile parallax styles -->
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
 </head>
 <body>
@@ -136,7 +136,9 @@
 <main>
 	<section>
 		<div class="hero">
-			<div class="brand-hero__wrapper index-hero-banner" data-android-fix="false">
+			<div class="parallax" data-parallax-image="img/new.png"></div>
+     <!-- NON MOBILE PARALLAX     <div class="brand-reasons__banner-img" data-android-fix="false"></div> -->
+			<!-- <div class="brand-hero__wrapper index-hero-banner" data-android-fix="false"> -->
 		  <div class="hero__item">
 		  	
 		  	<div class="hero__text-box banner-inner flex-column">
@@ -385,7 +387,10 @@
 		<div class="why-us__wrapper">
 			
 			<div class="why-us__banner-wrap" >
-				<div class="why-us__banner-img"></div>
+				<div class="why-us__banner-img">
+					<div class="parallax" data-parallax-image="img/new3.png"></div>
+     <!-- NON MOBILE PARALLAX     <div class="brand-reasons__banner-img" data-android-fix="false"></div> -->
+				</div>
 				<!-- <img class="why-us__banner-img" src="img/new3.png" alt="image"> -->
 				<div class="why-us__banner-content banner-inner flex-column">
 					<div class="why-us__banner-heading">
@@ -453,7 +458,10 @@
 
 	<section class="offer-banner">
 		<div class="offer-banner__wrapper">
-			<div class="offer-banner__img"></div>
+				<div class="parallax" data-parallax-image="img/new4.png"></div>
+     <!-- NON MOBILE PARALLAX     <div class="brand-reasons__banner-img" data-android-fix="false"></div> -->
+			<div class="offer-banner__img">
+			</div>
 			<!-- <img class="offer-banner__img" src="img/new4.png" alt="image"> -->
 			<img class="offer-banner__mystery-img" src="img/offer-mystery.png" alt="">
 			<div class="offer-banner__content banner-inner flex-column">
@@ -511,7 +519,9 @@
 
 <script src="js/tabs.js"></script>
 <script src="js/waypoints.js"></script>
-<script src="js/lib/parallax.js"></script>
+<!-- <script src="js/lib/parallax.js"></script> -->
+
+<script src="js/universal-parallax.min.js"></script>
 <script src="js/parallax.js"></script>
 
 

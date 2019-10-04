@@ -10,7 +10,7 @@
 
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-
+	<link rel="stylesheet" href="css/universal-parallax.min.css"> <!-- mobile parallax styles -->
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
 </head>
 <body>
@@ -205,7 +205,8 @@
 			</div>
 		</div>
 		<div class="brand-reasons__banner">
-			<div class="brand-reasons__banner-img" ></div>
+			<div class="parallax" data-parallax-image="img/single/brand-reason-banner.png"></div>
+     <!-- NON MOBILE PARALLAX     <div class="brand-reasons__banner-img" data-android-fix="false"></div> -->
 			<!-- <img class="brand-reasons__banner-img" src="img/single/brand-reason-banner.png" alt=""> -->
 			<div class="brand-reason__banner-inner banner-inner flex-column">
 				<h4 class="banner-heading">Причины, по которым именно к нам обращаются, если возникла необходимость произвести ремонт турбокомпрессора Caterbiller</h4>
@@ -322,7 +323,9 @@
 
 <script src="js/tabs.js"></script>
 <script src="js/waypoints.js"></script>
-<script src="js/lib/parallax.js"></script>
+<!-- <script src="js/lib/parallax.js"></script> -->
+
+<script src="js/universal-parallax.min.js"></script>
 <script src="js/parallax.js"></script>
 
 
