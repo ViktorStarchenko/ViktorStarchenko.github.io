@@ -70,10 +70,12 @@
 
 	// hero parallax:
 	$('.index-hero-banner').parallax({imageSrc: 'img/new.png'});
+	$('.abb-hero-banner').parallax({imageSrc: 'img/single/hero.png'});
 	$('.garret-hero-banner').parallax({imageSrc: 'img/garret/hero.png'});
 	$('.ihi-hero-banner').parallax({imageSrc: 'img/ihi/hero.png'});
 	$('.caterpillar-hero-banner').parallax({imageSrc: 'img/cat/hero.png'});
 	$('.holset-hero-banner').parallax({imageSrc: 'img/holset/hero.png'});
+	$('.perkins-hero-banner').parallax({imageSrc: 'img/perkins/hero.png'});
 
 
 
