@@ -3427,8 +3427,6 @@ background-color: #92c944;
     height: 639px;
 /*    -o-object-fit: cover;
        object-fit: cover;*/
-       background-attachment: fixed;
-       background-image: url(../img/komatsu/hero.png);
 }
 
 .brand-reason__banner-inner {
