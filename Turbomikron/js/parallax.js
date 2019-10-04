@@ -1,5 +1,5 @@
 new universalParallax().init({
-        speed: 5.0
+        speed: 9.0
     });
 
 
