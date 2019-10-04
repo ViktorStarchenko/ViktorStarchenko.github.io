@@ -21,14 +21,14 @@ $(document).ready(function() {
 
 
 	// BRAND-REASONS tabs
-	$('#brand-reason__equipnemt').on('click', function() {
-		$('.brand-reason__equipnemt').show()
-		$('.brand-reason__sizes').hide()
+	$('#brand-reason__left').on('click', function() {
+		$('.brand-reason__left').show()
+		$('.brand-reason__right').hide()
 	})
 
-	$('#brand-reason__sizes').on('click', function() {
-		$('.brand-reason__sizes').show()
-		$('.brand-reason__equipnemt').hide()
+	$('#brand-reason__right').on('click', function() {
+		$('.brand-reason__right').show()
+		$('.brand-reason__left').hide()
 	})
 
 

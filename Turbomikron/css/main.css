@@ -600,6 +600,17 @@ textarea {
             align-items: center;
 }
 
+.flex-wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+
+.align-start {
+   -webkit-box-align: start;
+       -ms-flex-align: start;
+           align-items: flex-start;
+}
+
 
 
 /*****************TEMPLATES**************************/
@@ -608,10 +619,19 @@ textarea {
     max-width: 1680px;
 }
 
+.banner-img {
+    height: 639px;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+
+
 .button-wrapper {
     width: 100%;
-    max-width: 406px;
-    height: 67px;
+    max-width: 326px;
+    height: 50px;
     background-color: #92c944;
     color: #fff;
     border: none;
@@ -631,6 +651,13 @@ textarea {
     -webkit-transition-duration: 0.3s;
             transition-duration: 0.3s;
     font-size: 22px;        
+}
+
+@media screen and (min-width: 1600px) {
+    .button-wrapper {
+        max-width: 406px;
+        height: 67px;
+    }
 }
 
 a.button-wrapper, a.button-wrapper:hover {
@@ -670,7 +697,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#92c944', end
     max-width: 90%;
     text-shadow: 1px 1px 16px black, 0 0 1em black;
     color: #92c944;
-    font-size: 38px;
+    font-size: 32px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 3.6px;
@@ -690,7 +717,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#92c944', end
     width: 90%;
     font-size: 16px;
     font-weight: 700;
-    margin: 0 auto 30px;
+    margin: 0 auto 50px;
     text-align: center;
 }
 
@@ -712,6 +739,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#92c944', end
             transition-duration: 1s;
 }
 
+.text-box {
+    font-size: 16px;
+}
+
+.text-box p {
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .text-box {
+    font-size: 14px;
+}
+}
+
 .text-list {
     margin-bottom: 50px;
 }
@@ -720,6 +761,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#92c944', end
     font-size: 16px;
     font-weight: 700;
     margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .text-list-heading {
+        font-size: 14px;
+    }
 }
 .text-list-item {
     font-size: 16px;
@@ -1134,6 +1181,7 @@ background-color: #92c944;
     z-index: 102;
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
+    overflow: scroll;
 }
 
 .menu-active {
@@ -1530,11 +1578,16 @@ background-color: #92c944;
 /*HERO*/
 
 .hero {
-    background-image: url('../img/new.png');
+/*    background-image: url('../img/new.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover;*/
     height: 100vh;
     max-height: 639px;
+}
+
+.brand-hero__wrapper {
+    background: transparent;
+    height: 100%;
 }
 .hero__item {
     position: relative;
@@ -1564,7 +1617,7 @@ background-color: #92c944;
 
 
 
-.hero__text-box h4 {
+/*.hero__text-box h4 {
     max-width: 1200px;
     text-shadow: 1px 1px 16px black, 0 0 1em black;
     color: #92c944;
@@ -1574,7 +1627,7 @@ background-color: #92c944;
     letter-spacing: 3.6px;
     text-align: center;
     margin-bottom: 80px;
-}
+}*/
 
 @media screen and (max-width: 1049px) {
     .hero__text-box h4 {
@@ -1692,6 +1745,7 @@ background-color: #92c944;
 
 .about-us__arrow-img {
     margin-left: 150px;
+    max-height: 70px;
 }
 
 @media screen and (max-width: 1420px) {
@@ -1727,7 +1781,7 @@ background-color: #92c944;
 .about-us__description-text p {
     width: calc(70% - 200px);
     max-width: 1036px;
-  font-size: 18px;
+  font-size: 16px;
   color: rgb(0, 0, 0);
   line-height: 1.2;
   text-align: left;
@@ -1783,7 +1837,7 @@ background-color: #92c944;
     display: grid;
     -ms-grid-columns: 1fr 15px 1fr 15px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    grid-template-areas:
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                grid-template-areas:
         ". . .";
     grid-gap: 40px;
 }
@@ -1802,7 +1856,7 @@ background-color: #92c944;
             grid-template-columns: 1fr;
         -ms-grid-rows: 1fr 40px 1fr 40px 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        grid-template-areas: "." "." ".";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    grid-template-areas: "." "." ".";
     }
 }
 
@@ -1847,7 +1901,7 @@ background-color: #92c944;
 
 .about-us__item-desc-wrap {
     width: 100%;
-    min-height: 199px;
+    height: 130px;
     border-top: 1px solid #e5e5e5;
     text-align: center;
     padding: 10px 0;
@@ -1862,33 +1916,63 @@ background-color: #92c944;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    position: relative;
 }
 
 .about-us__item-desc-wrap p {
-    display: none;
+    /*display: none;*/
+    position: absolute;
     font-size: 16px;
+    opacity: 0;
+    -webkit-transition: 3s;
+    -webkit-transition: 1s;
+    transition: 1s
+}
+@media screen and (max-width: 1240px) {
+    .about-us__item-desc-wrap {
+        min-height: 185px;
+    }
 }
 
 @media screen and (max-width: 992px) {
+    .about-us__item-desc-wrap {
+        min-height: 199px;
+    }
     .about-us__item-desc-wrap p {
         font-size: 14px;
+        -webkit-transition: 1s;
+        transition: 1s;
+
     }
 }
 
 .about-us__item-desc-arrow {
     height: 56px;
+    -webkit-transition: 1s;
+    transition: 1s;
+    -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+
 }
 
 .about-us__item-desc-wrap:hover p {
-    display: block
+    display: block;
+    opacity: 1;
+    -webkit-transition: 1s;
+    -webkit-transition: 2s;
+    transition: 2s;
 }
 
 .about-us__item-desc-wrap:hover .about-us__item-desc-arrow {
-    display: none
+    /*display: none*/
+    opacity: 0;
+    -webkit-transition: .3s;
+    transition: .3s;
 }
 
 .about-us__item-desc-wrap p:hover {
-    display: block;
+    opacity: 1;
+
 }
 
 
@@ -2042,8 +2126,8 @@ background-color: #92c944;
     .services__items {
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        -ms-grid-rows: auto 51px auto 51px auto 51px auto 51px auto 51px auto 51px auto 51px auto;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            grid-template-areas: "."
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    -ms-grid-rows: auto 51px auto 51px auto 51px auto 51px auto 51px auto 51px auto 51px auto;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        grid-template-areas: "."
                             "."
                             "."
                             "."
@@ -2272,9 +2356,8 @@ background-color: #92c944;
 .why-us__banner-heading h4 {
     text-shadow: 1px 1px 16px black, 0 0 1em black;
     color: #92c944;
-    font-size: 38px;
+    font-size: 32px;
     font-weight: 700;
-    /*text-transform: uppercase;*/
     letter-spacing: 3.6px;
     text-align: center;
     margin: 50px 0;
@@ -2334,6 +2417,12 @@ background-color: #92c944;
     color: #ffffff;
     font-size: 21px;
     font-weight: 700;
+}
+
+@media screen and (max-width: 1200px) {
+    .why-us__banner-text p {
+        font-size: 19px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -2431,6 +2520,11 @@ background-color: #92c944;
 .why-us__banner-button-box .button-wrapper {
     margin: 30px 0px;
 }
+@media screen and (max-width: 1600px) {
+    .why-us__banner-button-box img {
+        max-height: 48px;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .why-us__banner-button-box .button-wrapper {
@@ -2451,11 +2545,11 @@ background-color: #92c944;
             -webkit-box-pack: center;
                 -ms-flex-pack: center;
                     justify-content: center;
-        width: 67%;    
+        width: 56%;    
     }
 }
 
-@media screen and (max-width: 359px) {
+@media screen and (max-width: 393px) {
     .why-us__banner-button-box {
         width: 90%;
     }
@@ -2655,7 +2749,7 @@ background-color: #92c944;
     max-width: 1144px;
     text-shadow: 1px 1px 16px black, 0 0 1em black;
     color: #92c944;
-    font-size: 38px;
+    font-size: 32px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 3.6px;
@@ -2719,6 +2813,12 @@ background-color: #92c944;
     margin-bottom: 50px;
 }
 
+@media screen and (max-width: 1600px) {
+    .offer-banner__list {
+        font-size: 19px;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .offer-banner__list {
         margin-bottom: 50px;
@@ -2745,6 +2845,12 @@ background-color: #92c944;
     max-width: 1440px;
 }
 
+@media screen and (max-width: 1600px) {
+    .offer__banner-button-box img {
+        max-height: 48px;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .offer__banner-button-box .button-wrapper {
         max-width: calc(40% - 100px)
@@ -2765,7 +2871,7 @@ background-color: #92c944;
 
     .offer__banner-button-box .button-wrapper {
         max-width: 100%;
-        height: 55px;
+        height: 50px;
         -webkit-box-ordinal-group: 1;
             -ms-flex-order: 0;
                 order: 0;
@@ -2835,7 +2941,7 @@ background-color: #92c944;
  /***************HERO*/
 
 .brand-hero {
-    height: 636px;
+    height: 500px;
     position: relative;
 /*    background-image: url('../img/single/hero.png');
     background-size: cover;
@@ -2843,22 +2949,45 @@ background-color: #92c944;
 }
 
 @media screen and (max-width: 768px) {
+    .brand-hero {
+        height: 262px;
+    }
+}
+
+@media screen and (max-width: 768px) {
     .brand-hero .banner-heading {
-        font-size: 24px;
+        font-size: 21px;
+        margin-bottom: 18px;
     }
 }
 
 .brand-hero__banner {
-    height: 639px;
+    height: 100%;
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .brand-hero__banner {
+        -o-object-fit: unset;
+           object-fit: unset;
+    }
+    
 }
 
 .brand-hero__inner {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .brand-hero .brand-hero__inner {
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -2871,13 +3000,13 @@ background-color: #92c944;
 @media screen and (max-width: 768px) {
     .brand-hero .button-wrapper {
         width: calc(42% - 15px);
-        margin: 0px auto 20px;
-        height: 55px;
-        font-size: 17px;
+        margin: 0px auto 10px;
+        height: 30px;
+        font-size: 14px;
     }
 }
 
-@media screen and (max-width: 635px) {
+@media screen and (max-width: 529px) {
     .brand-hero .button-wrapper {
         width: calc(100% - 80px);
     }
@@ -3153,7 +3282,7 @@ background-color: #92c944;
     margin-bottom: 50px;
 }
 .brand-advantages__description p {
-    margin-bottom: 25px;
+    margin-bottom: 35px;
 }
 
 .brand-advantagase__list-wrapper {
@@ -3255,13 +3384,14 @@ background-color: #92c944;
 .brand-reasons__banner {
     height: 639px;
     position: relative;
+    background: transparent;
 }
 
 .brand-reasons__banner-img {
-    width: 100%;
+    /*width: 100%;*/
     height: 639px;
-    -o-object-fit: cover;
-       object-fit: cover;
+/*    -o-object-fit: cover;
+       object-fit: cover;*/
 }
 
 .brand-reason__banner-inner {
@@ -3355,7 +3485,7 @@ background-color: #92c944;
     }
 }
 
-.brand-reason__sizes {
+.brand-reason__right {
     display: none;
 }
 
@@ -3430,9 +3560,9 @@ background-color: #92c944;
         margin: 0 auto 50px;
     }
 }
-.brand-service__wrapper .text-list {
+/*.brand-service__wrapper .text-list {
     max-width: 45%;
-}
+}*/
 
 @media screen and (max-width: 768px) {
     .brand-service__wrapper .text-list {
@@ -3463,6 +3593,113 @@ background-color: #92c944;
 
 
 
+
+/*===============================SIEMENS PAGE==========================*/
+
+.brand-info.cat-info {
+    padding: 50px 0 0
+}
+
+.cat-service__list-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto 
+}
+.cat-service__list-wrapper .text-list {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .brand-service__wrapper.cat-service__wrapper .cat-service__list-wrapper ul.text-list {
+        margin-bottom: 50px;
+    }
+}
+.brand-service__cat-text {
+    font-size: 16px;
+    text-indent: 20px;
+}
+
+@media screen and (max-width: 768px ) {
+    .brand-service__cat-text {
+        font-size: 14px;
+    }
+}
+
+
+/********************************IHI PAGE***********************************/
+
+.brand-info.ihi-info {
+    padding: 50px 0 0
+}
+
+.ihi-banner {
+    
+    padding: 0 0 50px
+}
+
+.ihi-banner__img {
+    height: 600px;
+    background: transparent;
+}
+
+.brand-service.ihi-service {
+     padding: 0 0 50px
+}
+
+
+
+/******************************KOMATSU PAGE************************************/
+.komatsu-items {
+    padding: 0 0 60px;
+}
+.brand-info.komatsu-info {
+    padding: 50px 0 0;
+}
+
+.komatsu-items img {
+    width: 100%;
+}
+
+.brand-reasons.komatsu-reasons {
+}
+
+.brand-service.komatsu-service {
+    padding: 0 0 50px;
+}
+
+.brand-service.komatsu-service p {
+    text-indent: 20px;
+}
+.brand-slider__wrapper.komatsu-slider__wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr
+}
+
+
+/**********************GARRET PAGE**************/
+
+.brand-advantages.garret-advantages {
+    padding: 0 0 30px;
+}
+
+.brand-reasons.garret-reasons .brand-reason-description__text {
+    padding: 40px 6px 50px;
+}
+
+.brand-service.garret-service {
+    padding: 20px 0 60px;
+}
+
+
+
+/*********************PERKINS PAGE******************/
+
+.brand-reasons.perkins-reasons .brand-reason__heading-box .text-list .title-bold-small {
+    text-align: left;
+    margin: 0 0 20px;
+}
 
 
 
