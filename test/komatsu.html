@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="UTF-8"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="css/main.css">	
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/universal-parallax.min.css"> <!-- mobile parallax styles -->
+
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div class="logo">
+            <a href="/"><img alt="" src="img/logo.png"></a>
+        </div>
+        <div class="header-menu">
+            <div id="main-menu">
+                <nav>
+                    <ul class="menu__list">
+                        <li class="sub">
+                        	<a href="/turbiny">Турбины</a>
+                        	<img src="img/nav-arrow.png" alt="">
+                            <ul class="flex-column">
+                                <li class=""><a href="/remont-turbin-dlya-spectehniki">Ремонт турбин для спецтехники</a></li>
+                                <li class=""><a href="/kupit-kartridzh">Купить картридж</a></li>
+                                <li class=""><a href="/remont-turbin">Каталог турбин</a></li>
+                                <li class=""><a href="/prodazha-turbin">Продажа турбин</a></li>
+                                <li class=""><a href="/articles/view_list">Все о турбинах</a></li>
+                                <li class=""><a href="/sto">СТО</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub">
+                        	<a href="/remont-toplyvnoi">Ремонт ТНВД</a>
+                        	<img src="img/nav-arrow.png" alt="">
+                            <ul class="flex-column">
+                                <li class=""><a href="/remont-tnvd-bosch-delphi-denso">Ремонт ТНВД: Bosch, Delphi, Denso, Yanmar, Siemens, Stanadyne</a></li>
+                                <li class=""><a href="/remont-forsunok-i-nasosov-common-rail">Ремонт форсунок, ремонт форсунок Common Rail (Коммон Рейл)</a></li>
+                                <li class=""><a href="/remont-nasos-forsunok-nasosnyih-sektsiy">Ремонт насос форсунок, ремонт плунжерных пар, ремонт рядных насосов</a></li>
+                                <li class=""><a href="/remont-dizeley-cummins">Ремонт дизелей Cummins ISX, L10, M11, N14, N14 plus, NT855, NTA855, QST30, QSX, QSX15</a></li>
+                                <li class=""><a href="/avto-servis">Авто сервис</a></li>
+                                <li class=""><a href="/dizel-servis">Ремонт топливной аппаратуры Киев, проверка форсунок на стенде, диагностика дизельных форсунок</a></li>
+                                <li class=""><a href="/trak-cervis">Трак Сервис</a></li>
+                                <li class=""><a href="/remont-s-h-i-spetstehniki">Ремонт с/х и спецтехники</a></li>
+                                <li class=""><a href="/remont-bort-komp">Ремонт блоков управления (бортовых компьютеров) автомобилей</a></li>
+                                <li class=""><a href="/remont-i-obsluzhivanie-dizelnyih-generatorov-dgu">Ремонт и обслуживание дизельных генераторов (ДГУ)</a></li>
+                            </ul>
+                        </li>
+                        <li class=""><a href="/remont-i-balansirovka-kardannyx-valov">Ремонт карданов</a></li>
+                        <li class=""><a href="/remont-mexatronika-dsg">Ремонт мехатроника</a></li>
+                        <li class=""><a href="/reviews/view_list">Отзывы</a></li>
+                        <li class=""><a href="/dostavka">Доставка</a></li>
+                        <li class=""><a href="/kontakty">Контакты</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <button aria-label="hamburger" class="hamburger hamburger--spin" id="hamburger-btn" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span>
+        </button>
+    </div>
+    <div id="mobile_menu">
+        <ul class="mobile-menu__list">
+            <li class="sub">
+            	<a href="/turbiny">Турбины </a>
+            	<span class="menu_toggle"></span>
+                <ul class="dropdown">
+                    <li class=""><a href="/remont-turbin-dlya-spectehniki">Ремонт турбин для спецтехники</a></li>
+                    <li class=""><a href="/kupit-kartridzh">Купить картридж</a></li>
+                    <li class=""><a href="/remont-turbin">Каталог турбин</a></li>
+                    <li class=""><a href="/prodazha-turbin">Продажа турбин</a></li>
+                    <li class=""><a href="/articles/view_list">Все о турбинах</a></li>
+                    <li class=""><a href="/sto">СТО</a></li>
+                </ul>
+            </li>
+            <li class="sub">
+            	<a href="/remont-toplyvnoi">Ремонт ТНВД</a>
+            	<span class="menu_toggle"></span>
+                <ul class="dropdown">
+                    <li class=""><a href="/remont-tnvd-bosch-delphi-denso">Ремонт ТНВД: Bosch, Delphi, Denso, Yanmar, Siemens, Stanadyne</a></li>
+                    <li class=""><a href="/remont-forsunok-i-nasosov-common-rail">Ремонт форсунок, ремонт форсунок Common Rail (Коммон Рейл)</a></li>
+                    <li class=""><a href="/remont-nasos-forsunok-nasosnyih-sektsiy">Ремонт насос форсунок, ремонт плунжерных пар, ремонт рядных насосов</a></li>
+                    <li class=""><a href="/remont-dizeley-cummins">Ремонт дизелей Cummins ISX, L10, M11, N14, N14 plus, NT855, NTA855, QST30, QSX, QSX15</a></li>
+                    <li class=""><a href="/avto-servis">Авто сервис</a></li>
+                    <li class=""><a href="/dizel-servis">Ремонт топливной аппаратуры Киев, проверка форсунок на стенде, диагностика дизельных форсунок</a></li>
+                    <li class=""><a href="/trak-cervis">Трак Сервис</a></li>
+                    <li class=""><a href="/remont-s-h-i-spetstehniki">Ремонт с/х и спецтехники</a></li>
+                    <li class=""><a href="/remont-bort-komp">Ремонт блоков управления (бортовых компьютеров) автомобилей</a></li>
+                    <li class=""><a href="/remont-i-obsluzhivanie-dizelnyih-generatorov-dgu">Ремонт и обслуживание дизельных генераторов (ДГУ)</a></li>
+                </ul>
+            </li>
+            <li class=""><a href="/remont-i-balansirovka-kardannyx-valov">Ремонт карданов</a></li>
+            <li class=""><a href="/remont-mexatronika-dsg">Ремонт мехатроника</a></li>
+            <li class=""><a href="/reviews/view_list">Отзывы</a></li>
+            <li class=""><a href="/dostavka">Доставка</a></li>
+            <li class=""><a href="/kontakty">Контакты</a></li>
+        </ul>
+    </div>
+    <div id="menu-shadow"></div>
+<!--     <div id="fixed-right"><span class="toggle-fixed-right"><em></em></span>
+        <div class="right-wrap phones-wrap">
+            <ul>
+                <li><a href="tel:+380931706495"><span>(093)</span> 170-64-95</a></li>
+                <li><a href="tel:+380671034925"><span>(067)</span> 103-49-25</a></li>
+            </ul><a class="toggle-callback-modal" href="#"><i class="fa fa-phone"></i> <span>Обратный звонок</span></a></div>
+    </div> -->
+<!--     <div class="callback-modal">
+        <div class="modal-close"><a class="modal-close-link" href="" title="Закрыть">×</a></div>
+        <div class="modal-top">
+            <div class="modal-title"><span>Обратный звонок</span></div>
+        </div>
+        <div class="modal-content">
+            <form action="/mail_callback" method="POST">
+                <input name="csrfmiddlewaretoken" type="hidden" value="IisCdlArFrAsMsU1ugYFP8QlnL2AzFtyYusm8GPi9jSnSgwdxfnEHGsp2qpPK3JC">
+                <input id="callback-modal-name" name="name" placeholder="Имя" type="text">
+                <input id="callback-modal-phone" name="phone" placeholder="Телефон" type="tel">
+                <div class="g-recaptcha" data-sitekey="6LddKq0UAAAAAHVZZzrbsR8Ry8nv7FKtz3Ypw5Rh">
+                    <div style="width: 304px; height: 78px;">
+                        <div>
+                            <iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LddKq0UAAAAAHVZZzrbsR8Ry8nv7FKtz3Ypw5Rh&amp;co=aHR0cHM6Ly90dXJib21pY3Jvbi5jb206NDQz&amp;hl=ru&amp;v=Zy-zVXWdnDW6AUZkKlojAKGe&amp;size=normal&amp;cb=kohmgnf58wgq" width="304" height="78" role="presentation" name="a-34127nitazsa" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
+                        </div>
+                        <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                    </div>
+                </div>
+                <button class="btn" id="callback_modal_submit" type="submit">Отправить заявку</button>
+            </form>
+        </div>
+    </div> -->
+</header>
+
+
+<main>
+	<section class="brand-hero">
+		<div class="brand-hero__wrapper">
+			<img class="brand-hero__banner" src="img/komatsu/hero.png" alt="">
+			<div class="brand-hero__inner banner-inner flex-column">
+				<h4 class="banner-heading">Турбины Komatsu</h4>
+		  		<div class="hero__button-box flex-row">
+	  				<button type="button" class="button-wrapper">Получить консультацию</button>
+	  				<a href=""	 class="button-wrapper">Контакты</a>
+		  		</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="brand-info komatsu-info">
+		<div class="container">
+			<div class="brand-info__wrapper">
+				<h4 class="title-bold">На протяжении длительного времени турбинное оборудование komatsu может работать на автомате, что привлекает многих представителей крупных предприятий.</h4>
+				<div class="brand-info__text flex-row">
+					<div class="brand-info__img-box">
+						<img class="brand-info__img" src="img/brands/komatsu.png" alt="">
+					</div>
+					<p>Komatsu выпускает различную дорожно-строительную технику (бульдозеры, экскаваторы), автопогрузчики, трубоукладчики, горнодобывающее оборудование, прессы и иное индустриальное оборудование, военную технику и др. Компания имеет 22 завода по всему миру.</p>
+				</div>
+				<div class="notation-box flex-row">
+					<div class="important-box">
+						<img id="important-img-left" class="important-img-left to-tilt" src="img/single-important.png" alt="">
+						<img class="important-img-up to-tilt" src="img/single-important.png" alt="">
+						<img class="important-img-right to-tilt" src="img/single-important.png" alt="">
+					</div>
+					<p>К числу основных особенностей турбинной техники можно отнести минимальные объемы вредных выбросов в окружающую среду и возможность эксплуатации при любых нагрузках, в том числе на холостом ходу.</p>
+				</div>
+				<div class="brand-info__specialization">
+					<p>Обслуживание и ремонт турбин данного производителя осуществляется с привлечением минимального количества специалистов, так как каждый из наших сотрудников является настоящим профессионалом своего дела. Сотрудники нашей компании способны оперативно проанализировать техническое состояние и устранить выявленные нарушения в максимально сжатые сроки.</p>
+				</div>
+
+<!-- 					КОПИЯ
+				<div class="brand-info__items flex-row">
+					<div class="brand-info__item-box">
+						<img src="img/single/brand-info-1.png" alt="">
+					</div>
+					<div class="brand-info__item-box">
+						<img src="img/single/brand-info-2.png" alt="">
+					</div>
+					<div class="brand-info__item-box">
+						<img src="img/single/brand-info-3.png" alt="">
+					</div>
+				</div> -->
+			</div>
+		</div>
+	</section>
+
+	<section class="komatsu-items">
+		<div class="container">
+			<div class="komatsu-items__wrapper flex-wrap">
+				<img src="img/komatsu/items.jpg" alt="">
+			</div>
+		</div>
+	</section>	
+
+	<section class="brand-reasons komatsu-reasons">
+
+		<div class="container">
+			<div class="brand-reason__heading-box">
+				<div class="brand-reason__lis-wrap flex-row flex-wrap align-start">
+					<div class="brand-advantages__list text-list-box">
+							<p class="text-list-heading">ДИАГНОСТИКА ПОЗВОЛЯЕТ ОТВЕТИТЬ НА ВОПРОСЫ:</p>
+							<ul class="text-list">
+								<li class="text-list-item">Работоспособна турбина или нет;</li>
+								<li class="text-list-item">Каковы повреждения и чем они предположительно вызваны;</li>
+								<li class="text-list-item">Возможен ли восстановительный ремонт турбины и сколько он может стоить.</li>
+								<li class="text-list-item">Турбина диагностируется мастерами ремонтного цеха; </li>
+								<li class="text-list-item">Во время диагностики применяются специальные средства контроля и испытательное оборудование: пневматические и электронные тестеры, калибраторы, балансировочный стенд;</li>
+								<li class="text-list-item">В зависимости от модификации турбины, диагностика будет выполняться с частичной или полной разборкой турбокомпрессора.</li>
+								<li class="text-list-item">Результаты диагностики турбины передаются заказчику.</li>
+							</ul>
+
+					</div>
+					<div class="brand-advantages__list text-list-box">
+							<p class="text-list-heading">ОСНОВНЫМИ ПРИЗНАКАМИ НЕИСПРАВНОСТИ ТУРБИН KOMATSU ЯВЛЯЮТСЯ:</p>
+							<ul class="text-list">
+								<li class="text-list-item">высокий расход масла и топлива;</li>
+								<li class="text-list-item">появление выхлопного газа нетипичного цвета;</li>
+								<li class="text-list-item">снижение мощности двигателя, сопровождающееся нестабильностью работы.</li>
+
+							</ul>
+					</div>
+				</div>
+				
+				<div class="text-box">
+					<p>Подобная срочность выгодна для владельцев большинства строительных компаний, именно таким образом значительно уменьшаются затраты на издержки при ремонтно-восстановительных работах. Тяжелая строительная техника Komatsu оснащенная турбинами, требует исключительно своевременного обслуживания: при проведении строительных работ, попадание грязевых фракций в турбокомпрессор неизбежо приведет к его поломке. Некачественное масло не обеспечит нужный скользящий момент, а так же не будет выполнять должным образом роль теплоотвода.</p>
+				</div>
+			
+				<div class="double-arrow-block flex-row" >
+					<img src="img/about-arrow-prev.png" alt="">
+					<img src="img/about-arrow-next.png" alt="">
+				</div>
+			</div>
+		</div>
+            <div class="brand-reasons__banner">
+
+                <div class="parallax" data-parallax-image="img/single/brand-reason-banner.png"></div>
+     <!-- NON MOBILE PARALLAX     <div class="brand-reasons__banner-img" data-android-fix="false"></div> -->
+
+
+                <!-- <img class="brand-reasons__banner-img" src="img/single/brand-reason-banner.png" alt=""> -->
+                <div class="brand-reason__banner-inner banner-inner flex-column">
+                    <h4 class="banner-heading">Причины, по которым именно к нам обращаются, если возникла необходимость произвести ремонт турбонагнетателя АВВ</h4>
+                    <div class="mystery-box">
+                        <img class="mystery-img-left" src="img/single-mystery.png" alt="">
+                        <img class="mystery-img-up" src="img/single-mystery.png" alt="">
+                        <img class="mystery-img-right" src="img/single-mystery.png" alt="">
+                    </div>
+                    <div class="brand-reason__button-box flex-row">
+                        <button id="brand-reason__left" type="button" class="button-wrapper">Современное оборудование</button>
+                        <button id="brand-reason__right" type="button" class="button-wrapper">Значительные габариты</button>
+                    </div>
+                </div>
+        </div>
+
+        <div class="container">
+            <div class="brand-reason__description">
+                <div class="brand-reason-description__text brand-reason__left">
+                    <p>У нас используется современное оборудование, поставляемое от производителем. Данное оборудование предназначено специально для проведения и комплексного обслуживания турбокомпрессоров, диагностика и ремонт. На все виды выполняемых нами работ и услуг, по требованию заказчика, мы предоставляем гарантийные сертификаты.</p>
+                </div>
+                <div class="brand-reason-description__text brand-reason__right">
+                    <p>В связи со значительными размерами обслуживаемой техники и агрегатов, мы можем выполнить обслуживание и ремонт как на месте, так и, при необходимости,  доставить технику в цеха. В цехах оборудованы специальные участки и стенды, предназначенные для замены отдельных комплектующих, а также измерительные и токарный участки. В нашем распоряжении имеется камера, для высокотемпературной мойки, и пескоструйная установка, позволяющая осуществить качественную очистку от нагара и загрязнений. Проведение этих работ имеет очень важное значение для качественной диагностики состояния оборудования перед осуществлением его обслуживания и ремонта. </p>
+                </div>
+            </div>
+        </div>
+
+	</section>
+
+	<section class="brand-service komatsu-service">
+		<div class="container">
+			<div class="brand-service__wrapper ">
+				<div class="text-box">
+					<p>Наша компания выполняет профессиональное обслуживание и ремонт газотурбинной техники, оказывая оперативную помощь в выявлении нарушений эксплуатации оборудования. Помимо внушительного опыта в данном направлении, каждый специалист из штата нашей компании использует особое оборудование от производителя, позволяющее быстро и точно выполнять диагностические мероприятия и восстановительный ремонт, по всем параметрам соответствующей нормам и требованиям технического регламента.</p>
+
+					<p>Сотрудники нашей компании выполняют комплексный ремонт турбин Komatsu, используя для этой цели различные методы, включая неполную разборку. В зависимости от выявленных нарушений, устанавливается стоимость ремонта в целом, которую также можно свести к минимуму, благодаря подробной диагностике в процессе поиска более сложных поломок. В рамках данного мероприятия проводится проверка лопаток турбины, радиальных люфтов ротора воздуха, подводов и др. Более сложной считается динамическая диагностика функционирования турбины на различных РТдС стендах с полной или частичной разборкой турбонагнетателя.</p>
+
+					<p>Каждый специалист нашей компании строго соблюдает обязательства, данные клиенту, что позволяет нам сохранять кристальную репутацию. Мы никогда не нарушаем договоренностей с заказчиком относительно сроков, поставок запасных деталей, необходимых для выполнения ремонта и технического обслуживания.</p>
+				</div>
+				
+				
+				
+			</div>
+		</div>
+	</section>
+</main>
+
+<footer style="height: 400px; background-color: wheat"></footer>
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="js/mobile-menu.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"></script>
+
+<script src="js/tabs.js"></script>
+<script src="js/waypoints.js"></script>
+<!-- <script src="js/lib/parallax.js"></script> -->
+
+<script src="js/universal-parallax.min.js"></script>
+<script src="js/parallax.js"></script>
+
+</body>
+</html>
