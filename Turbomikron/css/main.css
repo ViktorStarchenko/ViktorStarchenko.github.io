@@ -810,7 +810,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#92c944', end
 header {
     position: fixed;
     width: 100%;
-    height: 60px;
+    height: 88px;
+    /*height: 60px;*/
     background: rgba(0, 0, 0, .5);
     left: 0;
     top: 0;
@@ -818,6 +819,80 @@ header {
     transition: all .3s ease;
     z-index: 10
 }
+
+
+/*CONTACTS SECTION*/
+
+.header-contacts {
+    background-color: #000;
+    color: #fff;
+    height: 20%;
+
+}
+
+.address-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 10%;
+    max-width: 95%;
+    margin: 0 auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center
+}
+
+.header-skype {
+    border-top: 21px solid #92c944;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    /* height: 32%; */
+    width: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+}
+
+.header-skype a {
+        position: absolute;
+    top: -19px;
+}
+.header-phone-list {
+    min-width: 215px;
+}
+
+@media screen and (max-width: 1272px) {
+    .header-skype {
+        border-top: 17px solid #92c944;
+    }
+    .header-contacts a {
+        font-size: 12px;
+    }
+    .header-skype a {
+        top: -16px;
+    }
+}
+
+@media screen and (max-width: 628px) {
+    .header-skype, .header-address {
+        display: none;
+    }
+    .header-phone-list {
+        width: 100%;
+    }
+} 
+
+
 
 @media screen and (min-width:1050px) {
     header {
@@ -843,7 +918,8 @@ header {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    height: 100%;
+            height: 80%;
+    /*height: 100%;*/
     max-width: 95%;
     margin: 0 auto;
     -webkit-box-align: center;
@@ -984,7 +1060,8 @@ header {
 .menu__list li {
     height: 25px;
     line-height: 25px;
-    padding: 31px 20px;
+    padding: 23px 20px;
+    /*padding: 31px 20px;*/
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1011,13 +1088,16 @@ background-color: #92c944;
         font-size: 12px;
     }
     .menu__list li {
-        padding: 31px 8px;
+        padding: 23px 20px;
+        /*padding: 31px 8px;*/
     }
 }
 
 @media screen and (max-width: 1272px) {
     .menu__list li {
-        padding: 22px 8px;
+        padding: 15px 8px;
+
+        /*padding: 22px 8px;*/
     }
     .menu__list li a {
         font-size: 10px;
@@ -1871,7 +1951,7 @@ background-color: #92c944;
     display: grid;
     -ms-grid-columns: 1fr 15px 1fr 15px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        grid-template-areas:
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            grid-template-areas:
         ". . .";
     grid-gap: 40px;
 }
@@ -1890,7 +1970,7 @@ background-color: #92c944;
             grid-template-columns: 1fr;
         -ms-grid-rows: 1fr 40px 1fr 40px 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            grid-template-areas: "." "." ".";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                grid-template-areas: "." "." ".";
     }
 }
 
@@ -2160,8 +2240,8 @@ background-color: #92c944;
     .services__items {
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            -ms-grid-rows: auto 51px auto 51px auto 51px auto 51px auto 51px auto 51px auto 51px auto;
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                grid-template-areas: "."
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                -ms-grid-rows: auto 51px auto 51px auto 51px auto 51px auto 51px auto 51px auto 51px auto;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    grid-template-areas: "."
                             "."
                             "."
                             "."
@@ -2206,6 +2286,7 @@ background-color: #92c944;
     height: 100%;
     background-color: #92c944;
     opacity: .25;
+    /*Убрали фон*/
     display: none;
 }
 
@@ -2271,6 +2352,7 @@ background-color: #92c944;
     background-repeat: no-repeat;
     height: 100%;
     width: 32px;
+    /*Убрали фон*/
     display: none;
 }
 
@@ -3284,6 +3366,8 @@ background-color: #92c944;
     height: 100%;
     background-color: #92c944;
     opacity: .25;
+    /*Убрали фон*/
+    display: none
 }
 
 .brand-info__item-box:hover:before {
@@ -3390,6 +3474,7 @@ background-color: #92c944;
     height: 100%;
     background-color: #92c944;
     opacity: .25;
+    display: none
 }
 
 .brand-slider__item-box:hover:before {
@@ -3565,6 +3650,8 @@ background-color: #92c944;
     background-color: #92c944;
     opacity: .25;
     -webkit-transition: 3s;
+    /*УБРАЛИ ФОН*/
+    display: none;
 
 }
 
