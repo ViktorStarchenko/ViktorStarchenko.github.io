@@ -1,0 +1,16 @@
+.about-us__item-desc-wrap p {
+	font-size: 14px;
+}
+@media screen and (max-width: 1280px) {
+	.about-us__item-desc-wrap p {
+    font-size: 13px;
+    -webkit-transition: 1s;
+    transition: 1s;
+	}
+}
+
+@media screen and (max-width: 720px) {
+	.about-us__item-desc-wrap p {
+    font-size: 14px;
+	}
+}
