@@ -1,16 +1,28 @@
-.about-us__item-desc-wrap p {
-	font-size: 14px;
+
+
+.brand-slider__item-box img {
+	max-height: 424px;
 }
-@media screen and (max-width: 1280px) {
-	.about-us__item-desc-wrap p {
-    font-size: 13px;
-    -webkit-transition: 1s;
-    transition: 1s;
+@media screen and(max-width: 1440px) {
+	.brand-slider__item-box img {
+		max-height: 341px;
 	}
 }
 
-@media screen and (max-width: 720px) {
-	.about-us__item-desc-wrap p {
-    font-size: 14px;
+@media screen and(max-width: 1080px) {
+	.brand-slider__item-box img {
+		max-height: 260px;
+	}
+}
+
+@media screen and(max-width: 992px) {
+	.brand-slider__item-box img {
+		max-height: 216px;
+	}
+}
+
+@media screen and(max-width: 768px) {
+	.brand-slider__item-box img {
+		max-height: 195px;
 	}
 }
