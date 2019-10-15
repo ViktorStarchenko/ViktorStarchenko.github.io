@@ -1,27 +1,30 @@
 
 
+
+
 .brand-slider__item-box img {
-	max-height: 424px;
+	width: 100%;
+	max-height: 403px;
 }
-@media screen and(max-width: 1440px) {
+@media screen and (max-width: 1440px) {
 	.brand-slider__item-box img {
 		max-height: 341px;
 	}
 }
 
-@media screen and(max-width: 1080px) {
+@media screen and (max-width: 1080px) {
 	.brand-slider__item-box img {
 		max-height: 260px;
 	}
 }
 
-@media screen and(max-width: 992px) {
+@media screen and (max-width: 992px) {
 	.brand-slider__item-box img {
 		max-height: 216px;
 	}
 }
 
-@media screen and(max-width: 768px) {
+@media screen and (max-width: 768px) {
 	.brand-slider__item-box img {
 		max-height: 195px;
 	}
