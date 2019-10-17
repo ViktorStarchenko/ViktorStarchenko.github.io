@@ -1,0 +1,16 @@
+@font-face{font-family:'FontAwesome';font-display:swap;src:url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'),url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'),url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype');font-weight:normal;font-style:normal}.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.fa-ul>li{position:relative}
+@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}100%{-webkit-transform:rotate(359deg);transform:rotate(359deg)}}
+.fa-remove:before,.fa-close:before,.fa-times:before{content:"\f00d"}
+.fa-book:before{content:"\f02d"}
+.fa-map-marker:before{content:"\f041"}
+.fa-play:before{content:"\f04b"}
+.fa-stop:before{content:"\f04d"}
+.fa-arrow-left:before{content:"\f060"}.fa-arrow-right:before{content:"\f061"}
+.fa-arrow-down:before{content:"\f063"}
+.fa-globe:before{content:"\f0ac"}
+.fa-dollar:before,.fa-usd:before{content:"\f155"}
+.fa-mortar-board:before,.fa-graduation-cap:before{content:"\f19d"}
+.fa-fa:before,.fa-font-awesome:before{content:"\f2b4"}
+.fa-address-book:before{content:"\f2b9"}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0, 0, 0, 0);border:0}

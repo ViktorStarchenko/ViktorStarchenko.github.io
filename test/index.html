@@ -1,526 +1,817 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<meta charset="UTF-8"> 
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="stylesheet" href="css/main.css">	
+ <!DOCTYPE html>
+ <html <?php language_attributes(); ?> class="no-js">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+ <head>
+	 <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NCKRR94');</script>
+<!-- End Google Tag Manager -->
+	 <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-76050521-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  gtag('config', 'UA-76050521-1');
+</script>
 
-  <link rel="stylesheet" href="css/universal-parallax.min.css"> <!-- mobile parallax styles -->
-	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
-</head>
-<body>
-<header>
-    <div class="header-container">
-        <div class="logo">
-            <a href="/"><img alt="" src="img/logo.png"></a>
-        </div>
-        <div class="header-menu">
-            <div id="main-menu">
-                <nav>
-                    <ul class="menu__list">
-                        <li class="sub">
-                        	<a href="/turbiny">Турбины</a>
-                        	<img src="img/nav-arrow.png" alt="">
-                            <ul class="flex-column">
-                                <li class=""><a href="/remont-turbin-dlya-spectehniki">Ремонт турбин для спецтехники</a></li>
-                                <li class=""><a href="/kupit-kartridzh">Купить картридж</a></li>
-                                <li class=""><a href="/remont-turbin">Каталог турбин</a></li>
-                                <li class=""><a href="/prodazha-turbin">Продажа турбин</a></li>
-                                <li class=""><a href="/articles/view_list">Все о турбинах</a></li>
-                                <li class=""><a href="/sto">СТО</a></li>
-                            </ul>
-                        </li>
-                        <li class="sub">
-                        	<a href="/remont-toplyvnoi">Ремонт ТНВД</a>
-                        	<img src="img/nav-arrow.png" alt="">
-                            <ul class="flex-column">
-                                <li class=""><a href="/remont-tnvd-bosch-delphi-denso">Ремонт ТНВД: Bosch, Delphi, Denso, Yanmar, Siemens, Stanadyne</a></li>
-                                <li class=""><a href="/remont-forsunok-i-nasosov-common-rail">Ремонт форсунок, ремонт форсунок Common Rail (Коммон Рейл)</a></li>
-                                <li class=""><a href="/remont-nasos-forsunok-nasosnyih-sektsiy">Ремонт насос форсунок, ремонт плунжерных пар, ремонт рядных насосов</a></li>
-                                <li class=""><a href="/remont-dizeley-cummins">Ремонт дизелей Cummins ISX, L10, M11, N14, N14 plus, NT855, NTA855, QST30, QSX, QSX15</a></li>
-                                <li class=""><a href="/avto-servis">Авто сервис</a></li>
-                                <li class=""><a href="/dizel-servis">Ремонт топливной аппаратуры Киев, проверка форсунок на стенде, диагностика дизельных форсунок</a></li>
-                                <li class=""><a href="/trak-cervis">Трак Сервис</a></li>
-                                <li class=""><a href="/remont-s-h-i-spetstehniki">Ремонт с/х и спецтехники</a></li>
-                                <li class=""><a href="/remont-bort-komp">Ремонт блоков управления (бортовых компьютеров) автомобилей</a></li>
-                                <li class=""><a href="/remont-i-obsluzhivanie-dizelnyih-generatorov-dgu">Ремонт и обслуживание дизельных генераторов (ДГУ)</a></li>
-                            </ul>
-                        </li>
-                        <li class=""><a href="/remont-i-balansirovka-kardannyx-valov">Ремонт карданов</a></li>
-                        <li class=""><a href="/remont-mexatronika-dsg">Ремонт мехатроника</a></li>
-                        <li class=""><a href="/reviews/view_list">Отзывы</a></li>
-                        <li class=""><a href="/dostavka">Доставка</a></li>
-                        <li class=""><a href="/kontakty">Контакты</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-        <button aria-label="hamburger" class="hamburger hamburger--spin" id="hamburger-btn" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span>
-        </button>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="cmsmagazine" content="57ea1c485937b35b55f2590c3cbe059f" />
+  <meta name="author" content="MassageClub" />
+  <link rel="apple-touch-icon" sizes="57x57" href="<?php bloginfo('template_directory'); ?>/img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="<?php bloginfo('template_directory'); ?>/img/favicons/apple-touch-icon-60x60.png">
+  <link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/img/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="<?php bloginfo('template_directory'); ?>/img/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="<?php bloginfo('template_directory'); ?>/img/favicons/manifest.json">
+  <link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/img/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#00a8ff">
+  <meta name="msapplication-config" content="<?php bloginfo('template_directory'); ?>/img/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="profile" href="https://gmpg.org/xfn/11">
+   <?php endif; ?>
+
+   <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/botstrap-cut.css">
+  <link rel="stylesheet" href="css/custom_scrollbar.css">
+  <link rel="stylesheet" href="css/font-awesome-cut.min">
+  <link rel="stylesheet" href="css/font-awesome">
+  <link rel="stylesheet" href="css/font-awesome.min">
+  <link rel="stylesheet" href="css/normalize-cut">
+  <link rel="stylesheet" href="css/normalize">
+  <link rel="stylesheet" href="style-origin.css">
+  <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="new.css">
+
+   <?php wp_head(); ?>
+ </head>
+
+ <body <?php body_class(); ?>>
+	 <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NCKRR94"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+ fbq('init', '187110208739424');
+fbq('track', 'PageView');
+</script>
+<noscript>
+ <img height="1" width="1" src="https://www.facebook.com/tr?id=187110208739424&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+  <nav class="navbar">
+   <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+     <button class="toggle-contacts"><i class="fa fa-address-book" aria-hidden="true"></i></button>
+<div class="navbar-brand">
+  <a href="/">
+    <img src="https://www.massageclub-edu.com.ua/wp-content/uploads/2018/01/logo2.png" data-active-url="https://www.massageclub-edu.com.ua/wp-content/uploads/2018/01/logo2.png" alt="logo">
+  </a>
+<div class="brand-contacts">
+<span><a href="tel:+380445780470">+38 (044) 578 04 70</a></span>
+<span><a href="tel:+380635780470">+38 (063) 578 04 70</a></span>
+<span class="address"><i class="fa fa-map-marker" aria-hidden="true"></i> Саксаганского 127</span>
+<span class="address"><i class="fa fa-map-marker" aria-hidden="true"></i> Дмитриевская 18/24</span>
+</div>
+</div> </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+     <ul class="nav navbar-nav navbar-right main-nav">
+      <li><a href="https://www.massageclub-edu.com.ua/">Главная</a></li>
+      <li><a href="/programmi/">Программы</a></li>
+      <li><a href="/raspisanie-i-stoimost/">Расписание и стоимость</a></li>
+      <li><a href="/nashiprepodavateli/ ">Наши преподаватели</a></li>
+      <li><a href="/otzivi/">Отзывы</a>
+       <ul class="sub-menu">
+        <li><a href=" https://www.massageclub-edu.com.ua/blog-massage/">Блог</a></li>
+       </ul>
+      </li>
+      <li><a href=" https://www.massageclub-edu.com.ua/contacts/">Контакты</a></li>
+     </ul>
     </div>
-    <div id="mobile_menu">
-        <ul class="mobile-menu__list">
-            <li class="sub">
-            	<a href="/turbiny">Турбины </a>
-            	<span class="menu_toggle"></span>
-                <ul class="dropdown">
-                    <li class=""><a href="/remont-turbin-dlya-spectehniki">Ремонт турбин для спецтехники</a></li>
-                    <li class=""><a href="/kupit-kartridzh">Купить картридж</a></li>
-                    <li class=""><a href="/remont-turbin">Каталог турбин</a></li>
-                    <li class=""><a href="/prodazha-turbin">Продажа турбин</a></li>
-                    <li class=""><a href="/articles/view_list">Все о турбинах</a></li>
-                    <li class=""><a href="/sto">СТО</a></li>
-                </ul>
-            </li>
-            <li class="sub">
-            	<a href="/remont-toplyvnoi">Ремонт ТНВД</a>
-            	<span class="menu_toggle"></span>
-                <ul class="dropdown">
-                    <li class=""><a href="/remont-tnvd-bosch-delphi-denso">Ремонт ТНВД: Bosch, Delphi, Denso, Yanmar, Siemens, Stanadyne</a></li>
-                    <li class=""><a href="/remont-forsunok-i-nasosov-common-rail">Ремонт форсунок, ремонт форсунок Common Rail (Коммон Рейл)</a></li>
-                    <li class=""><a href="/remont-nasos-forsunok-nasosnyih-sektsiy">Ремонт насос форсунок, ремонт плунжерных пар, ремонт рядных насосов</a></li>
-                    <li class=""><a href="/remont-dizeley-cummins">Ремонт дизелей Cummins ISX, L10, M11, N14, N14 plus, NT855, NTA855, QST30, QSX, QSX15</a></li>
-                    <li class=""><a href="/avto-servis">Авто сервис</a></li>
-                    <li class=""><a href="/dizel-servis">Ремонт топливной аппаратуры Киев, проверка форсунок на стенде, диагностика дизельных форсунок</a></li>
-                    <li class=""><a href="/trak-cervis">Трак Сервис</a></li>
-                    <li class=""><a href="/remont-s-h-i-spetstehniki">Ремонт с/х и спецтехники</a></li>
-                    <li class=""><a href="/remont-bort-komp">Ремонт блоков управления (бортовых компьютеров) автомобилей</a></li>
-                    <li class=""><a href="/remont-i-obsluzhivanie-dizelnyih-generatorov-dgu">Ремонт и обслуживание дизельных генераторов (ДГУ)</a></li>
-                </ul>
-            </li>
-            <li class=""><a href="/remont-i-balansirovka-kardannyx-valov">Ремонт карданов</a></li>
-            <li class=""><a href="/remont-mexatronika-dsg">Ремонт мехатроника</a></li>
-            <li class=""><a href="/reviews/view_list">Отзывы</a></li>
-            <li class=""><a href="/dostavka">Доставка</a></li>
-            <li class=""><a href="/kontakty">Контакты</a></li>
-        </ul>
-    </div>
-    <div id="menu-shadow"></div>
-<!--     <div id="fixed-right"><span class="toggle-fixed-right"><em></em></span>
-        <div class="right-wrap phones-wrap">
-            <ul>
-                <li><a href="tel:+380931706495"><span>(093)</span> 170-64-95</a></li>
-                <li><a href="tel:+380671034925"><span>(067)</span> 103-49-25</a></li>
-            </ul><a class="toggle-callback-modal" href="#"><i class="fa fa-phone"></i> <span>Обратный звонок</span></a></div>
-    </div> -->
-<!--     <div class="callback-modal">
-        <div class="modal-close"><a class="modal-close-link" href="" title="Закрыть">×</a></div>
-        <div class="modal-top">
-            <div class="modal-title"><span>Обратный звонок</span></div>
-        </div>
-        <div class="modal-content">
-            <form action="/mail_callback" method="POST">
-                <input name="csrfmiddlewaretoken" type="hidden" value="IisCdlArFrAsMsU1ugYFP8QlnL2AzFtyYusm8GPi9jSnSgwdxfnEHGsp2qpPK3JC">
-                <input id="callback-modal-name" name="name" placeholder="Имя" type="text">
-                <input id="callback-modal-phone" name="phone" placeholder="Телефон" type="tel">
-                <div class="g-recaptcha" data-sitekey="6LddKq0UAAAAAHVZZzrbsR8Ry8nv7FKtz3Ypw5Rh">
-                    <div style="width: 304px; height: 78px;">
-                        <div>
-                            <iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LddKq0UAAAAAHVZZzrbsR8Ry8nv7FKtz3Ypw5Rh&amp;co=aHR0cHM6Ly90dXJib21pY3Jvbi5jb206NDQz&amp;hl=ru&amp;v=Zy-zVXWdnDW6AUZkKlojAKGe&amp;size=normal&amp;cb=kohmgnf58wgq" width="304" height="78" role="presentation" name="a-34127nitazsa" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe>
-                        </div>
-                        <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
-                    </div>
-                </div>
-                <button class="btn" id="callback_modal_submit" type="submit">Отправить заявку</button>
-            </form>
-        </div>
-    </div> -->
-</header>
+    <!-- /.navbar-collapse -->
 
+   </div>
+   <!-- /.container-fluid -->
+  </nav>
 
-<main>
-	<section>
-		<div class="hero">
-			<div class="parallax" data-parallax-image="img/new.png"></div>
-     <!-- NON MOBILE PARALLAX     <div class="brand-reasons__banner-img" data-android-fix="false"></div> -->
-			<!-- <div class="brand-hero__wrapper index-hero-banner" data-android-fix="false"> -->
-		  <div class="hero__item">
-		  	
-		  	<div class="hero__text-box banner-inner flex-column">
-		  		<h4 class="banner-heading">КАПИТАЛЬНЫЙ РЕМОНТ ТУРБИН<br> ABB PERKINS KOMATSU GARRETT CATERPILLAR IHI HOLSET</h4>
-		  		<div class="hero__button-box flex-row">
-	  				<button type="button" class="button-wrapper">Получить консультацию</button>
-	  				<a href="/kontakty"	 class="button-wrapper">Контакты</a>
-		  		</div>
-		  	</div>
-		  </div>
-		</div> 
-	</section>
+<div class="mob-contacts">
+  <div class="phones">
+    <a href="tel:+380445780470">+38 (044) 578 04 70</a>
+    <a href="tel:+380635780470">+38 (063) 578 04 70</a>
+  </div>
+  <div class="locations">
+    <span class="address"><i class="fa fa-map-marker" aria-hidden="true"></i> Саксаганского 127</span>
+    <span class="address"><i class="fa fa-map-marker" aria-hidden="true"></i> Дмитриевская 18/24</span>
+  </div>
+</div>
 
-	<section class="about-us">
-		<div class="container">
-			<div class="about-us__wrapper">
-
-				<div class="about-us__description flex-column">
-					<h4 class="about-us__description-heading">Завод по ремонту турбин и тнвд.<br> 
-						<b>Ремонт турбин и продажа турбин в Киеве и во всех регионах Украины</b>
-					</h4>
-					<div class="about-us__description-text flex-row">
-						<img class="about-us__arrow-img" src="img/long-arrow.png" alt="">
-						<p>Завод ТурбоМикрон - лидер по обслуживанию, продаже и ремонту турбин любой сложности. Мы продаем и ремонтируем турбины для легковых, грузовых авто,  сельскохозяйственной, строительной, карьерной техники, катеров, а так-же силовых энергетических установок.</p>
-					</div>
-				</div>
-
-				<div class="about-us__items flex-column">
-					<div class="about-us__items-wrap flex-row">
-						<div class="about-us__item-box flex-column">
-							<div class="about-us__item-img-wrap">
-								<img class="about-us__item-img" src="img/about-us-items/about-us-item1.png" alt="">
-							</div>
-							<div class="about-us__item-title-wrap">
-								<h4>ГАЗОВЫЕ ТУРБИНЫ</h4>
-							</div>
-							<div class="about-us__item-desc-wrap">
-								<img class="about-us__item-desc-arrow" src="img/short-arrow.png" alt="">
-								<p>Сертифицированное обслуживание газопоршневых электростанций ГПУ, ГПЭС, ГПГУ оснащеных турбинами ABB, IHI, CAT.
-								</p>
-							</div>
-							
-						</div>
-						<div class="about-us__item-box flex-column">
-							<div class="about-us__item-img-wrap">
-								<img class="about-us__item-img" class="about-us__item-img" src="img/about-us-items/about-us-item2.png" alt="">
-							</div>
-							<div class="about-us__item-title-wrap">
-								<h4>ДИЗЕЛЬНЫЕ ГЕНЕРАТОРЫ С ИСПОЛЬЗОВАНИЕМ ТУРБОКОПМРЕССОРОВ ABB TPS</h4>
-							</div>
-							<div class="about-us__item-desc-wrap">
-								<img class="about-us__item-desc-arrow" src="img/short-arrow.png" alt="">
-								<p>Гарантийное обслуживание востановленных турбин для газопоршневых электростанций и когенерационных установок. Выполнения работ по месту установки с возможностью транспортировки до диагностического стенда.
-								</p>
-							</div>
-
-						</div>
-						<div class="about-us__item-box flex-column">
-							<div class="about-us__item-img-wrap">
-								<img class="about-us__item-img" src="img/about-us-items/about-us-item3.png" alt="">
-							</div>
-							<div class="about-us__item-title-wrap">
-								<h4>ТУРБИНЫ ГАЗОПОРШНЕВЫХ ДВИГАТЕЛЕЙ MWM, PERKINS, GEJES, WARTSILA</h4>
-							</div>
-							<div class="about-us__item-desc-wrap">
-								<img class="about-us__item-desc-arrow" src="img/short-arrow.png" alt="">
-								<p>У нас обслуживают дизельные генераторы для частных производств химической, текстильной, строительной, газовой и нефтяной промышленности.
-								</p>
-							</div>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-		</div>	
-	</section>
-
-	<section class="our-brands">
-		<div class="container">
-			<div class="our-brands-wrapper flex-column">
-				<div class="our-brands__arrows-wrap flex-row">
-					<img src="img/about-arrow-prev.png" alt="">
-					<img src="img/about-arrow-next.png" alt="">
-				</div>
-
-				<div class="our-brands-list flex-row">
-					<div class="our-brands-item">
-						<img src="img/brands/abb.png" alt="">
-					</div>
-
-					<div class="our-brands__separator"></div>
-
-					<div class="our-brands-item">
-						<img src="img/brands/cat.png" alt="">
-					</div>
-
-					<div class="our-brands__separator"></div>
-
-					<div class="our-brands-item">
-						<img src="img/brands/siemens.png" alt="">
-					</div>
-
-					<div class="our-brands__separator"></div>
-
-					<div class="our-brands-item">
-						<img src="img/brands/ihi.png" alt="">
-					</div>
-
-					<div class="our-brands__separator"></div>
-
-					<div class="our-brands-item">
-						<img src="img/brands/garret.png" alt="">
-					</div>
-
-					<div class="our-brands__separator"></div>
-
-					<div class="our-brands-item">
-						<img src="img/brands/holset.png" alt="">
-					</div>
-
-					<div class="our-brands__separator"></div>
-
-					<div class="our-brands-item">
-						<img src="img/brands/komatsu.png" alt="">
-					</div>
-				</div>
-				<div class="our-brands__arrows-wrap flex-row">
-					<img src="img/about-arrow-prev.png" alt="">
-					<img src="img/about-arrow-next.png" alt="">
-				</div>
-			</div>
-		</div>		
-	</section>
-
-	<section class="service">
-		<div class="container">
-			<div class="service__wrapper">
-				<div class="service__text-box">
-					<h4 class="service__text-heading">ОБСЛУЖИВАЕМЫЕ ТУРБОНАГНЕТАТЕЛИ</h4>
-					<p class="service__text-text">Наш центр по ремонту и диагностике турбин ТурбоМикрон осуществляет сервисное обслуживание:</p>
-				</div>
-				<div class="services__items">
-
-					<div class="service__item-wrap">
-						<div class="service__item-img-box">
-							<img src="img/service/service1.png" alt="">
-						</div>
-						<div class="service__item-title-box">
-							Ремонт ABB RR131
-						</div>
-						<div class="service__item-button">
-							<button class="service__button-wrapper">Подробней</button>
-						</div>
-					</div>
-
-					<div class="service__item-wrap">
-						<div class="service__item-img-box">
-							<img src="img/service/service2.png" alt="">
-						</div>
-						<div class="service__item-title-box">
-							Ремонт ABB RR131
-						</div>
-						<div class="service__item-button">
-							<button class="service__button-wrapper">Подробней</button>
-						</div>
-					</div>
-
-					<div class="service__item-wrap">
-						<div class="service__item-img-box">
-							<img src="img/service/service3.png" alt="">
-						</div>
-						<div class="service__item-title-box">
-							Ремонт ABB RR131
-						</div>
-						<div class="service__item-button">
-							<button class="service__button-wrapper">Подробней</button>
-						</div>
-					</div>
-
-					<div class="service__item-wrap">
-						<div class="service__item-img-box">
-							<img src="img/service/service4.png" alt="">
-						</div>
-						<div class="service__item-title-box">
-							Ремонт ABB RR131
-						</div>
-						<div class="service__item-button">
-							<button class="service__button-wrapper">Подробней</button>
-						</div>
-					</div>
-
-					<div class="service__item-wrap">
-						<div class="service__item-img-box">
-							<img src="img/service/service5.png" alt="">
-						</div>
-						<div class="service__item-title-box">
-							Ремонт ABB RR131
-						</div>
-						<div class="service__item-button">
-							<button class="service__button-wrapper">Подробней</button>
-						</div>
-					</div>
-
-					<div class="service__item-wrap">
-						<div class="service__item-img-box">
-							<img src="img/service/service6.png" alt="">
-						</div>
-						<div class="service__item-title-box">
-							Ремонт ABB RR131
-						</div>
-						<div class="service__item-button">
-							<button class="service__button-wrapper">Подробней</button>
-						</div>
-					</div>
-
-					<div class="service__item-wrap">
-						<div class="service__item-img-box">
-							<img src="img/service/service7.png" alt="">
-						</div>
-						<div class="service__item-title-box">
-							Ремонт ABB RR131
-						</div>
-						<div class="service__item-button">
-							<button class="service__button-wrapper">Подробней</button>
-						</div>
-					</div>
-
-					<div class="service__item-wrap">
-						<div class="service__item-img-box">
-							<img src="img/service/service8.png" alt="">
-						</div>
-						<div class="service__item-title-box">
-							Ремонт ABB RR131
-						</div>
-						<div class="service__item-button">
-							<button class="service__button-wrapper">Подробней</button>
-						</div>
-					</div>
-				</div>
-			</div>
+<section id="program" class="section section-padded">
+	<div class="container b-lazy b-loaded">
+		<div class="row text-center title">
+			<h2>Программа курсов массажа Massage Club базовый курс(45 часов- 15 занятий.)</h2>
 		</div>
-	</section>
-
-
-	<section class="why-us">
-		<div class="why-us__wrapper">
+		<div class="col-sm-3">
+			<div class="program__links-wrap">
+				<div class="program__links" data-toggle="1">Занятие 1</div>
+				<div class="program__links" data-toggle="2">Занятие 2</div>
+				<div class="program__links" data-toggle="3">Занятие 3</div>
+				<div class="program__links" data-toggle="4">Занятие 4</div>
+				<div class="program__links" data-toggle="5">Занятие 5</div>
+				<div class="program__links" data-toggle="6">Занятие 6</div>
+				<div class="program__links" data-toggle="7">Занятие 7</div>
+				<div class="program__links" data-toggle="8">Занятие 8</div>
+				<div class="program__links" data-toggle="9">Занятие 9</div>
+				<div class="program__links" data-toggle="10">Занятие 10</div>
+				<div class="program__links" data-toggle="11">Занятие 11</div>
+				<div class="program__links" data-toggle="12">Занятие 12</div>
+				<div class="program__links" data-toggle="13">Занятие 13</div>
+				<div class="program__links" data-toggle="14">Занятие 14</div>
+				<div class="program__links" data-toggle="15">Экзамен</div>
+			</div>
 			
-			<div class="why-us__banner-wrap" >
-				<div class="parallax" data-parallax-image="img/new3.png"></div>
-				<div class="why-us__banner-img">
-					
-     <!-- NON MOBILE PARALLAX     <div class="brand-reasons__banner-img" data-android-fix="false"></div> -->
+		</div>
+		<div class="col-sm-9">
+			<div class="program__description program-active" data-toggle="1">
+				<div class="program__description-title heading anti-description" >
+					<h4 class="heading anti-description">Введение в курс массажа</h4>
 				</div>
-				<!-- <img class="why-us__banner-img" src="img/new3.png" alt="image"> -->
-				<div class="why-us__banner-content banner-inner flex-column">
-					<div class="why-us__banner-heading">
-						<h4>Почему ТурбоМикрон?</h4>
-						<p>Профессиональный, быстрый и качественный ремонт турбин европейских брендов! </p>
+
+				<div class="program__description-text">
+					<div class="program_description-text-box">
+						<h4>Теория:</h4>
+						<ol>
+							<li>Знакомство с группой и преподавателем.</li>
+							<li>История массажа. </li>
+							<li>Введение в курс массажа: определение «массаж», классификация массажа,основные виды массажа их краткая характеристика, показания и противопоказания к массажу. </li>
+							<li>Анатомо-физиологические основы массажа.
+	Механизм воздействия массажа на кожу, мышечную систему, кровеносную систему, лимфатическую систему и нервную систему организма.</li>
+							<li>«Инструменты» массажиста,чем массажист (какими частями тела) делает массаж.</li>
+							<li>Гигиенические основы массажа, требования к клиенту и массажисту. </li>
+							<li>Организация работы массажиста,техника безопасности массажиста и кому нельзя делать массаж, оборудование кабинета, требования к рабочему месту массажиста. </li>
+							<li>Классификация приемов классического массажа.Правильность и последовательность проведения процедуры массажа. </li>
+							<li>Дозирование массажа. </li>
+						</ol>
 					</div>
-					<div class="why-us__banner-text flex-row">
-						<div class="mystery-box">
-							<img class="mystery-img-left" src="img/single-mystery.png" alt="">
-							<img class="mystery-img-up" src="img/single-mystery.png" alt="">
-							<img class="mystery-img-right" src="img/single-mystery.png" alt="">
-						</div>
-						<p>Хотите, чтобы вам установили исключительно оригинальные запчасти на оборудование с гарантией?</p>
+					<div class="program_description-text-box">
+						<h4>Практика:</h4>
+						<ol>
+							<li>Классификация приемов классического массажа.</li>
+							<li>Начальное ознакомление и  разучивание элементов поглаживания и растирания. </li>
+							<li>Связки приемов и плавность перехода.
+	Ученики делятся на пары и отрабатывают приемы.</li>
+						</ol>
 					</div>
-					<div class="why-us__banner-button-box flex-row">
-						<img id="away-left" сlass="why-us__banner-arrow-prev" src="img/about-arrow-prev.png" alt="">
-						<button id="why-us__banner-button" type="button" class="button-wrapper">Заказать звонок</button>
-						<img id="away-right" сlass="why-us__banner-arrow-next " src="img/about-arrow-next.png" alt="">
-					</div>	
+					<div class="program__description-schedule">
+						<table class="table table-striped table-bordered table-condensed">
+							<thead>
+						    <tr>
+						      <th></th>
+						      <th>Количество часов</th>
+						      <th>Теория</th>
+						      <th>Практика</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td></td>
+						      <td>3 часа</td>
+						      <td>1 час</td>
+						      <td>2 часа</td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+
 				</div>
 			</div>
-
-		</div>
-	</section>
-
-
-	<section class="why-us-2">
-		<div class="container">
-			<div class="why-us-2__wrapper">
-				<div class="why-us-2__text">
-					<p>Компания ООО «ТурбоМикрон»  выполнит все необходимые ремонтные работы, произведет капитальное, гарантийное и постгарантийное сервисное обслуживание по  наиболее низким ценам в РФ. К тому же есть возможность доставки турбины из самых труднодоступных мест нашей страны. Мы организуем проведение капитальных  ремонтных работ с турбинами ABB, Siemens, Komatsu, Caterpillar, Holset, IHI, Garret для энергодобывающих и энерговырабатывающих предприятий, использующих ДГУ,  ГТД, ГПТУ, ГТУ непосредственно на предприятии. Возможности нашей компании включают в себя ремонт судовых турбин и турбин для тепловозов. Другое оборудование,  которое подлежит ремонту, – это турбины для любой тяжелой техники – строительной, землеройной, карьерных самосвалов, аграрной спецтехники, турбокомпрессоров для буровых и нефтедобывающих установок. Основным обслуживанием являются турбины ABB серий VTR, VTC, TPS, TPR 61, TPL-B, TPL-A, RR, PTL. Исключение составляют турбины для легковых автомобилей. Этим занимаются другие компании.
-					</p>
+			<div class="program__description one " data-toggle="2">
+				<div class="program__description-title" >
+					<h4 class="heading anti-description">Основы анатомии и физиологии</h4>
 				</div>
-				<div class="why-us-2__img-wrap flex-row">
-					<img src="img/why/why-1.png" alt="">
-					<img src="img/why/why-2.png" alt="">
-					<img src="img/why/why-3.png" alt="">
-					<img src="img/why/why-4.png" alt="">
-					<img src="img/why/why-5.png" alt="">
+
+				<div class="program__description-text">
+					<div class="program_description-text-box">
+						<h4>Теория:</h4>
+						<ol>
+							<li>Строение ОДА и его функции (кости, мышцы,суставы, кожа).</li>
+						</ol>
+					</div>
+					<div class="program_description-text-box">
+						<h4>Практика:</h4>
+						<ol>
+							<li>Закрепление техники и методики приемов поглаживание и растирания.</li>
+							<li>Обучение и начальное разучивание  техники и методики приемов разминания и выжимания.</li>
+							<li>Связки приемов и плавность перехода.</li>
+							<li>Отрабатываем на массаже спины. Группа делиться на пары и отрабатывает все приемы на практике.</li>
+						</ol>
+					</div>
+					<div class="program__description-schedule">
+						<table class="table table-striped table-bordered table-condensed">
+							<thead>
+						    <tr>
+						      <th></th>
+						      <th>Количество часов</th>
+						      <th>Теория</th>
+						      <th>Практика</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td></td>
+						      <td>3 часа</td>
+						      <td>30 минут</td>
+						      <td>2,5  часа</td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+
 				</div>
-				<div class="why-us-2__text">
-					<p>При выполнении работ по капитальному ремонту или сервисному обслуживанию турбин, для выверки дисбаланса на максимальных оборотах, мы используем Turbotechnics  VSR 300, который входит в одобренный перечень диагностического оборудования от производителей Garrett, IHI, Caterpillar. На время диагностики, турбокомпрессор выводят в горячий режим, создающий имитацию работы на двигателе в смешанных режимах. Проверка показывает: существуют ли утечки масла, замеряется температура и скорость прохождения маслянного потока через картридж.
-					</p>
+
+			</div>
+			<div class="program__description two" data-toggle="3">
+				<div class="program__description-title" >
+					<h4 class="heading anti-description">Основы анатомии и физиологии</h4>
 				</div>
-				<div class="why-us-2__important-wrap flex-column">
-					<p>Одним из наиважнейших диагностических стендов явлется TB COMFORT САВ 820 ( SCHENCK ) производства Германия:</p>
-					<div class="why-us-2__important-box flex-row">
-						<!-- <img class="to-tilt image-tilt" src="img/important.png" alt=""> -->
-						<div class="important-box">
-							<img id="important-img-left" class="important-img-left to-tilt" src="img/single-important.png" alt="">
-							<img class="important-img-up to-tilt" src="img/single-important.png" alt="">
-							<img class="important-img-right to-tilt" src="img/single-important.png" alt="">
-						</div>
-						<p>Высокая точность измерения и эффективность Безопасное и простое обращение Балансировка в двух плоскостях Бесступенчатый привод Большой размерный и весовой диапазон роторов Эргономичная рабочая высота Промышленный ПК с сенсорным экраном CAB 820 Защитный кожух типа C60 в соответствии с ISO 7475</p>
+
+				<div class="program__description-text">
+					<div class="program_description-text-box">
+						<h4>Теория:</h4>
+						<ol>
+							<li>Сердечно-сосудистая система( кровеносная и лимфатическая).</li>
+						</ol>
+					</div>
+					<div class="program_description-text-box">
+						<h4>Практика:</h4>
+						<ol>
+							<li>Закрепление техники и методики приемов поглаживания и растирания, разминания и выжимания</li>
+							<li>Обучение технике приема вибрация. Разновидности этого приема.</li>
+							<li>Связки приемов и плавность перехода.</li>
+							<li>Отработка правильной схемы массажа спины : начиная с поянично-крестцового отдела позвоночника и заканчивая шейно-ворониковой зоной.</li>
+						</ol>
+					</div>
+					<div class="program__description-schedule">
+						<table class="table table-striped table-bordered table-condensed">
+							<thead>
+						    <tr>
+						      <th></th>
+						      <th>Количество часов</th>
+						      <th>Теория</th>
+						      <th>Практика</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td></td>
+						      <td>3 часа</td>
+						      <td>30 минут</td>
+						      <td>2,5  часа</td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+
+				</div>
+			</div>
+			<div class="program__description three" data-toggle="4">
+				<div class="program__description-title" >
+					<h4 class="heading anti-description">Строение нервной системы</h4>
+				</div>
+
+				<div class="program__description-text">
+					<div class="program_description-text-box">
+						<h4>Теория:</h4>
+						<ol>
+							<li>Строение нервной системы.</li>
+						</ol>
+					</div>
+					<div class="program_description-text-box">
+						<h4>Практика:</h4>
+						<ol>
+							<li>Закрепление техники и методки приемов поглаживания, растирания, разминания,выжимания и вибрация. </li>
+							<li>Связки приемов и плавность перехода.</li>
+							<li>Закрепление правильной схемы и навыков массажа спины.</li>
+							<li>Отработка «офисного» варианта массажа спины.</li>
+						</ol>
+					</div>
+					<div class="program__description-schedule">
+						<table class="table table-striped table-bordered table-condensed">
+							<thead>
+						    <tr>
+						      <th></th>
+						      <th>Количество часов</th>
+						      <th>Теория</th>
+						      <th>Практика</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td></td>
+						      <td>3 часа</td>
+						      <td>30 минут</td>
+						      <td>3  часа</td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+
+				</div>
+
+			</div>
+			<div class="program__description three" data-toggle="5">
+				<div class="program__description-title" >
+					<h4 class="heading anti-description">Распостраненные заболевания ССС</h4>
+				</div>
+
+				<div class="program__description-text">
+					<div class="program_description-text-box">
+						<h4>Теория:</h4>
+						<ol>
+							<li>Распостраненные заболевания ССС  ,которые касаются массажистов.
+( атеросклероз, тромбы,гипертоническая болезнь и др). </li>
+						</ol>
+					</div>
+					<div class="program_description-text-box">
+						<h4>Практика:</h4>
+						<ol>
+							<li>Массаж спины при гипертонической болезни.Правильность выполнения.</li>
+							<li>Правильный алгоритм и методика проведения массажа ( волосистой части головы, шейно-воротниковой зоны, грудного-пояснично-крестцового отделов позвоночника) при вышеперечисленных проблемах.</li>
+							<li>Связки приемов и плавность перехода.</li>
+							<li>Ознакомление и начальное разучивание правильного  алгортма и правильной методики массажа конечностей. </li>
+						</ol>
+					</div>
+					<div class="program__description-schedule">
+						<table class="table table-striped table-bordered table-condensed">
+							<thead>
+						    <tr>
+						      <th></th>
+						      <th>Количество часов</th>
+						      <th>Теория</th>
+						      <th>Практика</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td></td>
+						      <td>3 часа</td>
+						      <td>30 минут</td>
+						      <td>2.5 часа</td>
+						    </tr>
+						  </tbody>
+						</table>
 					</div>
 				</div>
-				<div class="why-us-2__text">
-					<p>TB Сomfort был разработан специально для балансировки турбокомпрессора с высочайшей точностью - колеса турбины с валом и непосредственно колеса компрессора. Набор необходимых спецификаций для балансировки роторов турбокомпрессора, имеются в полном объеме и охватывают огромный диапазон размеров и весов турбонагнетателей. TB Comfort имеет сенсорный экран на измерительном блоке САВ 820 и оснащен электронной системой управления приводом. Бесступенчатая ​​регулировка скорости облегчает управление скоростью в режиме балансировки. Встроенные функции обеспечивают более высокую эфективность и точность балансировки: больше работы в одно и то же время, с минимальными погрешностями в отношении точности измерений.
-					</p>
+
+			</div>
+			<div class="program__description three" data-toggle="6">
+				<div class="program__description-title" >
+					<h4 class="heading anti-description">Массаж живота, грудной клетки и верхних конечностей.</h4>
 				</div>
+
+				<div class="program__description-text">
+					<div class="program_description-text-box">
+						<h4>Теория:</h4>
+						<ol>
+							<li>Заболевания суставов ( артрит, артроз, бурсит, контрактуры).</li>
+							<li>2.	Переломы костей. Контрактуры(дерматогенные, миогенные, артрогенные).</li>
+						</ol>
+					</div>
+					<div class="program_description-text-box">
+						<h4>Практика:</h4>
+						<ol>
+							<li>Закрепление навыков массажа спины и конечностей.</li>
+							<li>Ознакомление и начальное разучивание правильного алгоритма и методики массажа живота и мышц грудной клетки.</li>
+							<li>Связки приемов и плавность перехода.</li>
+							<li>ЛФК и суставная гимнастика. </li>
+						</ol>
+					</div>
+					<div class="program__description-schedule">
+						<table class="table table-striped table-bordered table-condensed">
+							<thead>
+						    <tr>
+						      <th></th>
+						      <th>Количество часов</th>
+						      <th>Теория</th>
+						      <th>Практика</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td></td>
+						      <td>3 часа</td>
+						      <td>30 минут</td>
+						      <td>2.5 часа</td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+				</div>
+
+			</div>
+			<div class="program__description three" data-toggle="7">
+				<div class="program__description-title" >
+					<h4 class="heading anti-description">Массаж при заболеваниях желудочно-кишечного тракта.</h4>
+				</div>
+
+				<div class="program__description-text">
+					<div class="program_description-text-box">
+						<h4>Теория:</h4>
+						<ol>
+							<li>Заболевания ЖКТ и дыхательной системы.</li>
+						</ol>
+					</div>
+					<div class="program_description-text-box">
+						<h4>Практика:</h4>
+						<ol>
+							<li>Закрепление навыков массажа спины.</li>
+							<li>Закрепление навыков массажа конечностей.</li>
+							<li>Закрепление навыков массажа живота (массаж передней брюшной стенки, избирательный массаж прямых мышц живота)</li>
+							<li>Закрепление навыков массажа грудной клетки (массаж наружных межреберных мышц, диафрамы, межреберных нервов, перкуссионный массаж).</li>
+							<li>Объединение всех этих частей массажа в правильный алгоритм и схему общего массажа тела человека.</li>
+							<li>Связки приемов и плавность перехода.</li>
+						</ol>
+					</div>
+					<div class="program__description-schedule">
+						<table class="table table-striped table-bordered table-condensed">
+							<thead>
+						    <tr>
+						      <th></th>
+						      <th>Количество часов</th>
+						      <th>Теория</th>
+						      <th>Практика</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td></td>
+						      <td>3 часа</td>
+						      <td>30 минут</td>
+						      <td>2.5 часа</td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+				</div>
+
+			</div>
+			<div class="program__description three" data-toggle="8">
+				<div class="program__description-title" >
+					<h4 class="heading anti-description">Классический массаж</h4>
+				</div>
+
+				<div class="program__description-text">
+					<div class="program_description-text-box">
+						<h4>Практика:</h4>
+						<ol>
+							<li>Проведение полноценного классического массажа от начала процедуры и до конца ( массаж волосистой части головы, массаж спины, массаж стоп, массаж задней поверхности ног, ягодиц, передней поверхности ног, живота и мышц груди). </li>
+							<li>Применение всего арсенала разученых приемов и массажных техник.</li>
+						</ol>
+					</div>
+					<div class="program__description-schedule">
+						<table class="table table-striped table-bordered table-condensed">
+							<thead>
+						    <tr>
+						      <th></th>
+						      <th>Количество часов</th>
+						      <th>Теория</th>
+						      <th>Практика</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td></td>
+						      <td>3 часа</td>
+						      <td>&ndash</td>
+						      <td>3 часа</td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+				</div>
+
+			</div>
+			<div class="program__description three" data-toggle="9">
+				<div class="program__description-title" >
+					<h4 class="heading anti-description">Массаж при заболеваниях позвоночника</h4>
+				</div>
+
+				<div class="program__description-text">
+					<div class="program_description-text-box">
+						<h4>Теория:</h4>
+						<ol>
+							<li>Основные заболевания позвоночника: сколиоз,остеохондроз,протрузии,радикулит, ишиас, миозиты. </li>
+							<li>Основные заболевания НС , с которыми обращаются к массажистам:  Невралгия межреберных нервов. Невралгия плечевого сплетения. Невралгия затылочного нерва. Невралгия и неврит седалищного нерва.</li>
+							<li>Использование вакуумного ( баночного) массажа в лечебной практике.</li>
+						</ol>
+					</div>
+					<div class="program_description-text-box">
+						<h4>Практика:</h4>
+						<ol>
+							<li>Лечебный массаж спины при вышеперечисленных заболеваниях. Обучение специфическим техникам и методикам .</li>
+							<li>Отработка методики баночного массажа при вышеперечисленных заболеваниях. </li>
+							<li>Закрепление навыков ЛФК. </li>
+						</ol>
+					</div>
+					<div class="program__description-schedule">
+						<table class="table table-striped table-bordered table-condensed">
+							<thead>
+						    <tr>
+						      <th></th>
+						      <th>Количество часов</th>
+						      <th>Теория</th>
+						      <th>Практика</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td></td>
+						      <td>3 часа</td>
+						      <td>30 минут</td>
+						      <td>2.5 часа</td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+				</div>
+
+			</div>
+			<div class="program__description three" data-toggle="10">
+				<div class="program__description-title" >
+					<h4 class="heading anti-description">Медовый массаж</h4>
+				</div>
+
+				<div class="program__description-text">
+					<div class="program_description-text-box">
+						<h4>Теория:</h4>
+						<ol>
+							<li>Медовый массаж- показание и противопоказание.Виды и особенности проведения этого вида массажа.</li>
+						</ol>
+					</div>
+					<div class="program_description-text-box">
+						<h4>Практика:</h4>
+						<ol>
+							<li>Обучение технике медового массажа и специфике выполнения данной процедуры.</li>
+							<li>Закрепление общего массажа.</li>
+						</ol>
+					</div>
+					<div class="program__description-schedule">
+						<table class="table table-striped table-bordered table-condensed">
+							<thead>
+						    <tr>
+						      <th></th>
+						      <th>Количество часов</th>
+						      <th>Теория</th>
+						      <th>Практика</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td></td>
+						      <td>3 часа</td>
+						      <td>30 минут</td>
+						      <td>2.5 часа</td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+				</div>
+
+			</div>
+			<div class="program__description three" data-toggle="11">
+				<div class="program__description-title" >
+					<h4 class="heading anti-description">Основы антицеллюлитного массажа</h4>
+				</div>
+
+				<div class="program__description-text">
+					<div class="program_description-text-box">
+						<h4>Теория:</h4>
+						<ol>
+							<li>Целлюлит — определение. История целлюлита. Этиология и патогенез. Основные пути лечения и борьбы с целлюлитом. Антицеллюлитный массаж ,как проверенное средство борьбы с целлюлитом. Классификация и виды антицеллюлитного массажа. </li>
+						</ol>
+					</div>
+					<div class="program_description-text-box">
+						<h4>Практика:</h4>
+						<ol>
+							<li>Обучение основным приемам  лимфодренажного массажа. Обучение специфическим лимолитичским массажным приемам и техникам на проблемных зонах.</li>
+							<li>Использование вакуумного ( баночного ) массажа в антицеллюлитной практике. </li>
+						</ol>
+					</div>
+					<div class="program__description-schedule">
+						<table class="table table-striped table-bordered table-condensed">
+							<thead>
+						    <tr>
+						      <th></th>
+						      <th>Количество часов</th>
+						      <th>Теория</th>
+						      <th>Практика</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td></td>
+						      <td>3 часа</td>
+						      <td>30 минут</td>
+						      <td>2.5 часа</td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+				</div>
+
+			</div>
+			<div class="program__description three" data-toggle="12">
+				<div class="program__description-title" >
+					<h4 class="heading anti-description">Детский массаж </h4>
+				</div>
+
+				<div class="program__description-text">
+					<div class="program_description-text-box">
+						<h4>Теория:</h4>
+						<ol>
+							<li>Детский массаж . Характеристика детского массажа. Алгоритм и специфика проведения.</li>
+						</ol>
+					</div>
+					<div class="program_description-text-box">
+						<h4>Практика:</h4>
+						<ol>
+							<li>Повторение и закрепление общего оздоровительного массажа.</li>
+							<li>Отработка методики и навыков детского массажа.</li>
+						</ol>
+					</div>
+					<div class="program__description-schedule">
+						<table class="table table-striped table-bordered table-condensed">
+							<thead>
+						    <tr>
+						      <th></th>
+						      <th>Количество часов</th>
+						      <th>Теория</th>
+						      <th>Практика</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td></td>
+						      <td>3 часа</td>
+						      <td>30 минут</td>
+						      <td>2.5 часа</td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+				</div>
+
+			</div>
+			<div class="program__description three" data-toggle="13">
+				<div class="program__description-title" >
+					<h4 class="heading anti-description">Основы ароматерапии.</h4>
+				</div>
+
+				<div class="program__description-text">
+					<div class="program_description-text-box">
+						<h4>Теория:</h4>
+						<ol>
+							<li>Основы ароматерапии.</li>
+							<li>Классификация эфирных масел. Их воздействие на организм человека.</li>
+							<li>Алгоритм и методика проведения аромарелакс массажа.</li>
+						</ol>
+					</div>
+					<div class="program_description-text-box">
+						<h4>Практика:</h4>
+						<ol>
+							<li>Обучение основным массажным техникам и приемам,которые используются в аромарелакс массаже. </li>
+							<li>Правильное сочетание аромамасел в композиции, правильная дозировка эфиров. Работа с аромалампой.</li>
+						</ol>
+					</div>
+					<div class="program__description-schedule">
+						<table class="table table-striped table-bordered table-condensed">
+							<thead>
+						    <tr>
+						      <th></th>
+						      <th>Количество часов</th>
+						      <th>Теория</th>
+						      <th>Практика</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td></td>
+						      <td>3 часа</td>
+						      <td>30 минут</td>
+						      <td>2.5 часа</td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+				</div>
+
+			</div>
+			<div class="program__description three" data-toggle="14">
+				<div class="program__description-title" >
+					<h4 class="heading anti-description">Консультационно-практический день. Подготовка к экзамену.</h4>
+				</div>
+
+				<div class="program__description-text">
+					<div class="program_description-text-box">
+						<h4>Теория:</h4>
+						<ol>
+							<li>Неотложные состояния. Оказание первой медицинской помощи.</li>
+							<li>Этика и культура в массажном исскустве. Психологические и энергетические аспекты работы с клиентом.</li>
+							<li>Студенты могут задать все интересующие вопросы.</li>
+						</ol>
+					</div>
+					<div class="program_description-text-box">
+						<h4>Практика:</h4>
+						<ol>
+							<li>Отработка и повторение всех практических навыков,усвоенных на курсах. </li>
+						</ol>
+					</div>
+					<div class="program__description-schedule">
+						<table class="table table-striped table-bordered table-condensed">
+							<thead>
+						    <tr>
+						      <th></th>
+						      <th>Количество часов</th>
+						      <th>Теория</th>
+						      <th>Практика</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td></td>
+						      <td>3 часа</td>
+						      <td>30 минут</td>
+						      <td>2.5 часа</td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+				</div>
+
+			</div>
+			<div class="program__description three" data-toggle="15">
+				<div class="program__description-title" >
+					<h4 class="heading anti-description">Экзамен. Теория и практика.</h4>
+				</div>
+
+				<div class="program__description-text">
+
+					<div class="program__description-schedule">
+						<table class="table table-striped table-bordered table-condensed">
+							<thead>
+						    <tr>
+						      <th></th>
+						      <th>Количество часов</th>
+						      <th>Теория</th>
+						      <th>Практика</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+						    <tr>
+						      <td></td>
+						      <td>3 часа</td>
+						      <td>1 час</td>
+						      <td>2 часа</td>
+						    </tr>
+						  </tbody>
+						</table>
+					</div>
+				</div>
+
 			</div>
 		</div>
-	</section>
-
-	<section class="offer-banner">
-		<div class="offer-banner__wrapper">
-				<div class="parallax" data-parallax-image="img/new4.png"></div>
-     <!-- NON MOBILE PARALLAX     <div class="brand-reasons__banner-img" data-android-fix="false"></div> -->
-			<div class="offer-banner__img">
-			</div>
-			<!-- <img class="offer-banner__img" src="img/new4.png" alt="image"> -->
-			<img class="offer-banner__mystery-img" src="img/offer-mystery.png" alt="">
-			<div class="offer-banner__content banner-inner flex-column">
-				<h4 class="offer-banner__heading">ЧТО ИМЕННО ПРЕДЛАГАЕТ «ТУРБОМИКРОН» СВОИМ КЛИЕНТАМ</h4>
-				<p class="offer-banner__text">ПРИ НЕИСПРАВНОСТИ ТУРБИН ABB ИЛИ SIEMENS</p>
-				<p class="offer-banner__list"> техобслуживание турбокомпрессоров ABB; <br>
-					техобслуживание модулей данной марки;<br>
-					работы по восстановлению работоспособности турбокомпрессоров ABB;<br>
-					решение проблем транспортировки турбин для произведения ремонта;<br>
-					выполнение плановых ремонтных работ элементов турбокомпрессоров.</p>
-				<div class="offer__banner-button-box flex-row">
-					<img src="img/about-arrow-prev.png" alt="">
-					<button id="button-aab" class="button-wrapper">AAB</button>
-					<button id="button-siemens" class="button-wrapper">SIEMENS</button>
-					<img src="img/about-arrow-next.png" alt="">
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="offer-description">
-		<div class="container">
-			<div class="offer-description__wrapper offer-description__wrapper_aab">
-				<div class="offer-description__text">
-					<p>Бренд ABB – символ надежности и длительной бесперебойной эксплуатации оборудования. Несмотря на высокий уровень качества этой техники поломки все равно происходят. Своевременный ремонт таких турбин очень важен, но здесь есть нюанс.</p>
-				</div>
-				<div class="offer-description__text">
-					<p>Как правило, их довольно затруднительно доставить в сервисный центр. Проблема возникает из-за размеров турбокомпрессора, а также из-за удаленности на большие расстояния самого предприятия. В таком случае рекомендуется обратиться в компанию ООО «Реалремтурбо», которая имеет большой опыт в решении подобных вопросов. Вам предоставят услуги транспортировки турбины даже из самых отдаленных уголков страны в сервисный центр компании. В наличии всегда есть все необходимые запчасти для ремонта. Отремонтированные турбины проходят многоступенчатый ревизионный контроль и только после этого передаются заказчику.</p>
-				</div>
-				<div class="offer-description__text">
-					<p>Кроме того ТурбоМикрон располагает ремкомплектами для капитального ремонта, которые рекомендованы изготовителем ABB для TPS 52E01, TPSF32, TPS F32, TPS52. Правильная диагностика причины выхода из строя турбокомпрессора способствует эффективному устранению поломки. При этом можно повысить ресурс оборудования, а также снизить затраты на ремонтные и сервисные работы.</p>
-				</div>
-			</div>
-			<div class="offer-description__wrapper offer-description__wrapper_siemens">
-				<div class="offer-description__text">
-					<p>Бренд SIEMENS – рыба рыба и рыбаа. рыба на рыба рыба рыба рыба рыба рыба все рыба рыба. Своевременный рыба таких рыба очень рыба, но рыба есть рыба.</p>
-				</div>
-				<div class="offer-description__text">
-					<p>Кроме того рыба располагает рыба для рыба рыба, рыба рыба рыба рыба для рыба рыба, рыба, рыба рыба, рыба. Правильная рыба причины выхода из рыба рыба способствует рыба рыба поломки. рыба рыба рыба повысить рыба рыба, а рыба рыба рыба на рыба и рыба работы.</p>
-				</div>
-			</div>
-		</div>
-	</section>
-</main>
-
-<footer style="height: 400px; background-color: wheat"></footer>
-
-
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-<script src="js/mobile-menu.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"></script>
-
-<script src="js/tabs.js"></script>
-<script src="js/waypoints.js"></script>
-<!-- <script src="js/lib/parallax.js"></script> -->
-
-<script src="js/universal-parallax.min.js"></script>
-<script src="js/parallax.js"></script>
-
-
+	</div>
+</section>
+<script src="tabs.js">	</script>
 </body>
 </html>
+
+
+
+
