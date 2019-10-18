@@ -135,6 +135,9 @@ align-items: center;*/
 
 .program__description {
 	border: 2px solid #049ddf;
+	/*height: 595px;*/
+	/*overflow: scroll;*/
+	
 }
 .program__description:not(.program-active) {
 	display: none;
@@ -146,8 +149,16 @@ align-items: center;*/
 	
 }
 
+@media screen and (max-width: 768px) {
+	.program__description {
+		height: unset;
+	}
+}
+
 .program__description-text {
 	padding: 0 10px;
+	height: 498px;
+	overflow: auto;
 }
 
 .program__description-title {
@@ -184,4 +195,7 @@ align-items: center;*/
 		font-size: 14px;
 	}
 }
-	
+
+.program__description-schedule {
+	margin: 10px 0;
+}
