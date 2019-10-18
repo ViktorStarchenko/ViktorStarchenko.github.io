@@ -163,7 +163,21 @@ align-items: center;*/
 
 .program__description-title {
 	background-color: #0592da;
-	padding: 20px 10px;
+    padding: 3px 10px;
+    height: 93px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: start;
+	    -ms-flex-pack: start;
+	        justify-content: flex-start;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 
 @media screen and (max-width: 768px) {
