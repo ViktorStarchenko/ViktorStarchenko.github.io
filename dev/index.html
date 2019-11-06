@@ -2256,6 +2256,13 @@
 	                    success: function(data) {
 	                        if( data == 1 ) {
 	                        	console.log('успех, 1')
+                                $('body').append(`<div class="toast success">Cообщение успешно отправлено</div>`)
+                                setTimeout(() => {
+                                    $('.toast').fadeOut(1000)
+                                    setTimeout(() => {
+                                        $('.toast').remove()
+                                    }, 1000)
+                                }, 3000)
 	                            // $('.form-message__inner').text('Cообщение успешно отправлено')
 	                            // $('.form-message').addClass('active')
 	                            // $('.form-message').addClass('success')
@@ -2266,6 +2273,13 @@
 
 	                        } else if ( data == 0 ) {
 	                        	console.log('провал, 0')
+                                $('body').append(`<div class="toast error">При отправке сообщения возникли ошибки</div>`)
+                                setTimeout(() => {
+                                    $('.toast').fadeOut(1000)
+                                    setTimeout(() => {
+                                        $('.toast').remove()
+                                    }, 1000)
+                                }, 3000)
 	                            // $('.form-message__inner').text('При отправке сообщения возникли ошибки')
 	                            // $('.form-message').addClass('active')
 	                            // $('.form-message').addClass('error')
@@ -2275,6 +2289,13 @@
 	                            // $('textarea[name="message"]').val("")
 	                        } else if ( data == 2) {
 	                        	console.log('телефон, 2')
+                                $('body').append(`<div class="toast error">Не коректно указан номер телефона</div>`)
+                                setTimeout(() => {
+                                    $('.toast').fadeOut(1000)
+                                    setTimeout(() => {
+                                        $('.toast').remove()
+                                    }, 1000)
+                                }, 3000)
 	                          // $('.form-message__inner').text('Не коректно указан номер телефона')
 	                          //   $('.form-message').addClass('active')
 	                          //   $('.form-message').addClass('error')
