@@ -27,7 +27,7 @@ if(isset($_POST) and !empty($_POST['name']) and !empty($_POST['phone'])) {
 	$headers = "Content-type: text/html; charset=utf-8\r\n";
 	$headers .= "From: <reception.tcde@gmail.com>\r\n"; 
 	$headers .= "Reply-To: reception.tcde@gmail.com\r\n"; 
-	$subject = 'Форма обратной связи itcde.org';
+	$subject = 'Форма обратной связи site name';
 
 
 	$email_body = "<h4>Здравствуйте!<h4> <br>

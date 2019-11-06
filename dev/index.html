@@ -1094,8 +1094,8 @@
                 <div class="modal-title"><span>Обратный звонок</span></div>
             </div>
             <div class="modal-content">
-                <form action="" method="POST">
-                    <input name="csrfmiddlewaretoken" type="hidden" value="ttvIyJeTSGfHhKpNHIvElDMiyLVFEHTcMNnZH77reHCQr4C5FGkEceD0Dds9BoRz">
+                <form action="send-mail.php" method="POST">
+                    <!-- <input name="csrfmiddlewaretoken" type="hidden" value="ttvIyJeTSGfHhKpNHIvElDMiyLVFEHTcMNnZH77reHCQr4C5FGkEceD0Dds9BoRz"> -->
                     <input id="callback-modal-name" name="name" placeholder="Имя" type="text">
                     <input id="callback-modal-phone" name="phone" placeholder="Телефон" type="tel">
                     <!-- <div class="g-recaptcha" data-sitekey="6LddKq0UAAAAAHVZZzrbsR8Ry8nv7FKtz3Ypw5Rh">
@@ -2184,7 +2184,7 @@
     <script src="assets/js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="assets/js/slick.min.js"></script>
     <script src="assets/js/bundle.min.js"></script>
-    <script src="assets/js/main.min.js"></script>
+    <!-- <script src="assets/js/main.min.js"></script> -->
     <script>
 		$(document).ready(function(){
 		  $(".exploitation-carousel").slick({
@@ -2249,11 +2249,10 @@
 	        $('.callback_modal_submit').on('click', function(e) {
 	                var name = $('input[name="name"]').val();
 	                var phone = $('input[name="phone"]').val();
-	                
 	                $.ajax({
 	                    type: 'POST',
 	                    url: 'send-mail.php',
-	                    data: {name:name, phone:phone, message:message},
+	                    data: {name:name, phone:phone},
 	                    success: function(data) {
 	                        if( data == 1 ) {
 	                        	console.log('успех, 1')
