@@ -1094,7 +1094,7 @@
                 <div class="modal-title"><span>Обратный звонок</span></div>
             </div>
             <div class="modal-content">
-                <form action="https://vsbookcollection.space/test.php" method="POST">
+                <form action="" method="POST">
                     <input name="csrfmiddlewaretoken" type="hidden" value="ttvIyJeTSGfHhKpNHIvElDMiyLVFEHTcMNnZH77reHCQr4C5FGkEceD0Dds9BoRz">
                     <input id="callback-modal-name" name="name" placeholder="Имя" type="text">
                     <input id="callback-modal-phone" name="phone" placeholder="Телефон" type="tel">
@@ -1106,7 +1106,7 @@
                             <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
                         </div>
                     </div> -->
-                    <button class="btn" id="callback_modal_submit" type="submit">Отправить заявку</button>
+                    <button class="btn callback_modal_submit" id="callback_modal_submit" type="submit">Отправить заявку</button>
                 </form>
             </div>
         </div>
@@ -2244,6 +2244,57 @@
             <iframe title="проверка recaptcha" src="bframe(1).html" name="c-dmo0gel16lnp" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" style="width: 100%; height: 100%;"></iframe>
         </div>
     </div>
+    <script>	
+    	$(document).ready(function() {
+	        $('.callback_modal_submit').on('click', function(e) {
+	                var name = $('input[name="name"]').val();
+	                var phone = $('input[name="phone"]').val();
+	                
+	                $.ajax({
+	                    type: 'POST',
+	                    url: 'send-mail.php',
+	                    data: {name:name, phone:phone, message:message},
+	                    success: function(data) {
+	                        if( data == 1 ) {
+	                        	console.log('успех, 1')
+	                            // $('.form-message__inner').text('Cообщение успешно отправлено')
+	                            // $('.form-message').addClass('active')
+	                            // $('.form-message').addClass('success')
+
+	                            // $('input[name="name"]').val("")
+	                            // $('input[name="phone"]').val("")
+	                            // $('textarea[name="message"]').val("")
+
+	                        } else if ( data == 0 ) {
+	                        	console.log('провал, 0')
+	                            // $('.form-message__inner').text('При отправке сообщения возникли ошибки')
+	                            // $('.form-message').addClass('active')
+	                            // $('.form-message').addClass('error')
+
+	                            // $('input[name="name"]').val("")
+	                            // $('input[name="phone"]').val("")
+	                            // $('textarea[name="message"]').val("")
+	                        } else if ( data == 2) {
+	                        	console.log('телефон, 2')
+	                          // $('.form-message__inner').text('Не коректно указан номер телефона')
+	                          //   $('.form-message').addClass('active')
+	                          //   $('.form-message').addClass('error')
+	                        }
+	                    },
+	                    complete: function(data) {
+	                       //  setTimeout(function() {
+	                       //     $('.form-message').removeClass('active')
+	                       //     $('.form-message').removeClass('error')
+	                       //     $('.form-message').removeClass('success')
+	                       //     $('.form-message__inner').text('')
+	                       // }, 2500);
+	                    }
+	                })
+
+	            return false;
+	        })
+	    })
+    </script>
 </body>
 
 </html>
