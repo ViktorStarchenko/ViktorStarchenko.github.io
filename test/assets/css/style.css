@@ -203,7 +203,7 @@ body button:focus {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	background-color: #fff;
+	/*background-color: #fff;*/
 	padding: 0 5px;
 	margin: 0
 }
@@ -235,12 +235,16 @@ body button:focus {
 
 .navbar__language-link {
 	font-size: 10px;
-	color: #4e4e4d;
+	color: #fff;
+}
+
+.navbar__language-link.active {
+	text-decoration: underline;
 }
 
 .navbar__language-link:hover {
 	text-decoration: none;
-	color: #000;
+	color: #4e4e4d;
 }
 
 .header__flag-icon {
