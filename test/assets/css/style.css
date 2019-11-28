@@ -127,7 +127,7 @@ body button:focus {
 
 @media screen and (max-width: 1144px) {
 	#header .navbar-nav .nav-link {
-		font-size: 12px;
+		font-size: 11px;
 	}
 }
 
@@ -138,8 +138,9 @@ body button:focus {
 }
 
 #header .navbar-nav {
-	width: 100%;
+	width: 86%;
 	justify-content: space-around;
+	margin: auto;
 }
 
 #header .navbar-nav .nav-link:hover.nav-link:before {
