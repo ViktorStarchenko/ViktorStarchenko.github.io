@@ -423,6 +423,24 @@ body button:focus {
     -webkit-border-radius: 3px;
     margin: 14px 0;
     letter-spacing: 0.9px;
+    position: relative;
+    transition-duration: .3s
+}
+
+.base-button:hover {
+	background: transparent;
+}
+
+.base-button:hover.base-button:before {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 2px solid #fff;
+	border-radius: 4px;
+	transition-duration: .3s
 }
 
 .base-button:hover {
