@@ -12,6 +12,11 @@ body {
 	font-weight: 400;
 	position: relative;
 }
+
+body.hidden {
+	overflow: hidden;
+}
+
 p {
 	font-family: 'Roboto', sans-serif;
 	font-size: 18px;
