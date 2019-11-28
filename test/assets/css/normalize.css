@@ -19,10 +19,6 @@ html {
 /**
  * Remove the margin in all browsers.
  */
-* {
-  margin: 0;
-  padding: 0;
-} 
 
 body {
   margin: 0;
@@ -350,8 +346,4 @@ template {
 
 [hidden] {
   display: none;
-}
-
-ul, ol {
-  list-style-type: none;
 }
