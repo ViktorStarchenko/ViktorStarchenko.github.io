@@ -1280,6 +1280,22 @@ body button:focus {
 	}
 }
 
+@media screen and (max-width: 588px) {
+
+	.sheme__label-block {
+		height: 70px;
+	}
+	.sheme__label-block:before {
+		background-size: contain;
+		height: 130px;
+		width: 14px;
+	}
+
+	.sheme__label-block:after {
+		display: none;
+	}
+}
+
 
 .sheme__label-block-2 {
 	height: 290px;
@@ -1486,4 +1502,75 @@ body button:focus {
 	.sheme__item-wrap img {
 		margin-bottom: 16px;
 	}
+}
+
+/*PHOTOGALLERY BLOCK*/
+
+.photogallery h1 {
+	margin-bottom: 50px;
+	position: relative;
+}
+
+.photogallery h1:before {
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 115px;
+	top: -115px;
+	left: 0;
+	background-image: url(../img/service/line-2.jpg);
+	background-repeat: no-repeat;
+}
+
+.photogallery__wrap-left {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+
+}
+
+.cont {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.photo-bottom {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.photogallery__item img {
+	border-radius: 20px;
+}
+
+.photogallery__item {
+	margin: 5px;
+}
+
+
+.photogallery__wrap-left_bottom {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	height: 460px;
+}
+
+.photogallery__wrap-left_bottom .photogallery__item {
+	width: 52%;
+}
+
+
+
+.photogallery__wrap-right  {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	height: 784px;
+}
+
+.photogallery__wrap-right .photogallery__item {
+	width: 52%;
 }
