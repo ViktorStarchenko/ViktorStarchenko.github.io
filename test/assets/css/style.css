@@ -921,13 +921,13 @@ body button:focus {
 
 @media screen and (max-width: 425px) {
 	.service {
-		padding: 40px 0 100px;
+		padding: 40px 0 30px;
 	}
 }
 
 @media screen and (max-width: 388px) {
 	.service {
-		padding: 00px 0 100px;
+		padding: 00px 0 40px;
 	}
 }
 
@@ -1244,12 +1244,25 @@ body button:focus {
 .sheme__label-block:after {
 	content: '';
     position: absolute;
-    right: -220px;
+    right: -160px;
     top: -60px;
     background-image: url(../img/figure2.png);
     background-repeat: no-repeat;
-    width: 294px;
+    width: 227px;
 	height: 275px;
+}
+
+@media screen and (max-width: 1599px) {
+	.sheme__label-block:after {
+		right: -8vw;
+	}
+}
+
+@media screen and (max-width: 1499px) {
+	.sheme__label-block:after {
+		right: -2vw;
+		top: -100px;
+	}
 }
 
 @media screen and (max-width: 992px) {
@@ -1263,7 +1276,64 @@ body button:focus {
 		background-size: contain;
 		height: 100%;
 		right: -23px;
-    	top: -169px;
+    	top: -53px;
+	}
+}
+
+
+.sheme__label-block-2 {
+	height: 290px;
+	position: relative;
+}
+
+.sheme__label-block-2:before {
+	content: '';
+    position: absolute;
+    left: -73px;
+    bottom: 0;
+    background-image: url(../img/circle.png);
+    background-repeat: no-repeat;
+    height: 340px;
+    width: 275px;
+}
+
+.sheme__label-block-2:after {
+	content: '';
+    position: absolute;
+    right: 0;
+    bottom: 50px;
+    background-image: url(../img/schema.png);
+    background-repeat: no-repeat;
+    width: 27px;
+	height: 213px;
+}
+
+@media screen and (max-width: 1440px) {
+	.sheme__label-block-2:before {
+		left: 1vw;
+	}
+}
+
+@media screen and (max-width: 992px) {
+
+	.sheme__label-block-2:after {
+		background-size: contain;
+		width: 14px;
+		height: 100%;
+	} 
+
+	.sheme__label-block-2:before {
+		left: calc(50vw - 137.5px);
+	}
+}
+
+@media screen and (max-width: 588px) {
+	.sheme__label-block-2 {
+		height: 130px;
+	}
+
+	.sheme__label-block-2:before {
+		display: none;
 	}
 }
 
