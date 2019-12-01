@@ -1670,7 +1670,15 @@ body button:focus {
 	text-align: center;
 	margin: 10px;
 	position: relative;
-	
+}
+
+.some3__item a {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 5;
 }
 
 .some3__item-text {
@@ -1685,13 +1693,15 @@ body button:focus {
 	background-color: #000;
 	opacity: 0;
 	border-radius: 15px;
-	padding: 5px 10px;
+	/*padding: 5px 10px;*/
 	transition-duration: .4s
 }
 
 .some3__item-text p {
 	 color: #fff;
 	 font-size: 16px;
+	 padding: 5px 15px;
+	 margin: 0;
 }
 
 @media screen and (max-width: 1200px) {
@@ -1723,11 +1733,18 @@ body button:focus {
 
 .some3__item:nth-child(4) {
 	/*margin-top: 111%;*/
-	margin-top: calc(105% + 20px);
+	margin-top: calc(105% + 14px);
 }
 
 .some3__item img {
 	border-radius: 15px;
+}
+
+@media screen and (max-width: 1144px) {
+	.some3__item:nth-child(4) {
+		/*margin-top: 111%;*/
+		margin-top: calc(105% + 20px);
+	}
 }
 
 @media screen and (max-width: 992px) {
@@ -1737,16 +1754,18 @@ body button:focus {
 }
 
 @media screen and (max-width: 768px ) {
-	.some3__item-text {
-		width: calc(100% - 2.5rem);
-		left: 1.25rem;
-	}
+
 	.some3 {
-		column-gap: 0.5rem;
+		column-gap: 0.3rem;
 	}
 
 	.some3__item {
-		margin: 8px;
+		margin: 5px;
+	}
+
+	.some3__item:nth-child(4) {
+		/*margin-top: 111%;*/
+		margin-top: calc(105% + 6px);
 	}
 }
 
@@ -1756,6 +1775,7 @@ body button:focus {
 		column-count: 2;
 		height: unset;
 		max-height: unset;
+
 	}
 
 	.some3__item:nth-child(4) {
@@ -1763,7 +1783,14 @@ body button:focus {
 	}
 
 	.some3__item:nth-child(6) {
-		margin-top: calc(323px + 16px);
+		margin-top: calc(323px + 8px);
+	}
+		.some3__item-text {
+		width: calc(100% - 2.5rem);
+		left: 1.25rem;
+	}
+	.some3__item-text p {
+		 font-size: 14px;
 	}
 
 }
@@ -1774,7 +1801,7 @@ body button:focus {
 		left: 0;
 	}
 	.some3__item:nth-child(6) {
-		margin-top: calc(100% + 24px);
+		margin-top: calc(100% + 16px);
 	}
 
 }
@@ -1787,14 +1814,21 @@ body button:focus {
 	.some3__item:nth-child(6) {
 		margin-top: calc(98% + 14px)
 	}
+	.some3__item-text p {
+		 font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 480px ) {
+	.some3__item-text p {
+		 font-size: 10px;
+	}
 }
 
 @media screen and (max-width: 425px ) {
 	.some3 {
 		column-count: 1;
 	}
-
-
 
 	.some3__item:nth-child(1) {
 		width: 100%;
@@ -1806,7 +1840,11 @@ body button:focus {
 	.some3__item {
 		margin: 5px 0 5px;
 	}
+	.some3__item-text p {
+		 font-size: 14px;
+	}
 }
+
 
 /*@media screen and (max-width: 576px ) {	
 	.some3__item {
