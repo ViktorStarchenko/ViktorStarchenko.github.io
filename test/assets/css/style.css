@@ -1669,9 +1669,48 @@ body button:focus {
 	/*margin-bottom: 1em;*/
 	text-align: center;
 	margin: 10px;
+	position: relative;
+	
 }
 
+.some3__item-text {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #000;
+	opacity: 0;
+	border-radius: 15px;
+	padding: 5px 10px;
+	transition-duration: .4s
+}
 
+.some3__item-text p {
+	 color: #fff;
+	 font-size: 16px;
+}
+
+@media screen and (max-width: 1200px) {
+	.some3__item-text p {
+		 font-size: 11px;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.some3__item-text p {
+		 font-size: 9px;
+	}
+}
+
+.some3__item:hover .some3__item-text {
+	opacity: 0.7;
+	transition-duration: .4s
+
+}
 
 
 .some3__item:nth-child(1) {
@@ -1698,7 +1737,10 @@ body button:focus {
 }
 
 @media screen and (max-width: 768px ) {
-
+	.some3__item-text {
+		width: calc(100% - 2.5rem);
+		left: 1.25rem;
+	}
 	.some3 {
 		column-gap: 0.5rem;
 	}
@@ -1709,7 +1751,7 @@ body button:focus {
 }
 
 @media screen and (max-width: 767px ) {
-
+	
 	.some3 {
 		column-count: 2;
 		height: unset;
@@ -1727,6 +1769,10 @@ body button:focus {
 }
 
 @media screen and (max-width: 679px ) {
+	.some3__item-text {
+		width: 100%;
+		left: 0;
+	}
 	.some3__item:nth-child(6) {
 		margin-top: calc(100% + 24px);
 	}
