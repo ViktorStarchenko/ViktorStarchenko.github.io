@@ -14,4 +14,15 @@ $(document).ready(function() {
              $('#header .navbar').removeClass('scrolled');
          }
     });
+
+
 })
+// $('.some').galereya();
+
+var container = document.querySelector('.some2');
+var msnry = new Masonry( container, {
+  // Настройки
+  columnWidth: 60,
+  itemSelector: '.some2__item',
+  gutter: 10
+});
