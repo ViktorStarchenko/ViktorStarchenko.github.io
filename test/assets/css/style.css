@@ -479,15 +479,17 @@ body button:focus {
 /*////////hero block*/
 .hero {
 	background-image: url('../img/main-banner.jpg');
-	background-size: cover;
+	/*background-size: cover;*/
+	background-size: contain;
 	background-repeat: no-repeat;
 	height: 800px;
 	position: relative;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 	.hero {
 		height: 600px;
+		background-size: cover;
 	}
 }
 
@@ -502,10 +504,14 @@ body button:focus {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
+	/*height: 100%;*/
+	height: 50vw;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 	-webkit-box-orient: vertical;
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
@@ -517,6 +523,7 @@ body button:focus {
 	    -ms-flex-pack: center;
 	        justify-content: center;
 	text-align: center;
+
 }
 
 .hero__heading {
@@ -524,10 +531,36 @@ body button:focus {
 	margin-bottom: 80px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1440px) {
+	.hero__heading {
+		font-size: 32px;
+		max-width: 800px;
+    	margin: 0 auto 50px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.hero__heading {
+    	margin: 0 auto 15px;
+	    max-width: 68%;
+	    font-size: 30px;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.hero__heading {
+		font-size: 24px;
+	}
+}
+
+@media screen and (max-width: 767px) {
 	.hero__heading {
 		font-size: 32px;
 		margin-bottom: 50px;
+		max-width: unset;
+	}
+	.hero__inner {
+		height: 100%;
 	}
 }
 
