@@ -3432,7 +3432,7 @@ body {
 }
 .callback-body {
 	position: fixed;
-    right: 5%;
+    right: 5vw;
     bottom: 10%;
     width: 60px;
     height: 60px;
