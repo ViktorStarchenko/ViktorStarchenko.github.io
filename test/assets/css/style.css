@@ -482,8 +482,21 @@ body button:focus {
 	/*background-size: cover;*/
 	background-size: contain;
 	background-repeat: no-repeat;
-	height: 800px;
+	/*height: 800px;*/
+	height: 42vw;
 	position: relative;
+}
+
+@media screen and (max-width: 1290px) {
+	.hero {
+		height: 45vw;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.hero {
+		height: 48vw;
+	}
 }
 
 @media screen and (max-width: 767px) {
@@ -528,7 +541,8 @@ body button:focus {
 
 .hero__heading {
 	color: #fff;
-	margin-bottom: 80px;
+	/*margin-bottom: 80px;*/
+	margin-bottom: 50px;
 }
 
 @media screen and (max-width: 1440px) {
