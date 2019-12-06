@@ -199,6 +199,7 @@ ol li {
     max-width: 1182px;
     width: 100%;
     margin: 0 auto
+    display: flex;
 }
 
 #nh_2 img {
@@ -1266,8 +1267,9 @@ span.button:hover span {
     list-style-type: none;
     margin: 0;
     float: left;
-    width: 33%;
-    width: calc(100%/3);
+    /*width: 33%;*/
+    /*width: calc(100%/3);*/
+    width: 100%;
     margin-bottom: 22px;
     position: relative
 }
@@ -1337,7 +1339,10 @@ span.button:hover span {
 .products {
     margin-left: -12px;
     margin-right: -12px;
-    padding-top: 30px
+    padding-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .products .wishlist {
