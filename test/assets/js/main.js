@@ -29,29 +29,44 @@ var msnry = new Masonry( container, {
 
 $(document).ready(function(){
 	
-	$('.some3__item-text').each(function(i,elem) {
+	$('.photogallery__item-text').each(function(i,elem) {
 		// console.log($(".some3__item-text").siblings())
 		blockWidth = $(this).siblings();
-		parentWidth = $(".some3__item-text").parent()
-		console.log('Ширина родителя')
-		console.log(parentWidth[i].clientWidth)
+		parentWidth = $(".photogallery__item-text").parent()
+
 		parentWidth = parentWidth[i].clientWidth
 		blockWidth = blockWidth[1].clientWidth
 		result = (parseInt(parentWidth) - parseInt(blockWidth))
-		// console.log(parentWidth)
 
-		console.log('Ширина фотки')
-		console.log(blockWidth)
 		$(this).width(blockWidth)
 		$(this).css('left', result/2)
-		// console.log('отступ')
-		// console.log(result/2)
-		console.log('')
-	// if ($(this).hasClass("stop")) {
-	// 	alert("Остановлено на " + i + "-м пункте списка.");
+
+
+	$('.photogallery__item:nth-child(1), .photogallery__item:nth-child(4), .photogallery__item:nth-child(5)').mouseenter( function() {
+		$('.photogallery__logo').addClass('hidden')
+	})
+	$('.photogallery__item:nth-child(1), .photogallery__item:nth-child(4), .photogallery__item:nth-child(5)').mouseleave( function() {
+		$('.photogallery__logo').removeClass('hidden')
+	});
+	// $('.photogallery__item:nth-child(4)').mouseover(function() {
+	// 	$('.photogallery__logo').hide()
+
 	// 	return false;
-	// } else {
-	// 	alert(i + ': ' + $(elem).text());
-	// }
+	// })
 });
 })
+
+// Smooth scroll
+$(document).ready(function(){
+
+    $("header").on("click",".crane", function (event) {
+        //отменяем стандартную обработку нажатия по ссылке
+        event.preventDefault();
+        //забираем идентификатор бока с атрибута href
+        var id  = $(this).attr('href'),
+        //узнаем высоту от начала страницы до блока на который ссылается якорь
+            top = $(id).offset().top;
+        //анимируем переход на расстояние - top за 1500 мс
+        $('body,html').animate({scrollTop: top-100}, 1500);
+    });
+});
