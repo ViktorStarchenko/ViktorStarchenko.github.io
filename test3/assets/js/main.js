@@ -16,12 +16,25 @@ $(document).ready(function() {
 	$('.form-submit').on('click', function() {
 		var name = $('input[name="name"]').val()
 		var phone = $('input[name="phone"]').val()
-		var message = $('input[name="message"]').val()
+		var message = $('textarea[name="message"]').val()
 
 		console.log(name)
 		console.log(phone)
 		console.log(message)
-
+		$.ajax({
+			url: 'send.php',
+			type: 'POST',
+			data: {name: name, phone:phone, message:message},
+			success: function(data) {
+				if( data == 1 ) {
+					alert('Cообщение успешно отправлено')
+				} else if ( data == 0 ) {
+					alert('При отправке сообщения возникли ошибки')
+				} else if ( data == 2) {
+                  	alert('Не коректно указан номер телефона')
+				}
+			}
+		})
 
 		return false
 
