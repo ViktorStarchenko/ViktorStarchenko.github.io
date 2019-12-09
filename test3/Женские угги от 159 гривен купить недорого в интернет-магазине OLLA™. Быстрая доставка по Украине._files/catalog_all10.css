@@ -89,7 +89,7 @@ ol li {
 
 #descd {
     clear: both;
-    margin-bottom: -72px
+    /*margin-bottom: -72px*/
 }
 
 #descd1 {
@@ -1174,7 +1174,7 @@ span.button:hover span {
     clear: both;
     /*height: 318px;*/
     background: #363636;
-    margin-top: -318px
+    /*margin-top: -318px*/
 }
 
 .footer-wrapper {
@@ -1199,7 +1199,8 @@ span.button:hover span {
 }
 
 #footer0 {
-    padding-top: 50px
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 #footer1_wrap {
@@ -1269,7 +1270,8 @@ span.button:hover span {
 
 #footer4 {
     padding-top: 23px;
-    clear: both
+    clear: both;
+    display: none;
 }
 
 #footer4 img {
