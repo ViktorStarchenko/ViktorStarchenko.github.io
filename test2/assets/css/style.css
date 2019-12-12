@@ -408,6 +408,27 @@ body button:focus {
 	}
 }
 
+/*MAIN BANNER*/
+.main-banner {
+	display: none;
+	background-image: url('../img/image5.jpg');
+	background-size: contain;
+	width: 100%;
+	height: 44vw;
+	background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 767px) {
+	#main-video {
+		display: none;
+	}
+
+	.main-banner {
+		display: block;
+	}
+
+}
+
 
 
 /*PROGRAM BLOCK*/
@@ -539,7 +560,7 @@ body button:focus {
 
 @media screen and (max-width: 992px) {
 	.programs {
-		padding: 80px 0 40px;
+		padding: 40px 0 40px;
 	}
 
 	.programs__item-img-box h4 {
@@ -572,7 +593,7 @@ body button:focus {
 
 @media screen and (max-width: 500px) {
 	.programs {
-		padding: 80px 0 20px;
+		padding: 20px 0 20px;
 	}
 	.programs__item-img-box h4 {
 		font-size: 18px;

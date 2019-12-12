@@ -153,3 +153,17 @@ var video = $('#online-video').get(0);
 })
 
 // if(window.innerWidth >= 767){document.getElementById('vid').innerHTML='<video playsinline webkit-playinginline autoplay muted loop="-1" heght="auto" width="100%" poster="/wp-content/uploads/2019/12/video-preview.jpg"><source src="/wp-content/uploads/2019/12/site-video-superedit.mp4" type="video/mp4"><source src="/wp-content/uploads/2019/12/site-video-superedit.ogv" type="video/ogv">HTML5-видео не поддерживается вашим браузером</video><div class="mask"></div>'}
+
+
+// $(document).ready(function(){
+//     var main_video = $('#main-video').get(0);
+//     console.log(main_video.poster)
+//     console.log(window.innerWidth)
+//     main_video.poster = 'assets/img/image5.jpg'
+//     main_video.src = ''
+//     if(window.innerWidth >= 767){
+//         main_video.poster = 'assets/img/image5.jpg'
+//         }
+    
+// })
+
