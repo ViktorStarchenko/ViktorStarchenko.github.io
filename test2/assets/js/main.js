@@ -129,7 +129,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 
-var video = $('video').get(0);
+var video = $('#online-video').get(0);
 
 
     $('#online__video-button').on('click', function(){
