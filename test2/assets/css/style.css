@@ -563,6 +563,8 @@ body button:focus {
 		padding: 40px 0 40px;
 	}
 
+	
+
 	.programs__item-img-box h4 {
 		font-size: 16px;
 	}
@@ -574,6 +576,11 @@ body button:focus {
 }
 
 @media screen and (max-width: 767px) {
+	.programs .col-12.col-md-4{
+		box-shadow: 0 7px 24px rgba(0,0,0,.25);
+		margin-bottom: 20px;
+		padding: 15px;
+	}
 	.programs__item {
 		max-width: unset;
 		text-align: center;
