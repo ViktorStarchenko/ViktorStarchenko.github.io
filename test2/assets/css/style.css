@@ -418,7 +418,7 @@ body button:focus {
 }
 
 .programs__heading-box img {
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }
 
 .programs__item {
@@ -501,6 +501,7 @@ body button:focus {
 
 .programs__item-desc {
 	margin-bottom: 35px;
+	text-align: left;
 }
 
 .programs__item-desc img {
