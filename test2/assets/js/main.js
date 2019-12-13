@@ -134,8 +134,9 @@ var video = $('#online-video').get(0);
 
     $('#online__video-button').on('click', function(){
         
-
+            $('#online-video').removeClass('paused')
             video.play()
+            
             $('.video-button-wrap').hide()
             $('.video-pause-wrap').addClass('visible')
 
@@ -145,8 +146,10 @@ var video = $('#online-video').get(0);
 
         $('.video-pause-wrap').on('click', function(){
             console.log('played')
-
+            $('#online-video').addClass('paused')
+            
             video.pause()
+
             $('.video-button-wrap').show()
             $('.video-pause-wrap').removeClass('visible')
         })
