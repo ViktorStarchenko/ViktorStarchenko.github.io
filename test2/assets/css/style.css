@@ -1340,9 +1340,9 @@ body button:focus {
 	margin: auto;
 }
 
-/*.jsx-1570720278.eagr-reviews-skeleton-container div:nth-last-child(-n+1) {
+.jsx-1570720278.eagr-reviews-skeleton-container div:nth-child(3) {
 	display: none !important;
-}*/
+}
 
 
 
@@ -1433,6 +1433,7 @@ body button:focus {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, .5);
+    z-index: 5
 }
 
 @media screen and (min-width: 1441px) {
