@@ -427,7 +427,8 @@
 
           <a class="courses__item-link" href=""></a>
           <div class="courses__item-img-box">
-            <img class="img-fluid" src="assets/img/courses/jpeg_6.jpg" alt="">
+            <img class="lazy img-fluid" data-src="assets/img/courses/jpeg_6.jpg" src="assets/img/placeholder.jpg" alt="">
+            <!-- <img class="img-fluid" src="assets/img/courses/jpeg_6.jpg" alt=""> -->
           </div>
           <h2>Базовый курс</h2>
           <div class="programs__item-desc">
@@ -454,7 +455,8 @@
 
           <a  class="courses__item-link" href=""></a>
           <div class="courses__item-img-box">
-            <img class="img-fluid" src="assets/img/courses/jpeg_7.jpg" alt="">
+            <img class="lazy img-fluid" data-src="assets/img/courses/jpeg_7.jpg" src="assets/img/placeholder.jpg" alt="">
+            <!-- <img class="img-fluid" src="assets/img/courses/jpeg_7.jpg" alt=""> -->
           </div>
           <h2>Массажист эксперт</h2>
           <div class="programs__item-desc">
@@ -480,7 +482,8 @@
         <div class="courses__item">
           <a  class="courses__item-link" href=""></a>
           <div class="courses__item-img-box">
-            <img class="img-fluid" src="assets/img/courses/jpeg_8.jpg" alt="">
+            <img class="lazy img-fluid" data-src="assets/img/courses/jpeg_8.jpg" src="assets/img/placeholder.jpg" alt="">
+            <!-- <img class="img-fluid" src="assets/img/courses/jpeg_8.jpg" alt=""> -->
           </div>
           <h2>Массаж лица</h2>
           <div class="programs__item-desc">
@@ -504,10 +507,17 @@
   </div>
 </section>
 
-<div style="height: 854px; background-color: #0993f0; ">
-  <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-<div class="elfsight-app-c6560978-9dcf-419e-885f-42c84b011d8d"></div>
-</div>
+<section class="review">
+  <div class="container-fluid">
+    <div class="row wrapper m-auto">
+      <div class="col-12">
+          <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+          <div class="elfsight-app-c6560978-9dcf-419e-885f-42c84b011d8d"></div>
+      </div>
+    </div>
+  </div>
+  
+</section>
 
 <footer>
   <div class="container-fluid p-0">
@@ -556,7 +566,13 @@
       </div>
       <div class="col-12 col-md-5 p-0">
         <!-- <div style="width:100%; height: 100%;" ><iframe style="" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.567885854341!2d30.490804815731327!3d50.44914897947508!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce8af6929ab3%3A0xf2bfb91deb854165!2z0YPQuy4g0JTQvNC40YLRgNC40LXQstGB0LrQsNGPLCAxOC8yNCwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1571734898210!5m2!1sru!2sua" width="100%" height="643px" frameborder="0" style="border:0;" allowfullscreen=""></iframe></div> -->
-        <div id="map"></div>
+        <div id="map">
+          <!-- <div class="map-block">
+            <div class="map-img">
+              <p>Нажмите для просмотра интерактивной карты</p>
+            </div>
+          </div> -->
+        </div>
       </div>
     </div>
   </div>
@@ -564,7 +580,7 @@
 
 
 
-<footer style="height: 600px"></footer>
+<!-- <footer style="height: 600px"></footer> -->
 
 <script src="assets/js/jquery-3.4.1.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
