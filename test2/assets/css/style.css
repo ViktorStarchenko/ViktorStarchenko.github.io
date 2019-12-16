@@ -921,27 +921,48 @@ body button:focus {
 }
 
 @media screen and (max-width: 992px) {
+	.quote__wrap {
+		flex-direction: column;
+		align-items: flex-end;
+	}
+	.quote__wrap-left {
+		justify-content: flex-end;
+		height: 53%;
+	}
 	.quote__text-box {
 		padding: 30px 30px 13px 30px;
 		max-width: 311px;
+		margin-bottom: 30px;
 	}
 	.quote__text-box p {
 		font-size: 16px;
+	}
+
+	.quote__wrap-right {
+		align-items: center;
+	}
+
+	.quote__wrap-right img {
+		margin: 0;
+		margin-right: 93px;
 	}
 }
 
 @media screen and (max-width: 768px) {
 	.quote {
-		padding: 80px 0 150px;
+		padding: 80px 0;
 	}
+
 	.quote__wrap {
+		background-image: none;
+		height: unset;
 		flex-direction: column;
 		align-items: center;
 	}
 
 	.quote__wrap-left {
 		width: 100%;
-		justify-content: flex-end;
+		justify-content: center;
 		align-items: flex-start; 
 	}
 
@@ -956,7 +977,7 @@ body button:focus {
 	}
 
 	.quote__wrap-right img {
-		margin: unset;
+		margin: 0;
 	}
 }
 
@@ -964,10 +985,7 @@ body button:focus {
 	.quote {
 		padding: 80px 0;
 	}
-	.quote__wrap {
-		background-image: none;
-		height: unset;
-	}
+
 	.quote__wrap-left {
 		justify-content: center;
 	}
