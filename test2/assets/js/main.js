@@ -158,17 +158,6 @@ var video = $('#online-video').get(0);
 // if(window.innerWidth >= 767){document.getElementById('vid').innerHTML='<video playsinline webkit-playinginline autoplay muted loop="-1" heght="auto" width="100%" poster="/wp-content/uploads/2019/12/video-preview.jpg"><source src="/wp-content/uploads/2019/12/site-video-superedit.mp4" type="video/mp4"><source src="/wp-content/uploads/2019/12/site-video-superedit.ogv" type="video/ogv">HTML5-видео не поддерживается вашим браузером</video><div class="mask"></div>'}
 
 
-// $(document).ready(function(){
-//     var main_video = $('#main-video').get(0);
-//     console.log(main_video.poster)
-//     console.log(window.innerWidth)
-//     main_video.poster = 'assets/img/image5.jpg'
-//     main_video.src = ''
-//     if(window.innerWidth >= 767){
-//         main_video.poster = 'assets/img/image5.jpg'
-//         }
-    
-// })
 
 
 
@@ -188,38 +177,26 @@ var video = $('#online-video').get(0);
 //                 });
 //               }
 
-// $('.map-block').on('click', function(){
+function addScript(src){
+          var script = document.createElement('script');
+          script.src = src;
+          script.async = false; // чтобы гарантировать порядок
+          document.body.appendChild(script);
+        }
 
-//         console.log('gello')
-//     $('.map-block').hide()
+$('.map-block').on('click', function(){
+var mapSrc = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDKQ6x5al7NFc63XIBOw6VmnIGe1hjha64&amp;callback=initMap'
+        console.log('gello')
+    $('.map-block').hide()
+    $('#map').show()
+addScript(mapSrc);
 
-//       var mapSrc = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDKQ6x5al7NFc63XIBOw6VmnIGe1hjha64&amp;callback=initMap'
-//       function addScript(src){
-//           var script = document.createElement('script');
-//           script.src = src;
-//           script.async = false; // чтобы гарантировать порядок
-//           document.body.appendChild(script);
-//         }
-//         // addScript('assets/js/map.js');
-//         // initMap()
-//         addScript(mapSrc);
+        addScript('assets/js/map.js');
+        
+    })
 
-//     })
-
+// $('footer').on('click',function(){
+//     addScript('assets/js/test.js');
+// })
 
 
-    function initMap() {
-        var uluru = {lat: 50.4491873343781, lng: 30.4927882042627};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 14,
-          draggable: true,
-          styles: [{"featureType":"all","elementType":"geometry","stylers":[{"color":"#002444"}]},{"featureType":"all","elementType":"labels.text.fill","stylers":[{"gamma":0.01},{"lightness":20},{"color":"#2787d1"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"saturation":-31},{"lightness":-33},{"weight":2},{"gamma":0.8},{"color":"#002444"}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"lightness":30},{"saturation":30},{"color":"#002444"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"saturation":20},{"color":"#01152b"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"lightness":20},{"saturation":-20},{"color":"#011c39"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":10},{"saturation":-30}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"saturation":25},{"lightness":25},{"color":"#004988"}]},{"featureType":"water","elementType":"all","stylers":[{"lightness":-20},{"color":"#001e38"}]}],
-          center: uluru
-});
-        var marker = new google.maps.Marker({
-          position: {lat: 50.4491873343781, lng: 30.4927882042627},
-          map: map, 
-          title: 'Hello world',
-          icon: src='assets/img/marker.png'
-        });
-      }
