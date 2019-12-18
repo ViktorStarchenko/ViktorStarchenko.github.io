@@ -262,7 +262,7 @@ body button:focus {
 	-webkit-box-pack: end;
 	    -ms-flex-pack: end;
 	        justify-content: flex-end;
-	margin-bottom: 23px;
+	margin-bottom: 29px;
 }
 
 .header__socials-item {
