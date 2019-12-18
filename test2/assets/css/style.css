@@ -1430,6 +1430,7 @@ body button:focus {
 
 .pochemu__item-layout img {
 	margin-bottom: 30px;
+	max-width: 67px;
 }
 
 .pochemu__item-layout p {
