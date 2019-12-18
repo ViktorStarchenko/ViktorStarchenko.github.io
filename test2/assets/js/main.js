@@ -1,3 +1,18 @@
+// Мобильное меню
+
+$(document).ready(function(){
+    $('.navbar-toggler').on('click', function(){
+        console.log('hello')
+        $('.mobile-menu-wrap').addClass('show')
+    })
+
+    $('.mobile-menu-close-button').on('click', function(){
+        console.log('bue')
+        $('.mobile-menu-wrap').removeClass('show')
+    })
+})
+
+
 // $(document).ready(function() {
 // 	$('#header .navbar-toggler').on('click', function() {
 // 		$('.shadow-screen').toggleClass('active')
