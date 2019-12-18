@@ -1484,10 +1484,33 @@ body button:focus {
     z-index: 3
 }
 
+@media screen and (max-width: 1440px) {
+	
+	.pochemu h1 {
+		margin-bottom: 29px;
+	}
+
+	.pochemu__item {
+		padding: 16px 10px;
+	}
+
+	.pochemu__item-text p {
+		font-size: 13px;
+		line-height: 22px;
+		margin: 0;
+	}
+}
+
 
 @media screen and (max-width: 1200px) {
 	.pochemu {
 		background-repeat: repeat;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.pochemu {
+		padding: 30px 0;
 	}
 }
 
@@ -1531,6 +1554,10 @@ body button:focus {
 }
 
 @media screen and (max-width: 767px) {
+	.pochemu__item {
+		padding: 25px 10px;
+	}
+	
 	.pochemu .col-12.col-md-4.p-0:hover .pochemu__item-layout {
 		opacity: 0;
 		-webkit-transition-duration: .3s;
@@ -1553,6 +1580,8 @@ body button:focus {
 
 	.pochemu__item-text p {
 		text-align: center;
+		font-size: 16px;
+		line-height: 26px;
 	}
 }
 
