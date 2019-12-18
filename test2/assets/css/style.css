@@ -1499,6 +1499,10 @@ body button:focus {
 		line-height: 22px;
 		margin: 0;
 	}
+
+	.pochemu__item-layout img {
+		margin-bottom: 10px;
+	}
 }
 
 
@@ -1556,10 +1560,6 @@ body button:focus {
 @media screen and (max-width: 767px) {
 	.pochemu__item {
 		padding: 25px 10px;
-	}
-
-	.pochemu__item-layout img {
-		margin-bottom: 10px;
 	}
 
 	.pochemu .col-12.col-md-4.p-0:hover .pochemu__item-layout {
