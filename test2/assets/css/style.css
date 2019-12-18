@@ -1557,7 +1557,11 @@ body button:focus {
 	.pochemu__item {
 		padding: 25px 10px;
 	}
-	
+
+	.pochemu__item-layout img {
+		margin-bottom: 10px;
+	}
+
 	.pochemu .col-12.col-md-4.p-0:hover .pochemu__item-layout {
 		opacity: 0;
 		-webkit-transition-duration: .3s;
