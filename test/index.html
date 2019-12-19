@@ -127,7 +127,7 @@
                     
                     <input class="navbar__contact-email" readonly="readonly" value="info@greenarea.com.ua" >
                     <div class="navbar-phone">
-                        <p class="navbar__phone-number">+39-098-<span class="color-green">112-76-59</span></p>
+                        <a class="navbar__phone-number" href="tel:+390(98)-112-76-59">+39-098-<span class="color-green">112-76-59</span></a>
                         <a class="navbar__phone-call" href="tel:+390(98)-112-76-59">Заказать звонок</a>
                     </div>
                 </div>
@@ -171,7 +171,7 @@
                     
                     <input class="navbar__contact-email" readonly="readonly" value="info@greenarea.com.ua" >
                     <div class="navbar-phone">
-                        <p class="navbar__phone-number">+39-098-<span class="color-green">112-76-59</span></p>
+                        <a class="navbar__phone-number" href="tel:+390(98)-112-76-59">+39-098-<span class="color-green">112-76-59</span></a>
                         <a class="navbar__phone-call" href="tel:+390(98)-112-76-59">Заказать звонок</a>
                     </div>
                 </div>
@@ -202,15 +202,15 @@
         <div class="info-block">
             <div class="info__items">
                 <div class="info__item-box">
-                    <img src="assets/img/info-1.png" alt="">
+                    <img class="lazy" data-src="assets/img/info-1.png" src="assets/img/placeholder.jpg" alt="img alt">
                     <p>Дизайн  и Проектрование</p>
                 </div>
                 <div class="info__item-box info__item-box-middle">
-                    <img src="assets/img/info-2.png" alt="">
+                    <img class="lazy" data-src="assets/img/info-2.png" src="assets/img/placeholder.jpg" alt="img alt">
                     <p>Озеленение и Благоустройство</p>
                 </div>
                 <div class="info__item-box info__item-box-right">
-                    <img src="assets/img/info-3.png" alt="">
+                    <img class="lazy" data-src="assets/img/info-3.png" src="assets/img/placeholder.jpg" alt="img alt">
                     <p>Сервисное обслуживание</p>
                     <img class="img-fluid info-block__fiure" src="assets/img/figure2.png" alt="">
                 </div>
@@ -220,7 +220,7 @@
             <div class="row wrapper m-auto">
                 <div class="col-12 col-md-6">
                     <div class="about__img">
-                        <img class="img-fluid" src="assets/img/about-2.jpg" alt="">
+                       <img class="lazy img-fluid" data-src="assets/img/about-2.jpg" src="assets/img/placeholder.jpg" alt="img alt">
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
@@ -855,6 +855,24 @@
                     </div>
                 </div>
                 
+            </div>
+        </div>
+    </section>
+
+    <section style="background-color: black">
+        <div class="callback">
+            <div class="callback__wrap">
+                <form id="form" id="form" action="#" method="POST">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="phone" placeholder="Ваш номер телефона" required>
+                    </div>
+                    <div class="form-group">
+                        <button class="form-submit base-button" id="form-submit" type="submit">Заказть звонок</button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>

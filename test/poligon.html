@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+
+<html lang="ru-RU">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="https://use.fontawesome.com/b38bf7744d.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+
+
+
+</head>
+
+<body>
+    <div class="shadow-screen"></div>
+    <header id="header">
+        <div class="container-fluid">
+
+            <nav class="navbar navbar-expand-lg fixed-top m-auto">
+            <div class="wrapper m-auto header-inner">
+              <a class="navbar-brand" href="#">
+                  <img class="logo-img" src="assets/img/logo.png" alt="">
+              </a>
+              <a class="navbar__phone-call mobile" href="tel:+390(98)-112-76-59">+39-098-<span class="color-green">112-76-59</span></a>
+              <!-- <ul class="navbar__language mobile">
+                    <li class="navbar__language-item">
+                        <a class="navbar__language-link" href="">
+                            <img class="header__flag-icon" src="assets/img/ua.jpg" alt="">
+                            <span class="navbar__language-text">Українська</span>
+                        </a>
+                        
+                    </li>
+                    <li class="navbar__language-item">
+                        <a class="navbar__language-link" href="">
+                            <img class="header__flag-icon" src="assets/img/ru.jpg" alt="">
+                            <span class="navbar__language-text">Русский</span>
+                        </a>
+                    </li>
+                </ul> -->
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="fas fa-bars"></i>
+                </span>
+              </button>
+              
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">главная <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Услуги
+                    </a>
+                    <div class="dropdown-menu header__navbar-dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Ландшафтный дизайн</a>
+                      <a class="dropdown-item" href="#">Автоматический полив</a>
+                      <a class="dropdown-item" href="#">Рулонный газон</a>
+                      <a class="dropdown-item" href="#">Посадка декоративных растений</a>
+                      <a class="dropdown-item" href="#">Экопарковка</a>
+                      <a class="dropdown-item" href="#">Уход за газоном и растениями</a>
+                      <a class="dropdown-item" href="#">Оберка деревьев и кустарников</a>
+                      <div class="dropdown-divider"></div>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link crane" href="#photogallery">Фотогалерея</a>
+                  </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="#">Цены</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link crane" href="#about">О нас</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link crane" href="#contacts">Контакты</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Помощь экспертов</a>
+                  </li>
+                </ul>
+                
+                <div class="navbar__contact-block mobile">
+                    <div class="navbar__contact-top">
+                        <ul class="navbar__language">
+                            <li class="navbar__language-item">
+                                <a class="navbar__language-link active" href="">
+                                    <!-- <img class="header__flag-icon" src="assets/img/ua.jpg" alt=""> -->
+                                    <span class="navbar__language-text">Українська</span>
+                                </a>
+                                
+                            </li>
+                            <li class="navbar__language-item">
+                                <a class="navbar__language-link" href="">
+                                    <!-- <img class="header__flag-icon" src="assets/img/ru.jpg" alt=""> -->
+                                    <span class="navbar__language-text">Русский</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="navbar__socials">
+                            <li class="navbar__socials-item">
+                                <a href="">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="navbar__socials-item">
+                                <a href="">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="navbar__socials-item">
+                                <a href="">
+                                    <i class="fab fa-youtube"></i>
+                                </a>    
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <input class="navbar__contact-email" readonly="readonly" value="info@greenarea.com.ua" >
+                    <div class="navbar-phone">
+                        <a class="navbar__phone-number" href="tel:+390(98)-112-76-59">+39-098-<span class="color-green">112-76-59</span></a>
+                        <a class="navbar__phone-call" href="tel:+390(98)-112-76-59">Заказать звонок</a>
+                    </div>
+                </div>
+
+              </div>
+              <div class="navbar__contact-block">
+                    <div class="navbar__contact-top">
+                        <ul class="navbar__language">
+                            <li class="navbar__language-item">
+                                <a class="navbar__language-link active" href="">
+                                    <!-- <img class="header__flag-icon" src="assets/img/ua.jpg" alt=""> -->
+                                    <span class="navbar__language-text">Українська</span>
+                                </a>
+                                
+                            </li>
+                            <li class="navbar__language-item">
+                                <a class="navbar__language-link" href="">
+                                    <!-- <img class="header__flag-icon" src="assets/img/ru.jpg" alt=""> -->
+                                    <span class="navbar__language-text">Русский</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="navbar__socials">
+                            <li class="navbar__socials-item">
+                                <a href="">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="navbar__socials-item">
+                                <a href="">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="navbar__socials-item">
+                                <a href="">
+                                    <i class="fab fa-youtube"></i>
+                                </a>    
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <input class="navbar__contact-email" readonly="readonly" value="info@greenarea.com.ua" >
+                    <div class="navbar-phone">
+                        <a class="navbar__phone-number" href="tel:+390(98)-112-76-59">+39-098-<span class="color-green">112-76-59</span></a>
+                        <a class="navbar__phone-call" href="tel:+390(98)-112-76-59">Заказать звонок</a>
+                    </div>
+                </div>
+            </div>
+            </nav>
+
+            
+        </div>
+        
+    </header>
+ <section class="hero">
+        <div class="hero__inner">
+            <div class="container-fluid">
+                <div class="row wrapper m-auto">
+                    <div class="col-12">
+                        <h1 class="hero__heading">ландшафтный дизайн частных и  общественных территорий</h1>
+                        <a class="base-button" href="">Смотреть акции</a>
+                    </div>
+                </div>
+            </div> 
+           
+        </div>
+</section>
+
+
+<section class="service-page__options">
+	<div class="container-fluid">
+		<div class="row wrapper m-auto">
+			<div class="col-12 col-md-4">
+				<div class="service-page__options-item">
+					<div class="service-page__options-title">
+						<h2>стандарт</h2>
+					</div>
+					<div class="service-page__options-heading">
+						<h2>Полив из ёмкости</h2>
+					</div>
+					<div class="service-page__options-inner"></div>
+					<div class="service-page__options-content">
+						<img src="assets/img/poliv_2.jpg" alt="">
+						<div class="service-page__options-text-box">
+							<div class="service-page__options-text">
+								<span>Автоматика управления</span>
+								<ul>
+									<li>Контроллер</li>
+									<li>Датчик дождя</li>
+									<li>Кабель ПВС</li>
+								</ul>
+							</div>
+
+							<div class="service-page__options-text">
+								<span>Количество оросителей</span> 
+								<ul>
+									<li>Оптимальное</li>
+									<li>Капельный полив</li>
+								</ul>
+							</div>
+
+							<div class="service-page__options-text">
+								<span>Трубопровод</span> 
+								<ul>
+									<li>ПЭ 100 Производство: Украина</li>
+								</ul>
+								
+								
+							</div>
+
+							<div class="service-page__options-text">
+								<span>Фитинги "Irritec"</span> 
+								<ul>
+									<li>Производство: Италия</li>
+								</ul>
+								
+							</div>
+							<div class="service-page__options-text">
+								<span>ПЭ емкости</span>
+								<ul>
+									<li>Двухслойная</li>
+								</ul>
+	 							
+							</div>
+							<div class="service-page__options-text">
+								<span>Насосное оборудование</span>  
+								<ul>
+									<li>Автоматика "Pedrollo"</li>
+									<li>Насос "Pedrollo"</li>
+								</ul>
+	 							
+							</div>
+							<div class="service-page__options-text">
+								<span>Комплекс работ</span>
+								<ul>
+									<li>Земельные</li>
+									<li>Монтажные</li>
+									<li>Пуско-наладочные</li>
+								</ul>
+							</div>
+							<div class="service-page__options-text">
+								<span>Гарантия на оборудование</span>
+								<ul>
+									<li>До 3 лет</li>
+								</ul>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-4">
+				<div class="service-page__options-item">
+					<div class="service-page__options-title">
+						<h2>Комфорт</h2>
+					</div>
+					<div class="service-page__options-heading">
+						<h2>Полив со скважины</h2>
+					</div>
+					<div class="service-page__options-inner"></div>
+					<div class="service-page__options-content">
+						<img src="assets/img/poliv_1.jpg" alt="">
+						<div class="service-page__options-text-box">
+							<div class="service-page__options-text">
+								<span>Автоматика управления</span>
+								<ul>
+									<li>Контроллер</li>
+									<li>Датчик дождя</li>
+									<li>Кабель ПВС</li>
+								</ul>
+							</div>
+
+							<div class="service-page__options-text">
+								<span>Количество оросителей</span> 
+								<ul>
+									<li>Оптимальное</li>
+								</ul>
+							</div>
+
+							<div class="service-page__options-text">
+								<span>Трубопровод ПЭ 100</span> 
+								<ul>
+									<li>Производство: Украина</li>
+								</ul>
+								
+								
+							</div>
+
+							<div class="service-page__options-text">
+								<span>Фитинги "Irritec"</span> 
+								<ul>
+									<li>Производство: Италия</li>
+								</ul>
+								
+							</div>
+
+							<div class="service-page__options-text">
+								<span>Комплекс работ</span>
+								<ul>
+									<li>Земельные</li>
+									<li>Монтажные</li>
+									<li>Пуско-наладочные</li>
+								</ul>
+							</div>
+							<div class="service-page__options-text">
+								<span>Гарантия на оборудование</span>
+								<ul>
+									<li>До 3 лет</li>
+								</ul>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-md-4">
+				<div class="service-page__options-item">
+					<div class="service-page__options-title">
+						<h2>премиум</h2>
+					</div>
+					<div class="service-page__options-heading">
+						<h2>Умная технологиия полива</h2>
+					</div>
+					<div class="service-page__options-inner"></div>
+					<div class="service-page__options-content">
+						<img src="assets/img/poliv_3.jpg" alt="">
+						<div class="service-page__options-text-box">
+							<div class="service-page__options-text">
+								<span>Контроллер Датчик дождя</span>
+								<ul>
+									<li>Расходометр Wi-Fi соединени</li>
+									<li>Количество оросителей Оптимальное</li>
+									<li>Капельный полив</li>
+								</ul>
+							</div>
+
+							<div class="service-page__options-text">
+								<span>Количество оросителей</span> 
+								<ul>
+									<li>Максимальное</li>
+									<li>Капельный полив</li>
+								</ul>
+							</div>
+
+							<div class="service-page__options-text">
+								<span>Трубопровод ПЭ 100 </span> 
+								<ul>
+									<li>Производство: Польша</li>
+								</ul>
+								
+								
+							</div>
+
+							<div class="service-page__options-text">
+								<span>Фитинги "Irritec"</span> 
+								<ul>
+									<li>Производство: Италия</li>
+								</ul>
+								
+							</div>
+							<div class="service-page__options-text">
+								<span>ПЭ емкости</span>
+								<ul>
+									<li>Двухслойная</li>
+									<li>Защитный колодец</li>
+								</ul>
+	 							
+							</div>
+							<div class="service-page__options-text">
+								<span>Насосное оборудование</span>  
+								<ul>
+									<li>Автоматика "Pedrollo"</li>
+									<li>Насос "Pedrollo"</li>
+								</ul>
+	 							
+							</div>
+							<div class="service-page__options-text">
+								<span>Комплекс работ</span>
+								<ul>
+									<li>Земельные</li>
+									<li>Монтажные</li>
+									<li>Пуско-наладочные</li>
+								</ul>
+							</div>
+							<div class="service-page__options-text">
+								<span>Гарантия на оборудование</span>
+								<ul>
+									<li>До 3 лет</li>
+								</ul>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+   <footer class="footer" id="contacts">
+        <div class="container-fluid">
+            <div class="row wrapper m-auto ">
+                <div class="col-auto m-auto">
+                    <h1>Контакты</h1>
+                </div>
+            </div>
+            <div class="row wrapper m-auto ">
+                <div class="col-12 col-md-6">
+                   <div class="footer__contacts-items">
+                       <h2><span class="color-orange">Green</span>A</span>rea</h2>
+                       <ul class="footer__contacts-wrap">
+                           <li> <a href="tel:+38-(098)-112-76-59"> <span class="color-orange">Phone</span>:  +38 (098) 112-76-59</a></li>
+                           <li> <a href="mailto:info@greenarea.com.ua"><span class="color-orange">Email</span>:  info@greenarea.com.ua</a></li>
+                           <li><span class="color-orange">Город</span>:  Киев,  Киевская область</li>
+                       </ul>
+
+                       <ul class="footer__socials">
+                            <li class="footer__socials-item">
+                                <a href="">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="footer__socials-item">
+                                <a href="">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="footer__socials-item">
+                                <a href="">
+                                    <i class="fab fa-youtube"></i>
+                                </a>    
+                            </li>
+                        </ul>
+                   </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="callback">
+                        <div class="callback__wrap">
+                            <form id="form" id="form" action="#" method="POST">
+                                <div class="form-group-input-wrapper">
+                                    <div class="form-group-input">
+                                        <input type="text" name="name" placeholder="Ваше имя" required>
+                                    </div>
+                                    <div class="form-group-input">
+                                        <input type="emaim" name="email" placeholder="Email" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <!-- <input type="email" name="email" placeholder="Вкажіть Ваш email" required> -->
+                                    <textarea name="message" rows="6" placeholder="Your Message..."></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <button class="form-submit base-button" id="form-submit" type="submit">Отправить</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+<script src="assets/js/jquery-3.4.1.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/jquery.galereya.js"></script>
+<!-- <script src="assets/js/masonry.pkgd.min.js"></script> -->
+
+
+
+
+<script src="assets/js/main.js"></script>
+</body>
+
+</html>
