@@ -104,6 +104,27 @@ $(document).ready(function(){
 })
 
 
+$(document).ready(function(){
+    // Lazy load
+    lazyLoad = el => {
+      const scrollTop = $(window).scrollTop()
+      const winHeight = $(window).height()
+      const offset = $(el).offset().top
+      const schemeHeight = $(el).height()
+
+      if (scrollTop + winHeight >= offset && scrollTop <= offset + schemeHeight) {
+        $(el).addClass('animate')
+      }
+    }
+
+     $(window).on('load scroll', () => {
+
+      $('.waypoint').each((idx, item) => {
+        lazyLoad(item)
+      })
+    })
+})
+
 // $(document).ready(function(){
 //   $('.photogallery-page__slider-wrap').slick({
 //   		fade: true,
@@ -170,6 +191,105 @@ var video = $('#online-video').get(0);
         })
 })
 
+
+// Страница курсов, отзыв
+$(document).ready(function(){
+
+var videoReview1 = $('#review-video1').get(0);
+
+
+    $('#review1__video-button').on('click', function(){
+        
+            $('#review1__video-button').removeClass('paused')
+            videoReview1.play()
+          
+            $('.video-button-wrap').hide()
+            $('.review1-pause-wrap').addClass('visible')
+
+        })
+
+        
+
+        $('.review1-pause-wrap').on('click', function(){
+            console.log('played')
+            $('#review1__video-button').addClass('paused')
+            
+            videoReview1.pause()
+
+            $('.video-button-wrap').show()
+            $('.review1-pause-wrap').removeClass('visible')
+        })  
+
+
+
+
+var videoReview2 = $('#review-video2').get(0);
+
+
+    $('#review2__video-button').on('click', function(){
+        
+            $('#review2__video-button').removeClass('paused')
+            videoReview2.play()
+          
+            $('.video-button-wrap').hide()
+            $('.review2-pause-wrap').addClass('visible')
+
+        })
+
+        
+
+        $('.review2-pause-wrap').on('click', function(){
+            console.log('played')
+            $('#review2__video-button').addClass('paused')
+            
+            videoReview2.pause()
+
+            $('.video-button-wrap').show()
+            $('.review2-pause-wrap').removeClass('visible')
+        })        
+})
+
+
+
+
+
+$(document).ready(function(){
+  $('.courses-work__slider').slick({
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+});
 // if(window.innerWidth >= 767){document.getElementById('vid').innerHTML='<video playsinline webkit-playinginline autoplay muted loop="-1" heght="auto" width="100%" poster="/wp-content/uploads/2019/12/video-preview.jpg"><source src="/wp-content/uploads/2019/12/site-video-superedit.mp4" type="video/mp4"><source src="/wp-content/uploads/2019/12/site-video-superedit.ogv" type="video/ogv">HTML5-видео не поддерживается вашим браузером</video><div class="mask"></div>'}
 
 
