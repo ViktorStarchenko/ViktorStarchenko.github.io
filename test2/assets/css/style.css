@@ -2674,28 +2674,49 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
 
 .courses-who__item {
 	background-color: #f8f9fb;
-	height: 300px;
+	/*height: 300px;*/
+	min-height: 490px;
 	margin-bottom: 40px;
 	position: relative;
 	box-shadow: 0 2px 10px 1px rgba(9, 147, 240, 0.7);
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.courses-who .col-12.col-md-6.col-lg-3.text-center:nth-child(2) .courses-who__item, .courses-who .col-12.col-md-6.col-lg-3.text-center:nth-child(4) .courses-who__item {
+	flex-direction: column-reverse;
 }
 
 .courses-who__item h4 {
 	font-weight: 900;
-	background-color: #0a9dff;
-	color: #fff;
+	/*background-color: #0a9dff;*/
+	/*color: #fff;*/
 	height: 100px;
 	padding: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 0;
 
 }
 
 .courses-who__item p {
 	font-size: 14px;
-    padding: 10px;
+    padding: 0 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    height: 150px;
+}
+
+.courses-who__item {
+	padding: 5px;
+}
+
+.courses-who .courses-about__img-box {
+	width: unset;
 }
 
 
@@ -2733,7 +2754,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
 		transition-duration: .3s;
 	}
 
-	.courses-who__item p {
+/*	.courses-who__item p {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -2742,11 +2763,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
 		color: #fff;
 		background-color: #104e78;
 		opacity: 0;
-		/*z-index: -1;*/
 		display: flex;
 		justify-content: center;
 		align-items: center;
-	}
+	}*/
 }
 
 
@@ -3454,21 +3474,48 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
 	background-image: url(../img/video-preview.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
+	overflow: hidden;
 }
 
 .courses-sertificates-text {
 	margin-bottom: 40px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
 }
 
-.courses-sertificates h2, .courses-sertificates h4 {
+.courses-sertificates .banner-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.courses-sertificates h1, .courses-sertificates h4 {
 	color: #fff;
 }
 
-@media screen and (max-width: 767px) {
-	.courses-sertificates h2 {
+.courses-sertificates h1 {
+	letter-spacing: 1.4px;
+	font-size: 42px;
+}
+
+@media screen and (max-width: 992px) {
+	.courses-sertificates-text {
+		align-items: center;
+	}
+	.courses-sertificates h1, .courses-sertificates h4 {
+		text-align: center;
+	}
+	.courses-sertificates h1 {
 		margin-bottom: 30px;
 	}
-	.courses-sertificates h2, .courses-sertificates h4 {
-		text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+	
+	.courses-sertificates h1 {
+		font-size: 24px;
 	}
 }
