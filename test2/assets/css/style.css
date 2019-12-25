@@ -2920,7 +2920,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
 .courses-opportunity__item:hover {
 	background-color: #0993f0;
 	transition-duration: .5s;
-	transform: scaleY(1.2);
+	transform: scaleY(1.1);
 }
 
 .courses-opportunity__item:hover .courses-opportunity__item-title h4, .courses-opportunity__item:hover .courses-opportunity__item-text p {
