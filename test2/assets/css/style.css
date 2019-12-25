@@ -522,7 +522,7 @@ body button:focus {
 	left: 0;
 	width: 100%;
 	height: 6px;
-	box-shadow: 0 9px 8px 0px #020000;
+	box-shadow: 0 3px 5px 0px #020000;
 	background-color: #020000;
 	display: none;
 }
