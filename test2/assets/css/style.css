@@ -408,7 +408,36 @@ body button:focus {
 	        transition-duration: .3s;
 }
 
+
+
 .base-button:hover {
+	color: #fff;
+	text-decoration: none;
+	box-shadow: none;
+	-webkit-transition-duration: .3s;
+	        transition-duration: .3s;
+}
+
+.base-button-clip {
+	box-shadow: 0 2px 10px 1px rgba(9, 147, 240, 0.7);
+	border-radius: 2px;
+	background-color: #0993f0;
+	color: #fff;
+	text-align: center;
+	padding: 15px;
+	font-family: Roboto;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	/* Text style for "Заказать к" */
+	letter-spacing: 0.8px;
+	clip-path: polygon(6% 0, 97% 3%, 100% 19%, 100% 81%, 100% 100%, 10% 99%, 3% 81%, 0 14%);
+	-webkit-transition-duration: .3s;
+	        transition-duration: .3s;
+}
+
+.base-button-clip:hover {
+	background-color: #0993f0a3;
 	color: #fff;
 	text-decoration: none;
 	box-shadow: none;
@@ -2036,7 +2065,11 @@ body button:focus {
 
 
 /*COURSES-PAGE*/
-.courses-video-text {
+.courses-video {
+	overflow: hidden;
+}
+
+.courses-video-inner {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -2045,22 +2078,91 @@ body button:focus {
 	background-color: #11111152;
 	color: #fff;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 	z-index: 1;
 	padding: 0 10px;
+}
 
+.courses-video-text {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: space-between;
+	max-width: 600px;
+	margin-right: 200px
 }
 
 .courses-video-text h1 {
 	color: #fff;
-	text-align: center;
+	text-align: left;
+	font-weight: 600;
+	margin-bottom: 20px;
 }
 
 .courses-video-text p {
 	color: #fff;
-	text-align: center;
+	text-align: left;
+}
+
+.banner-button-wrap {
+	padding: 50px;
+	background-color: #0993f0;
+	/*transform: rotate(30deg);*/
+	/*clip-path: polygon(6% 0, 96% 4%, 100% 15%, 100% 81%, 100% 100%, 10% 99%, 3% 81%, 0 14%);*/
+	/*clip-path: polygon(10% 3%, 88% 0, 100% 13%, 98% 90%, 87.5% 100%, 10% 92%, 0 80%, 3% 12%);*/
+	clip-path: polygon(6% 0, 97% 3%, 100% 19%, 100% 81%, 100% 100%, 10% 99%, 3% 81%, 0 14%);
+	position: relative;
+}
+
+.banner-button-layer {
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    transform: rotate(0deg);
+    z-index: -1;
+    clip-path: polygon(10% 3%, 88% 0, 100% 13%, 98% 90%, 87.5% 100%, 10% 92%, 0 80%, 3% 12%);
+}
+	
+
+.banner-button-wrap:before {
+/*	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: #111;
+	transform: rotate(-10deg);*/
+}
+
+.banner-button {
+	position: relative;
+	padding: 15px;
+}
+
+.banner-button img {
+	position: absolute;
+	z-index: 1;
+}
+
+.banner-button img:nth-child(1) {
+	left: -50px;
+	top: 0;
+}
+
+.banner-button img:nth-child(2) {
+	bottom: -30px;
+    left: -15px;
+}
+
+.banner-button img:nth-child(3) {
+	bottom: -70px;
+    right: -49px;
 }
 
 .banner-button-box {
@@ -2068,18 +2170,20 @@ body button:focus {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	border: 1px solid #fff;
+	border: 2px solid #0993f0;;
 	padding: 10px 30px;
 	width: 100%;
     max-width: 600px;
+    clip-path: polygon(6% 0, 97% 3%, 100% 19%, 100% 81%, 100% 100%, 10% 99%, 3% 81%, 0 14%);
 }
 
 .banner-button-box span {
 	font-family: 'Roboto';
     font-size: 16px;
-    color: #ccc;
-    font-weight: 400;
+    color: #111;
+    font-weight: 600;
     line-height: 26px;
+    margin-bottom: 15px;
 }
 
 .banner-button-box .base-button {
@@ -2096,8 +2200,6 @@ body button:focus {
     height: 54vh;
     background-repeat: no-repeat;
 }
-
-
 
 .main-banner-quote {
     display: block;
@@ -2134,6 +2236,10 @@ body button:focus {
 }
 
 @media screen and (max-width: 1024px) {
+	.courses-video-text {
+		margin-right: unset;
+	}
+
 	.courses-video-text h1 {
 		font-size: 22px;
 	}
@@ -2143,13 +2249,59 @@ body button:focus {
 	}
 }
 
+@media screen and (max-width: 860px) {
+
+	.courses-video #main-video {
+		display: none
+	}
+
+	.courses-video-inner {
+		flex-direction: column;
+		align-items: center;
+		background-image: url(../img/video-preview.jpg);
+    	background-size: cover;
+    	position: relative;
+    	padding: 22px 0 74px;
+	}
+
+	.courses-video-text {
+		align-items: center;
+		margin-bottom: 30px;
+	}
+
+	.courses-video-text h1 {
+		text-align: center;
+		margin-bottom: 25px;
+	}
+
+	.courses-video-text p {
+		text-align: center;
+	}
+}
+
 @media screen and (max-width: 767px) {
+
+	.courses-video-inner {
+		flex-direction: column;
+		align-items: center;
+		background-image: url(../img/video-preview.jpg);
+    	background-size: cover;
+    	position: relative;
+    	padding: 22px 0 74px;
+	}
+
+	.courses-video-text h1 {
+		text-align: center;
+		margin-bottom: 25px;
+	}
 
 	.courses-video-text p {
 		font-size: 12px;
+		line-height: 21px;
+		/*text-align: center;*/
 	}
 	.main-banner-courses {
-		display: block;
+		/*display: block;*/
 	}
 }
 
@@ -2157,6 +2309,16 @@ body button:focus {
 
 	.main-banner-courses {
 		height: 60vh
+	}
+
+	.banner-button-box {
+		padding: 10px;
+	}
+
+	.banner-button-box span {
+		font-size: 12px;
+		text-align: center;
+		margin-bottom: 0;
 	}
 }
 
