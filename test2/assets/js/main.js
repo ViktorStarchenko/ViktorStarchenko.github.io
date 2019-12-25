@@ -334,4 +334,7 @@ addScript(mapSrc);
 //     addScript('assets/js/test.js');
 // })
 
+var scene = document.getElementById('scene');
+var parallaxInstance = new Parallax(scene);
+
 
