@@ -424,7 +424,7 @@ body button:focus {
 	background-color: #0993f0;
 	color: #fff;
 	text-align: center;
-	padding: 15px;
+	padding: 15px 38px;
 	font-family: Roboto;
 	font-size: 16px;
 	font-weight: 500;
@@ -2107,27 +2107,61 @@ body button:focus {
 }
 
 .banner-button-wrap {
-	padding: 50px;
-	background-color: #0993f0;
+	padding: 10px;
+	/*background-color: #0993f0;*/
 	/*transform: rotate(30deg);*/
 	/*clip-path: polygon(6% 0, 96% 4%, 100% 15%, 100% 81%, 100% 100%, 10% 99%, 3% 81%, 0 14%);*/
 	/*clip-path: polygon(10% 3%, 88% 0, 100% 13%, 98% 90%, 87.5% 100%, 10% 92%, 0 80%, 3% 12%);*/
-	clip-path: polygon(6% 0, 97% 3%, 100% 19%, 100% 81%, 100% 100%, 10% 99%, 3% 81%, 0 14%);
+	/*clip-path: polygon(6% 0, 97% 3%, 100% 19%, 100% 81%, 100% 100%, 10% 99%, 3% 81%, 0 14%);*/
 	position: relative;
+}
+.banner-button-layer-2 {
+	/*clip-path: polygon(6% 0, 97% 3%, 100% 19%, 100% 81%, 100% 100%, 10% 99%, 3% 81%, 0 14%);
+	background-color: #0993f0;
+	position: absolute;
+	height: 100%;
+	width: 100%;*/
+
+	clip-path: polygon(10% 3%, 88% 0, 100% 13%, 98% 90%, 87.5% 100%, 10% 92%, 0 80%, 3% 12%);
+    background-color: #0993f0;
+    position: absolute;
+    height: 99%;
+    width: 100%;
+    left: 0;
+    top: 0;
 }
 
 .banner-button-layer {
-	width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    /*background: #fff;
+    transform: rotate(0deg);
+    z-index: -1;
+    clip-path: polygon(10% 3%, 88% 0, 100% 13%, 98% 90%, 87.5% 100%, 10% 92%, 0 80%, 3% 12%);*/
+
     background: #fff;
     transform: rotate(0deg);
     z-index: -1;
-    clip-path: polygon(10% 3%, 88% 0, 100% 13%, 98% 90%, 87.5% 100%, 10% 92%, 0 80%, 3% 12%);
+    clip-path: polygon(10% 0, 97% 8%, 100% 30%, 100% 85%, 81% 94%, 37% 100%, 0 100%, 0% 30%);
+    width: 100%;
+    padding: 39px;
 }
 	
+.banner-button:hover img:nth-child(1) {
+	transition-duration: .3s;
+	left: -20px;
+	top: 15px;
+}
+
+.banner-button:hover img:nth-child(2) {
+	transition-duration: .3s;
+	bottom: -15px;
+    left: -7px;
+}
+
+.banner-button:hover img:nth-child(3) {
+	bottom: -35px;
+    right: -25px;
+    transition-duration: .3s;
+}
 
 .banner-button-wrap:before {
 /*	position: absolute;
@@ -2153,16 +2187,19 @@ body button:focus {
 .banner-button img:nth-child(1) {
 	left: -50px;
 	top: 0;
+	transition-duration: .3s;
 }
 
 .banner-button img:nth-child(2) {
 	bottom: -30px;
     left: -15px;
+    transition-duration: .3s;
 }
 
 .banner-button img:nth-child(3) {
 	bottom: -70px;
     right: -49px;
+    transition-duration: .3s;
 }
 
 .banner-button-box {
@@ -2385,20 +2422,30 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
 
 .courses-about__img-box:nth-child(1) img {
 	clip-path: polygon(5% 5%, 89% 10%, 96% 18%, 96% 94%, 12% 100%, 5% 93%);
+	transition-duration: .5s;
 }
 
 .courses-about__img-box:nth-child(2) img {
 	clip-path: polygon(4% 18%, 11% 10%, 95% 5%, 95% 93%, 88% 100%, 10% 96%, 4% 90%);
+	transition-duration: .5s;
 }
 
 .courses-about__img-box:nth-child(3) img {
 	clip-path: polygon(5% 7%, 12% 0, 88% 3%, 95% 10%, 96% 82%, 89% 90%, 5% 95%);
+	transition-duration: .5s;
 }
 
 .courses-about__img-box:nth-child(4) img {
 	clip-path: polygon(4% 5%, 88% 0, 95% 7%, 95% 95%, 11% 90%, 4% 82%);
+	transition-duration: .5s;
 }
 
+/*.courses-about__img-box:hover img {
+	clip-path: unset;
+	position: relative;
+	transition-duration: .5s;
+}
+*/
 
 
 /*.courses-about__img-box:nth-child(1) {
