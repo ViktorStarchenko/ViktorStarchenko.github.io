@@ -515,17 +515,17 @@ body button:focus {
 	padding: 9px 0;
 }
 
-/*.header__bottom .nav-item:before {
-	position: absolute;
+.header__bottom .nav-item:before {
+/*	position: absolute;
 	content: '';
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 6px;
 	box-shadow: 0 3px 5px 0px #020000;
-	background-color: #020000;
+	background-color: #020000;*/
 	display: none;
-}*/
+}
 
 .header__bottom .nav-item:hover.nav-item:before {
 	display: block;
