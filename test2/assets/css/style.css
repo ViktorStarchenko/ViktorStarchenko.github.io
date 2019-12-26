@@ -4201,11 +4201,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
 
 .courses-work .col-12.col-sm-6:nth-child(1) .courses-sertificate-img img {
 	transform: rotate3d(-111, -51, -16, -37deg);
+	transition-duration: .5s
 }
 
 .courses-work .col-12.col-sm-6:nth-child(2) .courses-sertificate-img img {
 	transform: rotate3d(145, -157, -10, -37deg);
+	transition-duration: .5s
 }
+
+.courses-work .col-12.col-sm-6:nth-child(1):hover .courses-sertificate-img img {
+	transform: none;
+	transition-duration: .5s
+}
+
+.courses-work .col-12.col-sm-6:nth-child(2):hover .courses-sertificate-img img {
+	transform: none;
+	transition-duration: .5s
+}
+
 
 .courses-work__slider {
 	/*height: 300px;*/
@@ -4243,7 +4256,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
     animation: shake4 7s linear infinite; }        
 
 .courses-work__slider .courses-work__slider-item {
-	height: 150px;
+	height: 90px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
