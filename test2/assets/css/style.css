@@ -2929,7 +2929,7 @@ body button:focus {
 		-webkit-box-align: center;
 		    -ms-flex-align: center;
 		        align-items: center;
-		background-image: url(../img/Image2.jpg);
+		background-image: url(../img/Image3.jpg);
     	background-size: cover;
     	background-position: center;
     	position: relative;
@@ -4290,7 +4290,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
 
 .courses-sertificates {
 	padding: 80px 0;
-	background-image: url(../img/video-preview.jpg);
+	background-image: url(../img/Image3.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	overflow: hidden;
