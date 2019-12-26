@@ -3222,12 +3222,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
 }
 
 .courses__item-img {
-	height: 90px;
+	width: 100%;
+	background-color: #0993f0;
+	height: 120px;
 	padding: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 40px;
 }
 
 .courses__item h2 {
 	height: 40px;
+	color: #fff;
+	margin-bottom: 0;
 }
 
 .courses__item-text {
