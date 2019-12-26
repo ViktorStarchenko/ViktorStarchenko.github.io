@@ -2933,7 +2933,7 @@ body button:focus {
     	background-size: cover;
     	background-position: center;
     	position: relative;
-    	padding: 22px 0 74px;
+    	padding: 5px 0 74px;
 	}
 
 	.courses-video-text {
@@ -2945,7 +2945,7 @@ body button:focus {
 
 	.courses-video-text h1 {
 		text-align: center;
-		margin-bottom: 25px;
+		margin-bottom: 13px;
 	}
 
 	.courses-video-text p {
