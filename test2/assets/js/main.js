@@ -338,3 +338,16 @@ var scene = document.getElementById('scene');
 var parallaxInstance = new Parallax(scene);
 
 
+
+
+// $([document.documentElement, document.body]).animate({
+//     scrollTop: $("#initial").offset().top
+// }, 2000);
+
+
+$(window).on('load', () => {
+
+    $([document.documentElement, document.body]).animate({
+    scrollTop: $("#initial").offset().top
+}, 5);
+})
