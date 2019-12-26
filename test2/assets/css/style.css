@@ -3209,15 +3209,30 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
 .courses-rules .courses__item {
 	padding: 10px;
     text-align: center;
-    height: 385px;
+    height: 460px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center;
+            justify-content: flex-start;
     /*box-shadow: -15px 15px 0px #0993f0;*/
     -webkit-transition-duration: .3s;
          -o-transition-duration: .3s;
             transition-duration: .3s;
     padding-bottom: 60px;
+    box-shadow: 0 2px 10px 1px rgba(9, 147, 240, 0.7)
+}
+
+.courses__item-img {
+	height: 90px;
+	padding: 5px;
+}
+
+.courses__item h2 {
+	height: 40px;
+}
+
+.courses__item-text {
+	min-height: 200px;
+	padding: 5px 11px;
 }
 
 .courses-rules .courses__item:hover {
@@ -3241,9 +3256,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
 	font-size: 14px;
 }
 
+@media screen and (max-width: 1024px) {
+	.courses-rules .courses__item {
+		height: 560px;
+	}
+}
+
+
+
 @media screen and (max-width: 992px) {
 	.courses-rules .courses__item {
-		min-height: 500px;
+		height: unset;
 	}
 
 	.courses-rules .courses__item h2 {
@@ -3259,6 +3282,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
 	.courses-rules .courses__item {
 		min-height: unset;
 		height: unset;
+	}
+
+	.courses__item-text {
+		min-height: unset;
 	}
 
 	.courses-rules h1 {
