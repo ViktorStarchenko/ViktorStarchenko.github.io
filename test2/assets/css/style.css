@@ -4189,8 +4189,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
 	color: #fff;
 }
 
+.courses-sertificate-img {
+	max-width: 400px;
+	margin: auto;
+	margin-bottom: 40px;
+}
+
 .courses-work__img {
 	margin-bottom: 40px;
+}
+
+.courses-work .col-12.col-sm-6:nth-child(1) .courses-sertificate-img img {
+	transform: rotate3d(-111, -51, -16, -37deg);
+}
+
+.courses-work .col-12.col-sm-6:nth-child(2) .courses-sertificate-img img {
+	transform: rotate3d(145, -157, -10, -37deg);
 }
 
 .courses-work__slider {
@@ -4283,6 +4297,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
 @media screen and (max-width: 767px) {
 	.courses-work h1 {
 		font-size: 17px;
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.courses-work {
+		clip-path: none;
 	}
 }
 
