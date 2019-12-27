@@ -4190,9 +4190,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
 }
 
 .courses-sertificate-img {
-	max-width: 400px;
-	margin: auto;
+	max-width: 300px;
+	/*margin: auto;*/
 	margin-bottom: 40px;
+}
+
+.courses-work .col-12.col-sm-6:nth-child(1) .courses-sertificate-img {
+	margin-left: auto;
+}
+
+.courses-work .col-12.col-sm-6:nth-child(2) .courses-sertificate-img {
+	margin-right: auto;
 }
 
 .courses-work__img {
@@ -4200,7 +4208,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
 }
 
 .courses-work .col-12.col-sm-6:nth-child(1) .courses-sertificate-img img {
-	transform: rotate3d(-111, -51, -16, -37deg);
+	/*transform: rotate3d(-111, -51, -16, -37deg);*/
+	transform: none;
 	transition-duration: .5s
 }
 
@@ -4210,7 +4219,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
 }
 
 .courses-work .col-12.col-sm-6:nth-child(1):hover .courses-sertificate-img img {
-	transform: none;
+	/*transform: none;*/
+	transform: rotate3d(-71, -1, 22, 360deg);
 	transition-duration: .5s
 }
 
@@ -4317,6 +4327,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', end
 	.courses-work {
 		clip-path: none;
 	}
+
+	.courses-work .col-12.col-sm-6:nth-child(1) .courses-sertificate-img,
+	.courses-work .col-12.col-sm-6:nth-child(2) .courses-sertificate-img {
+		margin: auto;
+		margin-bottom: 40px;
+	}
+
 }
 
 /*//////////////////////*/
