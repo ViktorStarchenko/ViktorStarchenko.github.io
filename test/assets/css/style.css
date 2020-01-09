@@ -67,6 +67,14 @@ body button:focus {
 	outline: none;
 }
 
+
+/*Добавить новое*/
+.text-600 {
+	font-weight: 600;
+} 
+
+/*Добавить новое конец*/
+
 .color-green {
 	color: #62be1e;
 }
@@ -3848,5 +3856,102 @@ width: 178px;
 	}
 }
 
-@media screen
+
+
+
+/*СТРАНИЦА ЛАНДШАФТНЫЙ ДИЗАЙН*/
+
+.hero__inner.landshaft {
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+.hero__inner.landshaft .hero__heading {
+	background: #11111173;
+    padding: 30px;
+    max-width: 45%;
+    text-align: left;
+    margin-right: 5vw;
+    margin-bottom: 14vw;
+    font-size: 45px;
+}
+
+.about__text.landshaft p {
+	max-height: unset;
+	display: block;
+}
+
+@media screen and (max-width: 1440px) {
+	.hero__inner.landshaft .hero__heading {
+		font-size: 30px;
+	}
+}
+
+@media screen and (max-width: 1290px) {
+	.about__text.landshaft {
+		height: unset;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.hero__inner.landshaft .hero__heading {
+		font-size: 20px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.hero__inner.landshaft .hero__heading {
+		max-width: 90%;
+		text-align: center;
+		font-size: 22px;
+		margin-bottom: 22vw;
+	}
+}
+
+@media screen and (max-width: 375px) {
+
+	
+	
+	.about__text.landshaft p {
+		height: unset;
+	}
+}
+
+
+.service-project__wrap {
+	max-width: 860px; 
+	margin: auto;
+}
+
+.service-project__download  {
+	padding: 60px 0;
+	overflow: hidden;
+}
+
+.service-project__download .block-color-corners {
+	max-width: 611px;
+	margin: auto;
+}
+
+.service-project__download .base-button {
+	max-width: 250px;
+	margin: auto;
+	color: #fff;
+	margin-top: 50px;
+}
+
+.service-project__download a {
+	display: block;
+	text-align: center;
+	color: #4e4e4d;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+}
+
+
+.photogallery.landshaft a {
+	/*position: relative;*/
+}
 

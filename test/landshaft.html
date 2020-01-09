@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+
+<html lang="ru-RU">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script src="https://use.fontawesome.com/b38bf7744d.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+
+
+
+</head>
+
+<body>
+    <div class="shadow-screen"></div>
+    <header id="header">
+        <div class="container-fluid">
+
+            <nav class="navbar navbar-expand-lg fixed-top m-auto">
+            <div class="wrapper m-auto header-inner">
+              <a class="navbar-brand" href="#">
+                  <img class="logo-img" src="assets/img/logo.png" alt="">
+              </a>
+              <a class="navbar__phone-call mobile" href="tel:+390(98)-112-76-59">+39-098-<span class="color-green">112-76-59</span></a>
+              <!-- <ul class="navbar__language mobile">
+                    <li class="navbar__language-item">
+                        <a class="navbar__language-link" href="">
+                            <img class="header__flag-icon" src="assets/img/ua.jpg" alt="">
+                            <span class="navbar__language-text">Українська</span>
+                        </a>
+                        
+                    </li>
+                    <li class="navbar__language-item">
+                        <a class="navbar__language-link" href="">
+                            <img class="header__flag-icon" src="assets/img/ru.jpg" alt="">
+                            <span class="navbar__language-text">Русский</span>
+                        </a>
+                    </li>
+                </ul> -->
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="fas fa-bars"></i>
+                </span>
+              </button>
+              
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">главная <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Услуги
+                    </a>
+                    <div class="dropdown-menu header__navbar-dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Ландшафтный дизайн</a>
+                      <a class="dropdown-item" href="#">Автоматический полив</a>
+                      <a class="dropdown-item" href="#">Рулонный газон</a>
+                      <a class="dropdown-item" href="#">Посадка декоративных растений</a>
+                      <a class="dropdown-item" href="#">Экопарковка</a>
+                      <a class="dropdown-item" href="#">Уход за газоном и растениями</a>
+                      <a class="dropdown-item" href="#">Оберка деревьев и кустарников</a>
+                      <div class="dropdown-divider"></div>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link crane" href="#photogallery">Фотогалерея</a>
+                  </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="#">Цены</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link crane" href="#about">О нас</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link crane" href="#contacts">Контакты</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Помощь экспертов</a>
+                  </li>
+                </ul>
+                
+                <div class="navbar__contact-block mobile">
+                    <div class="navbar__contact-top">
+                        <ul class="navbar__language">
+                            <li class="navbar__language-item">
+                                <a class="navbar__language-link active" href="">
+                                    <!-- <img class="header__flag-icon" src="assets/img/ua.jpg" alt=""> -->
+                                    <span class="navbar__language-text">Українська</span>
+                                </a>
+                                
+                            </li>
+                            <li class="navbar__language-item">
+                                <a class="navbar__language-link" href="">
+                                    <!-- <img class="header__flag-icon" src="assets/img/ru.jpg" alt=""> -->
+                                    <span class="navbar__language-text">Русский</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="navbar__socials">
+                            <li class="navbar__socials-item">
+                                <a href="">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="navbar__socials-item">
+                                <a href="">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="navbar__socials-item">
+                                <a href="">
+                                    <i class="fab fa-youtube"></i>
+                                </a>    
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <input class="navbar__contact-email" readonly="readonly" value="info@greenarea.com.ua" >
+                    <div class="navbar-phone">
+                        <a class="navbar__phone-number" href="tel:+390(98)-112-76-59">+39-098-<span class="color-green">112-76-59</span></a>
+                        <a class="navbar__phone-call" href="tel:+390(98)-112-76-59">Заказать звонок</a>
+                    </div>
+                </div>
+
+              </div>
+              <div class="navbar__contact-block">
+                    <div class="navbar__contact-top">
+                        <ul class="navbar__language">
+                            <li class="navbar__language-item">
+                                <a class="navbar__language-link active" href="">
+                                    <!-- <img class="header__flag-icon" src="assets/img/ua.jpg" alt=""> -->
+                                    <span class="navbar__language-text">Українська</span>
+                                </a>
+                                
+                            </li>
+                            <li class="navbar__language-item">
+                                <a class="navbar__language-link" href="">
+                                    <!-- <img class="header__flag-icon" src="assets/img/ru.jpg" alt=""> -->
+                                    <span class="navbar__language-text">Русский</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="navbar__socials">
+                            <li class="navbar__socials-item">
+                                <a href="">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="navbar__socials-item">
+                                <a href="">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="navbar__socials-item">
+                                <a href="">
+                                    <i class="fab fa-youtube"></i>
+                                </a>    
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <input class="navbar__contact-email" readonly="readonly" value="info@greenarea.com.ua" >
+                    <div class="navbar-phone">
+                        <a class="navbar__phone-number" href="tel:+390(98)-112-76-59">+39-098-<span class="color-green">112-76-59</span></a>
+                        <a class="navbar__phone-call" href="tel:+390(98)-112-76-59">Заказать звонок</a>
+                    </div>
+                </div>
+            </div>
+            </nav>
+
+            
+        </div>
+        
+    </header>
+<section class="hero-service">
+	<img src="assets/img/landshaft/5c3bc0173d7ff.jpeg" alt="" class="hero__img">
+        <div class="hero__inner landshaft">
+	        <h1 class="hero__heading">Делаем проекты ландшафтного дизайна. Озеленение, система автополива под ключ</h1>
+	        <!-- <a class="base-button" href="">Смотреть акции</a> -->
+        </div> 
+</section>
+
+<section class="about" id="about">
+        <div class="info-block">
+            <div class="info__items">
+                <div class="info__item-box">
+                    <img class="lazy" data-src="assets/img/info-1.png" src="assets/img/placeholder.jpg" alt="img alt">
+                    <p>Дизайн  и Проектрование</p>
+                </div>
+                <div class="info__item-box info__item-box-middle">
+                    <img class="lazy" data-src="assets/img/info-2.png" src="assets/img/placeholder.jpg" alt="img alt">
+                    <p>Озеленение и Благоустройство</p>
+                </div>
+                <div class="info__item-box info__item-box-right">
+                    <img class="lazy" data-src="assets/img/info-3.png" src="assets/img/placeholder.jpg" alt="img alt">
+                    <p>Сервисное обслуживание</p>
+                    <img class="img-fluid info-block__fiure" src="assets/img/figure2.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row wrapper m-auto">
+            	<div class="col-12">
+            		<div class="about__text landshaft">
+                        <p>Рынок благоустройства и озеленения уже давно динамично развивается, набрал обороты и уже не для кого не секрет, что представляет собой <span class="text-600">ландшафтный дизайн</span>.<br> Как правило, человек, который стал собственником дома, после покупки или завершения строительства, возможно позаботился уже о ремонте, реализовал дизайн-проект интерьера, взвесил все «за» и «против», оценил свои силы и возможности, скорее всего столкнулся с необходимостью привести в порядок территорию, прилегающую к его недвижимому имуществу.<br> И как же хочется, чтобы участок был уютным, «чистым», «зеленым» и самое главное - комфортным для отдыха всей семьи!<br> Здесь и возникают вопросы: с чего начать? Как лучше проложить дорожки? Где лучше посадить плодовый сад и разместить детскую площадку?<br> Где предусмотреть зону отдыха для взрослых и как правильно создать тень на участке с помощью будущих зеленых насаждений и много других вопросов?<br> А самое важное: кому доверить работы по проектированию ландшафтного дизайна, системы автоматического полива, освещения, а потом реализацию этого проекта с грамотным монтажом системы автополива для всех будущих растений и газона?<br> И вот начинается самый главный и самый ответственный этап - <span class="text-600">разработка проекта ландшафтного дизайна приусадебного участка</span>.</p>
+                    </div>
+            	</div>
+                <!-- <div class="col-12 col-md-6">
+                    <div class="about__img">
+                       <img class="lazy img-fluid" data-src="assets/img/about-2.jpg" src="assets/img/placeholder.jpg" alt="img alt">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="about__text">
+                        <h1 class="about__heading">GreenArea</h1>
+                        <p>Рынок благоустройства и озеленения уже давно динамично развивается, набрал обороты и уже не для кого не секрет, что представляет собой <b>ландшафтный дизайн</b>.<br> Как правило, человек, который стал собственником дома, после покупки или завершения строительства, возможно позаботился уже о ремонте, реализовал дизайн-проект интерьера, взвесил все «за» и «против», оценил свои силы и возможности, скорее всего столкнулся с необходимостью привести в порядок территорию, прилегающую к его недвижимому имуществу.<br> И как же хочется, чтобы участок был уютным, «чистым», «зеленым» и самое главное - комфортным для отдыха всей семьи!<br> Здесь и возникают вопросы: с чего начать? Как лучше проложить дорожки? Где лучше посадить плодовый сад и разместить детскую площадку?<br> Где предусмотреть зону отдыха для взрослых и как правильно создать тень на участке с помощью будущих зеленых насаждений и много других вопросов?<br> А самое важное: кому доверить работы по проектированию ландшафтного дизайна, системы автоматического полива, освещения, а потом реализацию этого проекта с грамотным монтажом системы автополива для всех будущих растений и газона?<br> И вот начинается самый главный и самый ответственный этап - <b>разработка проекта ландшафтного дизайна приусадебного участка</b>.</p>
+                        <h2>Верим в то, что делаем!</h2>
+                    </div>
+                </div> -->
+            </div>
+            <div class="row wrapper m-auto">
+                <div class="col-12">
+                    <div class="about__label-block"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<section class="service-project">
+	<div class="container-fluid">
+		<div class="row wrapper m-auto">
+			<div class="col-auto m-auto text-center">
+				<div class="title-line-box">
+					<h1 class="title-line">ИЗ ЧЕГО СОСТОИТ ПРОЕКТ ЛАНДШАФТНОГО ДИЗАЙНА ОТ GREENAREA</h1>
+				</div>	
+			</div>
+		</div>
+		<div class="row m-auto">
+			<div class="col-12">
+				<div class="service-project__wrap">
+					<div class="list-wrap">
+						<div class="list-item">
+							<img src="assets/img/checked.png" alt="">
+							<span><span class="text-bord-uppercase">ЧЕРТЕЖ СИТУАЦИОННОГО ПЛАНА УЧАСТКА С ЭСКИЗНЫМ ПРЕДЛОЖЕНИЕМ ЛАНДШАФТНОГО ДИЗАЙНА</span>, идея, концепция дизайна, варианты предложений озеленения со всеми поправками до полного согласования предлагаемой концепции с клиентом);</span>
+						</div>
+						<div class="list-item">
+							<img src="assets/img/checked.png" alt="">
+							<span><span class="text-bord-uppercase">КОМПЬЮТЕРНАЯ 3D ВИЗУАЛИЗАЦИЯ ЛАНДШАФТНОГО ДИЗАЙНА</span> всей территории;</span>
+						</div>
+						<div class="list-item">
+							<img src="assets/img/checked.png" alt="">
+							<span><span class="text-bord-uppercase">ГЕНЕРАЛЬНЫЙ ПЛАН</span> (согласованный последний вариант дизайна с нанесением на план всех элементов, планировки дорожек, границ цветников, газона, малых архитектурных форм и т.д.);</span>
+						</div>
+						<div class="list-item">
+							<img src="assets/img/checked.png" alt="">
+							<span><span class="text-bord-uppercase">ДЕНДРОПЛАН</span> (нанесение на план растений в виде условных обозначений, ассортиментная ведомость с нумерацией и полным названием растения на основании генплана);</span>
+						</div>
+						<div class="list-item">
+							<img src="assets/img/checked.png" alt="">
+							<span><span class="text-bord-uppercase">ПОСАДОЧНЫЙ ЧЕРТЕЖ</span> (указание на плане посадочных ям под каждое растение и расстояние между ними);</span>
+						</div>
+						<div class="list-item">
+							<img src="assets/img/checked.png" alt="">
+							<span><span class="text-bord-uppercase">РАЗБИВОЧНЫЙ ЧЕРТЕЖ</span> (нанесение на плане размеров, радиусов, площадок, границ цветников, других планировочных элементов для дальнейшей их точной реализации в натуре);</span>
+						</div>
+						<div class="list-item">
+							<img src="assets/img/checked.png" alt="">
+							<span><span class="text-bord-uppercase">СХЕМА ОСВЕЩЕНИЯ ДОРОЖЕК И ПОДСВЕТКИ</span> растений и цветников;</span>
+						</div>
+						<div class="list-item">
+							<img src="assets/img/checked.png" alt="">
+							 <span><span class="text-bord-uppercase">СМЕТЫ НА МАТЕРИАЛЫ И РАБОТЫ</span> (составление сметы на посадочный материал и сопутствующие материалы, на оборудование и монтаж для системы автополива и др.).</span>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row wrapper m-auto">
+			<div class="col-12 m-auto p-0">
+				<div class="service-project__download block-sircle-figures">
+					<div class="block-color-corners">
+						<a href="">Скачать пример проекта ландшафтного дизайна №1</a>
+						<a href="">Скачать пример проекта ландшафтного дизайна №2</a>
+					</div>
+					<a class="base-button" href="">Смотреть акции</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- <section class="photogallery landshaft" id="photogallery">
+        
+        <div class="row wrapper m-auto text-center">
+                <div class="col-auto m-auto">
+                    <h1>ФОТОГАЛЕРЕЯ</h1>
+
+                </div>
+                <div class="col-12 text-center">
+                     <p>Реализация проекта инженерных систем, автоматического полива, ландшафтного дизайна - трудоёмкий процесс. Здесь будет  еще много разного текста. Реализация проекта инженерных систем, автоматического полива, ландшафтного дизайна - трудоёмкий процесс. Здесь будет  еще много разного текста</p>
+                </div>
+               
+        </div>
+        <div class="container-fluid">
+            <div class="row wrapper m-auto">
+                <div class="col-12 p-0">
+                    <div class="photogallery__logo">
+                        <img class="img-fluid" src="assets/img/logo-color.png" alt="">
+                    </div>
+                    <div class="photogallery-wrap">
+                        
+                        <div class="photogallery__item">
+                        	<a href="assets/img/photo/photo1.jpg" data-toggle="lightbox" data-gallery="gallery">
+								<img class="img-fluid" src="assets/img/photo/photo1.jpg" alt="" data-fullsrc="assets/img/photo/photo1.jpg" alt="">
+							</a>	
+                       </div>
+                        <div class="photogallery__item">
+                        	<a href="assets/img/photo/photo2.jpg" data-toggle="lightbox" data-gallery="gallery">
+								<img class="img-fluid" src="assets/img/photo/photo2.jpg" alt="" data-fullsrc="assets/img/photo/photo2.jpg">
+							</a>
+                       </div>
+                       <div class="photogallery__item">
+                            <a href="assets/img/photo/photo3.jpg" data-toggle="lightbox" data-gallery="gallery">
+								<img class="img-fluid" src="assets/img/photo/photo3.jpg" alt="" data-fullsrc="assets/img/photo/photo3.jpg">
+							</a>
+                       </div>
+                       <div class="photogallery__item">
+                            <a href="assets/img/photo/photo4.jpg" data-toggle="lightbox" data-gallery="gallery">
+								<img class="img-fluid" src="assets/img/photo/photo4.jpg" alt="" data-fullsrc="assets/img/photo/photo4.jpg">
+							</a>
+
+                       </div>
+                       
+                       <div class="photogallery__item">
+                            <a href="assets/img/photo/photo5.jpg" data-toggle="lightbox" data-gallery="gallery">
+								<img class="img-fluid" src="assets/img/photo/photo5.jpg" alt="" data-fullsrc="assets/img/photo/photo5.jpg">
+							</a>
+                       </div>
+                       <div class="photogallery__item">
+                            <a href="assets/img/photo/photo6.jpg" data-toggle="lightbox" data-gallery="gallery">
+								<img class="img-fluid" src="assets/img/photo/photo6.jpg" alt="" data-fullsrc="assets/img/photo/photo6.jpg">
+							</a>
+                       </div>
+                       <div class="photogallery__item">
+                            <a href="assets/img/photo/photo7.jpg" data-toggle="lightbox" data-gallery="gallery">
+								<img class="img-fluid" src="assets/img/photo/photo7.jpg" alt="" data-fullsrc="assets/img/photo/photo7.jpg">
+							</a>
+                       </div>
+                       <div class="photogallery__item">
+                            <a href="assets/img/photo/photo8.jpg" data-toggle="lightbox" data-gallery="gallery">
+								<img class="img-fluid" src="assets/img/photo/photo8.jpg" alt="" data-fullsrc="assets/img/photo/photo8.jpg">
+							</a>
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section> -->
+
+
+<section class="photogallery landshaft" id="photogallery">    
+    <div class="row wrapper m-auto text-center">
+        <div class="col-auto m-auto text-center">
+			<div class="title-line-box">
+				<h1 class="title-line">ПРИМЕРЫ 3D ВИЗУАЛИЗАЦИИ ЛАНДШАФТНОГО ДИЗАЙНА</h1>
+			</div>	
+		</div>
+        <div class="col-12 text-center">
+             <p>Компьютерная «3D визуализация» - это приближенные к реальности изображения, благодаря которым Вы сможете увидеть, как будет выглядеть ландшафтный дизайн Вашего участка, на основе ранее одобренного Вами эскизного предложения</p>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row wrapper m-auto">
+            <div class="col-12 p-0">
+                <div class="photogallery__logo">
+                    <img class="img-fluid" src="assets/img/logo-color.png" alt="">
+                </div>
+                <div class="photogallery-wrap">
+                    
+                    <div class="photogallery__item">
+                    	<a href="assets/img/photo/photo1.jpg" data-toggle="lightbox" data-gallery="gallery"></a>
+							<img class="img-fluid" src="assets/img/photo/photo1.jpg" alt="" data-fullsrc="assets/img/photo/photo1.jpg" alt="">
+							
+                   </div>
+                    <div class="photogallery__item">
+                    	<a href="assets/img/photo/photo2.jpg" data-toggle="lightbox" data-gallery="gallery"></a>
+							<img class="img-fluid" src="assets/img/photo/photo2.jpg" alt="" data-fullsrc="assets/img/photo/photo2.jpg">
+						
+                   </div>
+                   <div class="photogallery__item">
+                        <a href="assets/img/photo/photo3.jpg" data-toggle="lightbox" data-gallery="gallery"></a>
+							<img class="img-fluid" src="assets/img/photo/photo3.jpg" alt="" data-fullsrc="assets/img/photo/photo3.jpg">
+						
+                   </div>
+                   <div class="photogallery__item">
+                        <a href="assets/img/photo/photo4.jpg" data-toggle="lightbox" data-gallery="gallery"></a>
+							<img class="img-fluid" src="assets/img/photo/photo4.jpg" alt="" data-fullsrc="assets/img/photo/photo4.jpg">
+						
+
+                   </div>
+                   
+                   <div class="photogallery__item">
+                        <a href="assets/img/photo/photo5.jpg" data-toggle="lightbox" data-gallery="gallery"></a>
+							<img class="img-fluid" src="assets/img/photo/photo5.jpg" alt="" data-fullsrc="assets/img/photo/photo5.jpg">
+						
+                   </div>
+                   <div class="photogallery__item">
+                        <a href="assets/img/photo/photo6.jpg" data-toggle="lightbox" data-gallery="gallery"></a>
+							<img class="img-fluid" src="assets/img/photo/photo6.jpg" alt="" data-fullsrc="assets/img/photo/photo6.jpg">
+						
+                   </div>
+                   <div class="photogallery__item">
+                        <a href="assets/img/photo/photo7.jpg" data-toggle="lightbox" data-gallery="gallery"></a>
+							<img class="img-fluid" src="assets/img/photo/photo7.jpg" alt="" data-fullsrc="assets/img/photo/photo7.jpg">
+						
+                   </div>
+                   <div class="photogallery__item">
+                        <a href="assets/img/photo/photo8.jpg" data-toggle="lightbox" data-gallery="gallery"></a>
+							<img class="img-fluid" src="assets/img/photo/photo8.jpg" alt="" data-fullsrc="assets/img/photo/photo8.jpg">
+						
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+
+   <footer class="footer" id="contacts">
+        <div class="container-fluid">
+            <div class="row wrapper m-auto ">
+                <div class="col-auto m-auto">
+                    <h1>Контакты</h1>
+                </div>
+            </div>
+            <div class="row wrapper m-auto ">
+                <div class="col-12 col-md-6">
+                   <div class="footer__contacts-items">
+                       <h2><span class="color-orange">Green</span>A</span>rea</h2>
+                       <ul class="footer__contacts-wrap">
+                           <li> <a href="tel:+38-(098)-112-76-59"> <span class="color-orange">Phone</span>:  +38 (098) 112-76-59</a></li>
+                           <li> <a href="mailto:info@greenarea.com.ua"><span class="color-orange">Email</span>:  info@greenarea.com.ua</a></li>
+                           <li><span class="color-orange">Город</span>:  Киев,  Киевская область</li>
+                       </ul>
+
+                       <ul class="footer__socials">
+                            <li class="footer__socials-item">
+                                <a href="">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="footer__socials-item">
+                                <a href="">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li class="footer__socials-item">
+                                <a href="">
+                                    <i class="fab fa-youtube"></i>
+                                </a>    
+                            </li>
+                        </ul>
+                   </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="callback">
+                        <div class="callback__wrap">
+                            <form id="form" id="form" action="#" method="POST">
+                                <div class="form-group-input-wrapper">
+                                    <div class="form-group-input">
+                                        <input type="text" name="name" placeholder="Ваше имя" required>
+                                    </div>
+                                    <div class="form-group-input">
+                                        <input type="emaim" name="email" placeholder="Email" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <!-- <input type="email" name="email" placeholder="Вкажіть Ваш email" required> -->
+                                    <textarea name="message" rows="6" placeholder="Your Message..."></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <button class="form-submit base-button" id="form-submit" type="submit">Отправить</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+<script src="assets/js/jquery-3.4.1.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+<script src="assets/js/slick.min.js"></script>
+<script src="assets/js/jquery.galereya.js"></script>
+<!-- <script src="assets/js/masonry.pkgd.min.js"></script> -->
+
+
+
+
+<script src="assets/js/main.js"></script>
+</body>
+
+</html>
