@@ -3917,6 +3917,10 @@ width: 178px;
 	}
 }
 
+.service-project {
+	overflow: hidden;
+	padding: 100px 0 60px;
+}
 
 .service-project__wrap {
 	max-width: 860px; 
