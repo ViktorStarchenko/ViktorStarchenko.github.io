@@ -1,4 +1,24 @@
 
+// БЛОК БАННЕРОВ
+// window.onload=function(){ 
+//   if(window.innerWidth > 520){
+//   // $('.banners-slider__wrapper').slick('unslick')
+//   }
+// }
+
+window.onload=function(){if(window.innerWidth <= 520){ // ДОБАВЛЯЕМ СЛАЙДЕР НА МОБИЛЬНЫХ ЭКРАНАХ
+  $('.banners-slider__wrapper').slick({
+    // slidesToScroll: 1,
+    centerMode: true,
+    // centerPadding: '20px',
+    autoplay: true,
+    autoplaySpeed: 2000,
+    centerMode: true,
+    centerPadding: '40px',
+    slidesToShow: 1
+  });
+}
+}
 
 
 // Show mobile menu
