@@ -519,7 +519,9 @@ footer .logo-img {
     text-decoration: none;
 }*/
 
-
+.navbar__mobile-menu-button {
+    display: none;
+}
 
 .phone-link:before {
     background-image: url('../img/icons/call-answer.png');
@@ -568,7 +570,7 @@ footer .logo-img {
     padding: 15px 0;
 }
 
-.header-bottom .navbar-toggler-icon i {
+.header-bottom .navbar__mobile-menu-button i {
     color: #fff;
 }
 
@@ -743,6 +745,9 @@ header .nav-link {
 } 
 
 @media screen and (max-width: 767px) {
+    .header-bottom .navbar__mobile-menu-button {
+        display: block;
+    }
     .header-top__inner {
         flex-direction: column;
     }
