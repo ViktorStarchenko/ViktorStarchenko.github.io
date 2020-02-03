@@ -7,19 +7,25 @@ $db = mysqli_connect('localhost', 'root', '', 'grid');
 # Обязательно проверяйте все данные
 # поступающие от клиента
 
-if ($db) {
-	echo 'Есть';
-} else {
-	echo 'error';
-}
+
 
 
 $result = mysqli_query($db, "SELECT * FROM `cities`");
 
 $cities = array();
-if ($result)
-    foreach ($result as $city)
+if ($result) {
+
+    foreach ($result as $city) {
+
         $cities[] = $city;
+    }
+
+   echo json_encode($cities);
+}
 
 
-// print_r($cities);
+
+
+// echo json_encode($cities);
+// return json_encode($cities);
+
