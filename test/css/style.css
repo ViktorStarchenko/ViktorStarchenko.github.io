@@ -1310,7 +1310,8 @@ ul,li{
 .curved-carousel .bx-controls{
 	position:absolute;
 	left:0px;
-	bottom:80px;
+	/*bottom:80px;*/
+	bottom:12px;
 	width:100%;
 	z-index:99;
 }
