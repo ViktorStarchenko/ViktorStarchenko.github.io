@@ -2,7 +2,22 @@
 	.main-menu {
 		margin-right: 220px;
 	}	
+
+	.main-menu .navbar-nav > li > a {
+		padding: 8px 10px;
+	}
 }
+
+@media only screen and (min-width: 1169px) and (max-width: 1199px) {
+	.main-menu .navbar-nav > li > a {
+		padding: 8px 10px;
+	}
+
+	.main-menu {
+		margin-right: 250px;
+	}
+}
+
 @media only screen and (min-width: 1169px) and (max-width: 1024px) {
 	.features-services .post.style-three .post-cont{
 		left:28%;
@@ -11,6 +26,10 @@
 	
 	.curved-carousel .slide-item .text-side{
 		padding-left:20px;	
+	}
+
+	.main-menu .navbar-nav > li > a {
+		padding: 8px 10px;
 	}
 }
 
@@ -224,6 +243,7 @@
 		float:none;
 		width:100%;
 		text-align:center;	
+		max-width: unset;
 	}
 	
 	.main-menu .navbar-nav > li{

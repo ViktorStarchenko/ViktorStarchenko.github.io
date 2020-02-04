@@ -280,6 +280,7 @@ ul,li{
 .main-header .logo{
 	position:relative;
 	float:left;	
+	max-width: 200px;
 }
 
 .main-header .logo img{
@@ -292,7 +293,8 @@ ul,li{
 	position:relative;
 	float:right;
 	padding:0px 0px;
-	margin-right: 100px;
+	/*margin-right: 100px;*/
+	margin-right: 142px;
 	transition:all 1s ease;
 	-webkit-transition:all 1s ease;
 	-ms-transition:all 1s ease;
@@ -853,6 +855,7 @@ ul,li{
     left: 0;
     right: 0;
     bottom: 0;	
+
 }
 
 .features-services .post .price{
@@ -1623,7 +1626,9 @@ ul,li{
 .products .image{
 	position:relative;
 	text-align:center;
+	margin: auto;
 	margin-top:50px;	
+	width: 320px;
 }
 
 .products .image img{
