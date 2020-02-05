@@ -18,8 +18,6 @@
 
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/css/flick/jquery-ui.theme.min.css" /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.min.css">
-    <link rel="stylesheet" type="text/css" href="themes/redmond/jquery-ui-1.7.1.custom.css" />
-
 	<link rel="stylesheet" type="text/css" media="screen" href="assets/css/ui.jqgrid.css" mce_href="css/ui.jqgrid.css" />
 	<style>html, body {
 	    margin: 0;
@@ -133,30 +131,15 @@
 	<div class="container-fluid p-0">
 		<div class="row wrapper m-auto">
 			<div class="col-12 p-0">
-				<!-- <div id="my-table-wrap" class="table-responsive my-table-wrap">
+				<div id="my-table-wrap" class="table-responsive my-table-wrap">
 					<table id="grid" class="table"></table>
 					<div id="gridpager"></div>
-
+					<p class="text-center">
+					    <button class="mypager">1</button>
+					    <button class="mypager">2</button>
+					    <button class="mypager">3</button>
+					</p>
 				</div>
-				<div id="my-table-paginator">
-					<ul class="pagination-box">
-						<li class="pagination-item first">
-							<a id="first_gridpager" href="#">первая...</a>
-						</li>
-						<li class="pagination-item prev">
-							<a id="prev_gridpager" href="#">1</a>
-						</li>
-						<li class="pagination-item active">
-							<a id="paginator_current_page" href="#">1</a>
-						</li>
-						<li class="pagination-item next">
-							<a id="next_gridpager" href="#">3</a>
-						</li>
-						<li class="pagination-item last">
-							<a id="last_gridpager" href="#">..последняя</a>
-						</li>
-					</ul>
-				</div> -->
 			</div>
 		</div>
 	</div>
@@ -229,36 +212,6 @@
 			<div class="row wrapper m-auto">
 				<div class="col-12 col-md-9 main-left-col">
 					<!-- ТАБЛИЦА "ВСЕ ТОРГИ" -->
-					<div id="lots-table-wrap" class="table-responsive lots-table-wrap">
-					<table id="grid" class="table"></table>
-					<div id="gridpager"></div>
-					
-<!-- 					<p class="text-center">
-					    <button id="first_gridpager" class="mypager">1</button>
-					    <button class="mypager">2</button>
-					    <button class="mypager">3</button>
-					    <button id="last_gridpager" class="mypager">last</button>
-					</p> -->
-				</div>
-				<div id="my-table-paginator" class="my-table-paginator">
-					<ul class="pagination-box">
-						<li class="pagination-item first">
-							<a id="first_gridpager" href="#">первая...</a>
-						</li>
-						<li class="pagination-item prev">
-							<a id="prev_gridpager" href="#">1</a>
-						</li>
-						<li class="pagination-item active">
-							<a id="paginator_current_page" href="#">1</a>
-						</li>
-						<li class="pagination-item next">
-							<a id="next_gridpager" href="#">3</a>
-						</li>
-						<li class="pagination-item last">
-							<a id="last_gridpager" href="#">..последняя</a>
-						</li>
-					</ul>
-				</div>
 					<div class="trade-table__wrap">
 						<div class="trade-table__heading">
 							<h4 class="text-16px-white">Все торги</h4>
@@ -1417,7 +1370,7 @@
 
 <script type="text/javascript">
 
-$(document).ready(function () {
+$(function () {
     "use strict";
     $("#grid").jqGrid({
   //   	url:'get.php',
@@ -1432,91 +1385,69 @@ $(document).ready(function () {
 		// ],
         colModel: [
             { name: 'id', label: "ID ЛОТА" },
-            { name: 'organisator', label: "ОРГАНИЗАТОР-РЕТЕЙЛЕР", formatter:'showlink', formatoptions:{baseLinkUrl:'someurl.php', addParam: '&action=edit'}, width: 200 },
-            { name: 'product', label: "ТОВАР", width: 320 },
+            { name: 'organisator', label: "ОРГАНИЗАТОР-РЕТЕЙЛЕР", formatter:'showlink', formatoptions:{baseLinkUrl:'someurl.php', addParam: '&action=edit'} },
+            { name: 'product', label: "ТОВАР" },
             { name: 'product_type', label: "Вид товара", stype: "select", searchoptions: { value: ":Все;Мясо:Мясо;Овощи:Овощи;Рыба:Рыба" } },
             { name: 'weight', label: "ОБЪЁМ", formatter:'showlink' },
             { name: 'finish', label: "ЗАВЕРШЕНИЕ", sorttype: 'date', formatter: 'date', formatoptions: { newformat: "d-M-y"}},
             { name: 'status', label: "СТАТУС", formatter:'showlink', formatoptions:{baseLinkUrl:'someurl.php', addParam: '&action=edit'} },
             { name: 'time', label: "ВРЕМЯ", sorttype: 'date', formatter: 'date', formatoptions: { newformat : 'Y-m-d H:i:s'},searchoptions: { sopt: ["eq"] } },
             { name: 'total_weight', label: "ВЕС СДЕЛКИ	" },
-            { name: 'isActive', label: 'Торг активный', stype: "select", searchoptions: { value: ":Все;Активный:Активный;Не активный:Не активный" } }
+            { name: 'isActive', label: 'Торг активный', template: 'booleanCheckbox' }
         ],
         data: [
-            { id: "1", organisator: "Merkel", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg' , finish: '11.10.2019', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: 'Активный' },
-            { id: "2", organisator: "Mugabe", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Рыба', weight: '16000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2019-11-21', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "3", organisator: "информация закрыта", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'закрыта', time: '2020-10-10', total_weight: 10000001, isActive: 'Не активный'  },
-            { id: "4", organisator: "Obama", product: 'Рыба рыбная, без кос.. карасик о...', product_type: 'Овощи', weight: '10000 kg', finish: '2015', status: 'в Запрос авторизации', time: '2015-09-10', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "5", organisator: "Hollande", product: 'Рыба рыбная, без кос.. Киевская о...', product_type: 'Мясо', weight: '9000 kg', finish: '11.10.2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: 'Не активный'  },
-            { id: "6", organisator: "Merkel2", product: 'Кусок Заморозка, без кос.. карасик о...', product_type: 'Рыба', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: 'Активный' },
-            { id: "7", organisator: "Mugabe2", product: 'Рыба рыбная, без кос.. Киевская о...', product_type: 'Мясо', weight: '6000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2019-11-21', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "8", organisator: "Cameron2", product: 'Овощи, без кос.. Киевская о...', product_type: 'Мясо', weight: '21000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2020-10-10', total_weight: 10000001, isActive: 'Не активный'  },
-            { id: "9", organisator: "Obama2", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '2015', status: 'в процессе', time: '2015-09-10', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "10", organisator: "Hollande2", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Рыба', weight: '15000 kg', finish: '11.10.2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: 'Не активный'  },
-            { id: "11", organisator: "Merke3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: 'Активный' },
-            { id: "12", organisator: "Mugabe3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '23000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2019-11-21', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "13", organisator: "Cameron3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Овощи', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2020-10-10', total_weight: 10000001, isActive: 'Активный'  },
-            { id: "14", organisator: "Obama3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '2015', status: 'в процессе', time: '2015-09-10', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "15", organisator: "Hollande3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '14000 kg', finish: '11.10.2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: 'Не активный'  },
-            { id: "16", organisator: "Merkel4", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: 'Активный' },
-            { id: "17", organisator: "Mugabe4", product: 'Рыба рыбная, без кос.. шпроты о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2019-11-21', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "18", organisator: "Cameron4", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Овощи', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2020-10-10', total_weight: 10000001, isActive: 'Не активный'  },
-            { id: "19", organisator: "Obama4", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Овощи', weight: '15000 kg', finish: '2015', status: 'в процессе', time: '2015-09-10', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "20", organisator: "Hollande4", product: 'Рыба рыбная, без кос.. шпроты о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: 'Не активный'  },
-            { id: "3", organisator: "информация закрыта", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'закрыта', time: '2020-10-10', total_weight: 10000001, isActive: 'Не активный'  },
-            { id: "4", organisator: "Obama", product: 'Рыба рыбная, без кос.. карасик о...', product_type: 'Овощи', weight: '10000 kg', finish: '2015', status: 'в Запрос авторизации', time: '2015-09-10', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "5", organisator: "Hollande", product: 'Рыба рыбная, без кос.. Киевская о...', product_type: 'Мясо', weight: '9000 kg', finish: '11.10.2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: 'Не активный'  },
-            { id: "6", organisator: "Merkel2", product: 'Кусок Заморозка, без кос.. карасик о...', product_type: 'Рыба', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: 'Активный' },
-            { id: "7", organisator: "Mugabe2", product: 'Рыба рыбная, без кос.. Киевская о...', product_type: 'Мясо', weight: '6000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2019-11-21', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "8", organisator: "Cameron2", product: 'Овощи, без кос.. Киевская о...', product_type: 'Мясо', weight: '21000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2020-10-10', total_weight: 10000001, isActive: 'Не активный'  },
-            { id: "9", organisator: "Obama2", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '2015', status: 'в процессе', time: '2015-09-10', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "10", organisator: "Hollande2", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Рыба', weight: '15000 kg', finish: '11.10.2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: 'Не активный'  },
-            { id: "11", organisator: "Merke3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: 'Активный' },
-            { id: "12", organisator: "Mugabe3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '23000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2019-11-21', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "13", organisator: "Cameron3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Овощи', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2020-10-10', total_weight: 10000001, isActive: 'Не активный'  },
-            { id: "14", organisator: "Obama3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '2015', status: 'в процессе', time: '2015-09-10', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "15", organisator: "Hollande3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '14000 kg', finish: '11.10.2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: 'Не активный'  },
-            { id: "16", organisator: "Merkel4", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: 'Активный' },
-            { id: "17", organisator: "Mugabe4", product: 'Рыба рыбная, без кос.. шпроты о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2019-11-21', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "18", organisator: "Cameron4", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Овощи', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2020-10-10', total_weight: 10000001, isActive: 'Не активный'  },
-            { id: "19", organisator: "Obama4", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Овощи', weight: '15000 kg', finish: '2015', status: 'в процессе', time: '2015-09-10', total_weight: 10000000, isActive: 'Активный'  },
+            { id: "1", organisator: "Merkel", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg' , finish: '11.10.2019', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: true },
+            { id: "2", organisator: "Mugabe", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Рыба', weight: '16000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2019-11-21', total_weight: 10000000, isActive: true  },
+            { id: "3", organisator: "информация закрыта", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'закрыта', time: '2020-10-10', total_weight: 10000001, isActive: false  },
+            { id: "4", organisator: "Obama", product: 'Рыба рыбная, без кос.. карасик о...', product_type: 'Овощи', weight: '10000 kg', finish: '2015', status: 'в Запрос авторизации', time: '2015-09-10', total_weight: 10000000, isActive: true  },
+            { id: "5", organisator: "Hollande", product: 'Рыба рыбная, без кос.. Киевская о...', product_type: 'Мясо', weight: '9000 kg', finish: '11.10.2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: false  },
+            { id: "6", organisator: "Merkel2", product: 'Кусок Заморозка, без кос.. карасик о...', product_type: 'Рыба', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: true },
+            { id: "7", organisator: "Mugabe2", product: 'Рыба рыбная, без кос.. Киевская о...', product_type: 'Мясо', weight: '6000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2019-11-21', total_weight: 10000000, isActive: true  },
+            { id: "8", organisator: "Cameron2", product: 'Овощи, без кос.. Киевская о...', product_type: 'Мясо', weight: '21000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2020-10-10', total_weight: 10000001, isActive: false  },
+            { id: "9", organisator: "Obama2", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '2015', status: 'в процессе', time: '2015-09-10', total_weight: 10000000, isActive: true  },
+            { id: "10", organisator: "Hollande2", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Рыба', weight: '15000 kg', finish: '11.10.2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: false  },
+            { id: "11", organisator: "Merke3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: true },
+            { id: "12", organisator: "Mugabe3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '23000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2019-11-21', total_weight: 10000000, isActive: true  },
+            { id: "13", organisator: "Cameron3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Овощи', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2020-10-10', total_weight: 10000001, isActive: false  },
+            { id: "14", organisator: "Obama3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '2015', status: 'в процессе', time: '2015-09-10', total_weight: 10000000, isActive: true  },
+            { id: "15", organisator: "Hollande3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '14000 kg', finish: '11.10.2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: false  },
+            { id: "16", organisator: "Merkel4", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: true },
+            { id: "17", organisator: "Mugabe4", product: 'Рыба рыбная, без кос.. шпроты о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2019-11-21', total_weight: 10000000, isActive: true  },
+            { id: "18", organisator: "Cameron4", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Овощи', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2020-10-10', total_weight: 10000001, isActive: false  },
+            { id: "19", organisator: "Obama4", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Овощи', weight: '15000 kg', finish: '2015', status: 'в процессе', time: '2015-09-10', total_weight: 10000000, isActive: true  },
             { id: "20", organisator: "Hollande4", product: 'Рыба рыбная, без кос.. шпроты о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: false  },
-            { id: "13", organisator: "Cameron3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Овощи', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2020-10-10', total_weight: 10000001, isActive: 'Не активный'  },
-            { id: "14", organisator: "Obama3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '2015', status: 'в процессе', time: '2015-09-10', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "15", organisator: "Hollande3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '14000 kg', finish: '11.10.2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: 'Не активный'  },
-            { id: "16", organisator: "Merkel4", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: 'Активный' },
-            { id: "17", organisator: "Mugabe4", product: 'Рыба рыбная, без кос.. шпроты о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2019-11-21', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "18", organisator: "Cameron4", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Овощи', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2020-10-10', total_weight: 10000001, isActive: 'Не активный'  },
-            { id: "19", organisator: "Obama4", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Овощи', weight: '15000 kg', finish: '2015', status: 'в процессе', time: '2015-09-10', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "20", organisator: "Hollande4", product: 'Рыба рыбная, без кос.. шпроты о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: 'Не активный'  },
-            { id: "9", organisator: "Obama2", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '2015', status: 'в процессе', time: '2015-09-10', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "10", organisator: "Hollande2", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Рыба', weight: '15000 kg', finish: '11.10.2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: 'Не активный'  },
-            { id: "11", organisator: "Merke3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: 'Активный' },
-            { id: "12", organisator: "Mugabe3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '23000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2019-11-21', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "13", organisator: "Cameron3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Овощи', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2020-10-10', total_weight: 10000001, isActive: 'Не активный'  },
-            { id: "14", organisator: "Obama3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '2015', status: 'в процессе', time: '2015-09-10', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "15", organisator: "Hollande3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '14000 kg', finish: '11.10.2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: 'Не активный'  },
-            { id: "16", organisator: "Merkel4", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: 'Активный' },
-            { id: "17", organisator: "Mugabe4", product: 'Рыба рыбная, без кос.. шпроты о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2019-11-21', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "18", organisator: "Cameron4", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Овощи', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2020-10-10', total_weight: 10000001, isActive: 'Не активный'  },
-            { id: "19", organisator: "Obama4", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Овощи', weight: '15000 kg', finish: '2015', status: 'в процессе', time: '2015-09-10', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "20", organisator: "Hollande4", product: 'Рыба рыбная, без кос.. шпроты о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: 'Не активный'  },
+            { id: "3", organisator: "информация закрыта", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'закрыта', time: '2020-10-10', total_weight: 10000001, isActive: false  },
+            { id: "4", organisator: "Obama", product: 'Рыба рыбная, без кос.. карасик о...', product_type: 'Овощи', weight: '10000 kg', finish: '2015', status: 'в Запрос авторизации', time: '2015-09-10', total_weight: 10000000, isActive: true  },
+            { id: "5", organisator: "Hollande", product: 'Рыба рыбная, без кос.. Киевская о...', product_type: 'Мясо', weight: '9000 kg', finish: '11.10.2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: false  },
+            { id: "6", organisator: "Merkel2", product: 'Кусок Заморозка, без кос.. карасик о...', product_type: 'Рыба', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: true },
+            { id: "7", organisator: "Mugabe2", product: 'Рыба рыбная, без кос.. Киевская о...', product_type: 'Мясо', weight: '6000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2019-11-21', total_weight: 10000000, isActive: true  },
+            { id: "8", organisator: "Cameron2", product: 'Овощи, без кос.. Киевская о...', product_type: 'Мясо', weight: '21000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2020-10-10', total_weight: 10000001, isActive: false  },
+            { id: "9", organisator: "Obama2", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '2015', status: 'в процессе', time: '2015-09-10', total_weight: 10000000, isActive: true  },
+            { id: "10", organisator: "Hollande2", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Рыба', weight: '15000 kg', finish: '11.10.2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: false  },
+            { id: "11", organisator: "Merke3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: true },
+            { id: "12", organisator: "Mugabe3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '23000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2019-11-21', total_weight: 10000000, isActive: true  },
+            { id: "13", organisator: "Cameron3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Овощи', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2020-10-10', total_weight: 10000001, isActive: false  },
+            { id: "14", organisator: "Obama3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '2015', status: 'в процессе', time: '2015-09-10', total_weight: 10000000, isActive: true  },
+            { id: "15", organisator: "Hollande3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '14000 kg', finish: '11.10.2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: false  },
+            { id: "16", organisator: "Merkel4", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: true },
+            { id: "17", organisator: "Mugabe4", product: 'Рыба рыбная, без кос.. шпроты о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2019-11-21', total_weight: 10000000, isActive: true  },
+            { id: "18", organisator: "Cameron4", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Овощи', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2020-10-10', total_weight: 10000001, isActive: false  },
+            { id: "19", organisator: "Obama4", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Овощи', weight: '15000 kg', finish: '2015', status: 'в процессе', time: '2015-09-10', total_weight: 10000000, isActive: true  },
+            { id: "20", organisator: "Hollande4", product: 'Рыба рыбная, без кос.. шпроты о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: false  },
         ],
         guiStyle: 'bootstrap4',
         iconSet: 'fontAwesome',
         idPrefix: 'lot_',
         caption: 'Все торги',
         hidegrid: false,
-        loadonce: false,
+        loadonce: true,
         // pager: true,
-        pagermode: "simple",
-     	pageable: true,
         pager : '#gridpager',
         rowNum: '10',
         viewrecords: true,
         ignoreCase: false,
         headertitles: true,
-        // multiSort: true,
+        multiSort: true,
         height: '100%',
         deepempty: true,
    //      jsonReader: {
@@ -1557,95 +1488,12 @@ $(document).ready(function () {
 		},
 
     }).jqGrid('filterToolbar');
-	
-	// $("#grid").navGrid('#gridpager',{edit:false,add:false,del:false,search:false})
-	// .navButtonAdd('#pager',{
-	// 	   caption:"Add", 
-	// 	   buttonicon:"", 
-	// 	   onClickButton: function(){ 
-	// 	     alert("Adding Row");
-	// 	   }, 
-	// 	   position:"last"
-	// 	})
-	// .navButtonAdd('#pager',{
-	// 	   caption:"Del", 
-	// 	   buttonicon:"", 
-	// 	   onClickButton: function(){ 
-	// 	      alert("Deleting Row");
-	// 	   }, 
-	// 	   position:"last"
-	// 	});
 
-	// $("button.mypager").click(function () {
- //        var page = Number(this.innerHTML);
- //        $("#grid").trigger("reloadGrid", { page: page});
- //    });
-
-    $("#my-table-paginator .pagination-box a").click(function () {
+	$("button.mypager").click(function () {
         var page = Number(this.innerHTML);
         $("#grid").trigger("reloadGrid", { page: page});
-
-       
     });
 });
-function initPaginator() {
-	var last_page = $('#sp_1_gridpager').html();
- 	var current_page = $('.form-control.ui-pg-input').val();
-
- 	$('.pagination-item.active a').text(current_page);
-	$('.pagination-item.last a').text('...' + last_page);
-	$('.pagination-item.prev a').text(parseInt(current_page) - 1);
-	$('.pagination-item.next a').text(parseInt(current_page) + 1);
-
-
-
-	if (current_page >= last_page) {
-		$('.pagination-item.last').hide();
-
-		$('.pagination-item.next').hide();
-
-	} else if (current_page < last_page) {
-		$('.pagination-item.last').show();
-
-		$('.pagination-item.next').show();
-
-	} 
-	if ( current_page == '1' ) {
-
-		$('.pagination-item.prev').hide();
-
-		$('.pagination-item.first').hide();
-
-	} else if (current_page > '1') {
-
-		$('.pagination-item.prev').show();
-
-		
-	} 
-
-	if (current_page > '2') {
-
-		$('.pagination-item.first').show();
-	} else if ( current_page < '2' ) {
-		$('.pagination-item.first').hide()
-	}
-
-}
-
- $(document).ready(function(){
- 	 initPaginator()
-	$('#next_gridpager, #prev_gridpager, #first_gridpager, #last_gridpager').on('click', function() {
-		initPaginator()
-	})
- }) 
-
- $(document).ready(function(){
- 	 initPaginator()
-	$('#lots-table-wrap select, #lots-table-wrap input').on('change', function() {
-		initPaginator()
-	})
- })
-
 </script>
 </body>
 
