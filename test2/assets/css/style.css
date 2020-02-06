@@ -168,6 +168,13 @@ main .container-fluid .main-right-col {
 
 }
 
+button.red-btn, button.red-btn:focus {
+    border: none;
+    outline: none;
+}
+
+
+
 .pagination-box {
     display: flex;
     flex-direction: row;
@@ -245,6 +252,10 @@ main .container-fluid .main-right-col {
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+
+
+/******************************************************TEXT STYLES***************************************************/
 
 .text-16px-white {
     font-size: 16px;
@@ -344,12 +355,28 @@ a.text-16px-white:hover {
     color: #fff;
 }
 
+.text-12px-black {
+    color: #000;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.text-12px-black:hover {
+    color: #000
+}
+
 .text-12px-585858 {
     color: #585858;
     font-family: Roboto;
     font-size: 12px;
     font-weight: 400;
     line-height: 28px;
+}
+
+.text-12px-585858:hover {
+    color: #585858;
 }
 
 .text-12px-f88170 {
@@ -366,6 +393,18 @@ a.text-16px-white:hover {
     font-size: 12px;
     font-weight: 300;
     line-height: 20px;
+}
+
+.text-12px-019299 {
+    color: #019299;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+a.text-12px-019299:hover {
+    color: #019299;
 }
 
 .text-30px-white {
@@ -460,11 +499,65 @@ a.text-16px-white:hover {
 
 
 
+/***********************************************FORM STYLES******************************************/
+.form-items-group {
+    display: flex;
+    
+}
+
+.tags-cloud-wrap .form-items-group {
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
 
 
+.tags-cloud-wrap input, .tags-cloud-wrap textarea {
+    border-radius: 18px;
+    padding: 5px 20px 2px 35px;
+    color: #2e2e2e;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    margin: 0 5px;
+}
+
+.tags-cloud-wrap input:focus, .tags-cloud-wrap textarea:focus {
+    outline: none;
+} 
 
 
+/**********************************************RATING STYLES***********************************************************/
 
+.rating-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rating-box {
+    display: flex;
+    align-items: center;
+}
+
+.rating-star-item {
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    vertical-align: top;
+    padding-right: 9px;
+    cursor: pointer;
+}
+
+.rating-star-item:before {
+    content: '';
+    display: block;
+    width: 17px;
+    height: 17px;
+    background: url(../img/icons/stars-2.png) no-repeat left top;
+    background-size: cover;
+}
 
 /************************************************HEADER*************************************/
 
@@ -1980,3 +2073,86 @@ padding: 6px 10px 4px;
 .my-table-paginator {
     margin-bottom: 50px;
 }
+
+
+
+/********************************************************************************************************************/
+/********************************************************************************************************************/
+/*****************************************************СТРАНИЦА НОВОСТИ***********************************************/
+
+.tags-cloud-wrap {
+    width: 100%;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(111, 111, 111, 0.25);
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.tags-cloud__container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+
+}
+
+.tags-cloud__container a {
+    margin-right: 10px;
+}
+
+
+.tags-cloud-wrap .form-items-group {
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.tags-cloud-wrap form .form-item {
+    max-width: 45%;
+    margin: 0;
+}
+
+.article-item {
+    
+    border-radius: 4px;
+}
+
+.article-item__content {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(111, 111, 111, 0.25);
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.article-item__img {
+    margin-bottom: 25px;
+}
+
+.article-item__service {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.article-item__service .tags-cloud__container {
+    max-width: 60%;
+}
+
+
+@media screen and (max-width: 600px) {
+    .tags-cloud-wrap .form-items-group  {
+        flex-direction: column;
+    }
+
+    .tags-cloud-wrap form .form-item {
+        max-width: 96%;
+        margin: auto;
+        margin-bottom: 15px;
+    }
+}
+
+
+    
