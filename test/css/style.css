@@ -253,6 +253,12 @@ ul,li{
 
 ***/
 
+.header-wrap.auto-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 .main-header{
 	position:relative;
 	left:0px;
@@ -295,7 +301,7 @@ ul,li{
 	float:right;
 	padding:0px 0px;
 	/*margin-right: 100px;*/
-	margin-right: 142px;
+	margin-right: 0;
 	transition:all 1s ease;
 	-webkit-transition:all 1s ease;
 	-ms-transition:all 1s ease;
@@ -318,14 +324,16 @@ ul,li{
 .main-menu .navbar-nav > li{
 	position:relative;
 	padding:0px;
-	margin-left:15px;	
+	/*margin-left:15px;	*/
 }
 
 .main-menu .navbar-nav > li > a{
 	position:relative;
 	display:block;
-	padding:8px 20px;
-	font-size:14px;
+	/*padding:8px 20px;*/
+	padding:8px 7px;
+	/*font-size:14px;*/
+	font-size:12px;
 	line-height:24px;
 	font-weight:600;
 	text-transform:uppercase;
