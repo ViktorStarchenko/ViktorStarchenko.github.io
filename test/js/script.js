@@ -228,27 +228,27 @@
 	}
 	
 	// Google Map Settings
-	if($('#map-location').length){
-		var map;
-		 map = new GMaps({
-			el: '#map-location',
-			zoom: 18,
-			scrollwheel:false,
-			//Set Latitude and Longitude Here
-			lat: -37.817085,
-			lng: 144.955631
-		  });
+	// if($('#map-location').length){
+	// 	var map;
+	// 	 map = new GMaps({
+	// 		el: '#map-location',
+	// 		zoom: 18,
+	// 		scrollwheel:false,
+	// 		//Set Latitude and Longitude Here
+	// 		lat: -37.817085,
+	// 		lng: 144.955631
+	// 	  });
 		  
-		  //Add map Marker
-		  map.addMarker({
-			lat: -37.817085,
-			lng: 144.955631,
-			infoWindow: {
-			  content: '<p style="color:#3b3b3b; text-align:center;"><strong>Envato</strong><br>Melbourne VIC 3000, Australia</p>'
-			}
+	// 	  //Add map Marker
+	// 	  map.addMarker({
+	// 		lat: -37.817085,
+	// 		lng: 144.955631,
+	// 		infoWindow: {
+	// 		  content: '<p style="color:#3b3b3b; text-align:center;"><strong>Envato</strong><br>Melbourne VIC 3000, Australia</p>'
+	// 		}
 		 
-		});
-	}
+	// 	});
+	// }
 	
 	//Add Scroll Bar To Schedule
 	if($('.schedule-box').length){
