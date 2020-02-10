@@ -45,3 +45,17 @@ $(document).ready(function() {
 })
 
 
+
+
+// RATING STARS
+
+$(document).ready(function(){
+
+  $('.rating-wrap').on('click', function(){
+    var stars = $(this)
+    console.log(stars)
+  })
+
+}) 
+
+

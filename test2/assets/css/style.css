@@ -559,6 +559,10 @@ a.text-12px-019299:hover {
     background-size: cover;
 }
 
+.rating-star-item.active:before {
+    background-position: left bottom;
+}
+
 /************************************************HEADER*************************************/
 
 footer .logo-img {
@@ -2124,6 +2128,7 @@ padding: 6px 10px 4px;
     box-shadow: 0 2px 5px rgba(111, 111, 111, 0.25);
     padding: 20px;
     border-radius: 4px;
+    margin-bottom: 15px;
 }
 
 .article-item__img {
@@ -2135,6 +2140,11 @@ padding: 6px 10px 4px;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
+    padding: 0 20px;
+}
+
+.article-item__content .article-item__service {
+    padding: 0;
 }
 
 .article-item__service .tags-cloud__container {
@@ -2151,6 +2161,16 @@ padding: 6px 10px 4px;
         max-width: 96%;
         margin: auto;
         margin-bottom: 15px;
+    }
+
+    .article-item__service {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .article-item__service .tags-cloud__container {
+        max-width: 100%;
+        margin-bottom: 8px;
     }
 }
 
