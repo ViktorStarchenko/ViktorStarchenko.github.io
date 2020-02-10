@@ -959,6 +959,24 @@ header .nav-link {
     margin-right: 74px;
 }
 
+@media screen and (max-width: 425px) {
+    .modal__login {
+        width: 92%;
+        left: 4%;
+    }
+
+    .modal__login .form-items-group.passwort-reset {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .modal__login .shift-pass-reset {
+        margin-right: 0;
+    }
+}
+
+
+
 /******************************************LOGIN MODAL конец*************************************************/
 
 
