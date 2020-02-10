@@ -51,9 +51,80 @@ $(document).ready(function() {
 
 $(document).ready(function(){
 
-  $('.rating-wrap').on('click', function(){
-    var stars = $(this)
-    console.log(stars)
+  $('.rating-wrap.rate-this').on('mouseover', function(e){
+
+
+
+    var rating = $(this)[0];
+    var stars = $(rating).children()
+
+    var target = e.target;
+
+    console.log(target)
+
+    rating.onclick = function(e){
+      var target = e.target;
+      if(e.target.classList.contains('rating-star-item')){
+
+        removeClass(stars,'current-active')
+        target.classList.add('active','current-active');
+      }
+    }
+
+    rating.onmouseover = function(e) {
+        var target = e.target;
+        if(target.classList.contains('rating-star-item')){
+          removeClass(stars,'active')
+          target.classList.add('active' );
+          mouseOverAddClassActive(stars)
+          // mouseOutActiveClass(stars)
+        }
+      }
+
+     rating.onmouseout = function(){
+        // addClass(stars,'active');
+        mouseOutActiveClass(stars);
+      } 
+
+
+    
+    function removeClass(arr) {
+      for(var i = 0, iLen = arr.length; i <iLen; i ++) {
+        for(var j = 1; j < arguments.length; j ++) {
+          stars[i].classList.remove(arguments[j]);
+        }
+      }
+    }
+
+    function addClass(arr) {
+      for(var i = 0, iLen = arr.length; i <iLen; i ++) {
+        for(var j = 1; j < arguments.length; j ++) {
+          stars[i].classList.add(arguments[j]);
+        }
+      }
+    }  
+
+    function mouseOverAddClassActive(arr) {
+      for(i=0; i<arr.length; i++) {
+        if(arr[i].classList.contains('active')) {
+          break;
+        } else {
+          stars[i].classList.add('active');
+        }
+      }
+    }
+
+    function mouseOutActiveClass(arr){
+      for(var i = arr.length-1; i >=1; i--) {
+        if(arr[i].classList.contains('current-active')){
+          break;
+        }else {
+          arr[i].classList.remove('active');
+        }
+      }
+    }
+
+
   })
 
 }) 
