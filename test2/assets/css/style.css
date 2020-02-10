@@ -92,7 +92,8 @@ ul {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255,255,255,0.3);
+    /*background-color: rgba(255,255,255,0.3);*/
+    background-color: rgba(0,0,0,0.5);
     z-index: -1;
     transition-duration: .3s;
     opacity: 0;
@@ -502,7 +503,18 @@ a.text-12px-019299:hover {
 /***********************************************FORM STYLES******************************************/
 .form-items-group {
     display: flex;
-    
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-item-square {
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 14px;
+}
+
+.form-item-square:focus, .form-item-square:active {
+    outline: none;
 }
 
 .tags-cloud-wrap .form-items-group {
@@ -526,6 +538,11 @@ a.text-12px-019299:hover {
 .tags-cloud-wrap input:focus, .tags-cloud-wrap textarea:focus {
     outline: none;
 } 
+
+.checkbox {
+    display: flex;
+    align-items: center;
+}
 
 
 /**********************************************RATING STYLES***********************************************************/
@@ -890,6 +907,59 @@ header .nav-link {
     }
 }
 
+
+/******************************************LOGIN MODAL начало*************************************************/
+
+.modal__login {
+    width: 380px;
+    position: absolute;
+    left: calc(50% - 190px);
+    top: -100%;
+    /*display: none;*/
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(111, 111, 111, 0.25);
+    border-radius: 4px;
+    transition-duration: .3s;
+}
+
+.modal__login.showModal {
+    /*display: block;*/
+    z-index: 11;
+    top: 10%;
+    transition-duration: .5s;
+}
+.modal__login label {
+    margin-bottom: 0;
+}
+
+
+
+.modal__login .modal-inner {
+    padding: 10px 30px 30px 30px;
+}
+
+.modal__login .form-items-group {
+    justify-content: flex-end;
+}
+
+.modal__login .form-item-square {
+    width: 100%;
+}
+
+#login-form .control-label {
+    width: 80px;
+}
+
+.modal__login .checkbox label {
+    display: flex;
+    align-items: center;
+}
+
+.modal__login .shift-pass-reset {
+    margin-right: 74px;
+}
+
+/******************************************LOGIN MODAL конец*************************************************/
 
 
 /******************************************MAIN*******************************************/

@@ -77,7 +77,7 @@
 			</div>
 
 			<div class="acc-control-wrap">
-				<a class="red-btn login-btn" href="#">Вход</a>
+				<a id="login-btn" class="red-btn login-btn" href="#">Вход</a>
 				<a class="link-icon registration-link text-16px-white" href="#">Регистрация</a>
 			</div>
 		</div>
@@ -682,6 +682,10 @@
       </div>
     </div>
   </div>
+
+
+
+
 </footer>
 
 
@@ -703,6 +707,50 @@
 <script src="assets/js/main.js"></script>
 <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKQ6x5al7NFc63XIBOw6VmnIGe1hjha64&amp;callback=initMap"></script> -->
 
+<!-- Модальное окно авторизации -->
+  
+  <div class="modal__login">
+    <div class="modal__login-wrap">
+      <div class="trade-table__heading">
+        <h4 class="text-16px-white">Войти</h4>
+      </div>
+      <div class="modal-inner">
+        <span class="text-12px-585858 text-300">Для входа в систему введите регистрационные данные или <a class="text-12px-019299" href="register">зарегистрируйте</a> Вашу компанию</span>
+
+        <form id="login-form" action="">
+          <div class="form-items-group">
+            <label class="control-label text-12px-585858"  for="">E-mail</label>
+            <input class="form-item-square" type="email" placeholder="Ваш логин или E-mail" required>
+          </div>
+
+          <div class="form-items-group password-input">
+            <label class="control-label text-12px-585858" for="">Пароль</label>
+            <input class="form-item-square" type="password" placeholder="Пароль" required>
+            <div class="show-password"></div>
+          </div>
+
+          <div class="form-items-group">
+            <a class="shift-pass-reset text-12px-019299" href="#">Забыли пароль?</a>
+            <div class="checkbox">
+              <label for="loginform-rememberme">
+              <input type="hidden" name="LoginForm[rememberMe]" value="0">
+              <input class="text-12px-585858" type="checkbox" id="loginform-rememberme" name="LoginForm[rememberMe]" value="1" checked="">
+              Запомнить меня
+              </label>
+            </div>
+          </div>
+
+          <div class="form-items-group">
+            <div class="form-item">
+              <button class="red-btn login-btn">Войти</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+      
+    </div> 
+  </div>
 
 </body>
 

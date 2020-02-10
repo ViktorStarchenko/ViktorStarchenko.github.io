@@ -20,7 +20,6 @@ window.onload=function(){if(window.innerWidth <= 520){ // ДОБАВЛЯЕМ С�
 }
 }
 
-
 // Show mobile menu
 
 $(document).ready(function() {
@@ -129,4 +128,21 @@ $(document).ready(function(){
 
 }) 
 
+
+
+
+$(document).ready(function(){
+  $('#login-btn').on('click', function(){
+    $('.modal__login').addClass('showModal');
+    $('.screen-shadow').addClass('show');
+    $('body').addClass('hidden');
+
+    $('.screen-shadow.show').on('click', function() {
+      $('.modal__login').removeClass('showModal');
+      $('.screen-shadow').removeClass('show');
+      $('body').removeClass('hidden');
+    })
+
+  })
+})
 
