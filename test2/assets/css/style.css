@@ -111,6 +111,12 @@ ul {
     margin: auto;
 }
 
+.flex-wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 main .container-fluid .main-left-col {
     /*background-color: red; */
     /*height: 800px;*/
@@ -463,6 +469,10 @@ a.text-12px-019299:hover {
     z-index: 2
 }
 
+.fullwidth {
+    width: 100%;
+}
+
 .text-300 {
     font-weight: 300
 }
@@ -503,7 +513,7 @@ a.text-12px-019299:hover {
 /***********************************************FORM STYLES******************************************/
 .form-items-group {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 15px;
 }
 
@@ -979,6 +989,170 @@ header .nav-link {
 
 /******************************************LOGIN MODAL конец*************************************************/
 
+
+/**************************************************REGISTRATION FORM SIGHNUP Начало******************************************************/
+.account {
+    margin-bottom: 60px;
+}
+
+.account-page {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(111, 111, 111, 0.25);
+    padding: 0 0 40px;
+    margin-bottom: 40px;
+}
+
+#signup-form .control-label {
+    width: 160px;
+}
+
+.signup .trade-table__heading h4:before {
+    background-image: url(../img/icons/contact.png);
+/*    height: 22px;
+    width: 18px;*/
+    background-repeat: no-repeat;
+}
+
+.account-page .form-wrapper {
+    padding: 20px;
+}
+
+.account-page .notation-box {
+    padding: 4px 20px;
+    box-shadow: 0 2px 5px rgba(111, 111, 111, 0.25);
+}
+
+.account-page .notation-box p {
+    margin-bottom: 0;
+}
+
+.account-page .text-box {
+    padding: 20px;
+}
+
+#signup-form .form-items-group {
+    min-width: 320px;
+    width: 45%;
+    margin-right: 20px;
+}
+
+#signup-form .form-items-group.fullwidth {
+    width: 100%;
+}
+
+#signup-form .flex-wrap.checkbox-list {
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 60%;
+}
+
+#signup-form .flex-wrap .checkbox {
+    width: 100%;
+    max-width: 45%;
+}
+
+.account-page  .form-item-square {
+    max-width: 60%;
+    width: 100%;
+}
+
+.red-btn.receive-pass {
+    padding: 1px;
+    font-size: 12px;
+    border-radius: 0;
+    box-shadow: navajowhite;
+    margin-top: -3px;
+    max-width: 55%;
+    text-align: center;
+}
+
+.form-items-group.confirm-pass .flex-wrap {
+    width: 100%;
+    max-width: 60%;
+    justify-content: flex-end;
+}
+
+.form-items-group.confirm-pass .flex-wrap .form-item-square {
+    width: 100%;
+    max-width: unset;
+    margin-bottom: 5px;
+}
+
+.red-btn.registration-link {
+    color: #fff;
+    margin: 0;
+}
+
+.red-btn.registration-link:before {
+    top: 8px;
+    background-repeat: no-repeat;
+} 
+
+@media screen and (max-width: 1024px) {
+    #signup-form .flex-wrap {
+        flex-direction: column;
+    }
+
+    #signup-form .flex-wrap .form-items-group {
+        width: 100%;
+    }
+
+    #signup-form .flex-wrap .flex-wrap.checkbox-list {
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .account-page .notation-box .link-16px-2e2e2e {
+        font-size: 10px;
+        line-height: 18px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .account-page .text-box {
+        padding: 10px;
+    }
+
+    .account-page .form-wrapper {
+        padding: 0;
+    }
+
+    #signup-form .flex-wrap .form-items-group {
+        flex-direction: column;
+        align-items: center;
+        width: 95%;
+        min-width: unset;
+        margin: auto;
+        margin-bottom: 15px;
+    }
+
+    #signup-form .form-items-group {
+        margin: auto;
+    }
+
+    #signup-form .flex-wrap .form-items-group .form-item-square {
+        max-width: unset;
+    }
+
+    #signup-form .flex-wrap .form-items-group .control-label {
+        width: 100%;
+    }
+
+    .form-items-group.confirm-pass .flex-wrap {
+        max-width: unset;
+    }
+
+    .red-btn.receive-pass {
+        max-width: unset;
+    }
+
+    #signup-form .red-btn.registration-link {
+        margin: auto;
+    }
+}
+
+/**************************************************REGISTRATION FORM SIGHNUP Конец******************************************************/
 
 /******************************************MAIN*******************************************/
 
