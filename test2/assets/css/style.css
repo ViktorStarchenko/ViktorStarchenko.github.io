@@ -657,9 +657,35 @@ footer .logo-img {
     background-image: url('../img/icons/call-answer.png');
 }
 
-.acc-control-wrap {
+.control-wrap {
     width: 100%;
     max-width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.language-box {
+    background-color: rgba(250,250,250, .1);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.language-list {
+    margin-bottom: 0
+}
+
+.language-list a {
+    line-height: 14px;
+}
+
+.language-list-item.active a {
+    color: #f88170;
+}
+
+.acc-control-wrap {
+    /*width: 100%;*/
+/*    max-width: 25%;*/
     background-color: rgba(250,250,250, .1);
     padding: 10px 20px;
     border-radius: 4px;
@@ -702,6 +728,7 @@ footer .logo-img {
 
 .header-bottom .navbar__mobile-menu-button i {
     color: #fff;
+    font-size: 22px;
 }
 
 .header-bottom__inner {
@@ -822,12 +849,20 @@ header .nav-link {
     color: #fff;
 }
 
-
-@media screen and (max-width: 1066px) {
+@media screen and (max-width: 1239px) {
     .header-top {
         background-size: cover;
         background-position: center;
     }
+
+    .language-box {
+        padding: 19px 10px;
+    }
+}
+
+
+@media screen and (max-width: 1066px) {
+    
 }
 
 
@@ -872,6 +907,10 @@ header .nav-link {
     .header-bottom .text-14px-white {
         font-size: 11px;
     }
+
+    .acc-control-wrap {
+        padding: 10px 4px;
+    }
 } 
 
 @media screen and (max-width: 767px) {
@@ -914,6 +953,20 @@ header .nav-link {
 
     .header-bottom__carrency-date .text-14px-white {
         padding: 0 10px;
+    }
+
+    .control-wrap {
+        width: unset;
+        max-width: unset;
+    }
+
+    .language-box {
+        padding: 5px 10px;
+    }
+
+    .acc-control-wrap {
+        padding: 10px 20px;
+        margin-right: 10px;
     }
 }
 
@@ -1808,6 +1861,7 @@ padding: 6px 10px 4px;
 
 .about .nav.nav-pills .link-16px-2e2e2e {
     font-weight: 400;
+    text-transform: uppercase;
 }
 
 .about .nav.nav-pills .link-16px-2e2e2e.active {
@@ -1859,7 +1913,8 @@ padding: 6px 10px 4px;
 .about__content-list-item {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    /*align-items: center;*/
+    align-items: flex-start;
     margin-bottom: 30px;
 }
 
@@ -2447,5 +2502,91 @@ padding: 6px 10px 4px;
     }
 }
 
+/*****************************************************СТРАНИЦА НОВОСТИ конец***********************************************/
 
+
+/********************************************************************************************************************/
+.about__content-box.full-width-tabs .about__content-text {
+    max-width: unset;
+    padding: 20px;
+    margin-right: 0;
+}
+
+.about__content-box.full-width-tabs .big-title-white {
+    margin-bottom: 25px;
+}
+
+.about__content-box.full-width-tabs img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.about__content-box.full-width-tabs  img.inner-fullwidth {
+    z-index: 0;
+}
+
+.about__content-box.full-width-tabs .about__content-inner {
+    background-color: rgba(0,0,0,0.8);
+    position: relative;
     
+}
+
+.about__content-box.full-width-tabs .about__content-text .text-30px-white {
+    text-align: left;
+    width: 100%;
+    max-width: 15%;
+}
+
+.about__content-box.full-width-tabs .about__content-list-item {
+    margin-bottom: 20px;
+}
+/********************************************************************************************************************/
+/*****************************************************СТРАНИЦА О ПЛОСЧАДКЕ***********************************************/
+
+
+.about-page .about__content-box.full-width-tabs .about__content-inner  {
+    min-height: 43vw;
+}
+
+.about-page .about__content-box.full-width-tabs .about__content-text .text-30px-white {
+    max-width: 15%;
+}
+
+.about .nav.nav-pills #pills-usage-tab.link-16px-2e2e2e.active:before, .about .nav.nav-pills #pills-processing-tab.link-16px-2e2e2e.active:before {
+    bottom: unset;
+    top: -21px;
+    clip-path: polygon(50% 25%, 0% 100%, 100% 100%);
+}
+
+
+
+@media screen and (max-width: 1144px) {
+    .about-page .about__content-box.full-width-tabs .about__content-inner  {
+        min-height: 60vw;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .about-page .about__content-box.full-width-tabs .about__content-text .text-30px-white {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .about-page .about__content-box.full-width-tabs .about__content-text .text-30px-white {
+        font-size: 18px;
+    }
+
+    .about__content-box.full-width-tabs .about__content-list-item {
+        margin-bottom: 13px;
+    }
+}
+
+@media screen and (max-width: 468px)  {
+    .about-page .nav.nav-pills .nav-item{
+        width: 100%;
+    }
+}
+
+
