@@ -1,26 +1,30 @@
-<?php // include 'get.php'; ?>
 <!DOCTYPE html>
 
 <html lang="ru-RU">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <script src="https://use.fontawesome.com/b38bf7744d.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/normalize.css">
+    <!-- Главные стили -->
     <link rel="stylesheet" href="assets/css/style.css">
-
+	<!-- bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="assets/css/informer.css">
+    <!-- Карусель slick -->
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/slick-theme.css">
+	<!-- font awesome -->
+    <link rel="stylesheet" href="assets/css/fontawesome/all.css">
+
 
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/css/flick/jquery-ui.theme.min.css" /> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.min.css"> -->
     <link rel="stylesheet" type="text/css" href="themes/redmond/jquery-ui-1.7.1.custom.css" />
-
+	
+	<!-- стили для jqgrid -->
 	<link rel="stylesheet" type="text/css" media="screen" href="assets/css/ui.jqgrid.css" mce_href="css/ui.jqgrid.css" />
 	<style>html, body {
 	    margin: 0;
@@ -29,13 +33,14 @@
 	}
 	</style>
     
-<!--     <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/slick-theme.css"> -->
 <body>
+	<!-- Оверлей для мобильного меню, модальных оконо и тд.	 -->
    <div class="screen-shadow"></div> 
+
+<!-- Шапка начало    -->
 <header>
 	<div class="header-top">
-		
+		<!-- Мобильное меню -->
 		<div class="mobile-menu-wrap">
 			<div class="close-button">
 				<span>
@@ -57,22 +62,20 @@
               </li>
             </ul>
 		</div>
-
+		
+		<!-- Контакты, лого, регистрация/авторизация -->
 		<div class="header-top__inner wrapper">
 			<a href="index.html">
 				<img class="logo-img" src="assets/img/tenderfood_monochrome_white.png" alt="logo">
 			</a>
 			<div class="header-top__phone-wrap">
 				<div class="phone-box">
-					<i class="fas fa-phone-alt"></i>
 					<a class="phone-link link-icon text-16px-white " href="tel:+38044-234-45-45">044-234-45-45</a>
 				</div>
 				<div class="phone-box">
-					<i class="fas fa-phone-alt"></i>
 					<a class="phone-link link-icon text-16px-white" href="tel:+38044-234-45-45">044-234-45-45</a>
 				</div>
 				<div class="phone-box">
-					<i class="fas fa-phone-alt"></i>
 					<a class="phone-link link-icon text-16px-white" href="tel:+38044-234-45-45">044-234-45-45</a>
 				</div>
 			</div>
@@ -101,15 +104,11 @@
 		
 	</div>
 
+	<!-- Меню навигации -->
 	<div class="header-bottom">
 		<div class="header-bottom__inner wrapper">
 			
 			<nav class="navbar navbar-expand-md">
-              <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon">
-                    <i class="fas fa-bars"></i>
-                </span>
-              </button> -->
 
                 <span class=" navbar__mobile-menu-button">
                     <i class="fas fa-bars"></i>
@@ -143,44 +142,12 @@
             </div>
 		</div>
 	</div>
-</header>
-
-
-<section class="my-table">
-	<div class="container-fluid p-0">
-		<div class="row wrapper m-auto">
-			<div class="col-12 p-0">
-				<!-- <div id="my-table-wrap" class="table-responsive my-table-wrap">
-					<table id="grid" class="table"></table>
-					<div id="gridpager"></div>
-
-				</div>
-				<div id="my-table-paginator">
-					<ul class="pagination-box">
-						<li class="pagination-item first">
-							<a id="first_gridpager" href="#">первая...</a>
-						</li>
-						<li class="pagination-item prev">
-							<a id="prev_gridpager" href="#">1</a>
-						</li>
-						<li class="pagination-item active">
-							<a id="paginator_current_page" href="#">1</a>
-						</li>
-						<li class="pagination-item next">
-							<a id="next_gridpager" href="#">3</a>
-						</li>
-						<li class="pagination-item last">
-							<a id="last_gridpager" href="#">..последняя</a>
-						</li>
-					</ul>
-				</div> -->
-			</div>
-		</div>
-	</div>
-</section>
+</header> 
+<!-- Шапка конец -->
 
 
 <main>
+	<!-- Баннер карусель на главной начало-->
 	<section class="banners">
 		<div class="container-fluid p-0">
 
@@ -229,22 +196,22 @@
 						<span class="text-18px-white">Открытых торгов</span>
 
 						<div class="inform__counter-block">
-							<!-- <img src="assets/img/counter.png" alt="counter"> -->
 						<span class="inform__counter-result text-18px-white">7777</span>	
-							<!-- <div class="inform__counter-result">
-								<span class="text-18px-white">7777</span>
-							</div> -->
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+	<!-- Баннер карусель на главной конец-->
+
+
 
 	<section class="all-lots">
 		<div class="container-fluid p-0">
 			<div class="row wrapper m-auto">
 				<div class="col-12 col-md-9 main-left-col">
+					<!-- Универсальная таблица и пагинация для нее -->
 					<!-- ТАБЛИЦА "ВСЕ ТОРГИ" -->
 					<div id="lots-table-wrap" class="table-responsive lots-table-wrap">
 					<table id="grid" class="table"></table>
@@ -276,7 +243,9 @@
 						</li>
 					</ul>
 				</div>
-					<div class="trade-table__wrap">
+
+				<!-- Изначальная таблица "Все торги" из макета, скорей всего она не нужна, тогда удалю совсем  НАЧАЛО-->
+					<!-- <div class="trade-table__wrap">
 						<div class="trade-table__heading">
 							<h4 class="text-16px-white">Все торги</h4>
 						</div>	
@@ -566,10 +535,12 @@
 
 						<a class="red-btn see-all-lots-btn" href="#">Показать все торги</a>
 						
-					</div>
+					</div> -->
+					<!-- Изначальная таблица "Все торги" из макета, скорей всего она не нужна, тогда удалю совсем  КОНЕЦ-->
 				</div>
-
+				
 				<div class="col-12 col-md-3 main-right-col">
+					<!-- САЙДБАР НОВОСТИ начало -->
 					<div class="sidebar-block">
 						<div class="sidebar__news-wrap">
 							<div class="sidebar__news-heading">
@@ -618,6 +589,7 @@
 							</div>
 						</div>
 						</div>
+						<!-- САЙДБАР НОВОСТИ конец -->
 					</div>
 				</div>
 			</div>
@@ -628,11 +600,12 @@
 		<div class="container-fluid p-0">
 			<div class="row wrapper m-auto">
 				<div class="col-12 p-0">
+			<!-- Изначальная таблица "Активные ТОРГИ" из макета, скорей всего она не нужна, тогда удалю совсем  НАЧАЛО-->		
 					<div class="trade-table__wrap">
 						<div class="trade-table__heading">
 							<h4 class="text-16px-white">Активные ТОРГИ</h4>
 						</div>
-                    <div class="table-responsive">
+                    	<div class="table-responsive">
 							<table class="trade-table">
 							  <thead >
 							    <tr>
@@ -775,11 +748,14 @@
 							</table>
 						</div>
 					</div>
+					<!-- Изначальная таблица "Активные ТОРГИ" из макета, скорей всего она не нужна, тогда удалю совсем  КОНЕЦ-->	
 				</div>
 			</div>
 		</div>
 	</section>
 
+
+<!-- Изначальная таблица "репутация компаний" НАЧАЛО-->	
 	<section class="companies-rating">
 		<div class="container-fluid p-0">
 			<div class="row wrapper m-auto">
@@ -1145,7 +1121,11 @@
 			</div>
 		</div>
 	</section>
+<!-- Изначальная таблица "репутация компаний" КОНЕЦ-->		
 
+
+
+<!-- Блок ИНФО НАЧАЛО-->	
 	<section class="info">
 		<div class="container-fluid p-0">
 			<div class="row wrapper m-auto info__inner">
@@ -1198,7 +1178,10 @@
 			</div>
 		</div>
 	</section>
+<!-- Блок ИНФО КОНЕЦ-->		
 
+
+<!-- Блок О ПРОЕКТЕ НАЧАЛО-->	
 	<section class="about">
 		<div class="container-fluid p-0">
 			<div class="row wrapper m-auto">
@@ -1290,7 +1273,9 @@
 			</div>
 		</div>
 	</section>
+<!-- Блок О ПРОЕКТЕ КОНЕЦ-->
 
+<!-- Блок ПРАВИЛА НАЧАЛО-->		
 	<section class="rules">
 		<div class="container-fluid p-0">
 			<div class="row wrapper m-auto">
@@ -1341,10 +1326,11 @@
 			</div>
 		</div>
 	</section>
-	
+<!-- Блок ПРАВИЛА КОНЕЦ-->		
 </main>
 
 
+<!-- Подвал начало -->
 <footer>
 	<div class="footer-top">
 		<div class="container-fluid">
@@ -1412,27 +1398,29 @@
 		</div>
 	</div>
 </footer>
-
-
-
-<!-- <footer style="height: 600px"></footer> -->
+<!-- Подвал конец -->
 
 <script src="assets/js/jquery-3.4.1.min.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript"></script> -->
 
-<script src="assets/js/informer_.js"></script>
+<!-- bootstrap -->
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+
+<!-- Карусель slick -->
 <script src="assets/js/slick.min.js"></script>
 
-<!-- <script type="text/javascript" src="assets/js/jquery-1.4.min.js"></script> -->
+<!-- fontawesome -->
+<script src="assets/js/fontawesome/all.js"></script>
+
+<!-- Скрипты jqgrid. Нужны для таблицы -->
 <script type="text/javascript" src="assets/js/i18n/grid.locale-ru.js"></script>
-<!-- <script type="text/javascript" src="assets/js/jquery.jqGrid.src.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.15.5/jquery.jqgrid.min.js"></script>
 
+<!-- Основные скрипты -->
 <script src="assets/js/main.js"></script>
-<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKQ6x5al7NFc63XIBOw6VmnIGe1hjha64&amp;callback=initMap"></script> -->
 
+
+<!-- Генерация таблицы начало-->
 <script type="text/javascript">
 
 $(document).ready(function () {
@@ -1606,6 +1594,7 @@ $(document).ready(function () {
        
     });
 });
+// Пагинация для таблицы
 function initPaginator() {
 	var last_page = $('#sp_1_gridpager').html();
  	var current_page = $('.form-control.ui-pg-input').val();
@@ -1665,11 +1654,12 @@ function initPaginator() {
  })
 
 </script>
+<!-- Генерация таблицы конец-->
 
 
 
 
-<!-- Модальное окно авторизации -->
+<!-- Модальное окно авторизации начало-->
   
   <div class="modal__login">
     <div class="modal__login-wrap">
@@ -1713,6 +1703,7 @@ function initPaginator() {
       
     </div> 
   </div>
+<!-- Модальное окно авторизации начало-->  
 </body>
 
 </html>

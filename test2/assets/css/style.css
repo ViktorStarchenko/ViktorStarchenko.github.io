@@ -674,6 +674,8 @@ footer .logo-img {
 
 .navbar__mobile-menu-button {
     display: none;
+    color: #fff;
+    font-size: 20px;
 }
 
 .phone-link:before {
@@ -846,6 +848,8 @@ header .nav-link {
     position: absolute;
     right: 15px;
     top: 10px;
+    color: #fff;
+    font-size: 20px;
 }
 
 .close-button i {
