@@ -164,138 +164,169 @@
 						<div class="form-wrapper">
 							<form id="signup-form" action="">
 								<div class="flex-wrap">
-									<div class="form-items-group">
-										<label class="control-label text-12px-585858" for="">Страна</label>
-										<select class="form-item-square" name="" id="">
-											<option value="">Выберите страну</option>
-											<option value="1">Ангола</option>
-											<option value="2">Республика Конго</option>
-											<option value="3">Руанда</option>
-											<option value="4"> Экваториальная Гвинея</option>
-											<option value="5">Камерун</option>
-										</select>
-									</div>
+									<div class=" flex-column">
+										<div class="form-items-group">
+											<label class="control-label required text-12px-585858 " for="">Страна</label>
+											<select class="form-item-square" name="" id="" required>
+												<option value="">Выберите страну</option>
+												<option value="1">Ангола</option>
+												<option value="2">Республика Конго</option>
+												<option value="3">Руанда</option>
+												<option value="4"> Экваториальная Гвинея</option>
+												<option value="5">Камерун</option>
+											</select>
+										</div>
 
-									<div class="form-items-group">
-										<label class="control-label text-12px-585858" for="">Название компании</label>
-										<input class="form-item-square" type="text">
-									</div>
+										<div class="form-items-group">
+											<label class="control-label required text-12px-585858" for="">Название компании</label>
+											<input class="form-item-square" type="text" required>
+										</div>
 
-									<div class="form-items-group">
-										<label class="control-label text-12px-585858" for="">ИНН</label>
-										<input class="form-item-square" type="text">
-									</div>
+										<div class="form-items-group">
+											<label class="control-label required text-12px-585858" for="">ИНН</label>
+											<input class="form-item-square" type="text" required>
+										</div>
 
-									<div class="form-items-group">
-										<label class="control-label text-11px-585858" for="">Сайт</label>
-										<input class="form-item-square" type="text">
-									</div>
+										<div class="form-items-group">
+											<!-- <label class="control-label text-2px-585858" for="">Пароль</label>
+											<input class="form-item-square" type="password"> -->
+											<input calss="control-label text-12px-585858" type="file" required>
+											<label class="control-label required text-12px-585858" for="" >Загрузить свидетельство</label>
+										</div>
 
-									<div class="form-items-group ">
-										<label class="control-label text-12px-585858" for="">Тип компании</label>
-										<div class="flex-wrap checkbox-list">
-											<div class="checkbox">
-												<label for="">
-													<input type="hidden" value="0">
-													<input type="checkbox" value="1">
-													Производитель
-												</label>
-											</div>
-											<div class="checkbox">
-												<label for="">
-													<input type="hidden" value="0">
-													<input type="checkbox" value="1">
-													Бойня
-												</label>
-											</div>
-											<div class="checkbox">
-												<label for="">
-													<input type="hidden" value="0">
-													<input type="checkbox" value="1">
-													Переработчик
-												</label>
-											</div>
-											<div class="checkbox">
-												<label for="">
-													<input type="hidden" value="0">
-													<input type="checkbox" value="1">
-													Трейдер
-												</label>
-											</div>
-											<div class="checkbox">
-												<label for="">
-													<input type="hidden" value="0">
-													<input type="checkbox" value="1">
-													Импортер
-												</label>
-											</div>
-											<div class="checkbox">
-												<label for="">
-													<input type="hidden" value="0">
-													<input type="checkbox" value="1">
-													Ритейлер
-												</label>
-											</div>
-											<div class="checkbox">
-												<label for="">
-													<input type="hidden" value="0">
-													<input type="checkbox" value="1">
-													Экспортер
-												</label>
-											</div>
-											<div class="checkbox">
-												<label for="">
-													<input type="hidden" value="0">
-													<input type="checkbox" value="1">
-													Хранитель
-												</label>
+										<div class="form-items-group">
+											<label class="control-label text-12px-585858" for="">Сайт</label>
+											<input class="form-item-square" type="text">
+										</div>
+
+										<div class="form-items-group ">
+											<label class="control-label text-12px-585858" for="">Тип компании</label>
+											<div class="flex-wrap checkbox-list">
+												<div class="checkbox">
+													<label for="">
+														<input type="hidden" value="0">
+														<input type="checkbox" value="1">
+														Производитель
+													</label>
+												</div>
+												<div class="checkbox">
+													<label for="">
+														<input type="hidden" value="0">
+														<input type="checkbox" value="1">
+														Бойня
+													</label>
+												</div>
+												<div class="checkbox">
+													<label for="">
+														<input type="hidden" value="0">
+														<input type="checkbox" value="1">
+														Переработчик
+													</label>
+												</div>
+												<div class="checkbox">
+													<label for="">
+														<input type="hidden" value="0">
+														<input type="checkbox" value="1">
+														Трейдер
+													</label>
+												</div>
+												<div class="checkbox">
+													<label for="">
+														<input type="hidden" value="0">
+														<input type="checkbox" value="1">
+														Импортер
+													</label>
+												</div>
+												<div class="checkbox">
+													<label for="">
+														<input type="hidden" value="0">
+														<input type="checkbox" value="1">
+														Ритейлер
+													</label>
+												</div>
+												<div class="checkbox">
+													<label for="">
+														<input type="hidden" value="0">
+														<input type="checkbox" value="1">
+														Экспортер
+													</label>
+												</div>
+												<div class="checkbox">
+													<label for="">
+														<input type="hidden" value="0">
+														<input type="checkbox" value="1">
+														Хранитель
+													</label>
+												</div>
 											</div>
 										</div>
-									</div>
 
-									<div class="form-items-group">
-										<label class="control-label text-12px-585858" for="">Имя</label>
-										<input class="form-item-square" type="text">
+										<div class="form-items-group">
+											<div class="checkbox fullwidth">
+													<label class="text-12px-585858" for="">
+														<input type="hidden" value="0">
+														<input type="checkbox" value="1">
+														Принимаю условия Договора присоединения. Договор присоединения.Тарифы. Правила работы.
+													</label>
+												</div>
+										</div>
 									</div>
+									
 
-									<div class="form-items-group">
-										<label class="control-label text-12px-585858" for="">Фамилия</label>
-										<input class="form-item-square" type="text">
-									</div>
+									
+									<div class="flex-column">
+										<div class="form-items-group">
+											<label class="control-label required text-12px-585858" for="">Имя</label>
+											<input class="form-item-square" type="text" required>
+										</div>
 
-									<div class="form-items-group">
-										<label class="control-label text-12px-585858" for="">Отчество</label>
-										<input class="form-item-square" type="text">
-									</div>
+										<div class="form-items-group">
+											<label class="control-label required text-12px-585858" for="">Фамилия</label>
+											<input class="form-item-square" type="text" required>
+										</div>
 
-									<div class="form-items-group">
-										<label class="control-label text-12px-585858" for="">Должность</label>
-										<input class="form-item-square" type="text">
-									</div>
+										<div class="form-items-group">
+											<label class="control-label required text-12px-585858" for="">Отчество</label>
+											<input class="form-item-square" type="text" required>
+										</div>
 
-									<div class="form-items-group">
-										<label class="control-label text-12px-585858" for="">Телефон</label>
-										<input class="form-item-square" type="phone">
-									</div>
-
-									<div class="form-items-group">
-										<label class="control-label text-12px-585858" for="">Email</label>
-										<input class="form-item-square" type="email">
-									</div>
-
-									<div class="form-items-group">
-										<label class="control-label text-2px-585858" for="">Пароль</label>
-										<input class="form-item-square" type="password">
-									</div>
-
-									<div class="form-items-group confirm-pass">
-										<label class="control-label text-12px-585858" for="">Код подтверждения</label>
-										<div class="flex-wrap">
+										<div class="form-items-group">
+											<label class="control-label text-12px-585858" for="">Должность</label>
 											<input class="form-item-square" type="text">
-											<a class="red-btn receive-pass" href="">Получить код</a>
+										</div>
+
+										<div class="form-items-group">
+											<label class="control-label text-12px-585858" for="">Телефон</label>
+											<input class="form-item-square" type="phone">
+										</div>
+
+										<div class="form-items-group">
+											<label class="control-label text-12px-585858" for="">Телефон</label>
+											<input class="form-item-square" type="phone">
+										</div>
+
+										<div class="form-items-group">
+											<label class="control-label required text-12px-585858" for="">Email</label>
+											<input class="form-item-square" type="email" required>
+										</div>
+
+										<div class="form-items-group">
+											<label class="control-label required text-12px-585858" for="">Пароль</label>
+											<input class="form-item-square" type="password" required>
+										</div>
+
+										<div class="form-items-group confirm-pass">
+											<label class="control-label text-12px-585858" for="">Код подтверждения</label>
+											<div class="flex-wrap">
+												<input class="form-item-square" type="text">
+												<a class="red-btn receive-pass" href="">Получить код</a>
+											</div>	
+											
 										</div>	
-										
-									</div>	
+									</div>
+									
+
+									
 								</div>
 								
 

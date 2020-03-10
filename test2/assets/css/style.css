@@ -566,6 +566,12 @@ a.text-12px-019299:hover {
     width: 160px;
 }
 
+.control-label.required:after {
+    content: ' * ';
+    color: #F00;
+    font-weight: bold;
+}
+
 @media screen and (max-width: 425px) {
     .form-items-group {
         flex-direction: column;
@@ -1114,12 +1120,21 @@ header .nav-link {
 
 #signup-form .form-items-group {
     min-width: 320px;
-    width: 45%;
+    /*width: 45%;*/
     margin-right: 20px;
+}
+
+#signup-form .flex-column {
+    max-width: 48%;
+    width: 100%;
 }
 
 #signup-form .form-items-group.fullwidth {
     width: 100%;
+}
+
+#signup-form .form-items-group .checkbox.fullwidth {
+    max-width: unset;
 }
 
 #signup-form .flex-wrap.checkbox-list {
@@ -1182,6 +1197,10 @@ header .nav-link {
     #signup-form .flex-wrap .flex-wrap.checkbox-list {
         flex-direction: row;
     }
+
+    #signup-form .flex-column {
+        max-width: unset;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -1219,6 +1238,7 @@ header .nav-link {
 
     #signup-form .flex-wrap .form-items-group .control-label {
         width: 100%;
+        position: relative;
     }
 
     .form-items-group.confirm-pass .flex-wrap {
