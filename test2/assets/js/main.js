@@ -184,3 +184,126 @@ $(document).ready(function(){
      $(".tel-mask").mask("+38 (999) 999-99-99");
    });
 
+
+
+
+
+
+
+// Страница пользователя, вкладка ТОВАРЫ  "ВАША КОМПАНИЯ ЗАКУПАЕТ"
+// $(document).ready(function(){
+//   $(".checkbox").on('click', function(){
+//     var checkbox_data = $(this).attr('data-check')
+//     var ckeckbox_list =  $('.ckeckbox-dropdown-list');
+//     ckeckbox_list.each(function(elem){
+
+//         // console.log($(video[elem]).attr('data-issetSrc')) 
+//         if ($(ckeckbox_list[elem]).attr('data-check') == checkbox_data) {
+//           // console.log($(this).attr('data-issetSrc'))
+//            $(this).toggleClass('show')
+//         }
+
+//       })
+
+//   })
+
+//   $(".checkbox input[type=checkbox]").change(function() {
+//     var data_purchase = $(this).attr('data-check')
+//     var ckeckbox_list =  $('.ckeckbox-dropdown-list');
+
+//     if ($(this).is(':checked')) {
+      
+//       ckeckbox_list.each(function(elem){
+
+//         // console.log($(video[elem]).attr('data-issetSrc')) 
+//         if ($(ckeckbox_list[elem]).attr('data-check') == data_purchase) {
+//           // console.log($(this).attr('data-issetSrc'))
+//            $(this).toggleClass('show')
+//            var checkbox_childs = ($(this).find('input[type=checkbox]'))
+
+//            checkbox_childs.each(function(elem){ 
+//             $(this).prop('checked', true)
+//            })
+//         }
+
+//       })
+//     } else {
+//       ckeckbox_list.each(function(elem){
+
+//         // console.log($(video[elem]).attr('data-issetSrc')) 
+//         if ($(ckeckbox_list[elem]).attr('data-check') == data_purchase) {
+//           // console.log($(this).attr('data-issetSrc'))
+//            $(this).toggleClass('show')
+//            var checkbox_childs = ($(this).find('input[type=checkbox]'))
+
+//            checkbox_childs.each(function(elem){ 
+//             $(this).prop('checked', false)
+//            })
+//         }
+
+//       })
+//     }
+    
+
+    
+//   });
+// })
+
+// Страница пользователя, вкладка ТОВАРЫ  "ВАША КОМПАНИЯ ПОСТАВЛЯЕТ"
+$(document).ready(function(){
+  $(".checkbox").on('click', function(){
+    var checkbox_data = $(this).attr('data-check')
+    var ckeckbox_list =  $('.ckeckbox-dropdown-list');
+    ckeckbox_list.each(function(elem){
+
+        // console.log($(video[elem]).attr('data-issetSrc')) 
+        if ($(ckeckbox_list[elem]).attr('data-check') == checkbox_data) {
+          // console.log($(this).attr('data-issetSrc'))
+           $(this).toggleClass('show')
+        }
+
+      })
+
+  })
+
+  $(".checkbox input[type=checkbox]").change(function() {
+    var data_purchase = $(this).attr('data-check')
+    var ckeckbox_list =  $('.ckeckbox-dropdown-list');
+
+    if ($(this).is(':checked')) {
+      
+      ckeckbox_list.each(function(elem){
+
+        // console.log($(video[elem]).attr('data-issetSrc')) 
+        if ($(ckeckbox_list[elem]).attr('data-check') == data_purchase) {
+          // console.log($(this).attr('data-issetSrc'))
+           $(this).toggleClass('show')
+           var checkbox_childs = ($(this).find('input[type=checkbox]'))
+
+           checkbox_childs.each(function(elem){ 
+            $(this).prop('checked', true)
+           })
+        }
+
+      })
+    } else {
+      ckeckbox_list.each(function(elem){
+
+        // console.log($(video[elem]).attr('data-issetSrc')) 
+        if ($(ckeckbox_list[elem]).attr('data-check') == data_purchase) {
+          // console.log($(this).attr('data-issetSrc'))
+           $(this).toggleClass('show')
+           var checkbox_childs = ($(this).find('input[type=checkbox]'))
+
+           checkbox_childs.each(function(elem){ 
+            $(this).prop('checked', false)
+           })
+        }
+
+      })
+    }
+    
+
+    
+  });
+})

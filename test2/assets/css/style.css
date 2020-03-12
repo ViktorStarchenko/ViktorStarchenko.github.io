@@ -1573,7 +1573,7 @@ margin-bottom: 3px;
     background-size: contain;
 }
 
-.trade-table thead th span.trade-table__heading-id:before {
+/*.trade-table thead th span.trade-table__heading-id:before {
     background-image: url('../img/icons/id.png');
 }
 
@@ -1595,7 +1595,7 @@ margin-bottom: 3px;
 
 .trade-table thead th span.trade-table__heading-status:before {
     background-image: url('../img/icons/status.png');
-}
+}*/
 
 
 .trade-table td {
@@ -1616,6 +1616,10 @@ margin-bottom: 3px;
 .trade-table td:hover span, .trade-table td:hover a {
     color: #fff;
     text-decoration: none;
+}
+
+.trade-table td:hover .text-12px-f88170 {
+    color: #f88170
 }
 
 
@@ -2494,6 +2498,8 @@ padding: 6px 10px 4px;
     font-size: 12px;
     font-weight: 400;
     line-height: 28px;
+    word-wrap: break-word;
+    white-space: normal;
 }
 
 .lots-table-wrap .ui-jqgrid tr.ui-row-ltr td:hover {
@@ -2838,6 +2844,10 @@ padding: 6px 10px 4px;
     border: 3px solid #fff;
 }
 
+li.list-item-heading {
+    border: unset;
+}
+
 .list-item-heading {
     max-width: 320px;
 }
@@ -2859,6 +2869,91 @@ padding: 6px 10px 4px;
     margin-left: 10px;
 }
 
+
+
+/*Вкладка Сообщения*/
+
+
+#gbox_account-messages, #gview_account-messages, #account-messages, .ui-jqgrid-bdiv, .ui-jqgrid-hdiv, #gview_account-messages .table {
+    width: 100%!important;
+    min-width: 978px!important;
+}
+
+#gview_account-messages {
+    table-layout: fixed
+}
+
+
+#lots-table-wrap .ui-jqgrid .ui-jqgrid-hbox {
+    padding-right: 0;
+}
+
+.lots-table-wrap .ui-jqgrid tr.ui-row-ltr td[aria-describedby="account-messages_reply"] a {
+    color: #f88170;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.account-message-content {
+    background-color: #fafafc;
+}
+
+.account-message-body {
+    display: flex;
+    align-items: flex-start;
+    padding: 30px 10px 20px;
+}
+
+.account-message-info {
+    min-width: 250px;
+    border-right: 2px solid #10b2bc;
+}
+
+.account-message-text {
+    padding-left: 10px;
+}
+
+
+/*Вкладка рассылки*/
+
+
+.account-mailing-content {
+    padding: 30px 
+}
+.account-mailing-checkbox-group {
+    padding-left: 20px;
+}
+
+/*Вкладка товары*/
+
+.ckeckbox-dropdown-list {
+    display: none;
+}
+
+.ckeckbox-dropdown-list.show {
+    display: block;
+}
+
+.checkbox-list .checkbox {
+    cursor: pointer;
+}
+
+.account-product-content {
+    padding: 30px 20px;
+}
+
+.account-product-content .checkbox-list {
+    padding-left: 20px;
+}
+
+/*Вкладка Счета*/
+
+#gbox_account-bills, #gview_account-bills, #account-bills, .ui-jqgrid-bdiv, .ui-jqgrid-hdiv, #gview_account-bills .table {
+    width: 100%!important;
+    min-width: 978px!important;
+}
 
 /*Страница редактирования аккаунта*/
 
@@ -2900,6 +2995,20 @@ padding: 6px 10px 4px;
     .account-page__content .red-btn.account-redact {
         display: block;
         margin: auto;
+    }
+
+    .account-message-body {
+        flex-direction: column;
+    }
+
+    .account-message-info {
+        border-right: unset;
+        border-bottom: 2px solid #10b2bc;
+        margin-bottom: 20px;
+    }
+
+    .account-message-text {
+        padding-left: 0;
     }
 }
 

@@ -13,17 +13,17 @@
 	<!-- bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
-    <link rel="stylesheet" href="assets/css/informer.css">
     <!-- Карусель slick -->
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/slick-theme.css">
 	<!-- font awesome -->
     <link rel="stylesheet" href="assets/css/fontawesome/all.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
 
 
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/css/flick/jquery-ui.theme.min.css" /> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.min.css"> -->
-    <link rel="stylesheet" type="text/css" href="themes/redmond/jquery-ui-1.7.1.custom.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="themes/redmond/jquery-ui-1.7.1.custom.css" /> -->
 	
 	<!-- стили для jqgrid -->
 	<link rel="stylesheet" type="text/css" media="screen" href="assets/css/ui.jqgrid.css" mce_href="css/ui.jqgrid.css" />
@@ -200,11 +200,11 @@
 						<ul class="nav nav-tabs pills-navigation">
 						  <li><a class="link-16px-2e2e2e" data-toggle="tab" href="#card">Карточка</a></li>
 						  <li><a class="link-16px-2e2e2e" data-toggle="tab" href="#users">Пользователи</a></li>
-						  <li><a class="link-16px-2e2e2e" data-toggle="tab" href="#menu2">Сообщения</a></li>
-						  <li><a class="link-16px-2e2e2e" data-toggle="tab" href="#menu2">Рассылки</a></li>
-						  <li class="active"><a class="link-16px-2e2e2e" data-toggle="tab" href="#menu2">Товар</a></li>
-						  <li><a class="link-16px-2e2e2e" data-toggle="tab" href="#menu2">Баланс</a></li>
-						  <li><a class="link-16px-2e2e2e" data-toggle="tab" href="#menu2">Счета</a></li>
+						  <li><a class="link-16px-2e2e2e" data-toggle="tab" href="#messages">Сообщения</a></li>
+						  <li><a class="link-16px-2e2e2e" data-toggle="tab" href="#mailing">Рассылки</a></li>
+						  <li class="active"><a class="link-16px-2e2e2e" data-toggle="tab" href="#product">Товар</a></li>
+						  <li><a class="link-16px-2e2e2e" data-toggle="tab" href="#balance">Баланс</a></li>
+						  <li><a class="link-16px-2e2e2e" data-toggle="tab" href="#bills">Счета</a></li>
 						  <li><a class="link-16px-2e2e2e" data-toggle="tab" href="#menu2">Связанные компании</a></li>
 						  <li  class="link-16px-2e2e2e">Мои торги:
 							<ul>
@@ -217,12 +217,15 @@
 					</div>
 
 					<div class="tab-content account-page__content">
-					  <div id="card" class="tab-pane fade in active">
+					  <div id="card" class="tab-pane fade in">
 					    <div class="notation-box">
 							<h4>Название</h4>
 						</div>
-					    <div class="notation-box text-center">
+					    <!-- <div class="notation-box text-center">
 							<h3>Информация о компании</h3>
+						</div> -->
+						<div class="trade-table__heading justify-content-center">
+							<h4 class="text-16px-white">Информация о компании</h4>
 						</div>
 						<div class="account-page__card">
 							<div class="account-page__card-info">
@@ -279,100 +282,1162 @@
 
 						<a href="account-edit.html" class="red-btn account-redact">Редактировать</a>
 					  </div>
+
 					  <div id="users" class="tab-pane account-users fade">
 					    <div class="trade-table__wrap">
-						<div class="trade-table__heading">
-							<h4 class="text-16px-white">Пользователи</h4>
+							<div class="trade-table__heading justify-content-center">
+								<h4 class="text-16px-white">Пользователи</h4>
+							</div>
+	                    	<div class="table-responsive">
+								<table class="trade-table">
+								  <thead >
+								    <tr>
+								      <th scope="col">
+								      	<span class="text-11px-334150 trade-table__heading-endtime">ФИО / Должность</span>
+								      </th>
+								      <th scope="col">
+								      	<span class="text-11px-334150 trade-table__heading-weight">Контакты</span>
+								      </th>
+								      <th scope="col">
+								      	<span class="text-11px-334150 trade-table__heading-product">Активность</span>
+								      </th>
+								      <th scope="col">
+								      	<span class="text-11px-334150 trade-table__heading-product">Действие</span>
+								      </th>
+								    </tr>
+								  </thead>
+								  <tbody>
+								    <tr>
+								      <td scope="row">
+								      	<a class="text-12px-585858" href="">Пользователь Первый / Менеджер</a>
+								      </td>
+								      <td>
+								      	<a class="text-12px-585858" href="tel:+3800000000000">+3800000000000</a> <span class="text-12px-585858"> / </span>  <a class="text-12px-585858" href="mailto:testmail@google.com">testmail@google.com</a>
+								      </td>
+								      <td>
+								      	<span class="trade-table__product-name text-12px-585858">20.11.2019 12:23</span>
+								      </td>
+								      <td>
+								      	<div class="lost-wrap">
+								      		<div class="lost-item">
+								      			<a href="account.html" class="red-btn table-button">Удалить</a>
+								      		</div>
+								      	</div>
+								      </td>
+								    </tr>
+
+								    <tr>
+								      <td scope="row">
+								      	<a class="text-12px-585858" href="">Пользователь второй / Менеджер</a>
+								      </td>
+								      <td>
+								      	<a class="text-12px-585858" href="tel:+3800000000000">+3800000000000</a> <span class="text-12px-585858"> / </span> <a class="text-12px-585858" href="mailto:testmail@google.com">testmail@google.com</a>
+								      </td>
+								      <td>
+								      	<span class="trade-table__product-name text-12px-585858">20.11.2019 12:23</span>
+								      </td>
+								      <td>
+								      	<div class="lost-wrap">
+								      		<div class="lost-item">
+								      			<a href="account.html" class="red-btn table-button">Удалить</a>
+								      		</div>
+								      	</div>
+								      </td>
+								    </tr>
+
+								    <tr>
+								      <td scope="row">
+								      	<a class="text-12px-585858" href="">Пользователь третий / Менеджер</a>
+								      </td>
+								      <td>
+								      	<a class="text-12px-585858" href="tel:+3800000000000">+3800000000000</a> <span class="text-12px-585858"> / </span> <a class="text-12px-585858" href="mailto:testmail@google.com">testmail@google.com</a>
+								      </td>
+								      <td>
+								      	<span class="trade-table__product-name text-12px-585858">20.11.2019 12:23</span>
+								      </td>
+								      <td>
+								      	<div class="lost-wrap">
+								      		<div class="lost-item">
+								      			<a href="account.html" class="red-btn table-button">Удалить</a>
+								      		</div>
+								      	</div>
+								      </td>
+								    </tr>
+
+								  </tbody>
+								</table>
+
+								
+							</div>
+							<a href="#" id="account__add-user" class="red-btn registration-link">Добавить пользователя</a>
 						</div>
-                    	<div class="table-responsive">
-							<table class="trade-table">
-							  <thead >
-							    <tr>
-							      <th scope="col">
-							      	<span class="text-11px-334150 trade-table__heading-endtime">ФИО / Должность</span>
-							      </th>
-							      <th scope="col">
-							      	<span class="text-11px-334150 trade-table__heading-weight">Контакты</span>
-							      </th>
-							      <th scope="col">
-							      	<span class="text-11px-334150 trade-table__heading-product">Активность</span>
-							      </th>
-							      <th scope="col">
-							      	<span class="text-11px-334150 trade-table__heading-product">Действие</span>
-							      </th>
-							    </tr>
-							  </thead>
-							  <tbody>
-							    <tr>
-							      <td scope="row">
-							      	<a class="text-12px-585858" href="">Пользователь Первый / Менеджер</a>
-							      </td>
-							      <td>
-							      	<a class="text-12px-585858" href="tel:+3800000000000">+3800000000000</a> / <a class="text-12px-585858" href="mailto:testmail@google.com">testmail@google.com</a>
-							      </td>
-							      <td>
-							      	<span class="trade-table__product-name text-12px-585858">20.11.2019 12:23</span>
-							      </td>
-							      <td>
-							      	<div class="lost-wrap">
-							      		<div class="lost-item">
-							      			<a href="account.html" class="red-btn table-button">Удалить</a>
-							      		</div>
-							      	</div>
-							      </td>
-							    </tr>
-
-							    <tr>
-							      <td scope="row">
-							      	<a class="text-12px-585858" href="">Пользователь второй / Менеджер</a>
-							      </td>
-							      <td>
-							      	<a class="text-12px-585858" href="tel:+3800000000000">+3800000000000</a> / <a class="text-12px-585858" href="mailto:testmail@google.com">testmail@google.com</a>
-							      </td>
-							      <td>
-							      	<span class="trade-table__product-name text-12px-585858">20.11.2019 12:23</span>
-							      </td>
-							      <td>
-							      	<div class="lost-wrap">
-							      		<div class="lost-item">
-							      			<a href="account.html" class="red-btn table-button">Удалить</a>
-							      		</div>
-							      	</div>
-							      </td>
-							    </tr>
-
-							    <tr>
-							      <td scope="row">
-							      	<a class="text-12px-585858" href="">Пользователь третий / Менеджер</a>
-							      </td>
-							      <td>
-							      	<a class="text-12px-585858" href="tel:+3800000000000">+3800000000000</a> / <a class="text-12px-585858" href="mailto:testmail@google.com">testmail@google.com</a>
-							      </td>
-							      <td>
-							      	<span class="trade-table__product-name text-12px-585858">20.11.2019 12:23</span>
-							      </td>
-							      <td>
-							      	<div class="lost-wrap">
-							      		<div class="lost-item">
-							      			<a href="account.html" class="red-btn table-button">Удалить</a>
-							      		</div>
-							      	</div>
-							      </td>
-							    </tr>
-
-							  </tbody>
-							</table>
-
-							
+					  </div>
+					<div id="messages" class="tab-pane fade">
+					    <div class="trade-table__heading justify-content-center">
+							<h4 class="text-16px-white">Сообщения</h4>
 						</div>
-						<a href="#" id="account__add-user" class="red-btn registration-link">Добавить пользователя</a>
-					</div>
+
+						<!-- Универсальная таблица и пагинация для нее -->
+							<!-- ТАблица сообщения -->
+							<div id="lots-table-wrap" class="table-responsive lots-table-wrap">
+							<table id="account-messages" class="table"></table>
+							<div id="gridpager"></div>
+
+							</div>
+							<div id="my-table-paginator" class="my-table-paginator">
+								<ul class="pagination-box">
+									<li class="pagination-item first">
+										<a id="first_gridpager" href="#">первая...</a>
+									</li>
+									<li class="pagination-item prev">
+										<a id="prev_gridpager" href="#">1</a>
+									</li>
+									<li class="pagination-item active">
+										<a id="paginator_current_page" href="#">1</a>
+									</li>
+									<li class="pagination-item next">
+										<a id="next_gridpager" href="#">3</a>
+									</li>
+									<li class="pagination-item last">
+										<a id="last_gridpager" href="#">..последняя</a>
+									</li>
+								</ul>
+							</div>	<!-- Универсальная таблица и пагинация для нее -->
 					  </div>
-					  <div id="menu2" class="tab-pane fade">
-					    <h3>Menu 2</h3>
-					    <p>Some content in menu 2.</p>
+
+
+					  <div id="mailing" class="tab-pane fade">
+							<div class="trade-table__heading justify-content-center">
+								<h4 class="text-16px-white">Рассылки</h4>
+							</div>
+							<div class="notation-box text-center">
+								<h4>Настройка рассылок и уведомлений</h4>
+							</div>
+							<div class="account-mailing-content">
+								<form action="">
+									<div class="checkbox-list">
+										<p class="text-14px-2e2e2e">Получение профильных новостей (втр., пнд.) по товарным группам: </p>
+										<div class=" account-mailing-checkbox-group">
+											<div class="checkbox">
+												<label class="text-14px-2e2e2e" for="">
+													<input type="hidden" value="0">
+													<input type="checkbox" value="1">
+													Свинина
+												</label>
+											</div>
+											<div class="checkbox">
+												<label class="text-14px-2e2e2e" for="">
+													<input type="hidden" value="0">
+													<input type="checkbox" value="1">
+													Говядина и баранина
+												</label>
+											</div>
+											<div class="checkbox">
+												<label class="text-14px-2e2e2e" for="">
+													<input type="hidden" value="0">
+													<input type="checkbox" value="1">
+													Птица
+												</label>
+											</div>
+											<div class="checkbox">
+												<label class="text-14px-2e2e2e" for="">
+													<input type="hidden" value="0">
+													<input type="checkbox" value="1">
+													Рыба и морепродукты
+												</label>
+											</div>
+											<div class="checkbox">
+												<label class="text-14px-2e2e2e" for="">
+													<input type="hidden" value="0">
+													<input type="checkbox" value="1">
+													Молоко и молочные продукты
+												</label>
+											</div>
+											<div class="checkbox">
+												<label class="text-14px-2e2e2e" for="">
+													<input type="hidden" value="0">
+													<input type="checkbox" value="1">
+													Овощи и фрукты
+												</label>
+											</div>
+											<div class="checkbox">
+												<label class="text-14px-2e2e2e" for="">
+													<input type="hidden" value="0">
+													<input type="checkbox" value="1">
+													Зерно
+												</label>
+											</div>
+										</div>
+										
+										<div class="checkbox">
+											<label class="text-14px-2e2e2e" for="">
+												<input type="hidden" value="0">
+												<input type="checkbox" value="1">
+												Уведомление о новых торгах, которые соответствуют профилю Вашей компании (ежедневно по будням в 8:00 и 12:00)
+											</label>
+										</div>
+
+										<div class="checkbox">
+											<label class="text-14px-2e2e2e" for="">
+												<input type="hidden" value="0">
+												<input type="checkbox" value="1">
+												Приглашения на торги непосредственно от организаторов торгов
+											</label>
+										</div>
+										<div class="checkbox">
+											<label class="text-14px-2e2e2e" for="">
+												<input type="hidden" value="0">
+												<input type="checkbox" value="1">
+												Уведомления о начале и завершении моих торгов
+											</label>
+										</div>
+										<div class="checkbox">
+											<label class="text-14px-2e2e2e" for="">
+												<input type="hidden" value="0">
+												<input type="checkbox" value="1">
+												SMS-уведомления о ставках на моих торгах
+											</label>
+										</div>
+									</div>
+								</form>
+							</div>
+
 					  </div>
-					</div>
+		<!-- Вкладка Товары -->
+					  <div id="product" class="tab-pane fade in active show">
+							<div class="trade-table__heading justify-content-center">
+								<h4 class="text-16px-white">Товар</h4>
+							</div>
+							<div class="notation-box">
+								<h4>Пользователь, спасибо за регистрацию!</h4>
+							</div>
+
+							<div class="notation-box">
+								<p>Весь функционал будет доступен Вам после прохождения модерации.<br>
+								В самое ближайшее время Вам перезвонит категорийный менеджер площадки.	
+								</p>
+							</div>
+							<div class="notation-box">
+								<p>В торговой системе работает 3100 компаний, совокупный обьем по производству и переработке которых составляет около 52% рынка. Большинство предоставляемых серверов могут быть настроены непосредственно под Вашу компанию, что позволит избежать лишних действий и непрофильной информации. Одна из ключевых задач, позволяющих существенно ускорить работу с системой - коррекстная настройка товарного классификатора как на закупку, так и на продажу продукции.<br> Просим Вас уделить несколько минут и заполнить классификаторы по интересующим Вас товарным группам.</p>
+							</div>
+							<div class="account-product-content">
+								<form class="account-product-form" action="">
+									<div class="flex-wrap">
+										<div class="flex-column">
+											<p class="text-18px-2e2e2e text-uppercase">Ваша компания закупает: </p>
+											<div class="checkbox-list">
+												<ul>
+													<li>
+														<div class="checkbox"  data-check="purchase-pork">
+															<label class="text-14px-2e2e2e" for="">
+																<input type="hidden" value="0" data-check="purchase-pork">
+																<input type="checkbox" value="1" data-check="purchase-pork">
+																Свинина
+															</label>
+														</div>
+														<div class=" account-mailing-checkbox-group ckeckbox-dropdown-list" data-check="purchase-pork">
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Свинина
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Говядина и баранина
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Птица
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Рыба и морепродукты
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Молоко и молочные продукты
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Овощи и фрукты
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Зерно
+																</label>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="checkbox"  data-check="purchase-krs">
+															<label class="text-14px-2e2e2e" for="">
+																<input type="hidden" value="0" data-check="purchase-krs">
+																<input type="checkbox" value="1" data-check="purchase-krs">
+																КРС
+															</label>
+														</div>
+														<div class=" account-mailing-checkbox-group ckeckbox-dropdown-list" data-check="purchase-krs">
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Баранина
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Буйволятина
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Говядина
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Конина
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Оленина
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Готовая продукция КРС
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Корма для домашних животных
+																</label>
+															</div>
+														</div>
+													</li>
+
+													<li>
+														<div class="checkbox" data-check="purchase-chicken">
+															<label class="text-14px-2e2e2e" for="">
+																<input type="hidden" value="0" data-check="purchase-chicken">
+																<input type="checkbox" value="1" data-check="purchase-chicken">
+																Птица
+															</label>
+														</div>
+														<div class=" account-mailing-checkbox-group ckeckbox-dropdown-list" data-check="purchase-chicken">
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Птица1
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Птица2
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Птица3
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Конина4
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Птица5
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Птица6
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Птица7
+																</label>
+															</div>
+														</div>
+													</li>
+
+													<li>
+														<div class="checkbox" data-check="purchase-fish">
+															<label class="text-14px-2e2e2e" for="">
+																<input type="hidden" value="0" data-check="purchase-fish">
+																<input type="checkbox" value="1" data-check="purchase-fish">
+																Рыба
+															</label>
+														</div>
+														<div class=" account-mailing-checkbox-group ckeckbox-dropdown-list" data-check="purchase-fish">
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Рыба1
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Рыба2
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Рыба3
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Рыба4
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Рыба5
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Рыба6
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Рыба7
+																</label>
+															</div>
+														</div>
+													</li>
+
+													<li>
+														<div class="checkbox" data-check="purchase-milk">
+															<label class="text-14px-2e2e2e" for="">
+																<input type="hidden" value="0" data-check="purchase-milk">
+																<input type="checkbox" value="1" data-check="purchase-milk">
+																Молоко
+															</label>
+														</div>
+														<div class=" account-mailing-checkbox-group ckeckbox-dropdown-list" data-check="purchase-milk">
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Молоко1
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Молоко2
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Молоко3
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Молоко4
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Молоко5
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Молоко6
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Молоко7
+																</label>
+															</div>
+														</div>
+													</li>
+
+													<li>
+														<div class="checkbox" data-check="purchase-vegetables">
+															<label class="text-14px-2e2e2e" for="">
+																<input type="hidden" value="0" data-check="purchase-vegetables">
+																<input type="checkbox" value="1" data-check="purchase-vegetables">
+																Овощи и фрукты
+															</label>
+														</div>
+														<div class=" account-mailing-checkbox-group ckeckbox-dropdown-list" data-check="purchase-vegetables">
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Овощи и фрукты1
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Овощи и фрукты2
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Овощи и фрукты3
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Овощи и фрукты4
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Овощи и фрукты5
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Овощи и фрукты6
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Овощи и фрукты7
+																</label>
+															</div>
+														</div>
+													</li>
+
+													<li>
+														<div class="checkbox" data-check="purchase-korn">
+															<label class="text-14px-2e2e2e" for="">
+																<input type="hidden" value="0" data-check="purchase-korn">
+																<input type="checkbox" value="1" data-check="purchase-korn">
+																Зерновые
+															</label>
+														</div>
+														<div class=" account-mailing-checkbox-group ckeckbox-dropdown-list" data-check="purchase-korn">
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Зерновые
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Зерновые2
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Зерновые3
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Зерновые4
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Зерновые5
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Зерновые6
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Зерновые7
+																</label>
+															</div>
+														</div>
+													</li>
+
+
+												</ul>
+												
+												
+											</div>
+										</div>
+										<div class="flex-column">
+											<p class="text-18px-2e2e2e text-uppercase">Ваша компания поставляет: </p>
+											<div class="checkbox-list">
+												
+												<ul>
+													<li>
+														<div class="checkbox"  data-check="supply-pork">
+															<label class="text-14px-2e2e2e" for="">
+																<input type="hidden" value="0" data-check="supply-pork">
+																<input type="checkbox" value="1" data-check="supply-pork">
+																Свинина
+															</label>
+														</div>
+														<div class=" account-mailing-checkbox-group ckeckbox-dropdown-list" data-check="supply-pork">
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Свинина
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Говядина и баранина
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Птица
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Рыба и морепродукты
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Молоко и молочные продукты
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Овощи и фрукты
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Зерно
+																</label>
+															</div>
+														</div>
+													</li>
+													<li>
+														<div class="checkbox"  data-check="supply-krs">
+															<label class="text-14px-2e2e2e" for="">
+																<input type="hidden" value="0" data-check="supply-krs">
+																<input type="checkbox" value="1" data-check="supply-krs">
+																КРС
+															</label>
+														</div>
+														<div class=" account-mailing-checkbox-group ckeckbox-dropdown-list" data-check="supply-krs">
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Баранина
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Буйволятина
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Говядина
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Конина
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Оленина
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Готовая продукция КРС
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Корма для домашних животных
+																</label>
+															</div>
+														</div>
+													</li>
+
+													<li>
+														<div class="checkbox" data-check="supply-chicken">
+															<label class="text-14px-2e2e2e" for="">
+																<input type="hidden" value="0" data-check="supply-chicken">
+																<input type="checkbox" value="1" data-check="supply-chicken">
+																Птица
+															</label>
+														</div>
+														<div class=" account-mailing-checkbox-group ckeckbox-dropdown-list" data-check="supply-chicken">
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Птица1
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Птица2
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Птица3
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Конина4
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Птица5
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Птица6
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Птица7
+																</label>
+															</div>
+														</div>
+													</li>
+
+													<li>
+														<div class="checkbox" data-check="supply-fish">
+															<label class="text-14px-2e2e2e" for="">
+																<input type="hidden" value="0" data-check="supply-fish">
+																<input type="checkbox" value="1" data-check="supply-fish">
+																Рыба
+															</label>
+														</div>
+														<div class=" account-mailing-checkbox-group ckeckbox-dropdown-list" data-check="supply-fish">
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Рыба1
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Рыба2
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Рыба3
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Рыба4
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Рыба5
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Рыба6
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Рыба7
+																</label>
+															</div>
+														</div>
+													</li>
+
+													<li>
+														<div class="checkbox" data-check="supply-milk">
+															<label class="text-14px-2e2e2e" for="">
+																<input type="hidden" value="0" data-check="supply-milk">
+																<input type="checkbox" value="1" data-check="supply-milk">
+																Молоко
+															</label>
+														</div>
+														<div class=" account-mailing-checkbox-group ckeckbox-dropdown-list" data-check="supply-milk">
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Молоко1
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Молоко2
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Молоко3
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Молоко4
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Молоко5
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Молоко6
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Молоко7
+																</label>
+															</div>
+														</div>
+													</li>
+
+													<li>
+														<div class="checkbox" data-check="supply-vegetables">
+															<label class="text-14px-2e2e2e" for="">
+																<input type="hidden" value="0" data-check="supply-vegetables">
+																<input type="checkbox" value="1" data-check="supply-vegetables">
+																Овощи и фрукты
+															</label>
+														</div>
+														<div class=" account-mailing-checkbox-group ckeckbox-dropdown-list" data-check="supply-vegetables">
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Овощи и фрукты1
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Овощи и фрукты2
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Овощи и фрукты3
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Овощи и фрукты4
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Овощи и фрукты5
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Овощи и фрукты6
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Овощи и фрукты7
+																</label>
+															</div>
+														</div>
+													</li>
+
+													<li>
+														<div class="checkbox" data-check="supply-korn">
+															<label class="text-14px-2e2e2e" for="">
+																<input type="hidden" value="0" data-check="supply-korn">
+																<input type="checkbox" value="1" data-check="supply-korn">
+																Зерновые
+															</label>
+														</div>
+														<div class=" account-mailing-checkbox-group ckeckbox-dropdown-list" data-check="supply-korn">
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Зерновые
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Зерновые2
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Зерновые3
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Зерновые4
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Зерновые5
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Зерновые6
+																</label>
+															</div>
+															<div class="checkbox">
+																<label class="text-14px-2e2e2e" for="">
+																	<input type="hidden" value="0">
+																	<input type="checkbox" value="1">
+																	Зерновые7
+																</label>
+															</div>
+														</div>
+													</li>
+
+
+												</ul>
+												
+												
+											</div>
+										</div>
+									</div>
+									
+								</form>
+							</div>
+
+					  </div>
+
+					  <div id="bills" class="tab-pane fade">
+					    <div class="trade-table__heading justify-content-center">
+							<h4 class="text-16px-white">Сообщения</h4>
+						</div>
+
+						<!-- Универсальная таблица и пагинация для нее -->
+							<!-- ТАблица сообщения -->
+							<div id="lots-table-wrap" class="table-responsive lots-table-wrap">
+							<table id="account-bills" class="table"></table>
+							<div id="gridpager"></div>
+
+							</div>
+							<div id="my-table-paginator" class="my-table-paginator">
+								<ul class="pagination-box">
+									<li class="pagination-item first">
+										<a id="first_gridpager" href="#">первая...</a>
+									</li>
+									<li class="pagination-item prev">
+										<a id="prev_gridpager" href="#">1</a>
+									</li>
+									<li class="pagination-item active">
+										<a id="paginator_current_page" href="#">1</a>
+									</li>
+									<li class="pagination-item next">
+										<a id="next_gridpager" href="#">3</a>
+									</li>
+									<li class="pagination-item last">
+										<a id="last_gridpager" href="#">..последняя</a>
+									</li>
+								</ul>
+							</div>	<!-- Универсальная таблица и пагинация для нее -->
+					  </div>
+
+
+					</div> <!-- Конец контента страницы пользователя -->
 
 					
 				</div>
@@ -457,13 +1522,16 @@
 
 <!-- bootstrap -->
 <script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script> -->
 
 <!-- Карусель slick -->
 <script src="assets/js/slick.min.js"></script>
 
 <!-- fontawesome -->
 <script src="assets/js/fontawesome/all.js"></script>
+
+
+<script src="assets/js/jquery-ui.min.js"></script>
 
 <!-- Маска для ввода номера телефона -->
 <script src="assets/js/jquery.maskedinput.js"></script>
@@ -603,6 +1671,429 @@
   </div>
 
   <!-- Модальное окно "Добавить пользователя" конец -->
+
+  <!-- Генерация таблицы для вкладки сообщений начало-->
+<script type="text/javascript">
+
+$(document).ready(function () {
+    "use strict";
+    $("#account-messages").jqGrid({
+  //   	url:'get.php',
+		// datatype: "json",
+		// colNames:['ID', 'country_code', 'city', 'latitude', 'longitude'],
+		// colModel:[
+		// 	{name:'id',index:'id'},
+		// 	{name:'country_code',index:'country_code'},	
+		// 	{name:'city',index:'city'},		
+		// 	{name:'latitude',index:'latitude'},		
+		// 	{name:'longitude',index:'longitude'},		
+		// ],
+        colModel: [
+            { name: 'id', label: "ID", width: 100, clearSearch: true, autosearch: true, searchOnEnter: false},
+            { name: 'date', label: "Дата", sorttype: 'date', formatter: 'date', sorttype: 'date', formatoptions: { newformat: "d-m-y"}, searchoptions: {sopt: ["eq"]}, clearSearch: true, autosearch: true,},
+            { name: 'author', label: "Автор", formatter:'showlink',  width: 200, clearSearch: true},
+            { name: 'message', label: "Сообщение", width: 360, clearSearch: true },
+            { name: 'reply', label: "Ответить", formatter:'showlink', formatoptions:{baseLinkUrl:'account-message-reply.html', addParam: ''}, search: false },
+            
+        ],
+        data: [
+            { id: "1", date: '2020-09-19', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+            { id: "2", date: '2019-09-19', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+            { id: "3", date: '2020-03-12', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+            { id: "4", date: '2020-09-19', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+            { id: "5", date: '2019-09-19', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+            { id: "6", date: '2020-03-12', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+
+			{ id: "7", date: '2020-09-19', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+            { id: "8", date: '2019-09-19', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+            { id: "9", date: '2020-03-12', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+
+			{ id: "10", date: '2020-09-19', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+            { id: "11", date: '2019-09-19', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+            { id: "12", date: '2020-03-12', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+
+			{ id: "13", date: '2020-09-19', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+            { id: "14", date: '2019-09-19', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+            { id: "15", date: '2020-03-12', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+
+			{ id: "16", date: '2020-09-19', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+            { id: "17", date: '2019-09-19', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+            { id: "18", date: '2020-03-12', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+
+			{ id: "19", date: '2020-09-19', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+            { id: "20", date: '2019-09-19', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+            { id: "21", date: '2020-03-12', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+
+			{ id: "22", date: '2020-09-19', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+            { id: "23", date: '2019-09-19', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+            { id: "24", date: '2020-03-12', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+
+			{ id: "25", date: '2020-09-19', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+            { id: "26", date: '2019-09-19', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+            { id: "27", date: '2020-03-12', author: 'Какой то автор', message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id assumenda ex ab, voluptatem doloremque?', reply: 'ответить' },
+
+        ],
+        searchOnEnter: false,
+        autosearch: true,
+        guiStyle: 'bootstrap4',
+        iconSet: 'fontAwesome',
+        idPrefix: 'lot_',
+        caption: 'Все торги',
+        hidegrid: false,
+        loadonce: false,
+        // pager: true,
+        pagermode: "simple",
+     	pageable: true,
+        pager : '#gridpager',
+        rowNum: '10',
+        viewrecords: true,
+        ignoreCase: false,
+        headertitles: true,
+        // multiSort: true,
+        // height: '100%',
+        deepempty: true,
+   //      jsonReader: {
+			// 	repeatitems : false,
+			// 	id: "0"
+			// },
+        // searching: {
+        // 	deafaultSearch: 'cn'
+        // },
+        searching: {
+            defaultSearch: "cn"
+        },
+        searchoptions: {
+		    sopt: ["eq"],
+		    dataInit: function (elem, options) {
+		        var self = this, $elem = $(elem),
+		            filterOnSelect = function () {
+		                setTimeout(function () {
+		                    self.triggerToolbar();
+		                }, 50);
+		            },
+		            triggerInputChangeOnSelect = function () {
+		                $elem.change();
+		            };
+		        
+		        setTimeout(function () {
+		            $elem.datepicker({
+		                dateFormat: "dd-M-yy",
+		                autoSize: true,
+		                changeYear: true,
+		                changeMonth: true,
+		                showButtonPanel: true,
+		                showWeek: true,
+		                onSelect: (options.mode === "filter" ? filterOnSelect : triggerInputChangeOnSelect)
+		            });
+		        }, 50);
+		    },
+		    searchOnEnter: false,
+
+		},
+
+    }).jqGrid('filterToolbar');
+	
+	// $("#grid").navGrid('#gridpager',{edit:false,add:false,del:false,search:false})
+	// .navButtonAdd('#pager',{
+	// 	   caption:"Add", 
+	// 	   buttonicon:"", 
+	// 	   onClickButton: function(){ 
+	// 	     alert("Adding Row");
+	// 	   }, 
+	// 	   position:"last"
+	// 	})
+	// .navButtonAdd('#pager',{
+	// 	   caption:"Del", 
+	// 	   buttonicon:"", 
+	// 	   onClickButton: function(){ 
+	// 	      alert("Deleting Row");
+	// 	   }, 
+	// 	   position:"last"
+	// 	});
+
+	// $("button.mypager").click(function () {
+ //        var page = Number(this.innerHTML);
+ //        $("#grid").trigger("reloadGrid", { page: page});
+ //    });
+
+    $("#my-table-paginator .pagination-box a").click(function () {
+        var page = Number(this.innerHTML);
+        $("#account-messages").trigger("reloadGrid", { page: page});
+
+       
+    });
+});
+
+
+// Пагинация для таблицы
+function initPaginator() {
+	var last_page = $('#sp_1_gridpager').html();
+ 	var current_page = $('.form-control.ui-pg-input').val();
+
+ 	$('.pagination-item.active a').text(current_page);
+	$('.pagination-item.last a').text('...' + last_page);
+	$('.pagination-item.prev a').text(parseInt(current_page) - 1);
+	$('.pagination-item.next a').text(parseInt(current_page) + 1);
+
+
+
+	if (current_page >= last_page) {
+		$('.pagination-item.last').hide();
+
+		$('.pagination-item.next').hide();
+
+	} else if (current_page < last_page) {
+		$('.pagination-item.last').show();
+
+		$('.pagination-item.next').show();
+
+	} 
+	if ( current_page == '1' ) {
+
+		$('.pagination-item.prev').hide();
+
+		$('.pagination-item.first').hide();
+
+	} else if (current_page > '1') {
+
+		$('.pagination-item.prev').show();
+
+		
+	} 
+
+	if (current_page > '2') {
+
+		$('.pagination-item.first').show();
+	} else if ( current_page < '2' ) {
+		$('.pagination-item.first').hide()
+	}
+
+}
+
+ $(document).ready(function(){
+ 	 initPaginator()
+	$('#next_gridpager, #prev_gridpager, #first_gridpager, #last_gridpager').on('click', function() {
+		initPaginator()
+	})
+ }) 
+
+ $(document).ready(function(){
+ 	 initPaginator()
+	$('#lots-table-wrap select, #lots-table-wrap input').on('change', function() {
+		initPaginator()
+	})
+ })
+
+ $(document).ready(function() {
+ 	$('#gs_account-messages_date').datepicker({
+ 		locale: 'ru',
+ 		showButtonPanel: true,
+		dateFormat: 'd-mm-y'
+ 	})
+ })
+
+</script>
+<!-- Генерация таблицы конец-->
+
+
+
+  <!-- Генерация таблицы для вкладки счетов начало-->
+<script type="text/javascript">
+
+$(document).ready(function () {
+    "use strict";
+    $("#account-bills").jqGrid({
+  //   	url:'get.php',
+		// datatype: "json",
+		// colNames:['ID', 'country_code', 'city', 'latitude', 'longitude'],
+		// colModel:[
+		// 	{name:'id',index:'id'},
+		// 	{name:'country_code',index:'country_code'},	
+		// 	{name:'city',index:'city'},		
+		// 	{name:'latitude',index:'latitude'},		
+		// 	{name:'longitude',index:'longitude'},		
+		// ],
+        colModel: [
+            { name: 'bill', label: "Счет", width: 100, clearSearch: true, autosearch: true, searchOnEnter: false},
+            { name: 'service', label: "Услуга", width: 100, clearSearch: true, autosearch: true, searchOnEnter: false},
+            { name: 'created', label: "Создан", sorttype: 'date', formatter: 'date', sorttype: 'date', formatoptions: { newformat: "d-m-y"}, searchoptions: {sopt: ["eq"]}, clearSearch: true, autosearch: true,},
+            { name: 'send', label: "Отправлен", sorttype: 'date', formatter: 'date', sorttype: 'date', formatoptions: { newformat: "d-m-y"}, searchoptions: {sopt: ["eq"]}, clearSearch: true, autosearch: true,},
+            { name: 'summary', label: "Сумма", width: 100, clearSearch: true, autosearch: true, searchOnEnter: false},
+            { name: 'status', label: "Статус", width: 100, clearSearch: true, autosearch: true, searchOnEnter: false, stype: "select", searchoptions: { value: ":Все;Не оплачен:Не оплачен;Оплачен:Оплачен" }},
+        ],
+        data: [
+            { bill: "123432", service: 'какая то там услуга', created: '2019-09-19', send: '2010-07-19', summary: '60 грн.', status: 'Не оплачен' },
+            { bill: "225668", service: 'какая то там услуга', created: '2018-06-29', send: '2016-10-09', summary: '5560 грн.', status: 'Не оплачен' },
+            { bill: "365", service: 'какая то там услуга', created: '2014-12-01', send: '2020-08-19', summary: '590 грн.', status: 'Оплачен' },
+            { bill: "1896654", service: 'какая то там услуга', created: '2016-10-09', send: '2020-08-19', summary: '1560 грн.', status: 'Оплачен' },
+            { bill: "2563", service: 'какая то там услуга', created: '2008-01-01', send: '2019-09-19', summary: '560 грн.', status: 'Не оплачен' },
+            { bill: "12556", service: 'какая то там услуга', created: '2009-09-09', send: '2018-06-29', summary: '960 грн.', status: 'Оплачен' },
+            { bill: "96351", service: 'какая то там услуга', created: '2010-07-19', send: '2020-08-19', summary: '9660 грн.', status: 'Не оплачен' },
+            
+
+        ],
+        searchOnEnter: false,
+        autosearch: true,
+        guiStyle: 'bootstrap4',
+        iconSet: 'fontAwesome',
+        idPrefix: 'lot_',
+        caption: 'Все торги',
+        hidegrid: false,
+        loadonce: false,
+        // pager: true,
+        pagermode: "simple",
+     	pageable: true,
+        pager : '#gridpager',
+        rowNum: '10',
+        viewrecords: true,
+        ignoreCase: false,
+        headertitles: true,
+        // multiSort: true,
+        // height: '100%',
+        deepempty: true,
+   //      jsonReader: {
+			// 	repeatitems : false,
+			// 	id: "0"
+			// },
+        // searching: {
+        // 	deafaultSearch: 'cn'
+        // },
+        searching: {
+            defaultSearch: "cn"
+        },
+        searchoptions: {
+		    sopt: ["eq"],
+		    dataInit: function (elem, options) {
+		        var self = this, $elem = $(elem),
+		            filterOnSelect = function () {
+		                setTimeout(function () {
+		                    self.triggerToolbar();
+		                }, 50);
+		            },
+		            triggerInputChangeOnSelect = function () {
+		                $elem.change();
+		            };
+		        
+		        setTimeout(function () {
+		            $elem.datepicker({
+		                dateFormat: "dd-M-yy",
+		                autoSize: true,
+		                changeYear: true,
+		                changeMonth: true,
+		                showButtonPanel: true,
+		                showWeek: true,
+		                onSelect: (options.mode === "filter" ? filterOnSelect : triggerInputChangeOnSelect)
+		            });
+		        }, 50);
+		    },
+		    searchOnEnter: false,
+
+		},
+
+    }).jqGrid('filterToolbar');
+	
+	// $("#grid").navGrid('#gridpager',{edit:false,add:false,del:false,search:false})
+	// .navButtonAdd('#pager',{
+	// 	   caption:"Add", 
+	// 	   buttonicon:"", 
+	// 	   onClickButton: function(){ 
+	// 	     alert("Adding Row");
+	// 	   }, 
+	// 	   position:"last"
+	// 	})
+	// .navButtonAdd('#pager',{
+	// 	   caption:"Del", 
+	// 	   buttonicon:"", 
+	// 	   onClickButton: function(){ 
+	// 	      alert("Deleting Row");
+	// 	   }, 
+	// 	   position:"last"
+	// 	});
+
+	// $("button.mypager").click(function () {
+ //        var page = Number(this.innerHTML);
+ //        $("#grid").trigger("reloadGrid", { page: page});
+ //    });
+
+    $("#my-table-paginator .pagination-box a").click(function () {
+        var page = Number(this.innerHTML);
+        $("#account-messages").trigger("reloadGrid", { page: page});
+
+       
+    });
+});
+
+
+// Пагинация для таблицы
+function initPaginator() {
+	var last_page = $('#sp_1_gridpager').html();
+ 	var current_page = $('.form-control.ui-pg-input').val();
+
+ 	$('.pagination-item.active a').text(current_page);
+	$('.pagination-item.last a').text('...' + last_page);
+	$('.pagination-item.prev a').text(parseInt(current_page) - 1);
+	$('.pagination-item.next a').text(parseInt(current_page) + 1);
+
+
+
+	if (current_page >= last_page) {
+		$('.pagination-item.last').hide();
+
+		$('.pagination-item.next').hide();
+
+	} else if (current_page < last_page) {
+		$('.pagination-item.last').show();
+
+		$('.pagination-item.next').show();
+
+	} 
+	if ( current_page == '1' ) {
+
+		$('.pagination-item.prev').hide();
+
+		$('.pagination-item.first').hide();
+
+	} else if (current_page > '1') {
+
+		$('.pagination-item.prev').show();
+
+		
+	} 
+
+	if (current_page > '2') {
+
+		$('.pagination-item.first').show();
+	} else if ( current_page < '2' ) {
+		$('.pagination-item.first').hide()
+	}
+
+}
+
+ $(document).ready(function(){
+ 	 initPaginator()
+	$('#next_gridpager, #prev_gridpager, #first_gridpager, #last_gridpager').on('click', function() {
+		initPaginator()
+	})
+ }) 
+
+ $(document).ready(function(){
+ 	 initPaginator()
+	$('#lots-table-wrap select, #lots-table-wrap input').on('change', function() {
+		initPaginator()
+	})
+ })
+
+ $(document).ready(function() {
+ 	$('#gs_account-bills_created, #gs_account-bills_send').datepicker({
+ 		locale: 'ru',
+ 		showButtonPanel: true,
+ 		dateFormat: 'd-mm-y'
+
+ 	})
+ })
+
+</script>
+<!-- Генерация таблицы конец-->
 </body>
 
 </html>
