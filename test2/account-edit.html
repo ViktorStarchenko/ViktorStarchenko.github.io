@@ -146,115 +146,150 @@
 </header> 
 <!-- Шапка конец -->
 
-
-<section class="my-table">
-	<div class="container-fluid p-0">
-		<div class="row wrapper m-auto">
-			<div class="col-12 p-0">
-				<!-- <div id="my-table-wrap" class="table-responsive my-table-wrap">
-					<table id="grid" class="table"></table>
-					<div id="gridpager"></div>
-
-				</div>
-				<div id="my-table-paginator">
-					<ul class="pagination-box">
-						<li class="pagination-item first">
-							<a id="first_gridpager" href="#">первая...</a>
-						</li>
-						<li class="pagination-item prev">
-							<a id="prev_gridpager" href="#">1</a>
-						</li>
-						<li class="pagination-item active">
-							<a id="paginator_current_page" href="#">1</a>
-						</li>
-						<li class="pagination-item next">
-							<a id="next_gridpager" href="#">3</a>
-						</li>
-						<li class="pagination-item last">
-							<a id="last_gridpager" href="#">..последняя</a>
-						</li>
-					</ul>
-				</div> -->
-			</div>
-		</div>
-	</div>
-</section>
-
-
 <main>
-
-	<section class="contacts-page">
+	<section class="account account-edit">
 		<div class="container-fluid p-0">
-			<div class="row wrapper m-auto page-background-white">
+			<div class="row wrapper m-auto">
 				<div class="col-12 p-0">
-					<div class="rating-table__heading">
-						<h4 class="text-16px-white">Наши контакты</h4>
-					</div>
-				</div>
-				<div class="col-12 col-md-6">
-					<div class="contacts-wrap">
-						<div class="flex-wrap contacts-box ">
-							<div class="footer__list-wrap">
-								<h4 class="text-18px-2e2e2e">Контакты</h4>
-								<ul class="footer__phones-list link-icon">
-									<li>
-										<a class="link-16px-2e2e2e" href="tel:+38044-234-45-45">044-234-45-45</a>
-									</li>
-									<li>
-										<a class="link-16px-2e2e2e" href="tel:+38044-234-45-45">044-234-45-45</a>
-									</li>
-									<li>
-										<a class="link-16px-2e2e2e" href="tel:+38044-234-45-45">044-234-45-45</a>
-									</li>
-								</ul>
+					<div class="account-page">
+						<div class="trade-table__heading">
+							<h4 class="text-16px-white">Редактирование профиля</h4>
+						</div>	
+<!-- 						<div class="notation-box">
+							<p class="link-16px-2e2e2e">ПОЖАЛУЙСТА, ЗАПОЛНИТЕ РЕГИСТРАЦИОННУЮ ФОРМУ</p>
+						</div> -->
+						<div class="form-wrapper">
+							<form id="account-edit" action="">
+								<div class="flex-wrap">
+									<div class=" flex-column">
+										<div class="form-items-group">
+											<label class="control-label text-12px-585858 " for="">Область</label>
+											<select class="form-item-square" name="" id="" required>
+												<option value="">Выберите страну</option>
+												<option value="1">Ангола</option>
+												<option value="2">Республика Конго</option>
+												<option value="3">Руанда</option>
+												<option value="4"> Экваториальная Гвинея</option>
+												<option value="5">Камерун</option>
+											</select>
+										</div>
 
-								<a class="link-icon link-16px-2e2e2e footer__email-link" href="mailto:info@tenderfood">info@tenderfood</a>
-							</div>
+										<div class="form-items-group">
+											<label class="control-label text-12px-585858 " for=""></label>
 
-							<div class="footer__list-wrap">
-								<h4 class="text-18px-2e2e2e">Наш адрес</h4>
-							</div>
+											<select class="form-item-square" name="" id="" required>
+												<option value="">Выберите область</option>
+												<option value="1">область 1</option>
+												<option value="2">область 2</option>
+												<option value="3">область 3</option>
+												<option value="4">область 4</option>
+												<option value="5">область 5</option>
+											</select>
+										</div>
+										<div class="form-items-group ">
+											<label class="control-label text-12px-585858" for="">Тип компании</label>
+											<div class="flex-wrap checkbox-list">
+												<div class="checkbox">
+													<label for="">
+														<input type="hidden" value="0">
+														<input type="checkbox" value="1">
+														Производитель
+													</label>
+												</div>
+												<div class="checkbox">
+													<label for="">
+														<input type="hidden" value="0">
+														<input type="checkbox" value="1">
+														Бойня
+													</label>
+												</div>
+												<div class="checkbox">
+													<label for="">
+														<input type="hidden" value="0">
+														<input type="checkbox" value="1">
+														Переработчик
+													</label>
+												</div>
+												<div class="checkbox">
+													<label for="">
+														<input type="hidden" value="0">
+														<input type="checkbox" value="1">
+														Трейдер
+													</label>
+												</div>
+												<div class="checkbox">
+													<label for="">
+														<input type="hidden" value="0">
+														<input type="checkbox" value="1">
+														Импортер
+													</label>
+												</div>
+												<div class="checkbox">
+													<label for="">
+														<input type="hidden" value="0">
+														<input type="checkbox" value="1">
+														Ритейлер
+													</label>
+												</div>
+												<div class="checkbox">
+													<label for="">
+														<input type="hidden" value="0">
+														<input type="checkbox" value="1">
+														Экспортер
+													</label>
+												</div>
+												<div class="checkbox">
+													<label for="">
+														<input type="hidden" value="0">
+														<input type="checkbox" value="1">
+														Хранитель
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="form-items-group">
+											<!-- <label class="control-label text-2px-585858" for="">Пароль</label>
+											<input class="form-item-square" type="password"> -->
+											<label class="control-label text-12px-585858" for="" >Загрузить свидетельство</label>
+											<input calss="control-label text-12px-585858" type="file" required>
+											
+										</div>
 
+										<div class="form-items-group">
+											<label class="control-label text-12px-585858" for="">Сайт</label>
+											<input class="form-item-square" type="text">
+										</div>
+
+									</div>
+									
+
+									
+									<div class="flex-column">
+										<div class="form-items-group">
+											<label class="control-label text-12px-585858" for="">Информация для контрагентов</label>
+											<textarea class="form-item-square" name="" id="" cols="30" rows="10"></textarea>
+										</div>
+									</div>
+									
+
+									
+								</div>
+								
+
+								<div class="form-items-group button-group">
+									<a href="#" class="red-btn registration-link">Сохранить</a>
+									<a href="account.html" class="red-btn registration-link">Отмена</a>
+								</div>
+
+							</form>
 						</div>
-
-						<div class="map-wrap">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12083.342249615276!2d-73.96674985072448!3d40.78762910075257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2589a018531e3%3A0xb9df1f7387a94119!2z0KbQtdC90YLRgNCw0LvRjNC90YvQuSDQv9Cw0YDQug!5e0!3m2!1sru!2sua!4v1581878211474!5m2!1sru!2sua" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-						</div>
 					</div>
-				</div>
-				<div class="col-12 col-md-6">
-					<div class="form-wrapper">
-						<div class="notation-box">
-							<p class="text-18px-2e2e2e">ПОЖАЛУЙСТА, ЗАПОЛНИТЕ ФОРМУ</p>
-						</div>
-						<form action="" class="contact-form">
-							<div class="form-items-group">
-								<label class="control-label text-12px-585858" for="">Ваше имя</label>
-								<input class="form-item-square" type="text">
-							</div>
-							<!-- <div class="form-items-group">
-								<label class="control-label text-12px-585858" for="">Email</label>
-								<input class="form-item-square" type="email">
-							</div> -->
-							<div class="form-items-group">
-								<label class="control-label text-12px-585858" for="">Номер телефона</label>
-								<input class="form-item-square" type="phone">
-							</div>
-							<div class="form-items-group">
-								<label class="control-label text-12px-585858" for="">Ваше сообщение</label>
-								<textarea class="form-item-square" name="" placeholder="Сообщение"></textarea> 
-							</div>
-
-							<div class="form-items-group">
-								<button class="red-btn ">Отправить</button>
-							</div>
-						</form>
-					</div>
+					
 				</div>
 			</div>
 		</div>
 	</section>
-
+	
 </main>
 
 
@@ -326,7 +361,6 @@
 	</div>
 </footer>
 
-
 <script src="assets/js/jquery-3.4.1.min.js"></script>
 
 <!-- bootstrap -->
@@ -345,9 +379,6 @@
 
 <!-- Основные скрипты -->
 <script src="assets/js/main.js"></script>
-
-
-
 
 
 <!-- Модальное окно авторизации -->

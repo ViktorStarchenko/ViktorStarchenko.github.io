@@ -6,6 +6,17 @@
 //   }
 // }
 
+function closeBtn() {
+  $('.screen-shadow.show, .modal-wrap .btn-close').on('click', function() {
+
+      $('.modal-wrap').removeClass('showModal');
+      $('.screen-shadow').removeClass('show');
+      $('body').removeClass('hidden');
+      return false;
+
+    })
+}
+
 window.onload=function(){if(window.innerWidth <= 520){ // ДОБАВЛЯЕМ СЛАЙДЕР НА МОБИЛЬНЫХ ЭКРАНАХ
   $('.banners-slider__wrapper').slick({
     // slidesToScroll: 1,
@@ -39,6 +50,28 @@ $(document).ready(function() {
       $('.screen-shadow').removeClass('show');
       $('body').removeClass('hidden');
     })
+
+  })
+})
+
+
+// account add user
+
+$(document).ready(function() {
+  $('#account__add-user').on('click', function() {
+    $('#account-add-user-form').addClass('showModal');
+    $('.screen-shadow').addClass('show');
+    $('body').addClass('hidden');
+
+    // $('.mobile-menu-wrap .close-button').on('click', function() {
+    //   $('.mobile-menu-wrap').removeClass('show');
+    //   $('.screen-shadow').removeClass('show');
+    //   $('body').removeClass('hidden');
+    // })
+    closeBtn()
+    
+
+    return false;
 
   })
 })
@@ -145,4 +178,9 @@ $(document).ready(function(){
 
   })
 })
+
+
+ jQuery( function($){
+     $(".tel-mask").mask("+38 (999) 999-99-99");
+   });
 

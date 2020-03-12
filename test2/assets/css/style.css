@@ -185,6 +185,11 @@ button.red-btn, button.red-btn:focus {
     outline: none;
 }
 
+.red-btn.table-button {
+    border-radius: 0;
+    width: 100%;
+}
+
 
 
 .pagination-box {
@@ -514,12 +519,59 @@ a.text-12px-019299:hover {
 }
 
 
+/********************************************************MODAL****************************************************************************/
+
+.modal-wrap {
+    width: 100%;
+    max-width: 380px;
+    position: absolute;
+    left: calc(50% - 190px);
+    top: -100%;
+    /* display: none; */
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(111, 111, 111, 0.25);
+    border-radius: 4px;
+}
+
+.modal-wrap.showModal {
+    z-index: 11;
+    top: 10%;
+    transition-duration: .5s;
+    /*display: block*/
+}
+
+.modal-inner {
+    padding: 10px 30px 30px 30px;
+    overflow: auto;
+    max-height: 80vh;
+}
+
+@media screen and (max-width: 425px) {
+
+    .modal-wrap {
+        left: 4%;
+        width: 92%;
+    }
+
+    .form-items-group.button-group {
+        flex-direction: row;
+    }
+
+    .modal-inner {
+        padding: 10px 10px 30px;
+    }
+    
+}
 
 /***********************************************FORM STYLES******************************************/
 .form-items-group {
     display: flex;
     align-items: flex-start;
     margin-bottom: 15px;
+
+    min-width: 320px;
+    /* width: 45%; */
+    margin-right: 20px;
 }
 
 .form-item-square {
@@ -572,13 +624,68 @@ a.text-12px-019299:hover {
     font-weight: bold;
 }
 
+.flex-wrap.checkbox-list {
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 60%;
+}
+
+.flex-wrap .checkbox {
+    width: 100%;
+    max-width: 45%;
+}
+
+.flex-column {
+    max-width: 48%;
+    width: 100%;
+}
+
+.button-group {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 400px;
+    margin-right: unset;
+    margin: auto;
+}
+
+@media screen and (max-width: 1024px) {
+    .flex-column {
+        max-width: unset;
+    }
+
+    .form-items-group {
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 425px) {
     .form-items-group {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        width: 95%;
+        min-width: unset;
+        margin: auto;
+        margin-bottom: 15px;
     }
 
     .form-item-square{
+        max-width: unset;
+    }
+
+    .form-items-group {
+        flex-direction: column;
+        align-items: center;
+        width: 95%;
+        min-width: unset;
+        margin: auto;
+        margin-bottom: 15px;
+    }
+
+    .control-label {
+        width: 100%;
+    }
+
+    .flex-wrap.checkbox-list {
         max-width: unset;
     }
 }
@@ -1148,10 +1255,10 @@ header .nav-link {
     max-width: 45%;
 }
 
-.account-page  .form-item-square {
+/*.account-page  .form-item-square {
     max-width: 60%;
     width: 100%;
-}
+}*/
 
 .red-btn.receive-pass {
     padding: 1px;
@@ -1503,13 +1610,14 @@ margin-bottom: 3px;
 .trade-table td:hover {
     box-shadow: 0 0 10px rgba(51, 65, 80, 0.5);
     background-color: #334150;
-    border: 1px solid #000
+    /*border: 1px solid #000*/
 }
 
 .trade-table td:hover span, .trade-table td:hover a {
     color: #fff;
     text-decoration: none;
 }
+
 
 
 
@@ -1607,6 +1715,8 @@ margin-bottom: 3px;
     background-size: cover;
     background-position: center;
     border-radius: 4px;
+    max-height: 35vh;
+    overflow: auto;
 }
 
 .sidebar__news-heading h4 {
@@ -2591,7 +2701,7 @@ padding: 6px 10px 4px;
     margin-bottom: 20px;
 }
 /********************************************************************************************************************/
-/*****************************************************СТРАНИЦА О ПЛОСЧАДКЕ***********************************************/
+/*****************************************************СТРАНИЦА О ПЛОЩАДКЕ***********************************************/
 
 
 .about-page .about__content-box.full-width-tabs .about__content-inner  {
@@ -2671,4 +2781,138 @@ padding: 6px 10px 4px;
 }
 
 
+
+/*******************************************СТРАНИЦА ПОЛЬЗОВАТЕЛЯ начало**************************************/
+
+.red-btn.bid-btn {
+    border-radius: 0;
+    width: 100%;
+    height: 94%;
+    text-align: center;
+}
+
+.pills-navigation {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.account-page__content {
+    padding-bottom: 40px;
+}
+
+/*Вкладка КАРТОЧКА*/
+.account-page__card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+
+.account-page__card-info {
+    width: 75%;
+
+}
+
+.list-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.list-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.list-item-heading, .list-item-value {
+    width: 100%;
+    min-width: 160px;
+    padding: 5px;
+    background-color: #fafafc;
+    text-align: center;
+    border: 3px solid #fff;
+}
+
+.list-item-heading {
+    max-width: 320px;
+}
+
+.nav-tabs.pills-navigation {
+    border-bottom: unset;
+}
+
+.account-page__content .red-btn.account-redact {
+    display: block;
+    margin-left: auto;
+    margin-right: 10%;
+    max-width: 200px;
+}
+
+/*Вкладка пользователи*/
+
+.account-users .red-btn.registration-link {
+    margin-left: 10px;
+}
+
+
+/*Страница редактирования аккаунта*/
+
+.account-edit .button-group {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 400px;
+    margin-right: unset;
+    margin: auto;
+}
+
+@media screen and (max-width: 910px) {
+    .red-btn.bid-btn {
+        font-size: 12px;
+
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .account-page__card {
+        flex-direction: column;
+    }
+
+    .account-page__card-info {
+        width: 100%;
+    }
+    .account-page__address {
+        width: 100%;
+    }
+
+    .list-item-heading {
+        max-width: unset;
+    }
+
+    .account-page__card {
+        padding: 20px 0;
+    }
+
+    .account-page__content .red-btn.account-redact {
+        display: block;
+        margin: auto;
+    }
+}
+
+/*@media screen and (max-width: 425px) {
+    .list-item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .list-item-heading {
+        max-width: unset;
+    }
+}*/
+
+/*******************************************СТРАНИЦА ПОЛЬЗОВАТЕЛЯ конец**************************************/
 
