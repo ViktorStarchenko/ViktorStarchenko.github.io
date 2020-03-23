@@ -7,9 +7,10 @@
 // }
 
 function closeBtn() {
-  $('.screen-shadow.show, .modal-wrap .btn-close').on('click', function() {
+  $('.screen-shadow.show, .modal-wrap .close-button, .modal__login .close-button').on('click', function() {
 
       $('.modal-wrap').removeClass('showModal');
+      $('.modal__login').removeClass('showModal');
       $('.screen-shadow').removeClass('show');
       $('body').removeClass('hidden');
       return false;
@@ -30,6 +31,17 @@ window.onload=function(){if(window.innerWidth <= 520){ // ДОБАВЛЯЕМ С�
   });
 }
 }
+
+
+
+
+$(document).ready(function(){
+  $('.inform-block').slick({
+    autoplay: true,
+    autoplaySpeed: 5000,
+    dots: true
+  })
+})
 
 // Show mobile menu
 
@@ -170,11 +182,7 @@ $(document).ready(function(){
     $('.screen-shadow').addClass('show');
     $('body').addClass('hidden');
 
-    $('.screen-shadow.show').on('click', function() {
-      $('.modal__login').removeClass('showModal');
-      $('.screen-shadow').removeClass('show');
-      $('body').removeClass('hidden');
-    })
+    closeBtn()
 
   })
 })
@@ -306,4 +314,189 @@ $(document).ready(function(){
 
     
   });
+})
+
+
+
+
+// страница ОБЬЯВИТЬ ТОРГИ. Добавить ТОВАР
+$(document).ready(function(){
+
+$('input[name=request-rights]').on('click', function(){
+  if ($(this).val() == 'b') {
+    $('.create-trades__add-company').addClass('show')
+  } else {
+    $('.create-trades__add-company').removeClass('show')
+  }
+}) 
+
+  var good_id = 2;
+
+  $('#create-trades__add-goods').on('click', function(){
+    
+    var  new_good =      '<div class="create-trades__goods-item">'
+            new_good +=        '<div class="flex-wrap">'
+            new_good +=          '<div class="flex-column">'
+            new_good +=            '<div class="form-items-group">'
+            new_good +=              '<label class="control-label required text-12px-585858 " for="">Товар</label>'
+            new_good +=              '<select class="form-item-square" name="request-product-'+good_id+'" id="" data-product-id="'+good_id+'" required>'
+            new_good +=                '<option value="">Выберите товар</option>'
+            new_good +=                '<option value="1">Свинина</option>'
+            new_good +=                '<option value="2">КРС</option>'
+            new_good +=                '<option value="3">Птица</option>'
+            new_good +=                '<option value="4">Рыбьа</option>'
+            new_good +=                '<option value="5">Молоко</option>'
+            new_good +=                '<option value="6">Овощи и фрукты</option>'
+            new_good +=               ' <option value="7">Зерновые</option>'
+            new_good +=              '</select>'
+             new_good +=           '</div>'
+            new_good +=            '<div class="form-items-group">'
+            new_good +=              '<label class="control-label text-12px-585858" for="">Дополнительное описание</label>'
+            new_good +=              '<textarea class="form-item-square"  name="request-product-descriptio-'+good_id+'" id="" cols="30" rows="10" placeholder="Дополнительное описание" data-product-id="'+good_id+'"></textarea>'
+            new_good +=            '</div>'
+            new_good +=            '<div class="form-items-group">'
+            new_good +=              '<label class="control-label text-12px-585858" for="" >Фото товара</label>'
+             new_good +=             '<input calss="control-label text-12px-585858"  name="request-product-photo-'+good_id+'" type="file" data-product-id="'+good_id+'">'
+             new_good +=          ' </div>'
+            new_good +=            '<div class="form-items-group">'
+            new_good +=              '<label class="control-label required text-12px-585858" for="">Общий обьем</label>'
+            new_good +=              '<input class="form-item-square" name="request-product-weight-'+good_id+'" type="text" placeholder="кг" data-product-id="'+good_id+'" required>'
+            new_good +=            '</div>'
+            new_good +=            '<div class="form-items-group">'
+            new_good +=              '<label class="control-label text-12px-585858" for="">Партия</label>'
+            new_good +=              '<input class="form-item-square"  name="request-product-party-'+good_id+'" type="text" placeholder="Партия по кг" data-product-id="'+good_id+'">'
+            new_good +=            '</div>'
+            new_good +=            '<div class="form-items-group">'
+            new_good +=              '<label class="control-label text-12px-585858" for="">Начальная цена</label>'
+            new_good +=              '<input class="form-item-square"  name="request-product-price-'+good_id+'" type="text" placeholder="грн/кг" data-product-id="'+good_id+'">'
+            new_good +=            '</div>'
+            new_good +=            '<div class="form-items-group">'
+            new_good +=              '<label class="control-label text-12px-585858" for="">Шаг торгов</label>'
+            new_good +=              '<input class="form-item-square"  name="request-product-step-'+good_id+'" type="text" placeholder="Шаг торгов (грн)" data-product-id="'+good_id+'">'
+            new_good +=            '</div>'
+            new_good +=          '</div>'
+            new_good +=          '<div class="flex-column">'
+            new_good +=            '<div class="form-items-group ">'
+            new_good +=              '<label class="control-label text-12px-585858" for="">Система налогообложения покупателя</label>'
+            new_good +=              '<div class="checkbox-list">'
+            new_good +=                '<div class="checkbox max-fullwidth">'
+            new_good +=                  '<label for="">'
+            new_good +=                    '<input type="radio"  name="request-product-taxes-'+good_id+'" value="1" data-product-id="'+good_id+'">'
+            new_good +=                    'НДС 20%'
+            new_good +=                  '</label>'
+            new_good +=                '</div>'
+            new_good +=                '<div class="checkbox max-fullwidth">'
+            new_good +=                  '<label for="">'
+            new_good +=                    '<input type="radio" name="request-product-taxes-'+good_id+'" value="2" data-product-id="'+good_id+'">'
+            new_good +=                    'НДС 10%'
+            new_good +=                  '</label>'
+            new_good +=               ' </div>'
+            new_good +=                '<div class="checkbox max-fullwidth">'
+            new_good +=                  '<label for="">'
+            new_good +=                    '<input type="radio" name="request-product-taxes-'+good_id+'" value="3" data-product-id="'+good_id+'">'
+            new_good +=                    'Без НДС'
+            new_good +=                  '</label>'
+            new_good +=                '</div>'
+            new_good +=              '</div>'
+            new_good +=           ' </div>'
+            new_good +=          '</div>'
+            new_good +=        '</div>'
+            new_good +=     ' </div>'
+
+
+    $('.create-trades__goods-list').append(new_good)
+
+    good_id++
+
+    console.log(good_id)
+    return false
+
+
+
+
+  })
+
+$('#create-trades__add-company').on('click', function(){
+
+     
+    var  add_company =      '<select class="form-item-square max-fullwidth" name="request-add-company-1" id="">'
+       add_company +=       '<option value="">Выберите компанию</option>'
+      add_company +=        '<option value="1">компания 1</option>'
+      add_company +=        '<option value="2">компания 2</option>'
+      add_company +=        '<option value="3">компания 3</option>'
+      add_company +=        '<option value="4">компания 4</option>'
+      add_company +=        '<option value="5">компания 5</option>'
+       add_company +=     '</select>'
+
+
+      console.log(add_company)
+  $('.create-trades__company-list').append(add_company)
+
+  return false
+})
+
+                   
+})
+
+
+$(document).ready(function(){
+  $('#lots-bidder-table-wrap .bidder-name').on('click', function() {
+    console.log('nien')
+  })
+})
+
+
+// Страница торгов показать модальное окно Пригласить компании по Email
+
+$(document).ready(function(){
+  $('.red-btn, .green-btn-square, a').on('click', function(){
+    var btn_href = $(this).attr('href')
+  btn_href = btn_href.slice(1)
+console.log(btn_href)
+    var modal_wrap = $('.modal-wrap')
+// console.log(modal_wrap)
+
+     modal_wrap.each(function(elem){
+
+      // if ($(modal_wrap[elem]).attr('id') != undefined)  { 
+
+        // if ($(modal_wrap[elem]).attr('id').search(btn_href)) {
+        //   console.log($(this))   
+        //   $(this).addClass('showModal')
+        //   $('.screen-shadow').addClass('show');
+        //   $('body').addClass('hidden');
+        //   closeBtn()
+        //   return false
+        // }
+       // } 
+        if ($(modal_wrap[elem]).attr('id') ==  btn_href) {     
+        
+          console.log($(this))   
+         
+          $(this).addClass('showModal')
+          $('.screen-shadow').addClass('show');
+          $('body').addClass('hidden');
+          closeBtn()
+          return false
+        }
+
+      })
+
+    // console.log(modal_wrap)
+    // $('#modal-invite-email.modal-wrap').addClass('showModal')
+    
+    
+  })
+})
+
+
+
+// Показать способы пополнения баланса
+
+$(document).ready(function(){
+  $('#replenish-btn').on('click', function(){
+    $('.balance-replenish').toggleClass('show')
+
+    return false
+  })
 })

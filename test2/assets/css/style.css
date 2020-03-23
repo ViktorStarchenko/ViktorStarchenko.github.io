@@ -1,3 +1,5 @@
+@import url('https://use.fontawesome.com/releases/v5.2.0/css/all.css')
+
 @font-face {
     font-family: 'Roboto';
     font-style: normal;
@@ -87,7 +89,7 @@ ul {
 }
 
 .screen-shadow {
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -117,9 +119,22 @@ ul {
     flex-wrap: wrap;
 }
 
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .page-background-white {
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(111, 111, 111, 0.25);
+}
+
+.notation-box {
+    padding: 4px 20px;
+    box-shadow: 0 2px 5px rgba(111, 111, 111, 0.25);
+    background-color: #fff;
+    margin-bottom: 4px;
 }
 
 main .container-fluid .main-left-col {
@@ -178,6 +193,40 @@ main .container-fluid .main-right-col {
     box-shadow: unset;
     transform: translateY(2px);
 
+}
+
+.green-btn, .green-btn-square {
+    background-image:linear-gradient(to right, #00a1a8 0%, #19b4bc 25%, #00a1a8 50%, #19b4bc 75%, #00a1a8 100%);
+    border-radius: 18px;
+    padding: 5px 20px 2px 35px;
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    box-shadow: 0px 1px 0px 1px #00a1a8;
+    transition-duration: .3s;
+    display: inline-block;
+    position: relative;
+
+}
+
+.green-btn:hover, .green-btn-square:hover {
+    /*background-image: linear-gradient(to top, #ad4233 0%, #fd8f81 100%);*/
+    transition-duration: .3s;
+    color: #fff;
+    text-decoration: none;
+}
+
+.green-btn:active, .green-btn-square:active {
+    transition-duration: .3s;
+    box-shadow: unset;
+    transform: translateY(2px);
+
+}
+
+.green-btn-square {
+    border-radius: 4px;
 }
 
 button.red-btn, button.red-btn:focus {
@@ -295,7 +344,7 @@ a.text-16px-white:hover {
     line-height: 28px;
 }
 
-.link-16px-2e2e2e:hover {
+.link-16px-2e2e2e:hover, a.link-16px-2e2e2e:hover {
     color: #10b2bc;
     text-decoration: none;
 }
@@ -483,6 +532,20 @@ a.text-12px-019299:hover {
     width: 100%;
 }
 
+.max-fullwidth {
+    max-width: 100%!important;
+}
+
+.width-50 {
+    width: 100%;
+    max-width: 50%;
+}
+
+.width-45 {
+    width: 100%;
+    max-width: 45%;
+}
+
 .text-300 {
     font-weight: 300
 }
@@ -524,7 +587,7 @@ a.text-12px-019299:hover {
 .modal-wrap {
     width: 100%;
     max-width: 380px;
-    position: absolute;
+    position: fixed;
     left: calc(50% - 190px);
     top: -100%;
     /* display: none; */
@@ -564,6 +627,14 @@ a.text-12px-019299:hover {
 }
 
 /***********************************************FORM STYLES******************************************/
+.text-response-box {
+    display: none;
+}
+
+.text-response-box.show {
+    display: block;
+}
+
 .form-items-group {
     display: flex;
     align-items: flex-start;
@@ -578,7 +649,7 @@ a.text-12px-019299:hover {
     border-radius: 4px;
     padding: 4px 10px;
     font-size: 14px;
-
+    position: relative;
     width: 100%;
     max-width: 60%;
 }
@@ -612,6 +683,11 @@ a.text-12px-019299:hover {
 .checkbox {
     display: flex;
     align-items: center;
+    
+}
+
+.checkbox label {
+    cursor: pointer;
 }
 
 .control-label {
@@ -622,6 +698,11 @@ a.text-12px-019299:hover {
     content: ' * ';
     color: #F00;
     font-weight: bold;
+}
+
+.checkbox-list {
+    width: 100%;
+    max-width: 60%;
 }
 
 .flex-wrap.checkbox-list {
@@ -641,6 +722,7 @@ a.text-12px-019299:hover {
 }
 
 .button-group {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     max-width: 400px;
@@ -661,7 +743,7 @@ a.text-12px-019299:hover {
 @media screen and (max-width: 425px) {
     .form-items-group {
         flex-direction: column;
-        align-items: center;
+        /*align-items: center;*/
         width: 95%;
         min-width: unset;
         margin: auto;
@@ -670,15 +752,6 @@ a.text-12px-019299:hover {
 
     .form-item-square{
         max-width: unset;
-    }
-
-    .form-items-group {
-        flex-direction: column;
-        align-items: center;
-        width: 95%;
-        min-width: unset;
-        margin: auto;
-        margin-bottom: 15px;
     }
 
     .control-label {
@@ -960,9 +1033,11 @@ header .nav-link {
 .close-button {
     position: absolute;
     right: 15px;
-    top: 10px;
+    /*top: 10px;*/
+    top: 3px;
     color: #fff;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .close-button i {
@@ -1191,8 +1266,8 @@ header .nav-link {
 }
 
 .account-page {
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(111, 111, 111, 0.25);
+/*    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(111, 111, 111, 0.25);*/
     padding: 0 0 40px;
     margin-bottom: 40px;
 }
@@ -1328,7 +1403,7 @@ header .nav-link {
 
     #signup-form .flex-wrap .form-items-group {
         flex-direction: column;
-        align-items: center;
+        /*align-items: center;*/
         width: 95%;
         min-width: unset;
         margin: auto;
@@ -1438,12 +1513,43 @@ header .nav-link {
     }*/
 }
 
-.inform-wrap {
-    min-height: 160px;
+.inform-block {
     background-image: url('../img/inform.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    border-radius: 4px;
+}
+
+.inform-block .slick-dots {
+    bottom: 6px;
+}
+
+.inform-block .slick-dots li {
+    background: #f88170;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+}
+
+.inform-block .slick-dots li button:before {
+    color: transparent;
+}
+
+.inform-block .slick-dots li.slick-active {
+    background: #19b4bc
+}
+
+.inform-block .slick-dots li.slick-active button:before {
+    color: transparent;
+}
+
+.inform-wrap {
+    min-height: 160px;
+    /*background-image: url('../img/inform.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1481,25 +1587,60 @@ header .nav-link {
     }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
+    .inform-wrap span.text-18px-white {
+        line-height: 30px;
+        font-size: 14px;
+    }
+
     .inform-wrap {
         justify-content: center;
     }
-    .inform-wrap span.text-18px-white {
-        line-height: 40px;
+}
+
+@media screen and (max-width: 992px) {
+    .inform-wrap {
+        justify-content: flex-start;
     }
+/*    .inform-wrap span.text-18px-white {
+        line-height: 40px;
+    }*/
 }
 
 @media screen and (max-width: 767px) {
     .inform-wrap {
         min-height: 140px;
         height: unset;
+        justify-content: center;
     }
 }
 
 
 
 /********************************************TRADE LIGHT****************************************************************/
+
+.trade-table__heading-red {
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+background-image: linear-gradient(to top, #d15645 0%, #fd8f81 100%);
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 6px 10px 4px;
+margin-bottom: 3px;
+}
+
+.trade-table__heading-red h4 {
+    position: relative;
+    padding-left: 50px;
+    margin: 0;
+}
+
+.trade-table__heading-red h4.text-16px-white {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
 
 .trade-table__wrap {
     display: flex;
@@ -1719,8 +1860,7 @@ margin-bottom: 3px;
     background-size: cover;
     background-position: center;
     border-radius: 4px;
-    max-height: 35vh;
-    overflow: auto;
+    
 }
 
 .sidebar__news-heading h4 {
@@ -1733,6 +1873,8 @@ margin-bottom: 3px;
  border-bottom-left-radius: 4px;
  border-bottom-right-radius: 4px;
  margin-bottom: 20px;
+ max-height: 35vh;
+overflow: auto;
 }
 
 .sidebar__news-item {
@@ -1802,13 +1944,14 @@ margin-bottom: 3px;
 
 @media screen and (max-width: 767px) {
     .sidebar__news-block {
-        flex-direction: row;
+        /*flex-direction: row;*/
         padding-bottom: 20px;
     }
 
     .sidebar__news-item {
         border-top: none;
         border-right: 1px solid #fff;
+        justify-content: center;
     }
 
     .sidebar__news-description {
@@ -1838,7 +1981,7 @@ margin-bottom: 3px;
 
 @media screen and (max-width: 375px) {
     .sidebar__specials-item {
-        padding: 0 10px;
+        padding: 0;
     }
 }
 
@@ -2557,7 +2700,49 @@ padding: 6px 10px 4px;
 
 
 .my-table-paginator {
-    margin-bottom: 50px;
+    margin-bottom: 35px;
+}
+
+
+
+
+/*********************************jqGrid Dark table styles***********************************/
+
+.lots-table-wrap_dark .ui-jqgrid .ui-jqgrid-bdiv {
+    background-image: url(../img/rating-table.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.lots-table-wrap_dark .ui-jqgrid tr.ui-row-ltr td {
+    background: unset;
+    border: unset;
+}
+
+.lots-table-wrap_dark .ui-jqgrid .jqgrow.ui-row-ltr {
+    border-bottom: 1px solid #fff;
+    color: #fff;
+}
+
+.lots-table-wrap_dark .ui-jqgrid tr.ui-row-ltr td {
+    color: #fff;
+}
+
+/*.lots-table-wrap_dark .ui-jqgrid-labels th.ui-th-column {
+    background-image: linear-gradient(to top, #e4e8f0 0%, #eef1f7 50%, #e4e8f0 100%);
+    border-top: 3px solid #334150;
+    border-right: 3px solid #334150;
+    border-left: 3px solid #334150;
+}
+
+.lots-table-wrap_dark .ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column {
+    border-top: 3px solid #334150;
+    border-right: 3px solid #334150;
+    border-left: 3px solid #334150;
+}*/
+
+.lots-table-wrap.lots-table-wrap_dark .ui-jqgrid tr.ui-row-ltr td a {
+    color: #fff;
 }
 
 
@@ -2668,6 +2853,37 @@ padding: 6px 10px 4px;
 }
 
 /*****************************************************СТРАНИЦА НОВОСТИ конец***********************************************/
+
+
+/******************************************************************************************************************************************/
+/***********************************************************стрница РЕПУТАЦИЯ КОМПАНИЙ начало***********************************************/
+
+
+#company-rating-gridpager {
+    display: none;
+}
+
+
+.ui-jqgrid tr.ui-row-ltr td.text-rate-aaa, 
+.ui-jqgrid tr.ui-row-ltr td.text-rate-aa, 
+.ui-jqgrid tr.ui-row-ltr td.text-rate-a, 
+.ui-jqgrid tr.ui-row-ltr td.text-rate-b, 
+.ui-jqgrid tr.ui-row-ltr td.text-rate-b-minus, 
+.ui-jqgrid tr.ui-row-ltr td.text-rate-del {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+    text-transform: uppercase;
+    /* Text style for "AAA" */
+    letter-spacing: 0.8px;
+}
+
+.ui-jqgrid tr.ui-row-ltr td.text-rate-aaa {
+    color: #19b4bc;
+}
+
+/***********************************************************стрница РЕПУТАЦИЯ КОМПАНИЙ конец***********************************************/
 
 
 /********************************************************************************************************************/
@@ -2790,6 +3006,51 @@ padding: 6px 10px 4px;
 
 /*******************************************СТРАНИЦА ПОЛЬЗОВАТЕЛЯ начало**************************************/
 
+/****************сайдбар чат*************/
+
+.sidebar__chat-item {
+    position: relative;
+    padding: 5px 10px;
+    border-top: 1px solid #fff;
+    transition-duration: .3s;
+}
+
+.sidebar__chat-date {
+    text-align: center;
+    border-bottom: 1px solid #19b4bc;
+}
+
+.sidebar__chat-body {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.sidebar__chat-author {
+    min-width: 90px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar__chat-text .text-14px-white {
+    line-height: 20px;
+}
+
+.chat_message-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.chat_message-form .red-btn {
+    margin: 15px 0;
+}
+
+.sidebar__chat_message .form-items-group {
+    margin: 0;
+}
+
 .red-btn.bid-btn {
     border-radius: 0;
     width: 100%;
@@ -2807,6 +3068,17 @@ padding: 6px 10px 4px;
     padding-bottom: 40px;
 }
 
+.account-page .nav.pills-navigation .link-16px-2e2e2e.active {
+    background-color: unset;
+    color: #2e2e2e;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+    text-shadow: 0 1px 1px rgba(37, 37, 37, 0.5);
+    position: relative;
+}
+
 /*Вкладка КАРТОЧКА*/
 .account-page__card {
     display: flex;
@@ -2814,6 +3086,7 @@ padding: 6px 10px 4px;
     align-items: flex-start;
     justify-content: space-between;
     padding-bottom: 20px;
+    background-color: #fff;
 }
 
 
@@ -2873,10 +3146,17 @@ li.list-item-heading {
 
 /*Вкладка Сообщения*/
 
+#account-messages-table-wrap .ui-jqgrid .ui-jqgrid-hbox {
+    padding: 0;
+}
+
+#account-messages-gridpager {
+    display: none;
+}
 
 #gbox_account-messages, #gview_account-messages, #account-messages, .ui-jqgrid-bdiv, .ui-jqgrid-hdiv, #gview_account-messages .table {
-    width: 100%!important;
-    min-width: 978px!important;
+    width: 100%;
+    min-width: 1075px!important;
 }
 
 #gview_account-messages {
@@ -2898,6 +3178,7 @@ li.list-item-heading {
 
 .account-message-content {
     background-color: #fafafc;
+    margin-bottom: 40px;
 }
 
 .account-message-body {
@@ -2915,6 +3196,51 @@ li.list-item-heading {
     padding-left: 10px;
 }
 
+.account-message__item {
+    box-shadow: 0 -2px 0px rgba(111, 111, 111, 0.25);
+    padding-top: 10px;
+}
+
+.message-reply-form-wrap {
+    padding: 30px 10px;
+}
+
+.account-message__item .service-block a {
+   margin-right: 15px;
+}
+
+.message-service-btn {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 20px;
+}
+
+.message-service-btn:before {
+    content: '';
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    background-size: contain;
+}
+
+.reply-btn:before {
+    background-image: url(../img/icons/reply.png);
+}
+.resend-btn:before {
+    background-image: url(../img/icons/resend.png);
+}
+
+
+@media screen and (max-width: 500px) {
+    .message-service-btn:before {
+        top: 1px;
+    }
+}
+
 
 /*Вкладка рассылки*/
 
@@ -2927,6 +3253,10 @@ li.list-item-heading {
 }
 
 /*Вкладка товары*/
+
+#account-trades-table-wrap .ui-jqgrid .ui-jqgrid-hbox {
+    padding: 0;
+}
 
 .ckeckbox-dropdown-list {
     display: none;
@@ -2948,11 +3278,77 @@ li.list-item-heading {
     padding-left: 20px;
 }
 
+/*Вкладка баланс*/
+
+.account-page__balance-wrap {
+    width: 100%;
+}
+
+.balance-list {
+    margin-bottom: 40px;
+}
+
+.balance-replenish {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 0;
+    overflow: hidden;
+    transition-duration: .4s
+}
+
+.balance-replenish.show {
+    height: unset;
+    transition-duration: .4s
+}
+
+.balance-replenish-item {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.balance-replenish-item img {
+    max-width: 230px;
+}
+
 /*Вкладка Счета*/
+
+#account-bills-wrap .ui-jqgrid .ui-jqgrid-hbox {
+    padding: 0;
+}
 
 #gbox_account-bills, #gview_account-bills, #account-bills, .ui-jqgrid-bdiv, .ui-jqgrid-hdiv, #gview_account-bills .table {
     width: 100%!important;
     min-width: 978px!important;
+}
+
+#account-bills-gridpager {
+    display: none;
+}
+
+/*Вкладка торги*/
+
+#gbox_account-trades, #gview_account-trades, #account-trades, .ui-jqgrid-bdiv, .ui-jqgrid-hdiv, #gview_account-trades .table {
+    width: 100%!important;
+    min-width: 1200px!important;
+}
+
+#account-trades-gridpager {
+    display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .account-page .nav.pills-navigation .link-16px-2e2e2e {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .account-page .nav.pills-navigation {
+        flex-direction: column;
+    }
 }
 
 /*Страница редактирования аккаунта*/
@@ -2963,6 +3359,18 @@ li.list-item-heading {
     max-width: 400px;
     margin-right: unset;
     margin: auto;
+}
+
+@media screen and (max-width: 1024px) {
+    .sidebar__chat-body {
+        flex-direction: column;
+    }
+} 
+
+@media screen and (max-width: 992px) {
+    .balance-replenish .width-45{
+        max-width: 100%;
+    }
 }
 
 @media screen and (max-width: 910px) {
@@ -3010,18 +3418,284 @@ li.list-item-heading {
     .account-message-text {
         padding-left: 0;
     }
+
+    .sidebar__chat-body {
+        flex-direction: row;
+    }
 }
 
-/*@media screen and (max-width: 425px) {
-    .list-item {
+@media screen and (max-width: 425px) {
+    .account-page__balance-wrap .link-16px-2e2e2e {
+        font-size: 12px;
+    }
+}
+
+
+
+/*****************************************Страница ОБЬЯВИТЬ ТОРГИ*************************************/
+
+
+#account-edit .checkbox.input-group.date .form-item-square {
+    max-width: unset;
+}
+
+#account-edit .checkbox.input-group.date {
+    margin-bottom: 15px;
+}
+
+.create-trades__goods-item {
+    box-shadow: 0 -2px 0px rgba(111, 111, 111, 0.25);
+    padding: 14px 0;
+}
+
+.create-trades .form-items-group.button-group {
+    max-width: 80%; 
+}
+
+.create-trades .form-items-group.button-group .red-btn {
+    margin-bottom: 15px;
+}
+
+.create-trades__add-company {
+    display: none;
+}
+
+.create-trades__add-company.show {
+    display: block;
+}
+
+.create-trades__company-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.create-trades__add-company .red-btn {
+    margin-bottom: 15px;
+}
+
+.create-trades__company-list select {
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 578px) {
+    .create-trades .form-items-group.button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/***********************************************Страница счета*****************************************/
+
+.bills-page .width-45 {
+    margin-bottom: 25px;
+}
+
+@media screen and (max-width: 767px ) {
+    .bills-page .width-45 {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 425px ) {
+    .bills-page .width-45 .list-item {
+        flex-direction: column;
+    }
+}
+
+
+
+/************************СТРАНИЦА КАРТОЧКА ТОРГОВ*******************/
+
+.account-lot-card {
+    padding-bottom: 40px;
+}
+
+.account-lot__card-info {
+    max-width: 46%;
+}
+
+.account-lot__status {
+    max-width: 46%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.account-lot__status .list-wrap {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.account-lot__status .red-btn {
+    margin-right: 30px;
+}
+
+.account-lot__product-item {
+    box-shadow: 0 -2px 0px rgba(111, 111, 111, 0.25);
+}
+
+#lots-bidder-gridpager {
+    display: none;
+}
+
+
+
+.account-lot__bidder-list {
+    /*padding-bottom: 30px;*/
+}
+
+#lots-bidder-table-wrap {
+    background-image: url(../img/rating-table.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.account-lot-card .form-group.button-group {
+    max-width: 80%;
+}
+
+.account-lot-card .form-group.button-group a {
+    margin: 0 10px;
+}
+
+.account-lot-card .form-group.button-group .red-btn, .account-lot-card .form-group.button-group .green-btn-square {
+    margin-bottom: 15px;
+}
+
+/*Таблица добавить компанию ПАРТНЕРА*/
+/*модальное окно Пригласить ПАРТНЕРА*/
+#gbox_lots-bidder-table-wrap, #gview_lots-bidder-table-wrap, #lots-bidder-table-wrap, .ui-jqgrid-bdiv, .ui-jqgrid-hdiv, #gview_lots-bidder-table-wrap .table {
+    width: 100%!important;
+    min-width: 978px!important;
+}
+
+.modal-wrap.modal-invite-partner {
+    max-width: 1200px;
+    left: calc( 50% - 600px )
+}
+
+.modal__invite-partner {
+    display: none;
+}
+.modal__invite-partner.show {
+    display: flex;
+}
+
+.modal-wrap.modal-invite-partner .modal-inner {
+    text-align: right;
+}
+
+#gbox_invite-partner-table, #gview_invite-partner-table, #invite-partner-table, .ui-jqgrid-bdiv, .ui-jqgrid-hdiv, #gview_invite-partner-table .table {
+    width: 100%!important;
+    min-width: 978px!important;
+}
+
+#invite-partner-gridpager {
+    display: none;
+}
+
+#lots-bidder-table-wrap .red-btn {
+    line-height: 22px;
+    padding: 0px 40px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+}
+
+
+/*МОДАЛЬНОЕ ОКНО ДОБАВИТЬ КОМПАНИЮ ПО ИМЕЙЛ*/
+
+.modal-wrap.modal-invite-email {
+    max-width: 600px;
+    left:  calc( 50% - 300px );
+}
+
+
+@media screen and (max-width: 1200px) {
+    .modal-wrap.modal-invite-email {
+        max-width: 90%;
+        left: 5%;
+    }
+
+    .modal-wrap.modal-invite-partner {
+        max-width: 90%;
+        left: 5%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+
+    
+
+    .account-lot-card .form-group.button-group {
+        max-width: 100%;
         flex-direction: column;
         align-items: center;
     }
 
-    .list-item-heading {
-        max-width: unset;
+    .account-lot-card .form-group.button-group .red-btn, .account-lot-card .form-group.button-group .green-btn-square {
+        width: 250px;
+        text-align: center;
     }
-}*/
+}
+
+@media screen and (max-width: 767px) {
+    .account-lot__card-info {
+        max-width: 100%;
+    }
+
+    .account-lot__status {
+        max-width: 100%;
+        align-items: center;
+    }
+
+    .account-lot__product-item-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .account-lot__product-item-inner .list-wrap.width-50 {
+        max-width: 100%;
+    }
+}
+
+
+/*МоДАЛЬНОЕ ОКНО СДЕЛАТЬ СТАВКУ*/
+
+.modal-wrap.modal-make-bet {
+    max-width: 600px;
+    left:  calc( 50% - 300px );
+}
+
+@media screen and (max-width: 1200px) {
+    .modal-wrap.modal-make-bet {
+        max-width: 90%;
+        left: 5%;
+    }
+}
+
+/*Модальное окно ОПЛАТИТЬ КОМИССИЮ*/
+
+.modal-wrap.modal-pay-comission {
+    max-width: 600px;
+    left:  calc( 50% - 300px );
+}
+
+@media screen and (max-width: 1200px) {
+    .modal-wrap.modal-pay-comission {
+        max-width: 90%;
+        left: 5%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .modal-pay-comission .width-45 {
+        max-width: 100%;
+    }
+}
+
 
 /*******************************************СТРАНИЦА ПОЛЬЗОВАТЕЛЯ конец**************************************/
 

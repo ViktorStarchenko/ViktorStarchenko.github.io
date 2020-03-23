@@ -12,17 +12,17 @@
 	<!-- bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
-    <link rel="stylesheet" href="assets/css/informer.css">
     <!-- Карусель slick -->
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/slick-theme.css">
 	<!-- font awesome -->
     <link rel="stylesheet" href="assets/css/fontawesome/all.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
 
 
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/css/flick/jquery-ui.theme.min.css" /> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.min.css"> -->
-    <link rel="stylesheet" type="text/css" href="themes/redmond/jquery-ui-1.7.1.custom.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="themes/redmond/jquery-ui-1.7.1.custom.css" /> -->
 	
 	<!-- стили для jqgrid -->
 	<link rel="stylesheet" type="text/css" media="screen" href="assets/css/ui.jqgrid.css" mce_href="css/ui.jqgrid.css" />
@@ -55,7 +55,7 @@
                 <a class="nav-link text-16px-white" href="news.html">Новости</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-16px-white" href="#">Рейтинг компании</a>
+                <a class="nav-link text-16px-white" href="company-rating.html">Рейтинг компании</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-16px-white" href="contacts.html">Контакты</a>
@@ -122,7 +122,7 @@
                     <a class="nav-link text-16px-white" href="news.html">Новости</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-16px-white" href="#">Рейтинг компании</a>
+                    <a class="nav-link text-16px-white" href="company-rating.html">Рейтинг компании</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link text-16px-white" href="contacts.html">Контакты</a>
@@ -192,16 +192,53 @@
 					</div>
 				</div>
 				<div class="col-12 col-md-3 main-right-col">
-					<div class="inform-wrap">
-						<span class="text-18px-white">Открытых торгов</span>
+					<div class="inform-block">
+						<div class="">
+							<div class="inform-wrap">
+								<span class="text-18px-white">ОБЪЕМ УСПЕШНЫХ ТОРГОВ</span>
 
-						<div class="inform__counter-block">
-						<span class="inform__counter-result text-18px-white">7777</span>	
+								<div class="inform__counter-block">
+								<span class="inform__counter-result text-18px-white">7777</span>	
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="inform-wrap">
+								<span class="text-18px-white">АКТИВНЫХ КОМПАНИЙ</span>
+
+								<div class="inform__counter-block">
+								<span class="inform__counter-result text-18px-white">7777</span>	
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="inform-wrap">
+								<span class="text-18px-white">СКОРОСТЬ ПРОДАЖ</span>
+
+								<div class="inform__counter-block">
+								<span class="inform__counter-result text-18px-white">7777</span>	
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="inform-wrap">
+								<span class="text-18px-white">ОТКРЫТЫХ ТОРГОВ</span>
+
+								<div class="inform__counter-block">
+								<span class="inform__counter-result text-18px-white">7777</span>	
+								</div>
+							</div>
 						</div>
 					</div>
+						
 				</div>
+						
 			</div>
 		</div>
+					
+<!-- 				</div>
+			</div> -->
+		<!-- </div> -->
 	</section>
 	<!-- Баннер карусель на главной конец-->
 
@@ -223,26 +260,26 @@
 					    <button class="mypager">3</button>
 					    <button id="last_gridpager" class="mypager">last</button>
 					</p> -->
-				</div>
-				<div id="my-table-paginator" class="my-table-paginator">
-					<ul class="pagination-box">
-						<li class="pagination-item first">
-							<a id="first_gridpager" href="#">первая...</a>
-						</li>
-						<li class="pagination-item prev">
-							<a id="prev_gridpager" href="#">1</a>
-						</li>
-						<li class="pagination-item active">
-							<a id="paginator_current_page" href="#">1</a>
-						</li>
-						<li class="pagination-item next">
-							<a id="next_gridpager" href="#">3</a>
-						</li>
-						<li class="pagination-item last">
-							<a id="last_gridpager" href="#">..последняя</a>
-						</li>
-					</ul>
-				</div>
+					</div>
+					<div id="my-table-paginator" class="my-table-paginator">
+						<ul class="pagination-box">
+							<li class="pagination-item first">
+								<a id="first_gridpager" href="#">первая...</a>
+							</li>
+							<li class="pagination-item prev">
+								<a id="prev_gridpager" href="#">1</a>
+							</li>
+							<li class="pagination-item active">
+								<a id="paginator_current_page" href="#">1</a>
+							</li>
+							<li class="pagination-item next">
+								<a id="next_gridpager" href="#">3</a>
+							</li>
+							<li class="pagination-item last">
+								<a id="last_gridpager" href="#">..последняя</a>
+							</li>
+						</ul>
+					</div>
 
 				<!-- Изначальная таблица "Все торги" из макета, скорей всего она не нужна, тогда удалю совсем  НАЧАЛО-->
 					<!-- <div class="trade-table__wrap">
@@ -1566,7 +1603,7 @@
 								<a class="link-16px-2e2e2e" href="index.html">Главная</a>
 							</li>
 							<li>
-								<a class="link-16px-2e2e2e" href="">Рейтинг компании</a>
+								<a class="link-16px-2e2e2e" href="company-rating.html">Рейтинг компании</a>
 							</li>
 							<li>
 								<a class="link-16px-2e2e2e" href="news.html">Новости</a>
@@ -1621,7 +1658,7 @@
 
 <!-- bootstrap -->
 <script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script> -->
 
 <!-- Карусель slick -->
 <script src="assets/js/slick.min.js"></script>
@@ -1629,9 +1666,16 @@
 <!-- fontawesome -->
 <script src="assets/js/fontawesome/all.js"></script>
 
+<!-- графический интерфейс jquery -->
+<script src="assets/js/jquery-ui.min.js"></script>
+
+<!-- Маска для ввода номера телефона -->
+<script src="assets/js/jquery.maskedinput.js"></script>
+
 <!-- Скрипты jqgrid. Нужны для таблицы -->
 <script type="text/javascript" src="assets/js/i18n/grid.locale-ru.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/free-jqgrid/4.15.5/jquery.jqgrid.min.js"></script>
+
 
 <!-- Основные скрипты -->
 <script src="assets/js/main.js"></script>
@@ -1654,42 +1698,42 @@ $(document).ready(function () {
 		// 	{name:'longitude',index:'longitude'},		
 		// ],
         colModel: [
-            { name: 'id', label: "ID ЛОТА" },
+            { name: 'id', label: "ID ЛОТА", formatter:'showlink', formatoptions:{baseLinkUrl:'lot-card.html', addParam: ''} },
             { name: 'organisator', label: "ОРГАНИЗАТОР-РЕТЕЙЛЕР", formatter:'showlink', formatoptions:{baseLinkUrl:'someurl.php', addParam: '&action=edit'}, width: 200 },
             { name: 'product', label: "ТОВАР", width: 320 },
             { name: 'product_type', label: "Вид товара", stype: "select", searchoptions: { value: ":Все;Мясо:Мясо;Овощи:Овощи;Рыба:Рыба" } },
             { name: 'weight', label: "ОБЪЁМ", formatter:'showlink' },
-            { name: 'finish', label: "ЗАВЕРШЕНИЕ", sorttype: 'date', formatter: 'date', formatoptions: { newformat: "d-M-y"}},
+            { name: 'finish', label: "ЗАВЕРШЕНИЕ", sorttype: 'date', formatter: 'date', formatoptions: { newformat: "d-m-y"}, width: 200},
             { name: 'status', label: "СТАТУС", formatter:'showlink', formatoptions:{baseLinkUrl:'someurl.php', addParam: '&action=edit'} },
-            { name: 'time', label: "ВРЕМЯ", sorttype: 'date', formatter: 'date', formatoptions: { newformat : 'Y-m-d H:i:s'},searchoptions: { sopt: ["eq"] } },
+            { name: 'time', label: "ВРЕМЯ", sorttype: 'date', formatter: 'date', formatoptions: { newformat : 'd-m-y'},searchoptions: { sopt: ["eq"] },  width: 200 },
             { name: 'total_weight', label: "ВЕС СДЕЛКИ	" },
             { name: 'isActive', label: 'Торг активный', stype: "select", searchoptions: { value: ":Все;Активный:Активный;Не активный:Не активный" } }
         ],
         data: [
-            { id: "1", organisator: "Merkel", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg' , finish: '11.10.2019', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: 'Активный' },
-            { id: "2", organisator: "Mugabe", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Рыба', weight: '16000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2019-11-21', total_weight: 10000000, isActive: 'Активный'  },
+            { id: "1", organisator: "Merkel", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg' , finish: '19-03-2020', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: 'Активный' },
+            { id: "2", organisator: "Mugabe", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Рыба', weight: '16000 kg', finish: '11-10-2019', status: 'Запрос авторизации', time: '2019-11-21', total_weight: 10000000, isActive: 'Активный'  },
             { id: "3", organisator: "информация закрыта", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'закрыта', time: '2020-10-10', total_weight: 10000001, isActive: 'Не активный'  },
             { id: "4", organisator: "Obama", product: 'Рыба рыбная, без кос.. карасик о...', product_type: 'Овощи', weight: '10000 kg', finish: '2015', status: 'в Запрос авторизации', time: '2015-09-10', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "5", organisator: "Hollande", product: 'Рыба рыбная, без кос.. Киевская о...', product_type: 'Мясо', weight: '9000 kg', finish: '11.10.2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: 'Не активный'  },
-            { id: "6", organisator: "Merkel2", product: 'Кусок Заморозка, без кос.. карасик о...', product_type: 'Рыба', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: 'Активный' },
-            { id: "7", organisator: "Mugabe2", product: 'Рыба рыбная, без кос.. Киевская о...', product_type: 'Мясо', weight: '6000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2019-11-21', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "8", organisator: "Cameron2", product: 'Овощи, без кос.. Киевская о...', product_type: 'Мясо', weight: '21000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2020-10-10', total_weight: 10000001, isActive: 'Не активный'  },
+            { id: "5", organisator: "Hollande", product: 'Рыба рыбная, без кос.. Киевская о...', product_type: 'Мясо', weight: '9000 kg', finish: '11-10-2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: 'Не активный'  },
+            { id: "6", organisator: "Merkel2", product: 'Кусок Заморозка, без кос.. карасик о...', product_type: 'Рыба', weight: '15000 kg', finish: '11-10-2019', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: 'Активный' },
+            { id: "7", organisator: "Mugabe2", product: 'Рыба рыбная, без кос.. Киевская о...', product_type: 'Мясо', weight: '6000 kg', finish: '11-10-2019', status: 'Запрос авторизации', time: '2019-11-21', total_weight: 10000000, isActive: 'Активный'  },
+            { id: "8", organisator: "Cameron2", product: 'Овощи, без кос.. Киевская о...', product_type: 'Мясо', weight: '21000 kg', finish: '11-10-2019', status: 'Запрос авторизации', time: '2020-10-10', total_weight: 10000001, isActive: 'Не активный'  },
             { id: "9", organisator: "Obama2", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '2015', status: 'в процессе', time: '2015-09-10', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "10", organisator: "Hollande2", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Рыба', weight: '15000 kg', finish: '11.10.2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: 'Не активный'  },
-            { id: "11", organisator: "Merke3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: 'Активный' },
-            { id: "12", organisator: "Mugabe3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '23000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2019-11-21', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "13", organisator: "Cameron3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Овощи', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2020-10-10', total_weight: 10000001, isActive: 'Активный'  },
+            { id: "10", organisator: "Hollande2", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Рыба', weight: '15000 kg', finish: '11-10-2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: 'Не активный'  },
+            { id: "11", organisator: "Merke3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '11-10-2019', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: 'Активный' },
+            { id: "12", organisator: "Mugabe3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '23000 kg', finish: '11-10-2019', status: 'Запрос авторизации', time: '2019-11-21', total_weight: 10000000, isActive: 'Активный'  },
+            { id: "13", organisator: "Cameron3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Овощи', weight: '15000 kg', finish: '11-10-2019', status: 'Запрос авторизации', time: '2020-10-10', total_weight: 10000001, isActive: 'Активный'  },
             { id: "14", organisator: "Obama3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '2015', status: 'в процессе', time: '2015-09-10', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "15", organisator: "Hollande3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '14000 kg', finish: '11.10.2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: 'Не активный'  },
-            { id: "16", organisator: "Merkel4", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: 'Активный' },
-            { id: "17", organisator: "Mugabe4", product: 'Рыба рыбная, без кос.. шпроты о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2019-11-21', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "18", organisator: "Cameron4", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Овощи', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2020-10-10', total_weight: 10000001, isActive: 'Не активный'  },
+            { id: "15", organisator: "Hollande3", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '14000 kg', finish: '11-10-2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: 'Не активный'  },
+            { id: "16", organisator: "Merkel4", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '11-10-2020', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: 'Активный' },
+            { id: "17", organisator: "Mugabe4", product: 'Рыба рыбная, без кос.. шпроты о...', product_type: 'Мясо', weight: '15000 kg', finish: '11-10-2019', status: 'Запрос авторизации', time: '2019-11-21', total_weight: 10000000, isActive: 'Активный'  },
+            { id: "18", organisator: "Cameron4", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Овощи', weight: '15000 kg', finish: '01-10-20', status: 'Запрос авторизации', time: '2020-10-10', total_weight: 10000001, isActive: 'Не активный'  },
             { id: "19", organisator: "Obama4", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Овощи', weight: '15000 kg', finish: '2015', status: 'в процессе', time: '2015-09-10', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "20", organisator: "Hollande4", product: 'Рыба рыбная, без кос.. шпроты о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: 'Не активный'  },
+            { id: "20", organisator: "Hollande4", product: 'Рыба рыбная, без кос.. шпроты о...', product_type: 'Мясо', weight: '15000 kg', finish: '11-11-2020', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: 'Не активный'  },
             { id: "3", organisator: "информация закрыта", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'закрыта', time: '2020-10-10', total_weight: 10000001, isActive: 'Не активный'  },
             { id: "4", organisator: "Obama", product: 'Рыба рыбная, без кос.. карасик о...', product_type: 'Овощи', weight: '10000 kg', finish: '2015', status: 'в Запрос авторизации', time: '2015-09-10', total_weight: 10000000, isActive: 'Активный'  },
-            { id: "5", organisator: "Hollande", product: 'Рыба рыбная, без кос.. Киевская о...', product_type: 'Мясо', weight: '9000 kg', finish: '11.10.2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: 'Не активный'  },
-            { id: "6", organisator: "Merkel2", product: 'Кусок Заморозка, без кос.. карасик о...', product_type: 'Рыба', weight: '15000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: 'Активный' },
+            { id: "5", organisator: "Hollande", product: 'Рыба рыбная, без кос.. Киевская о...', product_type: 'Мясо', weight: '9000 kg', finish: '11-10-2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: 'Не активный'  },
+            { id: "6", organisator: "Merkel2", product: 'Кусок Заморозка, без кос.. карасик о...', product_type: 'Рыба', weight: '15000 kg', finish: '11-09-2020', status: 'Запрос авторизации', time: '2018-03-10', total_weight: 10000000, isActive: 'Активный' },
             { id: "7", organisator: "Mugabe2", product: 'Рыба рыбная, без кос.. Киевская о...', product_type: 'Мясо', weight: '6000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2019-11-21', total_weight: 10000000, isActive: 'Активный'  },
             { id: "8", organisator: "Cameron2", product: 'Овощи, без кос.. Киевская о...', product_type: 'Мясо', weight: '21000 kg', finish: '11.10.2019', status: 'Запрос авторизации', time: '2020-10-10', total_weight: 10000001, isActive: 'Не активный'  },
             { id: "9", organisator: "Obama2", product: 'Кусок Заморозка, без кос.. Киевская о...', product_type: 'Мясо', weight: '15000 kg', finish: '2015', status: 'в процессе', time: '2015-09-10', total_weight: 10000000, isActive: 'Активный'  },
@@ -1726,7 +1770,8 @@ $(document).ready(function () {
             { id: "20", organisator: "Hollande4", product: 'Рыба рыбная, без кос.. шпроты о...', product_type: 'Мясо', weight: '15000 kg', finish: '11.10.2019', status: 'в процессе', time: '2014-09-19', total_weight: 10000000, isActive: 'Не активный'  },
         ],
         guiStyle: 'bootstrap4',
-        iconSet: 'fontAwesome',
+        // iconSet: 'fontAwesome',
+        iconSet: 'jQueryUI',
         idPrefix: 'lot_',
         caption: 'Все торги',
         hidegrid: false,
@@ -1870,6 +1915,14 @@ function initPaginator() {
 	})
  })
 
+ $(document).ready(function() {
+ 	$('#gs_grid_finish, #gs_grid_time').datepicker({
+ 		locale: 'ru',
+ 		showButtonPanel: true,
+		dateFormat: 'dd-mm-y'
+ 	})
+ })
+
 </script>
 <!-- Генерация таблицы конец-->
 
@@ -1879,6 +1932,11 @@ function initPaginator() {
 <!-- Модальное окно авторизации начало-->
   
   <div class="modal__login">
+  	<div class="close-button">
+		<span>
+			<svg class="svg-inline--fa fa-times-circle fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"></path></svg><!-- <i class="fas fa-times-circle"></i> -->
+		</span>
+	</div>
     <div class="modal__login-wrap">
       <div class="trade-table__heading">
         <h4 class="text-16px-white">Войти</h4>
