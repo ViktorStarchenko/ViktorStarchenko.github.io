@@ -1,0 +1,91 @@
+.modal-wrap {
+	width: 600px;
+	position: fixed;
+	top: -100%;
+	left: calc( 50% - 300px );
+	z-index: 10;
+	transition-duration: .4s;
+}
+
+.modal-wrap.active {
+	top: 20%;
+	transition-duration: .4s;
+}
+
+.modal-inner img {
+	max-width: 100%;
+}
+
+.modal-wrap .close-button { 
+	position: absolute;
+	right: -15px;
+	top: -15px;
+	cursor: pointer;
+}
+
+.modal-wrap .close-btn {
+	position: absolute;
+    top: 0;
+    left: 100%;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    background: #09ceff;
+    font-size: 40px;
+    line-height: 54px;
+    text-align: center;
+    color: #000;
+    border: none;
+    text-shadow: none;
+    cursor: pointer;
+    padding-bottom: 13px;
+}
+
+.modal-wrap .close-btn .close-icon {
+	width: 20px;
+    height: 20px;
+}
+
+.modal-wrap .close-btn .close-icon line {
+	stroke: #000;
+    stroke-width: 3px;
+}
+
+.shadow-screen {
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30,31,37,0.6);
+    cursor: pointer;
+    z-index: -100;
+    opacity: 0;
+    transition-duration: .3s;
+}
+
+.shadow-screen.active {
+	opacity: 1;
+	z-index: 1;
+	transition-duration: .3s;
+}
+
+@media screen and (max-width: 767px) {
+	.modal-wrap {
+		width: 90%;
+		left: 5%;
+	}
+
+	.modal-wrap .close-btn {
+		top: -40px;
+		left: auto;
+		right: 0;
+	    width: 40px;
+	    height: 40px;
+	    font-size: 30px;
+	    line-height: 40px;
+	}
+
+	
+}
+
