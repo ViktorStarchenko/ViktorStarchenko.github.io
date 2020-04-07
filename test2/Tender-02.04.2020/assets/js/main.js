@@ -449,8 +449,9 @@ $(document).ready(function(){
 // Страница торгов показать модальное окно Пригласить компании по Email
 
 $(document).ready(function(){
-  $('.red-btn, .green-btn-square, a').on('click', function(){
+  $('a.red-btn, a.green-btn-square, a').on('click', function(){
     var btn_href = $(this).attr('href')
+    console.log(btn_href)
   btn_href = btn_href.slice(1)
 console.log(btn_href)
     var modal_wrap = $('.modal-wrap')
@@ -470,6 +471,7 @@ console.log(btn_href)
         // }
        // } 
         if ($(modal_wrap[elem]).attr('id') ==  btn_href) {     
+        // if ($(modal_wrap[elem]).attr('id').search(btn_href)) {     
         
           console.log($(this))   
          
