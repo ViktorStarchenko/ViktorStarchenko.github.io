@@ -1,0 +1,383 @@
+var app = app || {};
+(function($) {
+    app.request = (function() {
+        var process = function(p, callback) {
+            var options = {
+                url: '',
+                method: 'get',
+                type: 'html',
+                data: {},
+                processData: true,
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8'
+            };
+            $.extend(options, p);
+            console.log(options);
+            $.ajax({
+                type: options.method,
+                dataType: options.type,
+                url: options.url,
+                data: options.data,
+                contentType: options.contentType,
+                processData: options.processData,
+                success: function(response) {
+                    if (options.type === 'json' && typeof response === 'string') response = JSON.stringify(response);
+                    if (response.events) app.events.listen(response.events);
+                    if (response.actions) read(response);
+                    if (typeof callback === 'function') return callback(response);
+                    return response;
+                },
+                error: function(response) {
+                    if (response.responseText) console.log('Error Response: ' + response.responseText);
+                    else
+                        console.log(response);
+                    return;
+                }
+            });
+        };
+        var submit = function($form, callback, type, s) {
+            if (!$form.length) return false;
+            var s = s || {};
+            var multipart = window.FormData && $form.find('input[type="file"]').length,
+                options = {
+                    'url': s.url || $form.data('ajax') || $form.attr('action') || '',
+                    'method': $form.attr('method') || 'get',
+                    'type': type || 'json',
+                    'data': multipart ? new FormData($form[0]) : $form.serialize()
+                };
+            if (multipart) options.contentType = false;
+            if (multipart) options.processData = false;
+            process(options, callback);
+        };
+        var load = function(url, place) {
+            var $where = typeof place !== 'object' ? $(place) : place;
+            if (!$where.length) return false;
+            process({
+                url: url
+            }, function(response) {
+                $where.html(response).initBlocks();
+                if ($where.find('.scrolling').length) app.scrolling.reinit($where.find('.scrolling'));
+                if ($where.find('.i-tooltip').length) app.tooltip.init($where.find('.i-tooltip'));
+            });
+        };
+        var read = function(response) {
+            if (response.actions)
+                for (var a in response.actions) switch (a) {
+                    case 'popup':
+                        switch (response.actions[a]) {
+                            case 'close':
+                                app.popup.close();
+                                break;
+                            default:
+                                var popup = response.actions[a];
+                                if (popup.change_overlay) app.popup.close();
+                                else
+                                    popup.without_overlay = true;
+                                setTimeout(function() {
+                                    app.popup.open(popup);
+                                }, 300);
+                                break;
+                        }
+                        break;
+                    case 'load':
+                        for (var selector in response.actions[a]) app.request.load(response.actions[a][selector], selector);
+                        break;
+                    case 'insert':
+                        var insert, $content = $('.app');
+                        for (var i = response.actions[a].length - 1; i >= 0; i--) {
+                            insert = response.actions[a][i];
+                            switch (insert.type) {
+                                case 'html':
+                                    $content.find(insert.selector).html(insert.value);
+                                    break;
+                                case 'text':
+                                    $content.find(insert.selector).text(insert.value);
+                                    break;
+                                case 'val':
+                                    $content.find(insert.selector).val(insert.value);
+                                    break;
+                                case 'data':
+                                    $content.find(insert.selector).data(insert.name, insert.value);
+                                    break;
+                            }
+                        }
+                        break;
+                    case 'redirect':
+                        var action = response.actions[a],
+                            delay = action.delay || 1;
+                        if (action.url) setTimeout(function() {
+                            window.location.href = action.url;
+                        }, delay);
+                        break;
+                    case 'reload':
+                        var action = response.actions[a],
+                            delay = action || 1;
+                        setTimeout(function() {
+                            window.location.reload();
+                        }, delay);
+                        break;
+                    case 'remove':
+                        var elements = response.actions[a];
+                        if (typeof elements !== 'object') elements = [elements];
+                        for (var i = 0; i <= elements.length; i++) $(elements[i]).remove();
+                        break;
+                }
+        };
+        return {
+            'process': process,
+            'submit': submit,
+            'load': load,
+            'read': read
+        };
+    })();
+    app.validate = (function() {
+        var email = function(value) {
+            var mask = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return mask.test(value);
+        };
+        var string = function(value, length, max) {
+            var length = length || 1,
+                max = max || 999999;
+            if (typeof value !== 'string') return false;
+            return value.length >= length && value.length <= max;
+        };
+        var integer = function(value, length, max) {
+            var length = length || 1,
+                valid;
+            if (typeof value !== 'string') return false;
+            value = value.replace(/[^0-9]/g, '');
+            valid = value.length >= length;
+            if (valid && max) valid = value.length <= max;
+            return valid;
+        };
+        var range = function(value, min, max) {
+            value = parseInt(value);
+            return value >= min && value <= max;
+        };
+        return {
+            'email': email,
+            'string': string,
+            'range': range,
+            'integer': integer
+        }
+    })();
+    app.forms = (function() {
+        var s = {
+                'main': $('.forms__ajax'),
+                'form': '.forms__self',
+                'field': '.forms__field',
+                'error': 'forms__field_error',
+                'valid': 'forms__field_valid',
+                'container': '.forms__container',
+                'button': '.forms__button',
+                'loading': 'forms_loading',
+                '$error': '.forms__error',
+                'reload': '.forms__reload',
+                'file': '.forms__file',
+                'filename': {
+                    s: '.feedback__file-name',
+                    hidden: 'feedback__file-name_hidden'
+                }
+            },
+            checkTimeout;
+        var init = function() {
+            s.main.on('change', 'input,textarea', _validateField);
+            s.main.on('keyup', 'input', _hideError);
+            s.main.on('click', s.$error, _hideFieldError);
+            s.main.on('submit', s.form, _submit);
+            s.main.on('click', s.reload, _reload);
+            s.main.on('click', '.forms__upload', _triggerUpload);
+            s.main.on('change', s.file, _upload);
+            s.main.on('click', s.filename.s, _remove);
+            s.main.on('keyup', '.forms__input_counter', _checkCounter);
+        };
+
+        var _checkCounter = function() {
+
+            var $this = $(this),
+                //value = $.trim($this.val()),
+                value = $this.val(),
+                rules = $this.data('validate').split(':'),
+                $field = $this.closest('.forms__field'),
+                $counter = $field.find('.forms__counter-val');
+
+            if (value.length > rules[2]) {
+
+                //this._setMod($counter, 'error');
+                //value = value.substring(0, value.length - 1);
+                $this.val(value);
+                _validate($this, true);
+            } else {
+
+                //this._delMod($counter, 'error');
+            }
+
+            $counter.text(value.length);
+        };
+        var _triggerUpload = function(e) {
+            var $this = $(e.target),
+                $form = $this.closest(s.form),
+                $input = $form.find(s.file);
+            $input.trigger('click');
+        };
+        var _upload = function(e) {
+            var $input = $(e.target),
+                files = $input[0].files || {};
+            for (var i = 0; i < files.length; i++) {
+                var file = files[i];
+                _showName($input, file.name);
+            }
+        };
+        var _showName = function($input, name) {
+            var $name = $input.closest(s.form).find(s.filename.s);
+            $name.text(name).removeClass(s.filename.hidden);
+        };
+        var _remove = function(e) {
+            var $this = $(e.target);
+            $this.empty().addClass(s.filename.hidden);
+            $this.closest(s.form).find(s.file).attr('value', '');
+        };
+        var _submit = function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var $form = $(e.target),
+                $main = $form.closest(s.main),
+                $container = $form.closest(s.container);
+            _hideErrors($form);
+            if (!_checkForm($form)) {
+                $form.find('input,textarea').each(function() {
+                    _validate($(this), true);
+                });
+                return false;
+            }
+            $main.addClass(s.loading);
+            app.request.submit($form, function(response) {
+                setTimeout(function() {
+                    _after(response, $main);
+                    $main.removeClass(s.loading);
+                }, ($main.find(s.button).data('timeout') || 0));
+            }, ($form.attr('data-type') || 'json'));
+        };
+        var _after = function(response, $main) {
+            if (response.fields_error)
+                for (var error in response.fields_error) _showError(error, response.fields_error[error]);
+
+            if (response && typeof response == 'string') {
+            	$main.find(s.container).html(response);
+            }
+        };
+        var _showError = function(name, text) {
+            var $field = s.main.find('[name=' + name + ']').closest(s.field);
+            $field.addClass(s.error);
+            $field.find(s.$error).html($('<span>').html(text));
+        };
+        var _reload = function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            var $link = $(e.target).closest(s.reload),
+                $container = $link.closest(s.container),
+                link;
+            if (link = $link.attr('href')) app.request.load(link, $container);
+        };
+        var _validateField = function(e) {
+            var $this = $(e.target);
+            _validate($this, true);
+            _checkForm($this.closest(s.form));
+        };
+        var _hideErrors = function($form) {
+            $form.find(s.field).removeClass(s.error);
+        };
+        var _hideFieldError = function(e) {
+            var $this = $(e.target);
+            $this.closest(s.field).removeClass(s.error).find('input,textarea').focus();
+        };
+        var _hideError = function(e) {
+            var $this = $(e.target);
+            $this.closest(s.field).removeClass(s.error);
+            if (checkTimeout) clearTimeout(checkTimeout);
+            checkTimeout = setTimeout(function() {
+                _checkForm($this.closest(s.form));
+            }, 1000);
+        };
+        var _checkForm = function($form) {
+            var valid, formValid = true;
+            $form.find('input,textarea').each(function() {
+                valid = _validate($(this));
+                if (!valid) formValid = false;
+            });
+            return formValid;
+            if (formValid) $form.find('button').prop('disabled', '');
+            else
+                $form.find('button').prop('disabled', 'disabled');
+        };
+        var _validate = function($el, show, rule) {
+            var rule = $el.data('validate') || rule,
+                alternate = $el.data('alternate'),
+                value = $el.val(),
+                valid = false;
+            if (!rule) return true;
+            var rules = rule.split(':'),
+                $field = $el.closest(s.field);
+            switch (rules[0]) {
+                case 'email':
+                    valid = app.validate.email(value);
+                    break;
+                case 'string':
+                    var length = rules[1],
+                        max = rules[2] || false;
+                    valid = app.validate.string(value, length, max);
+                    break;
+                case 'integer':
+                    var length = rules[1];
+                    valid = app.validate.integer(value, length);
+                    break;
+                default:
+                    valid = true;
+                    break;
+            }
+            if (!valid && alternate) {
+                var alt_rules = alternate.split(':'),
+                    $next_input = $el.closest(s.form).find('input[name="' + alt_rules[0] + '"]'),
+                    $next_field = $next_input.closest(s.field),
+                    valid_other;
+                if ($next_input.length) valid_other = _validate($next_input, false, alt_rules[1] + ':' + alt_rules[2]);
+                if (valid_other) valid = true;
+                if (show && $next_field && !valid_other) $next_field.addClass(s.error);
+            }
+            if (valid_other) {
+                $field.removeClass(s.error);
+                $next_field.removeClass(s.error);
+            }
+            if (show) valid ? $field.removeClass(s.error).addClass(s.valid) : $field.addClass(s.error).removeClass(s.valid);
+            else
+                return valid;
+        };
+        init();
+        return {};
+    })();
+
+
+    app.viewCount = (function() {
+
+        var $counter = $('.app-view-count');
+
+
+        var init = function() {
+
+
+            app.request.process({
+                url: $counter.attr('data-load'),
+                type: 'json'
+            }, _insertValue);
+        };
+
+        var _insertValue = function(response) {
+
+            if (response && response.count) {
+                $counter.append(response.count);
+            }
+        };
+
+        !$counter.length || init();
+
+    })();
+})(jQuery);
