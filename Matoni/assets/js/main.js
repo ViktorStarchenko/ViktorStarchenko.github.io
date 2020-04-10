@@ -100,6 +100,32 @@ $(document).ready(function(){
     })
 })
 
+
+$(document).ready(function(){
+  // Lazy load
+  lazyLoad = el => {
+    const scrollTop = $(window).scrollTop()
+    const winHeight = $(window).height()
+    const offset = $(el).offset().top
+    const schemeHeight = $(el).height()
+
+    if (scrollTop + winHeight >= offset && scrollTop <= offset + schemeHeight) {
+      const src = $(el).attr('data-src')
+      $(el).attr('src', src)
+    }
+  }
+
+   $(window).on('load scroll', () => {
+
+    $('.lazy').each((idx, item) => {
+      lazyLoad(item)
+    })
+  })
+})
+
+// \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+//////////////////////////////////lazy
+
 function closeBtn() {
   $('.screen-shadow.show, .modal-wrap .close-button, .modal__login .close-button').on('click', function() {
 
