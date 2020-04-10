@@ -319,6 +319,21 @@ button.red-btn, button.red-btn:focus {
     background-size: contain;
 }
 
+/*МОДАЛЬНОЕ ОКНО СООБЩЕНИЙ*/
+
+.modal-wrap.modal-message {
+    padding: 30px 5px;
+    min-height: 100px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-wrap.modal-message.showModal {
+    top: 0;
+}
+
 
 
 /******************************************************TEXT STYLES***************************************************/
