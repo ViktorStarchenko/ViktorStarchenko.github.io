@@ -332,6 +332,7 @@ button.red-btn, button.red-btn:focus {
 
 .modal-wrap.modal-message.showModal {
     top: 0;
+    transition-duration: .3s
 }
 
 

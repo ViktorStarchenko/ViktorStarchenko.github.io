@@ -39,7 +39,8 @@ $(document).ready(function(){
   $('.inform-block').slick({
     autoplay: true,
     autoplaySpeed: 5000,
-    dots: true
+    dots: true,
+    arrows: false
   })
 })
 
@@ -50,12 +51,6 @@ $(document).ready(function() {
     $('.mobile-menu-wrap').addClass('show');
     $('.screen-shadow').addClass('show');
     $('body').addClass('hidden');
-
-    // $('.mobile-menu-wrap .close-button').on('click', function() {
-    //   $('.mobile-menu-wrap').removeClass('show');
-    //   $('.screen-shadow').removeClass('show');
-    //   $('body').removeClass('hidden');
-    // })
 
     $('.screen-shadow.show, .mobile-menu-wrap .close-button').on('click', function() {
       $('.mobile-menu-wrap').removeClass('show');
@@ -75,11 +70,6 @@ $(document).ready(function() {
     $('.screen-shadow').addClass('show');
     $('body').addClass('hidden');
 
-    // $('.mobile-menu-wrap .close-button').on('click', function() {
-    //   $('.mobile-menu-wrap').removeClass('show');
-    //   $('.screen-shadow').removeClass('show');
-    //   $('body').removeClass('hidden');
-    // })
     closeBtn()
     
 
@@ -192,70 +182,6 @@ $(document).ready(function(){
      $(".tel-mask").mask("+38 (999) 999-99-99");
    });
 
-
-
-
-
-
-
-// Страница пользователя, вкладка ТОВАРЫ  "ВАША КОМПАНИЯ ЗАКУПАЕТ"
-// $(document).ready(function(){
-//   $(".checkbox").on('click', function(){
-//     var checkbox_data = $(this).attr('data-check')
-//     var ckeckbox_list =  $('.ckeckbox-dropdown-list');
-//     ckeckbox_list.each(function(elem){
-
-//         // console.log($(video[elem]).attr('data-issetSrc')) 
-//         if ($(ckeckbox_list[elem]).attr('data-check') == checkbox_data) {
-//           // console.log($(this).attr('data-issetSrc'))
-//            $(this).toggleClass('show')
-//         }
-
-//       })
-
-//   })
-
-//   $(".checkbox input[type=checkbox]").change(function() {
-//     var data_purchase = $(this).attr('data-check')
-//     var ckeckbox_list =  $('.ckeckbox-dropdown-list');
-
-//     if ($(this).is(':checked')) {
-      
-//       ckeckbox_list.each(function(elem){
-
-//         // console.log($(video[elem]).attr('data-issetSrc')) 
-//         if ($(ckeckbox_list[elem]).attr('data-check') == data_purchase) {
-//           // console.log($(this).attr('data-issetSrc'))
-//            $(this).toggleClass('show')
-//            var checkbox_childs = ($(this).find('input[type=checkbox]'))
-
-//            checkbox_childs.each(function(elem){ 
-//             $(this).prop('checked', true)
-//            })
-//         }
-
-//       })
-//     } else {
-//       ckeckbox_list.each(function(elem){
-
-//         // console.log($(video[elem]).attr('data-issetSrc')) 
-//         if ($(ckeckbox_list[elem]).attr('data-check') == data_purchase) {
-//           // console.log($(this).attr('data-issetSrc'))
-//            $(this).toggleClass('show')
-//            var checkbox_childs = ($(this).find('input[type=checkbox]'))
-
-//            checkbox_childs.each(function(elem){ 
-//             $(this).prop('checked', false)
-//            })
-//         }
-
-//       })
-//     }
-    
-
-    
-//   });
-// })
 
 // Страница пользователя, вкладка ТОВАРЫ  "ВАША КОМПАНИЯ ПОСТАВЛЯЕТ"
 $(document).ready(function(){
@@ -455,23 +381,10 @@ $(document).ready(function(){
   btn_href = btn_href.slice(1)
 console.log(btn_href)
     var modal_wrap = $('.modal-wrap')
-// console.log(modal_wrap)
 
      modal_wrap.each(function(elem){
 
-      // if ($(modal_wrap[elem]).attr('id') != undefined)  { 
-
-        // if ($(modal_wrap[elem]).attr('id').search(btn_href)) {
-        //   console.log($(this))   
-        //   $(this).addClass('showModal')
-        //   $('.screen-shadow').addClass('show');
-        //   $('body').addClass('hidden');
-        //   closeBtn()
-        //   return false
-        // }
-       // } 
-        if ($(modal_wrap[elem]).attr('id') ==  btn_href) {     
-        // if ($(modal_wrap[elem]).attr('id').search(btn_href)) {     
+        if ($(modal_wrap[elem]).attr('id') ==  btn_href) {      
         
           console.log($(this))   
          
@@ -483,11 +396,18 @@ console.log(btn_href)
         }
 
       })
+    
+  })
+})
 
-    // console.log(modal_wrap)
-    // $('#modal-invite-email.modal-wrap').addClass('showModal')
-    
-    
+// Модальное окно сообщений
+$(document).ready(function(){
+  $('body').on('click', function(){
+    $('.modal-message').addClass('showModal');
+    function hideMessage() {
+      $('.modal-message').removeClass('showModal')
+    }
+    setTimeout(hideMessage, 5000)
   })
 })
 
