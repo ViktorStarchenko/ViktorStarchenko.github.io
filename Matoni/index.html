@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+
+<html lang="ru-RU">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Matoni</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <!-- Главные стили -->
+    <link rel="stylesheet" href="assets/css/style.css">
+	<!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
+    <!-- Карусель slick -->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/slick-theme.css">
+	<!-- font awesome -->
+    <link rel="stylesheet" href="assets/css/fontawesome/all.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+
+
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/css/flick/jquery-ui.theme.min.css" /> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.min.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="themes/redmond/jquery-ui-1.7.1.custom.css" /> -->
+	
+    
+<body>
+	<!-- Оверлей для мобильного меню, модальных оконо и тд.	 -->
+   <div class="screen-shadow"></div> 
+
+<!-- Шапка начало    -->
+<header>
+	    <div class="header__top">
+          <div class="header__top-inner wrapper m-auto">
+              <a class="navbar-brand header__logo-link" href="#">
+                    <img src="assets/img/Matoni_logo_adapt.png" alt="logo">
+                </a>
+              <ul class="header__phone-list">
+                <li class="header__phone-item">
+                  <a class="contact-link contact-link_mail" href="mailto:matoni2011@gmail.com">matoni2011@gmail.com</a>
+                </li>
+                <li class="header__phone-item">
+                  <a class="contact-link contact-link_mail" href="mailto:matoni2011@gmail.com">matoni2011@gmail.com</a>
+                </li>
+               </ul>
+               <ul class="header__phone-list"> 
+                <li class="header__phone-item">
+                  <a class=" contact-link contact-link_phone" href="tel:+38(044)5780470">+38 (000) 666 66 66</a>
+                </li>
+                <li class="header__phone-item">
+                  <a class=" contact-link contact-link_phone" href="tel:+38(044)5780470">+38 (000) 999 99 99</a>
+                </li>
+              </ul>
+
+              <div class="header__socials">
+                  <ul class="header__socials-block">
+                      <li class="header__socials-item">
+                          <a href="">
+                              <i class="fab fa-twitter"></i>
+                          </a>
+                      </li>
+                      <li class="header__socials-item">
+                          <a href="">
+                              <i class="fab fa-linkedin-in"></i>
+                          </a>
+                      </li>
+                  </ul>
+
+	              <ul class="language_block">
+	              	<li class="header__phone-item">
+	                  <a class="text-16px-232323" href="#">RU</a>
+	                </li>
+	                <li class="header__phone-item">
+	                  <a class="text-16px-232323" href="#">UA</a>
+	                </li>
+	                <li class="header__phone-item">
+	                  <a class="text-16px-232323" href="#">ENG</a>
+	                </li>
+	              </ul>
+              </div>
+              
+          </div>
+        </div>
+        <div class="mobile-menu-wrap">
+                <button class="mobile-menu-close-button">
+                  <i class="far fa-times-circle"></i>
+                </button>
+                <ul class="mobile-navbar-nav" >
+                  <li class="mobile-nav-item">
+                    <a class="mobile-nav-link" href="#">Главная</a>
+                  </li>
+                  <li class="mobile-nav-item">
+                    <a class="mobile-nav-link" href="#">Курсы</a>
+                  </li>
+                  <li class="mobile-nav-item">
+                    <a class="mobile-nav-link" href="#">Семинары</a>
+                  </li>
+                  <li class="mobile-nav-item">
+                    <a class="mobile-nav-link" href="#">Расписание и стоимость</a>
+                  </li>
+                  <li class="mobile-nav-item">
+                    <a class="mobile-nav-link" href="#">О нас</a>
+                  </li>
+                  <li class="mobile-nav-item">
+                    <a class="mobile-nav-link" href="#">Контакты</a>
+                  </li>
+                </ul>
+              </div>
+        <div class="header__bottom">
+          <div class="wrapper m-auto">
+            <nav class="navbar navbar-expand-lg p-0">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="fas fa-bars"></i>
+                </span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav" >
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Главная</a>
+                  </li>  
+                  <li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			          Услуги
+			        </a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			          <a class="dropdown-item" href="#">Транспортировка LPG</a>
+			          <a class="dropdown-item" href="#">Логистический консалтинг</a>
+			        </div>
+			      </li>
+			      <li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			          Траспортировка LPG
+			        </a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			          <a class="dropdown-item" href="#">Направления</a>
+			          <a class="dropdown-item" href="#">Обеспечение транспорта</a>
+			          <a class="dropdown-item" href="#">Обеспечение внутренних поставок LPG</a>
+			        </div>
+			      </li>
+			      <li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			          Сотрудничество
+			        </a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			          <a class="dropdown-item" href="#">Трейдерам и розничным компаниям</a>
+			          <a class="dropdown-item" href="#">Собственникам газовозов</a>
+			        </div>
+			      </li>
+                  <li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			          О компании
+			        </a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+			          <a class="dropdown-item" href="#">Кто мы?</a>
+			          <a class="dropdown-item" href="#">Новости</a>
+			          <a class="dropdown-item" href="#">Наши партнеры</a>
+			          <a class="dropdown-item" href="#">Отзывы</a>
+			          <a class="dropdown-item" href="#">Вакансии</a>
+			          <a class="dropdown-item" href="#">Контакты</a>
+			        </div>
+			      </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+
+            
+        </div>
+        
+</header>	
+<!-- Шапка конец -->
+
+
+<main>
+	<section class="main-banner">
+		<div class="container-fluid p-0">
+			<div class="row m-auto">
+				<div class="col-12 p-0">
+					<div class="main-banner__slider-wrap slider">
+						<div>
+							<div class="main-banner__item first-slide">
+								<div class="main-banner__item-text">
+									<div class="main-banner__item-content">
+										<span class="text-24px-orange">LPG</span>
+										<span class="text-48px-white">быстро</span>
+										<span class="text-48px-white">ВОВРЕМЯ</span>
+										<span class="text-48px-white">В ПОЛНОМ ОБЪЕМЕ</span>
+									</div>
+									
+								</div>
+								<div class="main-banner__item-img">
+									<picture>
+									    <source srcset="assets/img/main/Jpeg_1.webp" type="image/webp">
+									    <img class="" src="assets/img/main/Jpeg_1.jpg" alt="banner__item">
+									</picture>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="main-banner__item">
+								<div class="main-banner__item-text">
+									<div class="main-banner__item-content text-card">
+										<span class="list-item-orange text-30px-white">Эффективное управление Вашим транспортом</span>
+										<span class="list-item-orange text-30px-white">Приглашаем к сотрудничеству собственников газовозов</span>
+									</div>
+									
+								</div>
+								<div class="main-banner__item-img">
+									<picture>
+									    <source srcset="assets/img/main/Jpeg_1_2.webp" type="image/webp">
+									    <img class="" src="assets/img/main/Jpeg_1_2.jpg" alt="banner__item">
+									</picture>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="main-banner__item">
+								<div class="main-banner__item-text">
+									<div class="main-banner__item-content text-card">
+										<span class="list-item-orange text-30px-white">Lоставляем LPG с 2011 года </span>
+										<span class="list-item-orange text-30px-white">Более 15 млн. пройденных километров</span>
+										<span class="list-item-orange text-30px-white">10 современных газовозов</span>
+									</div>
+									
+								</div>
+								<div class="main-banner__item-img">
+									<picture>
+									    <source srcset="assets/img/main/Jpeg_1_3.webp" type="image/webp">
+									    <img class="" src="assets/img/main/Jpeg_1_3.jpg" alt="banner__item">
+									</picture>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</section>
+
+	<section class="main-services">
+		<div class="container-fluid p-0">
+			<div class="row m-auto">
+				<div class="col-12 p-0">
+					<div class="text-background text-center">
+			          <p class="title__back-over">УСЛУГИ</p>
+			          <h2 class="sub-title">УСЛУГИ</h2>
+			        </div>
+				</div>
+			</div>
+			<div class="row m-auto">
+				<div class="col-12 col-lg-6 p-0">
+					<div class="main-services__img big-img-left">
+						<picture>
+						    <source srcset="assets/img/main/services.webp" type="image/webp">
+						    <img class="img-fluid" src="assets/img/main/services.jpg" alt="services">
+						</picture>
+					</div>
+				</div>
+				<div class="col-12 col-lg-6 p-0">
+					<div class="main-services__text">
+						<div class="main-services__item">
+							<div class="main-services__heading">
+								<img src="assets/img/icons/truck_1.svg" alt="truck_1">
+								<a href="#" class="text-24px-orange hover-arrow-right">Транспортировка LPG</a>
+								<!-- <img src="assets/img/icons/right_arrow.svg" alt="right_arrow"> -->
+							</div>
+							<div class="list-body">
+								<span class="text-24px-232323 text-800">Мы гарантируем:</span>
+								<ul class="list">
+									<li class="list-item text-16px-232323">Современный автопарк газовозов под ваши потребности</li>
+									<li class="list-item text-16px-232323">Соответствие объемов выгрузки объемам загрузки </li>
+									<li class="list-item text-16px-232323">Круглосуточную диспетчеризацию вашего ресурса</li>
+									<li class="list-item text-16px-232323">Широкую географию направлений загрузки - выгрузки</li>
+									<li class="list-item text-16px-232323">Справедливую цену на наши услуги</li>
+								</ul>
+
+								<a href="#" class="btn-blue">Заказать услугу</a>
+							</div>
+						</div>
+
+						<div class="main-services__item">
+							<div class="main-services__heading">
+								<img src="assets/img/icons/logistic.svg" alt="logistic">
+								<a href="#" class="text-24px-orange hover-arrow-right">Логистический консалтинг</a>
+								<!-- <img src="assets/img/icons/right_arrow.svg" alt="right_arrow"> -->
+							</div>
+							<div class="list-body">
+								<a href="#" class="btn-blue">Заказать услугу</a>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="main-directions">
+		<div class="container-fluid p-0">
+			<div class="row wrapper m-auto">
+				<div class="col-12">
+					<div class="text-background text-center">
+			          <p class="title__back-over">НАПРАВЛЕНИЯ</p>
+			          <h2 class="sub-title">Направления перевозок LPG</h2>
+			        </div>
+				</div>
+			</div>
+			<div class="row wrapper m-auto">
+				<div class="col-12">
+					<div class="main-directions__wrap">
+						
+							<div class="mtn-pills-wrap">
+								<ul class="nav nav-tabs mtn-nav-pills">
+								  <li class="mtn-nav-pills-item active"><a class="mtn-nav-pills-link text-18px-white active" data-toggle="tab" href="#import">Обеспечение импортных поставок LPG в Украину автонормами с территории Беларуси, РФ, Польши, Литвы, Румынии</a></li>
+								  <li class="mtn-nav-pills-item "><a class="mtn-nav-pills-link text-18px-white" data-toggle="tab" href="#domestic">Обеспечение внутренних перевозок LPG в Украине</a></li>
+								</ul>
+
+								<div class="tab-content">
+								  <div id="import" class="tab-pane fade in active show">
+								    
+									<div class="mtn-pills-content main-directions__inner">
+								    	<div class="main-directions__content-neading">
+								    		<h4 class="text-19px-232323 text-center">Перевозки LPG по схеме «с завода / ГНС до заправки (Украина)» с территории Белоруссии, Польши, Румынии, Литвы, РФ Средняя длительность рейса – 3,3 суток.</h4>
+								    	</div>
+										<div class="main-directions__content">
+											<div class="main-directions__info">
+												<p class="orange-line-left text-16px-232323">Поставка LPG автомобильными нормами в Украину традиционно логистически выгодна в приграничных областях:</p>
+												<ul class="list-body">
+													<li class="list-item text-14px-232323">Киевская, Черниговская, Житомирская, Ровенская, Волынская  (с ГНС Беларуси, Литвы),</li> 
+													<li class="list-item text-14px-232323">Черниговская, Сумская (с ГНС Беларуси, РФ), </li>
+													<li class="list-item text-14px-232323">Харьковская, Сумская, Днепропетровская (с ГНС РФ), </li>
+													<li class="list-item text-14px-232323">Волынская, Львовская, Ивано-Франковская, Ровенская (с ГНС Беларуси, Польши), </li>
+													<li class="list-item text-14px-232323">Закарпатская, Львовская, Ивано-Франсковская (с ГНС Польши, Румынии), </li>
+													<li class="list-item text-14px-232323">Черновицкая, Одесская (с ГНС Румынии)</li>
+												</ul>
+											</div>
+											<div class="main-directions__map">
+												<picture>
+												    <source srcset="assets/img/main/Map_1.webp" type="image/webp">
+												    <img class="" src="assets/img/main/Map_1.png" alt="main-directions__map">
+												</picture>
+											</div>
+										</div>
+								    </div>
+								    <div class="main-directions__route">
+								    	<div class="heading-figure-wrap">
+								    		<div class="heading-figure text-center">
+								    			<span class="text-30px-232323">Импорт LPG</span>
+								    		</div>
+								    	</div>
+								    	
+								    	<div class="main-directions__content">
+								    		<div class="main-directions__route-map">
+								    			<picture>
+												    <source srcset="assets/img/main/Map_3.webp" type="image/webp">
+												    <img class="" src="assets/img/main/Map_3.png" alt="main-route-map">
+												</picture>
+								    		</div>
+								    		<div class="main-directions__route-desc">
+								    			<img class="main-directions__route-logo" src="assets/img/main/Matoni_logo_color.png" alt="logo">
+								    			<ul class="main-directions__route-list">
+								    				<li class="text-18px-white">1. НПЗ/ГНС - ГНС в Украине</li>
+								    				<li class="text-18px-white">2. НПЗ/ГНС - Заправка</li>
+								    			</ul>
+								    		</div>
+								    	</div>
+								    	<a href="#" class="btn-orange">Все локации</a>
+								    </div>
+
+								  </div>
+								  <div id="domestic" class="tab-pane fade">
+								    
+									<div class="mtn-pills-content main-directions__inner">
+								    	<div class="main-directions__content-neading">
+								    		<h4 class="text-19px-232323 text-center">Внутренние поставки LPG автонормами по Украине осуществляются по схемам «ГНС – заправка». Последние годы набирает вес схема «судно – заправка / ГНС» Средняя продолжительность рейса – 1,2 суток</h4>
+								    	</div>
+										<div class="main-directions__content">
+											<div class="main-directions__info">
+												<p class="orange-line-left text-16px-232323">Основные внутренние поставки LPG в Украине осуществляются по схеме «ГНС – заправка»только автонормами с 66 ГНС непосредственно на заправки или конечному потребителю. Также логистически выгодны автогазовозные партии поставок LPG по схемам «судно – заправка» или «судно – ГНС»в припортовых областях: </p>
+												<ul class="list-body">
+													<li class="list-item text-14px-232323">Николаевская</li>
+													<li class="list-item text-14px-232323">Одесская, </li>
+													<li class="list-item text-14px-232323">Херсонская</li>
+													<li class="list-item text-14px-232323">Кировоградская, </li>
+													<li class="list-item text-14px-232323">Днепропетровская обл. </li>
+												</ul>
+											</div>
+											<div class="main-directions__map">
+												<picture>
+												    <source srcset="assets/img/main/Map_2.webp" type="image/webp">
+												    <img class="" src="assets/img/main/Map_2.png" alt="main-directions__map">
+												</picture>
+											</div>
+										</div>
+										
+								    </div>
+								    <div class="main-directions__route">
+									    	<div class="heading-figure-wrap">
+									    		<div class="heading-figure text-center">
+									    			<span class="text-30px-232323">Внутренние поставки</span>
+									    		</div>
+									    	</div>
+									    	<div class="main-directions__content">
+									    		<div class="main-directions__route-map">
+									    			<picture>
+													    <source srcset="assets/img/main/Map_4.webp" type="image/webp">
+													    <img class="" src="assets/img/main/Map_4.png" alt="main-route-map">
+													</picture>
+									    		</div>
+									    		<div class="main-directions__route-desc">
+									    			<img class="main-directions__route-logo" src="assets/img/main/Matoni_logo_color.png" alt="logo">
+									    			<ul class="main-directions__route-list second">
+									    				<li class="text-18px-white">1. НПЗ/ГНС - ГНС </li>
+									    				<li class="text-18px-white">2. НПЗ/ГНС - Заправка</li>
+									    				<li class="text-18px-white">3. Судно - НПЗ/ГНС</li>
+									    				<li class="text-18px-white">4. Cудно - Заправка</li>
+									    			</ul>
+									    		</div>
+									    	</div>
+									    	<a href="#" class="btn-orange">Все локации</a>
+									    </div>
+
+								  </div>
+
+								</div> <!-- End of tab-content -->
+
+							</div> <!-- End of mtn-pills-wrap -->
+							
+
+							
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="main-about overflow-hidden">
+		<div class="container-fluid p-0">
+			<div class="row m-auto">
+				<div class="col-12 p-0">
+					<div class="text-background text-center">
+			          <p class="title__back-over">о нас</p>
+			          <h2 class="sub-title">о нас</h2>
+			        </div>
+				</div>
+			</div>
+			<div class="row m-auto">
+				<div class="col-12 col-lg-6 p-0">
+					<div class="main-about__img big-img-left">
+						<picture>
+						    <source srcset="assets/img/main/Jpeg_8.webp" type="image/webp">
+						    <img class="img-fluid" src="assets/img/main/Jpeg_8.jpg" alt="about__img">
+						</picture>
+					</div>
+				</div>
+				<div class="col-12 col-lg-6 p-0">
+					<div class="main-about__text">
+						<div class="text-box text-background-rotated">
+							<p class="title__rotated">мы</p>
+							<p class="orange-line-left text-16px-232323">ООО «МАТОNI»специализируется на предоставлении транспортных услуг по перевозке сжиженного газа (LPG) в Украину из сопредельных стран, а также по Украине автомобильными нормами. </p>
+
+							<p class="text-16px-232323">Кроме того,компания «МАТОNI» предоставляет консалтинговые услуги в области транспортной логистики и готова включиться в ваши логистические проекты на любой стадии их реализации. Наш более чем десятилетний опыт логистики сжиженного газа, как в Украине, так и за ее пределами станет прочным фундаментом ваших конкурентных преимуществ.</p>
+
+							<p class="text-16px-232323 orange-line-bottom">Мы любим свою работу,постоянно совершенствуемся в своем деле и всегда открыты к диалогу.</p>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div class="row m-auto">
+				<div class="col-12 col-lg-6 p-0">
+					<div class="main-team__text">
+						<h4 class="text-60px-232323">Наша команда</h4>
+						<div class="text-box">
+							<p class="orange-line-left text-16px-232323 orange-line-bottom">В компании MATONI работают исключительно профессионалы с богатым опытом за плечами. Все специалистынашей командыобъединенныобщей целью компании –транспортировка LPG наших партнеров должна быть быстрой, своевременной и в полном объеме.</p>
+						</div>
+						<div class="text-background text-center">
+				          <p class="title__back-over">команда</p>
+				        </div>
+					</div>
+				</div>
+				<div class="col-12 col-lg-6 p-0">
+					<div class="orange-slider">
+						<div class="orange-slider-background"></div>
+						<div class="main-team__slider slider">
+							<div>
+								<div class="orange-slider-item main-team__slider-item text-center">
+									<div class="main-team__slider-img">
+										<picture>
+										    <source srcset="assets/img/main/1878.webp" type="image/webp">
+										    <img class="img-fluid" src="assets/img/main/1878.jpg" alt="team__slider">
+										</picture>
+									</div>
+									<div class="main-team__slider-info">
+										<div class="main-team__slider-name">
+											<span class="text-24px-232323">Сергей Бабичев Бабичев</span>
+										</div>
+										<div class="main-team__slider-position">
+											<span class="text-18px-232323">Главный механик Главный механик</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div>
+								<div class="orange-slider-item main-team__slider-item text-center">
+									<div class="main-team__slider-img">
+										<picture>
+										    <source srcset="assets/img/main/1878.webp" type="image/webp">
+										    <img class="img-fluid" src="assets/img/main/1878.jpg" alt="team__slider">
+										</picture>
+									</div>
+									<div class="main-team__slider-info">
+										<div class="main-team__slider-name">
+											<span class="text-24px-232323">Сергей Бабичев Бабичев</span>
+										</div>
+										<div class="main-team__slider-position">
+											<span class="text-18px-232323">Главный механик Главный механик</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div>
+								<div class="orange-slider-item main-team__slider-item text-center">
+									<div class="main-team__slider-img">
+										<picture>
+										    <source srcset="assets/img/main/1878.webp" type="image/webp">
+										    <img class="img-fluid" src="assets/img/main/1878.jpg" alt="team__slider">
+										</picture>
+									</div>
+									<div class="main-team__slider-info">
+										<div class="main-team__slider-name">
+											<span class="text-24px-232323">Сергей Бабичев</span>
+										</div>
+										<div class="main-team__slider-position">
+											<span class="text-18px-232323">Главный механик</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div>
+								<div class="orange-slider-item main-team__slider-item text-center">
+									<div class="main-team__slider-img">
+										<picture>
+										    <source srcset="assets/img/main/1878.webp" type="image/webp">
+										    <img class="img-fluid" src="assets/img/main/1878.jpg" alt="team__slider">
+										</picture>
+									</div>
+									<div class="main-team__slider-info">
+										<div class="main-team__slider-name">
+											<span class="text-24px-232323">Сергей Бабичев</span>
+										</div>
+										<div class="main-team__slider-position">
+											<span class="text-18px-232323">Главный механик</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div>
+								<div class="orange-slider-item main-team__slider-item text-center">
+									<div class="main-team__slider-img">
+										<picture>
+										    <source srcset="assets/img/main/1878.webp" type="image/webp">
+										    <img class="img-fluid" src="assets/img/main/1878.jpg" alt="team__slider">
+										</picture>
+									</div>
+									<div class="main-team__slider-info">
+										<div class="main-team__slider-name">
+											<span class="text-24px-232323">Сергей Бабичев</span>
+										</div>
+										<div class="main-team__slider-position">
+											<span class="text-18px-232323">Главный механик</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div>
+								<div class="orange-slider-item main-team__slider-item text-center">
+									<div class="main-team__slider-img">
+										<picture>
+										    <source srcset="assets/img/main/1878.webp" type="image/webp">
+										    <img class="img-fluid" src="assets/img/main/1878.jpg" alt="team__slider">
+										</picture>
+									</div>
+									<div class="main-team__slider-info">
+										<div class="main-team__slider-name">
+											<span class="text-24px-232323">Сергей Бабичев</span>
+										</div>
+										<div class="main-team__slider-position">
+											<span class="text-18px-232323">Главный механик</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div>
+								<div class="orange-slider-item main-team__slider-item text-center">
+									<div class="main-team__slider-img">
+										<picture>
+										    <source srcset="assets/img/main/1878.webp" type="image/webp">
+										    <img class="img-fluid" src="assets/img/main/1878.jpg" alt="team__slider">
+										</picture>
+									</div>
+									<div class="main-team__slider-info">
+										<div class="main-team__slider-name">
+											<span class="text-24px-232323">Сергей Бабичев</span>
+										</div>
+										<div class="main-team__slider-position">
+											<span class="text-18px-232323">Главный механик</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div> <!-- end of slider init -->
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="contact-banner overflow-hidden">
+		<div class="container-fluid p-0">
+			<div class="row wrapper m-auto">
+				<div class="col-12">
+					<div class="contact-banner__wrap figure-squares">
+						<div class="contact-banner__inner">
+							<div class="contact-banner__heading">
+								<span class="text-30px-white">Если у вас остались вопросы или Вы хотите сотрудничать с нами </span>
+							</div>
+							<div class="button-block">
+								<a href="#" class="btn-transparent">Напишите нам</a>
+								<span class="text-18px-white">или</span>
+								<a href="#" class="btn-orange">Перезвоните</a>
+							</div>
+						</div>
+						<picture>
+						    <source srcset="assets/img/main/woman.webp" type="image/webp">
+						    <img class="contact-banner__wmn-image" class="img-fluid" src="assets/img/main/woman.png" alt="contact-banner">
+						</picture>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="partners overflow-hidden">
+		<div class="container-fluid p-0">
+			<div class="row m-auto">
+				<div class="col-12 p-0">
+					<div class="text-background text-center">
+			          <p class="title__back-over">партнеры</p>
+			          <h2 class="sub-title">наши партнёры</h2>
+			        </div>
+				</div>
+			</div>
+			<div class="row wrapper m-auto">
+				<div class="col-12 p-0">
+					<div class="partners-wrap">
+						<div class="partners-slider slider">
+
+							<div>
+								<div class="partners-slider-item">
+									<picture>
+									    <source srcset="assets/img/main/DAF.webp" type="image/webp">
+									    <img class="" class="img-fluid" src="assets/img/main/DAF.png" alt="DAF">
+									</picture>
+								</div>
+							</div>
+							<div>
+								<div class="partners-slider-item">
+									<picture>
+									    <source srcset="assets/img/main/express.webp" type="image/webp">
+									    <img class="" class="img-fluid" src="assets/img/main/express.png" alt="express">
+									</picture>
+								</div>
+							</div>
+							<div>
+								<div class="partners-slider-item">
+									<picture>
+									    <source srcset="assets/img/main/Scania.webp" type="image/webp">
+									    <img class="" class="img-fluid" src="assets/img/main/Scania.png" alt="Scania">
+									</picture>
+								</div>
+							</div>
+							<div>
+								<div class="partners-slider-item">
+									<picture>
+									    <source srcset="assets/img/main/Socar.webp" type="image/webp">
+									    <img class="" class="img-fluid" src="assets/img/main/Socar.png" alt="Socar">
+									</picture>
+								</div>
+							</div>
+							<div>
+								<div class="partners-slider-item">
+									<picture>
+									    <source srcset="assets/img/main/DAF.webp" type="image/webp">
+									    <img class="" class="img-fluid" src="assets/img/main/DAF.png" alt="DAF">
+									</picture>
+								</div>
+							</div>
+							<div>
+								<div class="partners-slider-item">
+									<picture>
+									    <source srcset="assets/img/main/express.webp" type="image/webp">
+									    <img class="" class="img-fluid" src="assets/img/main/express.png" alt="express">
+									</picture>
+								</div>
+							</div>
+							<div>
+								<div class="partners-slider-item">
+									<picture>
+									    <source srcset="assets/img/main/Scania.webp" type="image/webp">
+									    <img class="" class="img-fluid" src="assets/img/main/Scania.png" alt="Scania">
+									</picture>
+								</div>
+							</div>
+							<div>
+								<div class="partners-slider-item">
+									<picture>
+									    <source srcset="assets/img/main/Socar.webp" type="image/webp">
+									    <img class="" class="img-fluid" src="assets/img/main/Socar.png" alt="Socar">
+									</picture>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- <section style="height: 500px"></section>	 -->
+</main>
+
+
+<!-- Подвал начало -->
+<footer class="footer">
+	<div class="container-fluid p-0">
+		<div class="row wrapper m-auto">
+			<div class="col-12 col-md-6">
+				<div class="footer__info">
+					<div class="footer__nav">
+						<div class="column">
+							<div class="unstyled-list">
+								<span class="text-18px-white">Услуги</span>
+								<ul class="unstyled-list-body">
+									<li class="unstyled-list-item"><a class="text-16px-white" href="#">Транспортровка LPG</a></li>
+									<li class="unstyled-list-item"><a class="text-16px-white" href="#">Логистический консалтинг</a></li>
+								</ul>
+							</div>
+
+							<div class="unstyled-list">
+								<span class="text-18px-white">О компании</span>
+								<ul class="unstyled-list-body">
+									<li class="unstyled-list-item"><a class="text-16px-white" href="#">Кто мы?</a></li>
+									<li class="unstyled-list-item"><a class="text-16px-white" href="#">Новости</a></li>
+									<li class="unstyled-list-item"><a class="text-16px-white" href="#">Наши партнеры</a></li>
+									<li class="unstyled-list-item"><a class="text-16px-white" href="#">Отзывы</a></li>
+									<li class="unstyled-list-item"><a class="text-16px-white" href="#">Вакансии</a></li>
+									<li class="unstyled-list-item"><a class="text-16px-white" href="#">Контакты</a></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="column">
+							<div class="unstyled-list">
+								<span class="text-18px-white">Транспортировка LPG</span>
+								<ul class="unstyled-list-body">
+									<li class="unstyled-list-item"><a class="text-16px-white" href="#">Направления</a></li>
+									<li class="unstyled-list-item"><a class="text-16px-white" href="#">Обеспечение импорта</a></li>
+									<li class="unstyled-list-item"><a class="text-16px-white" href="#">Обеспечение внутренних поставок LPG</a></li>
+								</ul>
+							</div>
+
+							<div class="unstyled-list">
+								<span class="text-18px-white">Сотрудничество</span>
+								<ul class="unstyled-list-body">
+									<li class="unstyled-list-item"><a class="text-16px-white" href="#">Трейдерам и розничным компаниями</a></li>
+									<li class="unstyled-list-item"><a class="text-16px-white" href="#">Собственникам газовозов</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<div class="footer__info-text">
+						<picture>
+						    <source srcset="assets/img/white-logo.webp" type="image/webp">
+						    <img class="" class="img-fluid" src="assets/img/white-logo.png" alt="logo">
+						</picture>
+						<p class="text-14px-white">Предоставление транспортных услуг по перевозке сжиженного газа (LPG) в Украину из сопредельных стран, а также по Украине автомобильными нормами.</p>
+					</div>
+
+				</div>
+			</div>
+			<div class="col-12 col-md-6">
+				<div class="footer__contacts">
+					<div class="column">
+						<div class="unstyled-list">
+							<span class="text-18px-white">Контакты</span>
+							<ul class="unstyled-list-body">
+								<li class="unstyled-list-item"><a class="text-16px-white" href="tel:+38(097)808-08-08">Тел., Viber, WA, Telegram: +38(097) 808-08-08 </a></li>
+								<li class="unstyled-list-item"><a class="text-16px-white" href="mailto::@gmail.com">E-mail :@gmail.com</a></li>
+								<li class="unstyled-list-item"><span class="text-16px-white" href="#">Адрес: , г. Киев, ул. Бережанская, 12-Б, офис 15</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="map__block">
+						<div class="contacts__map-box" data-map="map">
+							<iframe src="" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+							<div class="full-width-inner contacts__map-shadow"  data-map="map">
+								<span class="text-14px-white">Нажмите для просмотра интерактивной карты</span>
+							</div>
+							<img class="full-width-inner contacts__map-img" src="assets/img/main/Map.jpg" alt="map" data-map="map">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="copyright-block">
+		<span class="text-14px-white">All rights reserved Matoni ©2018 </span>
+	</div>
+</footer>
+<!-- Подвал конец -->
+
+<script src="assets/js/jquery-3.4.1.min.js"></script>
+
+<!-- bootstrap -->
+<script src="assets/js/bootstrap.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.7.14/js/bootstrap-datetimepicker.min.js"></script> -->
+
+<!-- Карусель slick -->
+<script src="assets/js/slick.min.js"></script>
+
+<!-- fontawesome -->
+<script src="assets/js/fontawesome/all.js"></script>
+
+<!-- графический интерфейс jquery -->
+<script src="assets/js/jquery-ui.min.js"></script>
+
+<!-- Маска для ввода номера телефона -->
+<script src="assets/js/jquery.maskedinput.js"></script>
+
+<!-- Основные скрипты -->
+<script src="assets/js/main.js"></script>
+
+
+
+<!-- Генерация таблицы конец-->
+
+
+
+
+<!-- Модальное окно авторизации начало-->
+  
+  <!-- <div class="modal__login">
+  	<div class="close-button">
+		<span>
+			<svg class="svg-inline--fa fa-times-circle fa-w-16" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times-circle" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"></path></svg>
+		</span>
+	</div>
+    <div class="modal__login-wrap">
+      <div class="trade-table__heading">
+        <h4 class="text-16px-white">Войти</h4>
+      </div>
+      <div class="modal-inner">
+        <span class="text-12px-585858 text-300">Для входа в систему введите регистрационные данные или <a class="text-12px-019299" href="register">зарегистрируйте</a> Вашу компанию</span>
+
+        <form id="login-form" action="">
+          <div class="form-items-group">
+            <label class="control-label text-12px-585858"  for="">E-mail</label>
+            <input class="form-item-square" type="email" placeholder="Ваш логин или E-mail" required>
+          </div>
+
+          <div class="form-items-group password-input">
+            <label class="control-label text-12px-585858" for="">Пароль</label>
+            <input class="form-item-square" type="password" placeholder="Пароль" required>
+            <div class="show-password"></div>
+          </div>
+
+          <div class="form-items-group passwort-reset">
+            <a class="shift-pass-reset text-12px-019299" href="#">Забыли пароль?</a>
+            <div class="checkbox">
+              <label for="loginform-rememberme">
+              <input type="hidden" name="LoginForm[rememberMe]" value="0">
+              <input class="text-12px-585858" type="checkbox" id="loginform-rememberme" name="LoginForm[rememberMe]" value="1" checked="">
+              Запомнить меня
+              </label>
+            </div>
+          </div>
+
+         <div class="rext-response-box">
+         	<span class="text-danger">Необходимо одобрение регистрации, рассмотрение заявки занимает не более 72 часов</span>
+         </div>
+
+          <div class="form-items-group">
+            <div class="form-item">
+              <button class="red-btn login-btn">Войти</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+      
+    </div> 
+  </div> -->
+<!-- Модальное окно авторизации конец-->  
+</body>
+
+</html>
