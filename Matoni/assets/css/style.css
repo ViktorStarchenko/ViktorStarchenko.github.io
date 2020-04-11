@@ -1012,6 +1012,12 @@ header {
     font-family: Roboto;
 }
 
+@media screen and (max-width: 992px) {
+    .header__bottom .nav-item:hover {
+        background-color: #293858
+    }
+}
+
 @media screen and (max-width: 767px) {
     .header__bottom .dropdown-menu {
         max-width: 100%;
