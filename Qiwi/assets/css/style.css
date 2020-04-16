@@ -1,0 +1,28 @@
+.advantages-item .t-btn {
+	padding: 30px;
+	height: unset;
+	width: 100%;
+	white-space: normal;
+	min-height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.advantages-item .t228__right_buttons_but {
+	width: 100%;
+	display: block;
+	
+}
+
+.advantages-item .t-btn .btn-top {
+	font-size: 46px;
+}
+
+.advantages-item .t-btn .btn-bottom {
+	font-size: 24px;
+}
+
+.help-project .advantages-item .t-btn {
+	min-height: 100px;
+}
