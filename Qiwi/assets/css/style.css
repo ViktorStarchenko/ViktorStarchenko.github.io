@@ -25,5 +25,10 @@
 }
 
 .help-project .advantages-item .t-btn {
-	min-height: 170px;
+	min-height: unset;
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
 }
+
+.help-project .advantages-item
