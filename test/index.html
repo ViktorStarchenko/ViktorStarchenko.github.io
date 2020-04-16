@@ -1519,7 +1519,7 @@
 
 <script>
 	$(document).ready(function(){
-		var megasale = '<a class="banner-wrap" href="" style="max-height:100%;position:fixed; right: 0; bottom: 0;z-index:100; display: none">'
+		var megasale = '<a class="banner-wrap" href="" style="max-height:100%; max-width: 10%; position:fixed; right: 0; bottom: 0;z-index:100; display: none">'
 		megasale += '<span style="display:block;width:100%; height:100%" class="banner-inner">'
 		megasale += '<img style="width: 100%; height:auto" src="images/banner.jpg" alt="banner">'
 		megasale += '</span>'
@@ -1536,7 +1536,7 @@
 	          $('.banner-wrap').css('display', 'block').css('position', 'fixed').css('right', '0').css('bottom', '0')
 	        } else if ($(window).width() <= '1240' && $(window).width() >= 767) {
 	        	console.log($(window).width())
-	        	$('.banner-wrap').css('display', 'block').css('max-width', '20%')
+	        	$('.banner-wrap').css('display', 'block').css('max-width', '15%')
 	        }
 		}
 
