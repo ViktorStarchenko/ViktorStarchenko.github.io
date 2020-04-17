@@ -400,14 +400,15 @@ console.log(btn_href)
   })
 })
 
-// Модальное окно сообщений
+// Закрыть модальное окно сообщений
 $(document).ready(function(){
-  $('body').on('click', function(){
-    $('.modal-message').addClass('showModal');
-    function hideMessage() {
+  $('body').on('click', function(e){
+    console.log(e.target.classList)
+    if (!$(e.target).hasClass('showModal')) {
       $('.modal-message').removeClass('showModal')
+    } else {
+      console.log('да')
     }
-    setTimeout(hideMessage, 5000)
   })
 })
 

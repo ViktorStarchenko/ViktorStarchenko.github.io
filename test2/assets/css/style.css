@@ -328,6 +328,7 @@ button.red-btn, button.red-btn:focus {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition-duration: .3s
 }
 
 .modal-wrap.modal-message.showModal {
