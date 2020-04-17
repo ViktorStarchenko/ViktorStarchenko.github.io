@@ -403,11 +403,10 @@ console.log(btn_href)
 // Закрыть модальное окно сообщений
 $(document).ready(function(){
   $('body').on('click', function(e){
-    console.log(e.target.classList)
     if (!$(e.target).hasClass('showModal')) {
       $('.modal-message').removeClass('showModal')
     } else {
-      console.log('да')
+      return false
     }
   })
 })
