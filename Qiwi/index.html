@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="assets/css/tilda-blocks-2.12.css" type="text/css" media="all">
     <link rel="stylesheet" href="assets/css/tilda-animation-1.0.min.css" type="text/css" media="all">
     <link rel="stylesheet" href="assets/css/tilda-menusub-1.0.min.css" type="text/css" media="all">
+    <link rel="stylesheet" href="assets/css/slick.css" type="text/css" media="all">
+    <link rel="stylesheet" href="assets/css/slick-theme.css" type="text/css" media="all">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all">
     <script type="text/javascript" async="" src="assets/js/js"></script>
     <!-- <script async="" src="assets/js/tag.js"></script> -->
@@ -37,6 +39,7 @@
     <script src="assets/js/lazyload-1.3.min.js" charset="utf-8"></script>
     <script src="assets/js/tilda-animation-1.0.min.js" charset="utf-8"></script>
     <script src="assets/js/tilda-menusub-1.0.min.js" charset="utf-8"></script>
+    <script src="assets/js/slick.min.js" charset="utf-8"></script>
     <script src="assets/js/jquery.spincrement.min.js" charset="utf-8"></script>
     <meta name="yandex-verification" content="8ceda259f13428f2">
     <meta name="google-site-verification" content="YMP7hyDNhjLX933fAvfT8ElXmk88kW_ERA0coR-jfcw">
@@ -71,10 +74,18 @@
                         <div class="t228__centerside t228__menualign_right">
                             <div class="t228__centercontainer">
                                 <ul class="t228__list ">
-                                    <li class="t228__list_item"><a class="t-menu__link-item" href="#" data-menu-submenu-hook="" style="color:#000000;font-size:16px;font-weight:500;font-family:&#39;Museo&#39;;" data-menu-item-number="1">Меню 1</a> </li>
-                                    <li class="t228__list_item"><a class="t-menu__link-item" href="#" data-menu-submenu-hook="" style="color:#000000;font-size:16px;font-weight:500;font-family:&#39;Museo&#39;;" data-menu-item-number="2">Меню 2</a> </li>
-                                    <li class="t228__list_item"><a class="t-menu__link-item" href="#" data-menu-submenu-hook="" style="color:#000000;font-size:16px;font-weight:500;font-family:&#39;Museo&#39;;" data-menu-item-number="3">Меню 3</a> </li>
-                                    <li class="t228__list_item"><a class="t-menu__link-item t794__tm-link" href="#" data-menu-submenu-hook="" style="color:#000000;font-size:16px;font-weight:500;font-family:&#39;Museo&#39;;" data-menu-item-number="4" data-tooltip-menu-id="99666373">Меню 4</a> </li>
+                                    <li class="t228__list_item">
+                                        <a class="t-menu__link-item crane" href="#about-us" data-menu-submenu-hook="" style="color:#000000;font-size:16px;font-weight:500;font-family:&#39;Museo&#39;;" data-menu-item-number="1">Про нас</a> 
+                                    </li>
+                                    <li class="t228__list_item">
+                                        <a class="t-menu__link-item crane" href="#reason" data-menu-submenu-hook="" style="color:#000000;font-size:16px;font-weight:500;font-family:&#39;Museo&#39;;" data-menu-item-number="2">Для чого</a> 
+                                    </li>
+                                    <li class="t228__list_item">
+                                        <a class="t-menu__link-item crane" href="#piggybank" data-menu-submenu-hook="" style="color:#000000;font-size:16px;font-weight:500;font-family:&#39;Museo&#39;;" data-menu-item-number="3">Скарбничка</a> 
+                                    </li>
+                                    <li class="t228__list_item">
+                                        <a class="t-menu__link-item t794__tm-link crane" href="#partners" data-menu-submenu-hook="" style="color:#000000;font-size:16px;font-weight:500;font-family:&#39;Museo&#39;;" data-menu-item-number="4" data-tooltip-menu-id="99666373">Партнери</a> 
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -83,7 +94,7 @@
                                 <div class="t228__right_buttons">
                                     <div class="t228__right_buttons_wrap">
                                         <div class="t228__right_buttons_but">
-                                            <a href="https://b2b.qiwi.com/nadobro/#request" target="" class="t-btn " style="color:#ffffff;background-color:#ff8c00;border-radius:100px; -moz-border-radius:100px; -webkit-border-radius:100px;font-family:Museo;font-weight:400;">
+                                            <a href="#donate" class="t-btn crane " style="color:#ffffff;background-color:#ff8c00;border-radius:100px; -moz-border-radius:100px; -webkit-border-radius:100px;font-family:Museo;font-weight:400;">
                                                 <table style="width:100%; height:100%;">
                                                     <tbody>
                                                         <tr>
@@ -94,7 +105,7 @@
                                             </a>
                                         </div>
                                         <div class="t228__right_buttons_but">
-                                            <a href="https://kassa.qiwi.com/service/core/merchants" target="_blank" class="t-btn js-click-stat" data-tilda-event-name="/tilda/click/rec91664032/button2" style="border:1px solid #e6e6e6;border-radius:100px; -moz-border-radius:100px; -webkit-border-radius:100px;font-family:Museo;font-weight:400;">
+                                            <!-- <a href="https://kassa.qiwi.com/service/core/merchants" target="_blank" class="t-btn js-click-stat" data-tilda-event-name="/tilda/click/rec91664032/button2" style="border:1px solid #e6e6e6;border-radius:100px; -moz-border-radius:100px; -webkit-border-radius:100px;font-family:Museo;font-weight:400;">
                                                 <table style="width:100%; height:100%;">
                                                     <tbody>
                                                         <tr>
@@ -102,7 +113,7 @@
                                                         </tr>
                                                     </tbody>
                                                 </table>
-                                            </a>
+                                            </a> -->
                                         </div>
                                     </div>
                                 </div>
@@ -218,20 +229,18 @@
                         <div class="t280__menu__bg" style="background-color:#ffffff; opacity:1;"></div>
                         <div class="t280__menu__container">
                             <div class="t280__menu t-width t-width_6"> 
-                                <a class="t280__menu__item t-title t-title_xl t-menu__link-item" href="#" data-menu-submenu-hook="" style="color:#000000;font-size:18px;font-weight:500;font-family:&#39;Museo&#39;;">Меню 1</a> 
-                                <a class="t280__menu__item t-title t-title_xl t-menu__link-item" href="#" data-menu-submenu-hook="" style="color:#000000;font-size:18px;font-weight:500;font-family:&#39;Museo&#39;;">Меню 2</a> 
-                                <a class="t280__menu__item t-title t-title_xl t-menu__link-item" href="#" data-menu-submenu-hook="" style="color:#000000;font-size:18px;font-weight:500;font-family:&#39;Museo&#39;;">Меню 3</a> 
-                                <a class="t280__menu__item t-title t-title_xl t-menu__link-item" href="#" data-menu-submenu-hook="" style="color:#000000;font-size:18px;font-weight:500;font-family:&#39;Museo&#39;;">Меню 4</a> 
-                                <a class="t280__menu__item t-title t-title_xl t-menu__link-item" href="#" data-menu-submenu-hook="" style="color:#000000;font-size:18px;font-weight:500;font-family:&#39;Museo&#39;;">Меню 5</a> 
-                                <a class="t280__menu__item t-title t-title_xl t-menu__link-item" href="#" data-menu-submenu-hook="" style="color:#000000;font-size:18px;font-weight:500;font-family:&#39;Museo&#39;;">Меню 6</a> 
-                                <a class="t280__menu__item t-title t-title_xl t-menu__link-item" href="#" data-menu-submenu-hook="" style="color:#000000;font-size:18px;font-weight:500;font-family:&#39;Museo&#39;;">Меню 7</a> 
-                                <a class="t280__menu__item t-title t-title_xl t-menu__link-item" href="#" data-menu-submenu-hook="" style="color:#000000;font-size:18px;font-weight:500;font-family:&#39;Museo&#39;;">Меню 8</a> 
-                                <a class="t280__menu__item t-title t-title_xl t-menu__link-item" href="#" data-menu-submenu-hook="" style="color:#000000;font-size:18px;font-weight:500;font-family:&#39;Museo&#39;;">Меню 9</a> 
-                                <a class="t280__menu__item t-title t-title_xl t-menu__link-item" href="#" data-menu-submenu-hook="" style="color:#000000;font-size:18px;font-weight:500;font-family:&#39;Museo&#39;;">Меню 10</a> 
-                                <a class="t280__menu__item t-title t-title_xl t-menu__link-item" href="#" data-menu-submenu-hook="" style="color:#000000;font-size:18px;font-weight:500;font-family:&#39;Museo&#39;;">Меню 11</a> 
-                                <a class="t280__menu__item t-title t-title_xl t-menu__link-item" href="#" data-menu-submenu-hook="" style="color:#000000;font-size:18px;font-weight:500;font-family:&#39;Museo&#39;;">Меню 12</a> 
-                                <a class="t280__menu__item t-title t-title_xl t-menu__link-item t-active" href="#" data-menu-submenu-hook="" style="color:#000000;font-size:18px;font-weight:500;font-family:&#39;Museo&#39;;">Меню 13</a> 
-                                <a class="t280__menu__item t-title t-title_xl t-menu__link-item" href="https://kassa.qiwi.com/service/core/merchants" data-menu-submenu-hook="" target="_blank" style="color:#000000;font-size:18px;font-weight:500;font-family:&#39;Museo&#39;;">Войти</a> 
+                                <a class="t280__menu__item t-title t-title_xl t-menu__link-item crane" href="#about-us" data-menu-submenu-hook="" style="color:#000000;font-size:18px;font-weight:500;font-family:&#39;Museo&#39;;">Про нас
+                                </a> 
+                                <a class="t280__menu__item t-title t-title_xl t-menu__link-item crane" href="#reason" data-menu-submenu-hook="" style="color:#000000;font-size:18px;font-weight:500;font-family:&#39;Museo&#39;;">Для чого
+                                </a> 
+                                <a class="t280__menu__item t-title t-title_xl t-menu__link-item crane" href="#piggybank" data-menu-submenu-hook="" style="color:#000000;font-size:18px;font-weight:500;font-family:&#39;Museo&#39;;">Скарбничка
+                                </a> 
+                                <a class="t280__menu__item t-title t-title_xl t-menu__link-item crane" href="#partners" data-menu-submenu-hook="" style="color:#000000;font-size:18px;font-weight:500;font-family:&#39;Museo&#39;;">Партнери
+                                </a> 
+
+
+                                
+                                <!-- <a class="t280__menu__item t-title t-title_xl t-menu__link-item" href="#" data-menu-submenu-hook="" target="_blank" style="color:#000000;font-size:18px;font-weight:500;font-family:&#39;Museo&#39;;">Войт -->и</a> 
                             </div>
                         </div>
                     </div>
@@ -340,7 +349,7 @@
             </div>
         </div>
         <!--/header-->
-        <div id="rec72371268" class="r t-rec t-rec_pb_0" style="padding-bottom:0px; " data-animationappear="off" data-record-type="205">
+        <div id="about-us" class="r t-rec t-rec_pb_0" style="padding-bottom:0px; " data-animationappear="off" data-record-type="205">
             <!-- cover -->
             <div class="t-cover" id="recorddiv72371268" bgimgfield="img" style="height:100vh; background-image:url(assets/img/tild3964-3862-4935-b134-313138313733__-__resize__20x__Artboard_2100.jpg);">
                 <div class="t-cover__carrier loaded" id="coverCarry72371268" data-content-cover-id="72371268" data-content-cover-bg="assets/img/tild3964-3862-4935-b134-313138313733__artboard_2100.jpg" data-content-cover-height="100vh" data-content-cover-parallax="dynamic" style="height: 100vh; background-attachment: scroll; position: relative; background-image: url(assets/img/tild3964-3862-4935-b134-313138313733__artboard_2100.jpg); transform: translateY(0);" src=""></div>
@@ -351,12 +360,12 @@
                             <div class="t182">
                                 <div data-hook-content="covercontent">
                                     <div class="t182__wrapper">
-                                        <h1 class="t182__title t-title t-title_xl t-animate" data-animate-style="fadeinup" data-animate-group="yes" style="transition-delay: 0s;" field="title"><div style="font-size:52px;font-family:&#39;Museo&#39;;color:#000000;" data-customstyle="yes">Развитие любого народа – это развитие образования!<span style="color: rgb(245, 153, 66);">#НАОСВІТУ</span><br></div></h1>
+                                        <h1 class="t182__title t-title t-title_xl t-animate" data-animate-style="fadeinup" data-animate-group="yes" style="transition-delay: 0s;" field="title"><div style="font-size:52px;font-family:&#39;Museo&#39;;color:#000000;" data-customstyle="yes">Розвиток будь-якого народу - це розвиток освіти!<span style="color: rgb(245, 153, 66);">#НАОСВІТУ</span><br></div></h1>
                                         <div class="t182__descr t-descr t-descr_lg t-animate " data-animate-style="fadeinup" data-animate-group="yes" style="transition-delay: 0.3s;" field="descr">
-                                            <div style="font-size:22px;font-family:&#39;Museo&#39;;color:#2d3540;" data-customstyle="yes">Просто напомните клиентам, что помогать - легко</div>
+                                            <div style="font-size:22px;font-family:&#39;Museo&#39;;color:#2d3540;" data-customstyle="yes">Допомагати просто</div>
                                         </div>
                                         <div class="t182__buttons">
-                                            <a href="#" target="_blank" class="t-btn t-animate " data-animate-style="fadeinup" data-animate-group="yes" style="color: rgb(255, 255, 255); background-color: rgb(255, 140, 0); border-radius: 30px; font-weight: 700; box-shadow: rgba(0, 0, 0, 0) 0px 0px 10px 0px;">
+                                            <a href="#donate" class="t-btn t-animate crane " data-animate-style="fadeinup" data-animate-group="yes" style="color: rgb(255, 255, 255); background-color: rgb(255, 140, 0); border-radius: 30px; font-weight: 700; box-shadow: rgba(0, 0, 0, 0) 0px 0px 10px 0px;">
                                                 <table style="width:100%; height:100%;">
                                                     <tbody>
                                                         <tr>
@@ -417,14 +426,23 @@
                 <div class="t-section__container t-container">
                     <div class="t-col t-col_12">
                         <div class="t-section__topwrapper t-align_center">
-                            <h2 class="t-section__title t-title t-title_xs" field="btitle"><div style="font-size:42px;" data-customstyle="yes">Ваш партнер — ваш помощник<br></div></h2>
+                            <h2 class="t-section__title t-title t-title_xs" field="btitle"><div style="font-size:42px;" data-customstyle="yes">Проект «E-schools»<br></div></h2>
                             <div class="t-section__descr t-descr t-descr_xl t-margin_auto" field="bdescr">
-                                <div style="font-size:18px;" data-customstyle="yes"><span style="font-size: 20px;">С помощью виджетов программы <strong style=""><span style="color: rgb(255, 140, 0);" data-redactor-tag="span">#надобро</span></strong>, размещенных на сайтах партнеров помочь фонду
-                                    <br> будет проще.
-                                    <br>Вы находите новых людей, готовых делать добро — мы пом<span style="color: rgb(0, 0, 0);">огаем не терять и</span>х.
+                                <div style="font-size:18px;" data-customstyle="yes">
+                                    <span style="font-size: 20px;">Впроваджується в Україні з 2016 року. За цей час більше <strong style=""><span style="color: rgb(255, 140, 0);" data-redactor-tag="span">3500</span></strong> закладів освіти із всіх куточків України приєдналось до нас.
+                                    <br>Користувачами сервісів порталу <strong style=""><span style="color: rgb(255, 140, 0);" data-redactor-tag="span">e-schools.info</span></strong>  
+                                    є більше <strong style=""><span style="color: rgb(255, 140, 0);" data-redactor-tag="span">600 тис.</span></strong> школярів, <strong style=""><span style="color: rgb(255, 140, 0);" data-redactor-tag="span">450 тис.</span></strong> батьків та близько <strong style=""><span style="color: rgb(255, 140, 0);" data-redactor-tag="span">100 тис.</span></strong> вчителів, разом більше мільйона наших співвітчизників.
                                     <br>
                                     </span>
-                                    <br><a href="#" target="_blank"><span style="font-size: 20px;">Познакомьтесь с виджетами "Фонд Хабенский"<br></span><br><br></a><strong><span data-redactor-tag="span" style="font-size: 22px;">Фондам помогали</span></strong><strong></strong><u></u></div>
+                                    <br>
+                                    <span style="font-size: 20px;">Заклади освіти користуються власними сайтами на порталі <strong style=""><span style="color: rgb(255, 140, 0);" data-redactor-tag="span"> e-schools.info</span></strong> безкоштовно, не сплачуючи ні за хостинг, ні за доменне ім'я.<br>
+                                    Вчителі можуть безкоштовно використовувати на сайтах шкіл електронні журнали та інші інструменти порталу.
+                                    Переважна більшість батьків використовують сервіси електронних щоденників безкоштовно.
+                                    <br>
+                                    </span>
+                                    <br>
+                                    <strong><span data-redactor-tag="span" style="font-size: 22px;">Підтримати проект «E-schools»</span></strong>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -436,26 +454,10 @@
                                 <table style="width:100%; height:100%;">
                                     <tbody>
                                         <tr>
-                                            <td class="btn-top count">5000</td>
+                                            <td class="btn-top count">3 500</td>
                                         </tr>
                                         <tr>
-                                            <td class="btn-bottom">шкіл підключено</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="t851__col t-col t-col_3 t-align_center t851__col_mobile-grid t851__show_hover advantages-item">
-                        <div class="t228__right_buttons_but">
-                            <a href="https://b2b.qiwi.com/nadobro/#request" target="" class="t-btn " style="color:#ffffff;background-color:#ff8c00;font-family:Museo;font-weight:400;">
-                                <table style="width:100%; height:100%;">
-                                    <tbody>
-                                        <tr>
-                                            <td class="btn-top count">500000</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="btn-bottom">користувачів</td>
+                                            <td class="btn-bottom">закладів освіти</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -468,10 +470,10 @@
                                 <table style="width:100%; height:100%;">
                                     <tbody>
                                         <tr>
-                                            <td class="btn-top count">5 </td>
+                                            <td class="btn-top count">600 000</td>
                                         </tr>
                                         <tr>
-                                            <td class="btn-bottom">років досвіду</td>
+                                            <td class="btn-bottom">школярів </td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -484,10 +486,26 @@
                                 <table style="width:100%; height:100%;">
                                     <tbody>
                                         <tr>
-                                            <td class="btn-top count">20 </td>
+                                            <td class="btn-top count">450 000 </td>
                                         </tr>
                                         <tr>
-                                            <td class="btn-bottom">млн. оцінок у жураналах</td>
+                                            <td class="btn-bottom">батьків </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="t851__col t-col t-col_3 t-align_center t851__col_mobile-grid t851__show_hover advantages-item">
+                        <div class="t228__right_buttons_but">
+                            <a href="https://b2b.qiwi.com/nadobro/#request" target="" class="t-btn " style="color:#ffffff;background-color:#ff8c00;font-family:Museo;font-weight:400;">
+                                <table style="width:100%; height:100%;">
+                                    <tbody>
+                                        <tr>
+                                            <td class="btn-top count">100 000 </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="btn-bottom">вчителів</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -502,19 +520,66 @@
                 });
             </script>
         </div>
-        <div id="rec72371270" class="r t-rec t-rec_pt_90 t-rec_pb_90" style="padding-top:90px;padding-bottom:90px;background-color:#f5f5f5; " data-animationappear="off" data-record-type="193" data-bg-color="#f5f5f5">
+        <div id="reason" class="r t-rec t-rec_pt_90 t-rec_pb_90 reason" style="padding-top:90px;padding-bottom:90px;background-color:#f5f5f5; " data-animationappear="off" data-record-type="193" data-bg-color="#f5f5f5">
             <!-- T175 -->
             <div class="t175">
                 <div class="t-container t-container_flex">
-                    <div class="t-col t-col_6 t-col_flex t-align_center"> <img src="assets/img/tild6566-3733-4465-b336-323138323231_____-_google_chrome_3.jpg" data-original="assets/img/tild6566-3733-4465-b336-323138323231_____-_google_chrome_3.jpg" imgfield="img" class="t175__img t-img t-animate loaded " data-animate-style="fadeinright" data-animate-group="yes" data-animate-order="1" title="No EXIF" style="transition-delay: 0s;"> </div>
+                    <div class="t-col t-col_6 t-col_flex t-align_center"> 
+                        <div class="reason__slider-wrap">
+                            <div class="reason__slider">
+                                <div>
+                                    <div class="reason__slider-item">
+                                        <img src="assets/img/tild6566-3733-4465-b336-323138323231_____-_google_chrome_3.jpg" data-original="assets/img/tild6566-3733-4465-b336-323138323231_____-_google_chrome_3.jpg" imgfield="img" class="t175__img t-img t-animate loaded " data-animate-style="fadeinright" data-animate-group="yes" data-animate-order="1" title="No EXIF" style="transition-delay: 0s;">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="reason__slider-item">
+                                        <img src="assets/img/tild6566-3733-4465-b336-323138323231_____-_google_chrome_3.jpg" data-original="assets/img/tild6566-3733-4465-b336-323138323231_____-_google_chrome_3.jpg" imgfield="img" class="t175__img t-img t-animate loaded " data-animate-style="fadeinright" data-animate-group="yes" data-animate-order="1" title="No EXIF" style="transition-delay: 0s;">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="reason__slider-item">
+                                        <img src="assets/img/tild6566-3733-4465-b336-323138323231_____-_google_chrome_3.jpg" data-original="assets/img/tild6566-3733-4465-b336-323138323231_____-_google_chrome_3.jpg" imgfield="img" class="t175__img t-img t-animate loaded " data-animate-style="fadeinright" data-animate-group="yes" data-animate-order="1" title="No EXIF" style="transition-delay: 0s;">
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="reason__slider-item">
+                                        <img src="assets/img/tild6566-3733-4465-b336-323138323231_____-_google_chrome_3.jpg" data-original="assets/img/tild6566-3733-4465-b336-323138323231_____-_google_chrome_3.jpg" imgfield="img" class="t175__img t-img t-animate loaded " data-animate-style="fadeinright" data-animate-group="yes" data-animate-order="1" title="No EXIF" style="transition-delay: 0s;">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                         
+                    </div>
                     <div class="t-col t-col_6 t-prefix_1 t-col_flex">
                         <div class="t175__textwrapper">
-                            <h2 class="t175__title t-title t-title_md t-animate " data-animate-style="fadeinleft" data-animate-group="yes" data-animate-order="2" data-animate-delay="0.3" style="transition-delay: 0.3s;" field="title"><div style="font-size:42px;font-family:&#39;Museo&#39;;" data-customstyle="yes">Чому наш портал...</div></h2>
+                            <h2 class="t175__title t-title t-title_md t-animate " data-animate-style="fadeinleft" data-animate-group="yes" data-animate-order="2" data-animate-delay="0.3" style="transition-delay: 0.3s;" field="title"><div style="font-size:42px;font-family:&#39;Museo&#39;;" data-customstyle="yes">На що ми просимо вашої підтримки?</div></h2>
                             <div class="t175__text t-text t-text_sm t-animate " data-animate-style="fadeinleft" data-animate-group="yes" data-animate-order="4" data-animate-delay="0.3" style="transition-delay: 0.6s;" field="text">
-                                <div style="font-size:18px;line-height:26px;color:#666666;" data-customstyle="yes"><span style="color: rgb(45, 53, 64);"><span data-redactor-style="font-family: Museo;" style="font-family: Museo;"><br></span></span><span style="color: rgb(45, 53, 64);"><span data-redactor-style="font-family: Museo;" style="font-family: Museo;"><span style="font-size: 20px;" data-redactor-tag="span"><span data-redactor-style="color: #000000;" style="color: rgb(0, 0, 0);">Сделайте так, чтобы Вас запомнили:<br>используйте ваш логотип и брендовые цвета. Это возможно с помощью индивидуальных настроек.</span></span>
-                                    </span>
+                                <div style="font-size:18px;line-height:26px;color:#666666;" data-customstyle="yes">
+                                    <span style="color: rgb(45, 53, 64);">
+                                        <span data-redactor-style="font-family: Museo;" style="font-family: Museo;">
+                                            <span style="font-size: 20px;" data-redactor-tag="span">
+                                                <span data-redactor-style="color: #000000;" style="color: rgb(0, 0, 0);">Ми не байдужі до розвитку сфери освіти в Україні, за нашої підтримки проводяться міжнародні освітянські форуми, здійснюється навчання педагогів сучасним інформаційним технологіям.
+                                                </span>
+                                            </span>
+                                        </span>
                                     <br>
-                                    </span><u><span style="font-size: 20px;" data-redactor-tag="span"><br></span></u><span style="color: rgb(0, 85, 187);"><a href="#" target="_blank" style="color:#0055bb !important;"><span style="font-size: 20px;">Так выглядит форма оплаты фонда "Линия жизни"</span></a>
+                                    <br>
+                                        <span data-redactor-style="font-family: Museo;" style="font-family: Museo;">
+                                            <span style="font-size: 20px;" data-redactor-tag="span">
+                                                <span data-redactor-style="color: #000000;" style="color: rgb(0, 0, 0);">Під час карантину стрімко збільшилось навантаження на технічні та людські ресурси системи. Ми збільшуємо потужності обробки даних, штат фахівців служби технічної підтримки та підтримки користувачів. Тобто, витрати на функціонування порталу безперервно зростають.<br>
+                                                Наші витрати на фінансування проекту, які ми здійснювали всі ці роки, деякою мірою компенсувались батьками, які оплачували розширений пакет послуг електронного щоденника.
+                                                </span>
+                                            </span>
+                                        </span>
+                                    <br> 
+                                    <br>     
+                                        <span data-redactor-style="font-family: Museo;" style="font-family: Museo;">
+                                            <span style="font-size: 20px;" data-redactor-tag="span">
+                                                <span data-redactor-style="color: #000000;" style="color: rgb(0, 0, 0);">Наразі ми не отримуємо жодних фінансових надходжень, оскільки функції розширеного пакету послуг електронного щоденника на час карантину всім користувачам надаються <strong style=""><span style="color: rgb(255, 140, 0);" data-redactor-tag="span">БЕЗКОШТОВНО</span></strong>.
+                                                </span>
+                                            </span>
+                                        </span>
                                     </span>
                                 </div>
                             </div>
@@ -529,11 +594,15 @@
                 <div class="t-container">
                     <div class="t165__col-top t-col t-col_8 t165__vmiddle t165__left">
                         <div class="t165__textwrapper">
-                            <h2 class="t165__title t-heading t-heading_md t-animate " data-animate-style="fadeinright" data-animate-group="yes" data-animate-order="3" data-animate-delay="0.3" style="transition-delay: 0.3s;" field="title"><div style="font-size:42px;font-family:&#39;Museo&#39;;" data-customstyle="yes">Помогать просто.<br>Даже на бегу</div></h2>
+                            <h2 class="t165__title t-heading t-heading_md t-animate " data-animate-style="fadeinright" data-animate-group="yes" data-animate-order="3" data-animate-delay="0.3" style="transition-delay: 0.3s;" field="title"><div style="font-size:42px;font-family:&#39;Museo&#39;;" data-customstyle="yes">Нові можливості</div></h2>
                             <div class="t165__text t-text t-text_sm t-animate " data-animate-style="fadeinleft" data-animate-group="yes" data-animate-order="4" data-animate-delay="0.3" style="transition-delay: 0.6s;" field="text">
-                                <div style="font-size:20px;font-family:&#39;Museo&#39;;color:#000000;" data-customstyle="yes"><strong></strong><strong>40% пользователей совершают покупки с телефона. </strong>
-                                    <br><span style="font-family: Museo;">Платежная форма работает на Andoroid, iOS и других мобильных системах. К оплате принимаются карты Visa, Mastercard, МИР и QIWI Кошелек.</span>
-                                    <br><span style="color: rgb(45, 53, 64);"><br></span></div>
+                                <div style="font-size:20px;font-family:&#39;Museo&#39;;color:#000000;" data-customstyle="yes">
+                                    <br>
+
+                                    <span style="font-family: Museo;">Сьогодні ми просимо вашої підтримки для розробки нових можливостей порталу, оновлення його дизайну, запуску мобільних додатків, розширення служби технічної підтримки користувачів.</span>
+                                    <br><br>
+                                    <span style="font-family: Museo;">Наша спільна мрія про сучасну школу, доступні для кожного технології в освіті  має крок за кроком втілюватись у життя!</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -541,14 +610,21 @@
                 </div>
             </div>
         </div>
-        <div id="rec72371272" class="r t-rec t-rec_pt_90 t-rec_pb_90  counter-container2          " style="padding-top:90px;padding-bottom:90px;background-color:#ffffff; " data-animationappear="off" data-record-type="495" data-bg-color="#ffffff">
+        <div id="piggybank" class="r t-rec t-rec_pt_90 t-rec_pb_90  counter-container2          " style="padding-top:90px;padding-bottom:90px;background-color:#ffffff; " data-animationappear="off" data-record-type="495" data-bg-color="#ffffff">
             <!-- t495 -->
             <div class="t495">
                 <div class="t-section__container t-container">
                     <div class="t-col t-col_12">
                         <div class="t-section__topwrapper t-align_center">
-                            <h2 class="t-section__title t-title t-title_xs t-animate" data-animate-style="fadeinup" data-animate-group="yes" field="btitle" data-animate-start-time="1586775239663"><div style="font-size:42px;" data-customstyle="yes">Результаты работы в Апреле</div>
+                            <h2 class="t-section__title t-title t-title_xs t-animate" data-animate-style="fadeinup" data-animate-group="yes" field="btitle" data-animate-start-time="1586775239663"><div style="font-size:42px;" data-customstyle="yes">СКАРБНИЧКА</div>
                             </h2>
+                            <div class="t-section__descr t-descr t-descr_xl t-margin_auto" field="bdescr">
+                                <div style="font-size:18px;" data-customstyle="yes">
+                                    <span style="font-size: 20px;">На цій сторінці розміщена «скарбничка», завдяки якій ви будете бачити, скільки коштів потрапило від вас на підтримку порталу.
+                                   <br>
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -561,29 +637,29 @@
                             </div>
                             <div class="t495__line" style="background-color: #ff8c00; height: 3px; "></div>
                             <div class="t-descr t-descr_sm" style="" field="descr">
-                                <div style="font-size:30px;text-align:center;font-family:&#39;Museo&#39;;color:#000000;" data-customstyle="yes"><strong class="count2">300000</strong></div>
+                                <div style="font-size:30px;text-align:center;font-family:&#39;Museo&#39;;color:#000000;" data-customstyle="yes"><strong class="count2">840</strong></div>
                             </div>
                         </div>
                         <div class="t495__col t-col t-col_4 t-item t-animate" data-animate-style="zoomin" data-animate-chain="yes" data-animate-start-time="1586775239984" style="transition-delay: 0.32s;">
                             <div class="t-heading t-heading_lg" style="" field="title2">
                                 <div style="font-size:26px;text-align:center;font-family:&#39;Museo&#39;;color:#000000;" data-customstyle="yes">
-                                    <br><strong></strong><span style="font-weight: 300;">Сумму зібрано</span> </div>
+                                    <br><strong></strong><span style="font-weight: 300;">На цей час ви зібрали:</span> </div>
                             </div>
                             <div class="t495__line" style="background-color: #ff8c00; height: 3px; "></div>
                             <div class="t-descr t-descr_sm" style="" field="descr2">
-                                <div style="font-size:30px;text-align:center;font-family:&#39;Museo&#39;;color:#000000;" data-customstyle="yes"><strong class="count2">150 000 </strong></div>
+                                <div style="font-size:30px;text-align:center;font-family:&#39;Museo&#39;;color:#000000;" data-customstyle="yes"><strong class="count2">52 000</strong> грн.</div>
                             </div>
                         </div>
                         <div class="t495__col t-col t-col_4 t-item t-animate " data-animate-style="zoomin" data-animate-chain="yes" data-animate-start-time="1586775240144" style="transition-delay: 0.48s;">
                             <div class="t-heading t-heading_lg" style="" field="title3">
                                 <div style="font-size:26px;text-align:center;font-family:&#39;Museo&#39;;" data-customstyle="yes">
-                                    <br><span style="font-weight: 300;">Скільки ще потрібно</span>
+                                    <br><span style="font-weight: 300;">До мети залишилось:</span>
                                     <br>
                                 </div>
                             </div>
                             <div class="t495__line" style="background-color: #ff8c00; height: 3px; "></div>
                             <div class="t-descr t-descr_sm" style="" field="descr3">
-                                <div style="font-size:30px;text-align:center;font-family:&#39;Museo&#39;;color:#2d3540;" data-customstyle="yes"><strong class="count2">150 000 </strong></div>
+                                <div style="font-size:30px;text-align:center;font-family:&#39;Museo&#39;;color:#2d3540;" data-customstyle="yes"><strong class="count2">1 948 000</strong> грн.</div>
                             </div>
                         </div>
                     </div>
@@ -592,7 +668,7 @@
         </div>
 
 <!-- Кнопки -->
-        <div id="" class="r t-rec t-rec_pt_90 t-rec_pb_90 help-project counter-container3" style="padding-top:90px;padding-bottom:90px;background-color:#ffffff; " data-animationappear="off" data-record-type="851" data-bg-color="#ffffff">
+        <div id="donate" class="r t-rec t-rec_pt_90 t-rec_pb_90 help-project counter-container3" style="padding-top:90px;padding-bottom:90px;background-color:#ffffff; " data-animationappear="off" data-record-type="851" data-bg-color="#ffffff">
             <!-- t851 -->
             <div class="t851" data-tile-ratio="0.57142857142857">
                 <div class="t-section__container t-container">
@@ -603,7 +679,7 @@
                             <div class="t-section__descr t-descr t-descr_xl t-margin_auto" field="bdescr">
                                 <div style="font-size:18px;" data-customstyle="yes">
                                     <br>
-                                    <!-- <strong><span data-redactor-tag="span" style="font-size: 22px;">Допомогти проекту</span></strong><strong></strong><u></u> -->
+                                    <strong><span data-redactor-tag="span" style="font-size: 22px;">Оберіть суму допомоги</span></strong><strong></strong><u></u>
                                 </div>
                             </div>
                         </div>
@@ -717,14 +793,14 @@
 
 
 
-        <div id="rec111007120" class="r t-rec t-rec_pt_45 t-rec_pb_75" style="padding-top:45px;padding-bottom:75px;background-color:#ffffff; " data-record-type="594" data-bg-color="#ffffff" data-animationappear="off">
+        <div id="partners" class="r t-rec t-rec_pt_45 t-rec_pb_75" style="padding-top:45px;padding-bottom:75px;background-color:#ffffff; " data-record-type="594" data-bg-color="#ffffff" data-animationappear="off">
             <!-- t594 -->
             <div class="t594">
                 <div class="t-section__container t-container">
                     <div class="t-col t-col_12">
                         <div class="t-section__topwrapper t-align_center">
                             <div class="t-section__title t-title t-title_xs" field="btitle">
-                                <div style="font-size:42px;font-family:&#39;Museo&#39;;" data-customstyle="yes">Наши партнеры</div>
+                                <div style="font-size:42px;font-family:&#39;Museo&#39;;" data-customstyle="yes">Дякуємо за розуміння та співпрацю!</div>
                             </div>
                         </div>
                     </div>
@@ -769,7 +845,7 @@
                 <div class="t-container_100">
                     <div class="t142__wrapone">
                         <div class="t142__wraptwo">
-                            <a href="#" target="_blank" data-tilda-event-name="/tilda/click/rec111001590/button1" class="js-click-stat">
+                            <a href="#donate" class=" crane" data-tilda-event-name="/tilda/click/rec111001590/button1" class="js-click-stat">
                                 <div class="t-btn t142__submit " style="color:#ffffff;background-color:#ff8c00;border-radius:30px; -moz-border-radius:30px; -webkit-border-radius:30px;font-weight:700;"> Допомогти </div>
                             </a>
                         </div>

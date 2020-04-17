@@ -29,6 +29,37 @@
 	width: 140px;
 	height: 140px;
 	border-radius: 50%;
+	margin: auto;
 }
 
-.help-project .advantages-item
+.reason__slider {
+	overflow: hidden;
+}
+
+.reason__slider.slick-initialized {
+	overflow: visible;
+}
+
+.reason .slick-dots {
+	bottom: -40px;
+}
+
+.reason .slick-dots li {
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+	background-color: #00000085;
+}
+
+.reason .slick-dots li.slick-active {
+	background-color: #ff8c00;
+}
+
+
+.reason .slick-dots li button:before, .reason .slick-dots li.slick-active button:before {
+	content: '';
+}
+
+.reason .t-col.flexx, .reason .t-col_flex {
+	margin-top: 0;
+}
