@@ -32,6 +32,10 @@
 	margin: auto;
 }
 
+.reason__slider-wrap {
+	margin-bottom: 60px;
+}
+
 .reason__slider {
 	overflow: hidden;
 }
