@@ -1,0 +1,1 @@
+{"public_key":"i34815045149","version":"3","action":"paydonate","amount":"10","currency":"UAH","description":"Розвиток свери освіти разом з E-school","order_id":"000001"}
