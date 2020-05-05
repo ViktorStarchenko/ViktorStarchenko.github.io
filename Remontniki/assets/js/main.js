@@ -171,7 +171,7 @@ $(document).ready(function(){
 
 
 
-window.onload=function(){
+
 
 	// Advantages palms animation 
 
@@ -198,7 +198,7 @@ window.onload=function(){
 		  .setPin(".sticky")
 		  .setTween(tl)
 			.addTo(controller);	
-	
+
 	if(window.innerWidth >= 768){ 
 		var tl2 = new TimelineMax({onUpdate:updatePercentage2});
 			tl2.from('.rate-animation-3', 1.5, {opacity:0});
@@ -225,7 +225,7 @@ window.onload=function(){
 			  .setTween(tl2)
 				.addTo(controller);	
 	}
-}
+
 
 
 	
