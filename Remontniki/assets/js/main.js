@@ -93,6 +93,33 @@ $(document).ready(function(){
 	})
 })
 
+$(document).ready(function(){
+	$('.rate__mobile-slider.owl-carousel').owlCarousel({
+		nav: true,
+		dots: true,
+		center:true,
+		loop: true,
+  		navText: ["<div  class='advantages-arrow advantages-prevArrow'><img src='assets/img/icons/6.svg'></div>","<div  class='advantages-arrow advantages-nextArrow'><img src='assets/img/icons/6.svg'></div>"],
+	  	responsive:{
+	        0:{
+	            items:1,
+	            nav:true
+	        },
+	   //      404:{
+	   //      	items:1,
+	   //          nav:true,
+	   //          center:true,
+				// stagePadding: 20,
+	   //      },
+	        600:{
+	        	center: false,
+	        	stagePadding: 0,
+	            items:2,
+	        },
+	    }
+	})
+})
+
 
 
 // LAZY LOAD
@@ -141,59 +168,67 @@ $(document).ready(function(){
 
 
 
-// Advantages palms animation 
-
-	var tl = new TimelineMax({onUpdate:updatePercentage});
-	const controller = new ScrollMagic.Controller();
-	tl.from('.advantages__palms-left', .5, {x:-500});
-	tl.from('.advantages__palms-right', .5, {x:100});
-	tl.from('.tube-img', .5, {x:100});
-	// t1.from('.tube-img', .5, {x:-500});
-
-	function updatePercentage() {
-		  //percent.innerHTML = (tl.progress() *100 ).toFixed();
-		  tl.progress();
-		  // console.log(tl.progress());
-		}
-
-
-	const scene = new ScrollMagic.Scene({
-	  triggerElement: ".sticky",
-	            triggerHook: "0.28",
-	            duration: "100%",
-	            offset: "0%"
-	})
-	  .setPin(".sticky")
-	  .setTween(tl)
-		.addTo(controller);	
 
 
 
+window.onload=function(){
 
-	var tl2 = new TimelineMax({onUpdate:updatePercentage2});
-	tl2.from('.rate-animation-3', 1.5, {opacity:0});
-	tl2.from('.tube-img', 2, {y:500});
-	tl2.from('.rate-animation-1', 3, {opacity:0});
-	tl2.from('.rate-animation-2', 6, {opacity:0});
+	// Advantages palms animation 
+
+		var tl = new TimelineMax({onUpdate:updatePercentage});
+		const controller = new ScrollMagic.Controller();
+		tl.from('.advantages__palms-left', .5, {x:-500});
+		tl.from('.advantages__palms-right', .5, {x:100});
+		tl.from('.tube-img', .5, {x:100});
+		// t1.from('.tube-img', .5, {x:-500});
+
+		function updatePercentage() {
+			  //percent.innerHTML = (tl.progress() *100 ).toFixed();
+			  tl.progress();
+			  // console.log(tl.progress());
+			}
+
+
+		const scene = new ScrollMagic.Scene({
+		  triggerElement: ".sticky",
+		            triggerHook: "0.28",
+		            duration: "100%",
+		            offset: "0%"
+		})
+		  .setPin(".sticky")
+		  .setTween(tl)
+			.addTo(controller);	
 	
+	if(window.innerWidth >= 768){ 
+		var tl2 = new TimelineMax({onUpdate:updatePercentage2});
+			tl2.from('.rate-animation-3', 1.5, {opacity:0});
+			tl2.from('.tube-img', 2, {y:500});
+			tl2.from('.rate-animation-1', 3, {opacity:0});
+			tl2.from('.rate-animation-2', 6, {opacity:0});
+			
 
-	function updatePercentage2() {
-		console.log('PADLA')
-		  //percent.innerHTML = (tl.progress() *100 ).toFixed();
-		  tl2.progress();
-		  // console.log(tl.progress());
-		}
+			function updatePercentage2() {
+				console.log('PADLA')
+				  //percent.innerHTML = (tl.progress() *100 ).toFixed();
+				  tl2.progress();
+				  // console.log(tl.progress());
+				}
 
 
-	const scene2 = new ScrollMagic.Scene({
-	  			triggerElement: ".rate",
-	            triggerHook: "0.28",
-	            duration: "200%",
-	            offset: "0%"
-	})
-	  .setPin(".rate")
-	  .setTween(tl2)
-		.addTo(controller);	
+			const scene2 = new ScrollMagic.Scene({
+			  			triggerElement: ".rate",
+			            triggerHook: "0.28",
+			            duration: "200%",
+			            offset: "0%"
+			})
+			  .setPin(".rate")
+			  .setTween(tl2)
+				.addTo(controller);	
+	}
+}
+
+
+	
 
 
 	// var tube = TweenMax.to(".tube-img", 2, {y: 500});
