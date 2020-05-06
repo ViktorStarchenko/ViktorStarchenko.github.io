@@ -74,7 +74,8 @@ $(document).ready(function(){
   	dots: false,
   	pagination: false,
   	autoplay:true,
-  	autoplayTimeout:800
+  	autoplayTimeout:800,
+  	lazyLoad: true
   });
 
   function addBigCicleOpacity() {
@@ -106,6 +107,7 @@ $(document).ready(function(){
 	$('.advantages__works-slider.owl-carousel').owlCarousel({
 		nav: true,
 		items:1,
+		lazyLoad: true,
   		navText: ["<div  class='advantages-arrow advantages-prevArrow'><img src='assets/img/icons/6.svg'></div>","<div  class='advantages-arrow advantages-nextArrow'><img src='assets/img/icons/6.svg'></div>"],
 	  	responsive:{
 	        600:{
@@ -125,6 +127,7 @@ $(document).ready(function(){
 		center:true,
 		loop: true,
 		items:1,
+		lazyLoad: true,
   		navText: ["<div  class='advantages-arrow advantages-prevArrow'><img src='assets/img/icons/6.svg'></div>","<div  class='advantages-arrow advantages-nextArrow'><img src='assets/img/icons/6.svg'></div>"],
 	  	responsive:{
 	   //      404:{
