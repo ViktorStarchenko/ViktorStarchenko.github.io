@@ -1822,6 +1822,7 @@ a.text-14-123965-unbold:hover {
 .rate__tabs-item-info .rate__tabs-item-text {
 	max-width: 382px;
 	margin-bottom: 50px;
+	height: 150px;
 }
 
 .rate__tabs-item-buttons {
@@ -1907,7 +1908,7 @@ a.text-14-123965-unbold:hover {
 .rate__tabs-nav-item {
 	width: 100%;
 	height: calc(100% / 5);
-	padding: 26px 50px;
+	padding: 28.5px 50px;
 	position: relative;
 	cursor: pointer;
 	transition-duration: .2s;
@@ -1955,11 +1956,15 @@ a.text-14-123965-unbold:hover {
 	transition-duration: .2s;
 	opacity: 1;
 }
-
+/*@media screen and (max-width: 1121px) {
+	.rate__tabs-nav-item {
+		padding: 26.3px 50px;
+	}
+}*/
 
 @media screen and (max-width: 1116px) {
 	.rate__tabs-nav-item {
-		padding: 23.8px 50px;
+		padding: 26.3px 50px;
 	}
 
 	.tube-img {
@@ -1970,13 +1975,13 @@ a.text-14-123965-unbold:hover {
 
 @media screen and (max-width: 1058px) {
 	.rate__tabs-nav-item {
-		padding: 21.6px 50px;
+		padding: 24.1px 50px
 	}
 }
 
 @media screen and (max-width: 1053px) {
 	.rate__tabs-nav-item {
-		padding: 24.1px 50px;
+		padding: 26.6px 50px;
 	}
 }
 
@@ -2035,7 +2040,7 @@ a.text-14-123965-unbold:hover {
 	}
 
 	.rate__tabs-nav-item {
-		padding: 44.6px 50px;
+		padding: 47.1px 50px;
 	}
 }
 
@@ -2047,7 +2052,7 @@ a.text-14-123965-unbold:hover {
 
 @media screen and (max-width: 815px) {
 	.rate__tabs-nav-item {
-		padding: 42.5px 50px;
+		padding: 44.9px 50px;
 	}
 }
 
@@ -2219,6 +2224,7 @@ a.text-14-123965-unbold:hover {
 
 	.rate__mobile-slider-desc {
 		margin-bottom: 40px;
+		height: 155px;
 	}
 
 	.rate__mobile-item-buttons {
