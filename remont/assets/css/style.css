@@ -6208,6 +6208,7 @@ a.text-14-123965-unbold:hover {
     min-width: 204px;
     border: 1px solid #d2dcf7;
     padding-bottom: 0;
+    z-index: 15;
 }
 
 .header__phones .header__phones-dropdown.dropdown-list .header__phones-item {
