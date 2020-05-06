@@ -5299,6 +5299,25 @@ a.text-dark:hover, a.text-dark:focus {
 
 
 /*ANIMATIONS*/
+@keyframes opacity0to1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes animate_tube {
+  from {
+    transform: translateY(409px);
+    transition-duration: .5s;
+  }
+  to {
+    transform: translateY(0);
+    transition-duration: .5s;
+  }
+}
+
 @keyframes animate_palms_right {
 	from {
 		transform: translateX(300px);
@@ -5309,6 +5328,18 @@ a.text-dark:hover, a.text-dark:focus {
 		transition-duration: .5s;
 	}
 }
+
+@keyframes animate_palms_left {
+  from {
+    transform: translateX(-500px);
+    transition-duration: .5s;
+  }
+  to {
+    transform: translateX(0);
+    transition-duration: .5s;
+  }
+}
+
 @keyframes background-blisk {
   from {
     left: -100%;
@@ -6779,18 +6810,29 @@ background-image: linear-gradient(12deg, #9ccfff 0%, #c6d5ff 100%);
 
 .advantages__palms-left {
 	bottom: -150px;
-    left: 0;
+  left: -500px;
 }
 
 .advantages__palms-right {
 	bottom: 0;
+  right: -300px;
 }
 
-.animate-right {
+.advantages__palms-left.add-animate {
+  animation-name: animate_palms_left;
+  animation-duration: .7s;
+  animation-fill-mode: backwards;
+}
+
+.advantages__palms-right.add-animate {
 	animation-name: animate_palms_right;
 	animation-duration: .5s;
 	animation-fill-mode: backwards;
 
+}
+
+.advantages__palms-left.animated {
+  left: 0;
 }
 
 .advantages__palms-right.animated {
@@ -7152,7 +7194,45 @@ background-image: linear-gradient(12deg, #9ccfff 0%, #c6d5ff 100%);
 .tube-img {
 	position: absolute;
 	left: 49%;
-    top: -121px;
+  top: 281px;
+}
+
+.tube-img.add-animate {
+  animation-name: animate_tube;
+  animation-duration: .5s;
+  animation-fill-mode: backwards;
+}
+.tube-img.animated {
+  top: -121px;
+}
+
+.rate-animation-3, .rate-animation-1, .rate-animation-2 {
+  opacity: 0;
+}
+
+.rate-animation-3.add-animate {
+  animation-name: opacity0to1;
+  animation-duration: .8s;
+  animation-fill-mode: backwards;
+  animation-delay: .4s;
+}
+
+.rate-animation-1.add-animate {
+  animation-name: opacity0to1;
+  animation-duration: .8s;
+  animation-fill-mode: backwards;
+  animation-delay: .6s;
+}
+
+.rate-animation-2.add-animate {
+  animation-name: opacity0to1;
+  animation-duration: .9s;
+  animation-fill-mode: backwards;
+  animation-delay: 1s;
+}
+
+.rate-animation-3.animated, .rate-animation-1.animated, .rate-animation-2.animated {
+  opacity: 1;
 }
 
 .rate__tabs {
@@ -7543,8 +7623,13 @@ background-image: linear-gradient(12deg, #9ccfff 0%, #c6d5ff 100%);
 	    z-index: -1;
 	}
 
+  .rate__mobile-background .col-12 {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
 	.rate__mobile-slider-item {
-		width: 314px;
+		/*width: 314px;
 		max-width: 100%;
 		display: flex;
 	    flex-direction: column;
@@ -7553,7 +7638,19 @@ background-image: linear-gradient(12deg, #9ccfff 0%, #c6d5ff 100%);
 		border-radius: 10px;
 		background-color: #ffffff;
 		padding: 20px 15px; 
-		margin: auto;
+		/*margin: auto;*/
+
+    width: 94%;
+    max-width: 314px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 3px 4px 32px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 20px 6px;
+    /* margin: auto; */
+    margin-right: 17px;
 	}
 	.rate__mobile-values-block {
 		display: flex;
@@ -7595,11 +7692,13 @@ background-image: linear-gradient(12deg, #9ccfff 0%, #c6d5ff 100%);
 
 	.rate__mobile-slider-heading {
 		margin-bottom: 30px;
+    padding: 0 15px;
 	}
 
 	.rate__mobile-slider-desc {
 		margin-bottom: 40px;
-		height: 155px;
+		height: 200px;
+    padding: 0 15px;
 	}
 
 	.rate__mobile-item-buttons {

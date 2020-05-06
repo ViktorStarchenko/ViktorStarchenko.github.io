@@ -47,10 +47,10 @@
 
 if(isset($_POST)) {
 		if(empty($name) or !isset($name)) {
-			$response['error'] = 'Пожалуйста у кажите Ваше имя';
+			$response['error'] = 'Пожалуйста укажите Ваше имя';
 		} else {
 			if(!isset($tel) or $telLength < 12) {
-				$response['error'] = 'Пожалуйста у кажите Ваш номер телефона';
+				$response['error'] = 'Пожалуйста укажите Ваш номер телефона';
 			} else {
 				mail($to, $subject, $email_body, $headers);
 			}

@@ -111,6 +111,8 @@ $(document).ready(function(){
 		nav: true,
 		items:1,
 		lazyLoad: true,
+		loop: true,
+		center: true,
   		navText: ["<div  class='advantages-arrow advantages-prevArrow'><img src='assets/img/icons/6.svg'></div>","<div  class='advantages-arrow advantages-nextArrow'><img src='assets/img/icons/6.svg'></div>"],
 	  	responsive:{
 	        600:{
@@ -127,21 +129,28 @@ $(document).ready(function(){
 	$('.rate__mobile-slider.owl-carousel').owlCarousel({
 		nav: true,
 		dots: true,
-		center:true,
+		// center:true,
 		loop: true,
-		items:1,
+		items: 1,
 		lazyLoad: true,
+		stagePadding: 15,
   		navText: ["<div  class='advantages-arrow advantages-prevArrow'><img src='assets/img/icons/6.svg'></div>","<div  class='advantages-arrow advantages-nextArrow'><img src='assets/img/icons/6.svg'></div>"],
 	  	responsive:{
-	   //      404:{
-	   //      	items:1,
-	   //          nav:true,
-	   //          center:true,
-				// stagePadding: 20,
-	   //      },
+	        425:{
+	        	items:1,
+	            nav:true,
+	            center:true,
+				stagePadding: 40,
+	        },
+	        500:{
+	        	items:1,
+	            nav:true,
+	            center:true,
+				stagePadding: 80,
+	        },
 	        600:{
 	        	center: false,
-	        	stagePadding: 0,
+	        	stagePadding: 5,
 	            items:2,
 	        },
 	    }
@@ -149,7 +158,7 @@ $(document).ready(function(){
 })
 
 $(document).ready(function(){
-  // Lazy load
+  // Animation
   animate = el => {
     const scrollTop = $(window).scrollTop()
     const winHeight = $(window).height()
@@ -157,17 +166,17 @@ $(document).ready(function(){
     const schemeHeight = $(el).height()
 
     if (scrollTop + winHeight >= offset && scrollTop <= offset + schemeHeight) {
-      $(el).addClass('animate-right')
+      $(el).addClass('add-animate')
       $(el).addClass('animated')
     } else {
-		$(el).removeClass('animate-right')
+		$(el).removeClass('add-animate')
       $(el).removeClass('animated')
     }
   }
 
    $(window).on('load scroll', () => {
 
-    $('.advantages__palms-right').each((idx, item) => {
+    $('.to-animate').each((idx, item) => {
       animate(item)
     })
   })
@@ -240,62 +249,62 @@ $(document).ready(function(){
 
 		
 
-	if(window.innerWidth >= 768){ 
+	// if(window.innerWidth >= 768){ 
 
 
-	var tl = new TimelineMax({onUpdate:updatePercentage});
-		const controller = new ScrollMagic.Controller();
-		tl.from('.advantages__palms-left', .5, {x:-500});
-		// tl.from('.advantages__palms-right', .5, {x:100});
-		// tl.from('.tube-img', .5, {x:100});
-		// t1.from('.tube-img', .5, {x:-500});
+	// var tl = new TimelineMax({onUpdate:updatePercentage});
+	// 	const controller = new ScrollMagic.Controller();
+	// 	tl.from('.advantages__palms-left', .5, {x:-500});
+	// 	// tl.from('.advantages__palms-right', .5, {x:100});
+	// 	// tl.from('.tube-img', .5, {x:100});
+	// 	// t1.from('.tube-img', .5, {x:-500});
 
-		function updatePercentage() {
-			  //percent.innerHTML = (tl.progress() *100 ).toFixed();
-			  tl.progress();
-			  // console.log(tl.progress());
-			}
-
-
-		const scene = new ScrollMagic.Scene({
-		  triggerElement: ".sticky",
-		            // triggerHook: "0.28",
-		            triggerHook: "0.28",
-		            duration: "100%",
-		            offset: "0%"
-		})
-		  .setPin(".sticky")
-		  .setTween(tl)
-			.addTo(controller);	
+	// 	function updatePercentage() {
+	// 		  //percent.innerHTML = (tl.progress() *100 ).toFixed();
+	// 		  tl.progress();
+	// 		  // console.log(tl.progress());
+	// 		}
 
 
+	// 	const scene = new ScrollMagic.Scene({
+	// 	  triggerElement: ".sticky",
+	// 	            // triggerHook: "0.28",
+	// 	            triggerHook: "0.28",
+	// 	            duration: "100%",
+	// 	            offset: "0%"
+	// 	})
+	// 	  .setPin(".sticky")
+	// 	  .setTween(tl)
+	// 		.addTo(controller);	
 
 
-		var tl2 = new TimelineMax({onUpdate:updatePercentage2});
-			tl2.from('.rate-animation-3', 1.5, {opacity:0});
-			tl2.from('.tube-img', 2, {y:500});
-			tl2.from('.rate-animation-1', 3, {opacity:0});
-			tl2.from('.rate-animation-2', 6, {opacity:0});
+
+
+	// 	var tl2 = new TimelineMax({onUpdate:updatePercentage2});
+	// 		tl2.from('.rate-animation-3', 1.5, {opacity:0});
+	// 		tl2.from('.tube-img', 2, {y:500});
+	// 		tl2.from('.rate-animation-1', 3, {opacity:0});
+	// 		tl2.from('.rate-animation-2', 6, {opacity:0});
 			
 
-			function updatePercentage2() {
-				console.log('PADLA')
-				  //percent.innerHTML = (tl.progress() *100 ).toFixed();
-				  tl2.progress();
-				  // console.log(tl.progress());
-				}
+	// 		function updatePercentage2() {
+	// 			console.log('PADLA')
+	// 			  //percent.innerHTML = (tl.progress() *100 ).toFixed();
+	// 			  tl2.progress();
+	// 			  // console.log(tl.progress());
+	// 			}
 
 
-			const scene2 = new ScrollMagic.Scene({
-			  			triggerElement: ".rate",
-			            triggerHook: "0.28",
-			            duration: "200%",
-			            offset: "0%"
-			})
-			  .setPin(".rate")
-			  .setTween(tl2)
-				.addTo(controller);	
-	}
+	// 		const scene2 = new ScrollMagic.Scene({
+	// 		  			triggerElement: ".rate",
+	// 		            triggerHook: "0.28",
+	// 		            duration: "200%",
+	// 		            offset: "0%"
+	// 		})
+	// 		  .setPin(".rate")
+	// 		  .setTween(tl2)
+	// 			.addTo(controller);	
+	// }
 
 
 
