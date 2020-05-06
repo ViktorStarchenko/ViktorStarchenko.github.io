@@ -133,7 +133,7 @@ $(document).ready(function(){
 		loop: true,
 		items: 1,
 		lazyLoad: true,
-		stagePadding: 15,
+		stagePadding: 40,
   		navText: ["<div  class='advantages-arrow advantages-prevArrow'><img src='assets/img/icons/6.svg'></div>","<div  class='advantages-arrow advantages-nextArrow'><img src='assets/img/icons/6.svg'></div>"],
 	  	responsive:{
 	        425:{
