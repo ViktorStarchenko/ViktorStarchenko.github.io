@@ -142,6 +142,31 @@ $(document).ready(function(){
 	})
 })
 
+$(document).ready(function(){
+  // Lazy load
+  animate = el => {
+    const scrollTop = $(window).scrollTop()
+    const winHeight = $(window).height()
+    const offset = $(el).offset().top
+    const schemeHeight = $(el).height()
+
+    if (scrollTop + winHeight >= offset && scrollTop <= offset + schemeHeight) {
+      $(el).addClass('animate-right')
+      $(el).addClass('animated')
+    } else {
+		$(el).removeClass('animate-right')
+      $(el).removeClass('animated')
+    }
+  }
+
+   $(window).on('load scroll', () => {
+
+    $('.advantages__palms-right').each((idx, item) => {
+      animate(item)
+    })
+  })
+})
+
 
 
 // LAZY LOAD
@@ -175,10 +200,10 @@ window.onload=function(){
 	// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
 	function headerFixed() {
 	  if (window.pageYOffset > header) {
-	    $(".header").addClass("sticky");
+	    $(".header").addClass("fixed");
 
 	  } else {
-	    $(".header").removeClass("sticky");
+	    $(".header").removeClass("fixed");
 
 	  }
 	}
@@ -215,8 +240,8 @@ $(document).ready(function(){
 	var tl = new TimelineMax({onUpdate:updatePercentage});
 		const controller = new ScrollMagic.Controller();
 		tl.from('.advantages__palms-left', .5, {x:-500});
-		tl.from('.advantages__palms-right', .5, {x:100});
-		tl.from('.tube-img', .5, {x:100});
+		// tl.from('.advantages__palms-right', .5, {x:100});
+		// tl.from('.tube-img', .5, {x:100});
 		// t1.from('.tube-img', .5, {x:-500});
 
 		function updatePercentage() {
@@ -229,7 +254,7 @@ $(document).ready(function(){
 		const scene = new ScrollMagic.Scene({
 		  triggerElement: ".sticky",
 		            // triggerHook: "0.28",
-		            triggerHook: "0",
+		            triggerHook: "0.28",
 		            duration: "100%",
 		            offset: "0%"
 		})
