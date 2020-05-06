@@ -6718,6 +6718,10 @@ a.text-14-123965-unbold:hover {
 	width: 37px;
 	height: 37px;
 	/*transition-duration: .3s;*/
+	background-color: #dde5ff;
+background-image: -webkit-linear-gradient(282deg, #9ccfff 0%, #c6d5ff 100%);
+background-image: -o-linear-gradient(282deg, #9ccfff 0%, #c6d5ff 100%);
+background-image: linear-gradient(12deg, #9ccfff 0%, #c6d5ff 100%);
 }
 
 
@@ -6734,8 +6738,9 @@ a.text-14-123965-unbold:hover {
 }
 
 .advantages-arrow.advantages-nextArrow:hover {
-	right: -9px;
-	top: calc(50% - 49px);
+	right: -8px;
+    top: calc(50% - 47px);
+
 }
 
 .advantages-prevArrow {
@@ -6744,6 +6749,12 @@ a.text-14-123965-unbold:hover {
     left: -13px;
     transform: rotate(180deg);
 }
+
+.advantages-arrow.advantages-prevArrow:hover {
+	left: -8px;
+    top: calc(50% - 47px);
+}
+
 
 .advantages__control-inner {
 	display: flex;
