@@ -258,6 +258,9 @@ body {
     font-weight: 400;
     color: #0a243e;
 }
+html.modal-open {
+	overflow: hidden;
+}
 
 .wrapper {
 	width: 100%;
@@ -271,7 +274,7 @@ body {
 }
 
 .screen-shadow {
-	position: absolute;
+	position: fixed;
 	top: 0;
 	bottom: 0;
 	left: 0;
@@ -695,6 +698,13 @@ a.text-14-123965-unbold:hover {
 @media screen and (max-width: 767px) {
 	.hidden-767 {
 		display: none!important;
+	}
+}
+
+@media screen and (max-width: 528px) {
+	.dropdown-list.show {
+		top: calc(100% + 11px);
+	    right: calc(50% - 102px);
 	}
 }
 

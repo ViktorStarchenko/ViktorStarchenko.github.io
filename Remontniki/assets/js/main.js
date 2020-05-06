@@ -14,30 +14,48 @@ $(document).ready(function() {
 		$('.close-button').on('click', function(){
 			$('.screen-shadow').removeClass('show');
 			$('.nav-list').removeClass('active');
+			$('html').removeClass('modal-open');
 		})
 
-		$('.screen-shadow.show').on('click', function(e){
-			console.log(e.target)
-			$('.screen-shadow').removeClass('show');
-			$('.nav-list').removeClass('active');
-		})
+		
 	}
 })
 
 // MOBILE MENU
 function closeModal() {
+
+	console.log('closeModal')
 		$('.close-button').on('click', function(){
 			$('.screen-shadow').removeClass('show');
 			$('.nav-list').removeClass('active');
+			$('html').removeClass('modal-open');
 		})
+
+		$('.screen-shadow.show').on('click', function(e){
+			$('.screen-shadow').removeClass('show');
+			$('.nav-list').removeClass('active');
+			$('html').removeClass('modal-open');
+		})
+		$('header .nav-link.crane').on('click', function(){
+			$('.screen-shadow').removeClass('show');
+			$('.nav-list').removeClass('active');
+			$('html').removeClass('modal-open');
+		})
+
 	}
+
 $(document).ready(function(){
 	$('.navbar-toggler').on('click', function(){
 		$('.nav-list').addClass('active');
 		$('.screen-shadow').addClass('show');
+		$('html').addClass('modal-open');
 
 	
-	closeModal();
+		closeModal();
+
+	$('header .nav-link.crane').on('click', function(){
+		closeModal();
+	})
 
 	})
 })
@@ -145,7 +163,7 @@ $(document).ready(function(){
   })
 })
 
-$(document).ready(function(){
+window.onload=function(){
 	var header = $(".header").offset().top;
 	var sticky = header.offsetTop;
 	console.log(header)
@@ -164,18 +182,33 @@ $(document).ready(function(){
 	window.onscroll = function() {
 		headerFixed();
 	}
+}
+
+
+
+
+
+// Smooth scroll
+$(document).ready(function(){
+	$('.crane').on("click", function (event) {
+	        event.preventDefault();
+	        //забираем идентификатор бока с атрибута href
+	        var id  = $(this).attr('href'),
+	        //узнаем высоту от начала страницы до блока на который ссылается якорь
+	            top = $(id).offset().top;
+	        //анимируем переход на расстояние - top за 1500 мс
+	        $('body,html').animate({scrollTop: top-100}, 1500);
+	    });
 })
-
-
-
-
-
-
-
 
 	// Advantages palms animation 
 
-		var tl = new TimelineMax({onUpdate:updatePercentage});
+		
+
+	if(window.innerWidth >= 768){ 
+
+
+	var tl = new TimelineMax({onUpdate:updatePercentage});
 		const controller = new ScrollMagic.Controller();
 		tl.from('.advantages__palms-left', .5, {x:-500});
 		tl.from('.advantages__palms-right', .5, {x:100});
@@ -199,7 +232,9 @@ $(document).ready(function(){
 		  .setTween(tl)
 			.addTo(controller);	
 
-	if(window.innerWidth >= 768){ 
+
+
+
 		var tl2 = new TimelineMax({onUpdate:updatePercentage2});
 			tl2.from('.rate-animation-3', 1.5, {opacity:0});
 			tl2.from('.tube-img', 2, {y:500});
