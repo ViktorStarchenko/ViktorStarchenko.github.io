@@ -7708,6 +7708,8 @@ background-image: linear-gradient(12deg, #9ccfff 0%, #c6d5ff 100%);
 
 	.rate__mobile-value:last-child .rate__mobile-value-img {
 		margin-right: 30px;
+    height: 81px;
+    width: 81px;
 	}
 
 	.rate__mobile-value:last-child .rate__mobile-value-desc {
