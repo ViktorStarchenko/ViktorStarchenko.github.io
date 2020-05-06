@@ -5676,6 +5676,7 @@ button.btn-blue, input.btn-blue {
 	transition-duration: .3s;
 	transform-origin: right;
 	transform: scale(1.02);
+  background-image: unset;
 }
 
 .btn-blue:focus {
