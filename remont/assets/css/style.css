@@ -7773,6 +7773,39 @@ letter-spacing: 1.43px;
 	width: 100%;
 }
 
+.form-message {
+  width: 300px;
+  background-color: #fff;
+  position: fixed;
+  left: calc(50% - 150px) ;
+  top: -400px;
+  z-index: 25;
+  padding: 20px 10px;
+  border-radius: 0 0px 10px 10px;
+  transition-duration: .4s;
+}
+
+.form-message.active {
+  top: 0;
+  transition-duration: .4s;
+}
+
+.form-message__inner {
+  text-align: center;
+  color: #111111;
+  font-family: "Road Radio";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.form-message__inner.error {
+  color: #dc3545;
+}
+
+.form-message__inner.success {
+  color: #28a745;
+}
 
 @media screen and (max-width: 666px) {
 	.modal__wrap {

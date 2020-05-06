@@ -417,3 +417,48 @@ $(document).ready(function(){
      $(".tel-mask").mask("+38 (999) 999-99-99");
    });
 
+
+ // Send from
+  $(document).ready(function() {
+        $('.form-submit').on('click', function(e) {
+                var name = $('input[name="name"]').val();
+                var phone = $('input[name="phone"]').val();
+                $.ajax({
+                    type: 'POST',
+                    url: 'send.php',
+                    dataType: "json",
+                    data: {name:name, phone:phone},
+                    success: function(data) {
+                    	console.log(data.error);
+
+						if (data.success && !data.error) {
+							$('.form-message__inner').text(data.success);
+							$('.form-message__inner').addClass('success');
+	                        $('.form-message').addClass('active');
+	                        $('.form-message').addClass('success');
+
+
+	                        $('input[name="name"]').val("");
+	                        $('input[name="phone"]').val("");
+						} else if (data.error) {
+							$('.form-message__inner').text(data.error);
+							$('.form-message__inner').addClass('error');
+	                        $('.form-message').addClass('active');
+	                        $('.form-message').addClass('success');
+						}
+
+                    },
+                    complete: function(data) {
+                        setTimeout(function() {
+                           $('.form-message').removeClass('active')
+                           $('.form-message__inner').removeClass('error')
+                           $('.form-message__inner').removeClass('success')
+                           $('.form-message__inner').text('')
+                       }, 2500);
+                    }
+                })
+
+            return false;
+        })
+    })
+
