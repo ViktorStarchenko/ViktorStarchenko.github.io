@@ -29,17 +29,20 @@ function closeModal() {
 			$('.screen-shadow').removeClass('show');
 			$('.nav-list').removeClass('active');
 			$('html').removeClass('modal-open');
+			$('.modal__wrap').removeClass('showModal');
 		})
 
 		$('.screen-shadow.show').on('click', function(e){
 			$('.screen-shadow').removeClass('show');
 			$('.nav-list').removeClass('active');
 			$('html').removeClass('modal-open');
+			$('.modal__wrap').removeClass('showModal');
 		})
 		$('header .nav-link.crane').on('click', function(){
 			$('.screen-shadow').removeClass('show');
 			$('.nav-list').removeClass('active');
 			$('html').removeClass('modal-open');
+			$('.modal__wrap').removeClass('showModal');
 		})
 
 	}
@@ -374,5 +377,36 @@ $(document).ready(function(){
 
   	return false;
   })  
+})
+
+
+
+
+// Open modal
+
+$(document).ready(function(){
+  $('a').on('click', function(){
+    var btn_href = $(this).attr('href')
+    console.log(btn_href)
+  	btn_href = btn_href.slice(1)
+	console.log(btn_href)
+    var modal_wrap = $('.modal__wrap')
+
+     modal_wrap.each(function(elem){
+
+        if ($(modal_wrap[elem]).attr('id') ==  btn_href) {     
+        
+          console.log($(this))   
+         
+          $(this).addClass('showModal')
+          $('.screen-shadow').addClass('show');
+          $('html').addClass('modal-open');
+          closeModal()
+          return false
+        }
+
+      })
+      
+  })
 })
 

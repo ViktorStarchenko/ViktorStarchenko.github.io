@@ -5550,23 +5550,34 @@ html.modal-open {
 
 .screen-shadow.show {
 	opacity: .5;
-	z-index: 10;
+	z-index: 25;
 	transition-duration: .2s;
 }
 
 .close-button {
-	height: 23px;
-	width: 23px;
+	height: 31px;
+	width: 31px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	border-radius: 50%;
-	background-color: #123965;
+	background-color: #dde5ff;
+background-image: linear-gradient(12deg, #9ccfff 0%, #c6d5ff 100%), linear-gradient(-58deg, #c0e1ff 0%, #dce5ff 100%);
+position: absolute;
+z-index: 200;
+right: 10px;
+top: 10px;
+cursor: pointer;
+}
+
+.close-button:hover {
+	background-color: #dde5ff;
+background-image: linear-gradient(12deg, #9ccfff 0%, #c6d5ff 100%), linear-gradient(-58deg, #c0e1ff 0%, #dce5ff 100%), linear-gradient(12deg, #9ccfff 0%, #c6d5ff 100%);
 }
 
 .close-button svg {
 	fill: #fff;
-	stroke: #fff;
+	stroke: #5790d0;
 	width: 20px;
 	height: 20px;
 }
@@ -5598,6 +5609,7 @@ html.modal-open {
 	background-image: linear-gradient(12deg, #9ccfff 0%, #c6d5ff 100%);
 	transition-duration: .3s;
 	transform-origin: right;
+	transform: scale(1.02);
 }
 
 .btn-white:focus {
@@ -5619,7 +5631,7 @@ html.modal-open {
     background-repeat: no-repeat;*/
     /* background-color: #fff; */
     /*background-color: #ffffffde;*/
-    animation: background-blisk 1.5s infinite alternate-reverse;
+    animation: background-blisk 1.5s infinite normal;
     -webkit-box-shadow: 0px -2px 93px 65px #fff;
     box-shadow: 0px -2px 93px 65px #fff;
     z-index: -1;
@@ -5652,20 +5664,25 @@ box-shadow:         -17px 0px 13px 0px #9bcaffc7;
 	position: relative;
 	z-index: 1;
 	overflow: hidden;
+	cursor: pointer;
 }
 
-
+button.btn-blue, input.btn-blue {
+	border: unset;
+}
 
 .btn-blue:hover {
 	background-color: #fbfcff;
 	transition-duration: .3s;
 	transform-origin: right;
+	transform: scale(1.02);
 }
 
 .btn-blue:focus {
 	transform: translateY(6px);
 	box-shadow: unset;
 	transition-duration: .2s;
+	outline: none;
 }
 
 .btn-blue:before {
@@ -5681,7 +5698,7 @@ box-shadow:         -17px 0px 13px 0px #9bcaffc7;
     background-repeat: no-repeat;*/
     /* background-color: #fff; */
     /*background-color: #ffffffde;*/
-    animation: background-blisk 1.5s infinite alternate-reverse;
+    animation: background-blisk 1.5s infinite normal;
     -webkit-box-shadow: 0px -2px 93px 65px #fff;
     box-shadow: 0px -2px 93px 65px #fff;
     z-index: -1;
@@ -6032,7 +6049,7 @@ a.text-14-123965-unbold:hover {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 9999999;
+  z-index: 20;
 }
 .navigation {
 	display: flex;
@@ -6119,12 +6136,18 @@ a.text-14-123965-unbold:hover {
 	text-transform: uppercase;
 }
 
+.nav-item:hover .nav-link {
+	font-weight: 600;
+	opacity: 1;
+}
+
 .header__phones-item {
 	cursor: pointer;
 	color: #123965;
 	font-family: "Road Radio";
 	font-size: 18px;
 	font-weight: 700;
+
 }
 
 .header__phones-item.icon-28-link:before {
@@ -6687,7 +6710,17 @@ a.text-14-123965-unbold:hover {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	/*transition-duration: .3s;*/
 }
+
+.advantages-arrow:hover {
+	border: unset;
+	width: 37px;
+	height: 37px;
+	/*transition-duration: .3s;*/
+}
+
+
 
 .advantages-arrow img{
 	width: 16px;
@@ -6698,6 +6731,11 @@ a.text-14-123965-unbold:hover {
 	position: absolute;
     top: calc(50% - 52px);
     right: -13px;
+}
+
+.advantages-arrow.advantages-nextArrow:hover {
+	right: -9px;
+	top: calc(50% - 49px);
 }
 
 .advantages-prevArrow {
@@ -7637,3 +7675,106 @@ footer .header-logo .footer__copyright {
 	}
 }
 
+
+
+/*******************************************************************MODAL********************************************************/
+
+.modal__wrap {
+	width: 626px;
+	height: 372px;
+    position: fixed;
+    left: calc(50% - 313px);
+    z-index: 100;
+    top: -100%;
+    transition-duration: .3s;
+}
+
+.modal__wrap.showModal {
+	top: 10%;
+    top: calc(50vh - 186px);
+    transition-duration: .3s;
+}
+
+.modal__inner {
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+.modal__img {
+	border-radius: 10px 1px 0 10px;
+	background-color: #dde5ff;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	text-align: center;
+}
+
+.modal__img img {
+	margin-top: -16px;
+}
+
+.modal__content {
+	width: 100%;
+	max-width: 331px;
+	height: 100%;
+	border-radius: 1px 10px 10px 0;
+	background-color: #ffffff;
+ 	display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px;
+}
+
+.modal__heading {
+	margin-bottom: 25px;
+}
+
+.modal__desc {
+	margin-bottom: 40px;
+}
+
+.form-label {
+	opacity: 0.9;
+color: #123965;
+font-family: "Uni Neue Regular";
+font-size: 12px;
+font-weight: 400;
+/* Text style for "Ваше имя" */
+letter-spacing: 1.43px;
+}
+
+.form-group {
+	margin-bottom: 15px;
+}
+
+.form-input {
+	width: 100%;
+	border: unset;
+	border-bottom: 1px solid #d1d1d1;
+}
+
+.form-input:focus {
+	outline: none;
+}
+
+.form-btn {
+	width: 100%;
+}
+
+
+@media screen and (max-width: 666px) {
+	.modal__wrap {
+		width: 290px; 
+		left: calc(50% - 145px);
+	}
+	.modal__img {
+		display: none;
+	}
+
+	.modal__content {
+		border-radius: 10px;
+		text-align: center;
+	}
+
+}
