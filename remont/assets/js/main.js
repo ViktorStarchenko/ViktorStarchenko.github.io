@@ -410,3 +410,10 @@ $(document).ready(function(){
   })
 })
 
+
+
+// PHONE MASK
+ jQuery( function($){
+     $(".tel-mask").mask("+38 (999) 999-99-99");
+   });
+
