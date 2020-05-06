@@ -6713,7 +6713,7 @@ a.text-14-123965-unbold:hover {
 	/*transition-duration: .3s;*/
 }
 
-.advantages-arrow:hover {
+.advantages .advantages-arrow:hover {
 	border: unset;
 	width: 37px;
 	height: 37px;
@@ -6737,7 +6737,7 @@ background-image: linear-gradient(12deg, #9ccfff 0%, #c6d5ff 100%);
     right: -13px;
 }
 
-.advantages-arrow.advantages-nextArrow:hover {
+.advantages .advantages-arrow.advantages-nextArrow:hover {
 	right: -8px;
     top: calc(50% - 47px);
 
@@ -6750,7 +6750,7 @@ background-image: linear-gradient(12deg, #9ccfff 0%, #c6d5ff 100%);
     transform: rotate(180deg);
 }
 
-.advantages-arrow.advantages-prevArrow:hover {
+.advantages .advantages-arrow.advantages-prevArrow:hover {
 	left: -8px;
     top: calc(50% - 47px);
 }
