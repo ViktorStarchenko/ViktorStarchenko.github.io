@@ -73,21 +73,31 @@ $(document).ready(function(){
   	animateOut: 'fadeOut', // and this
   	dots: false,
   	pagination: false,
+  	autoplay:true,
+  	autoplayTimeout:800
   });
 
-  owl.hover( function(){
-  	owl.trigger('play.owl.autoplay',[800]);
-  	// $('.big-circle').css('opacity', 1);
-  	function addBigCicleOpacity() {
+  function addBigCicleOpacity() {
 		$('.big-circle').addClass('active')
   	}
   	function addSmallCicleOpacity() {
 		$('.small-circle').addClass('active')
   	}
-  	setTimeout(addBigCicleOpacity, 4500)
-  	setTimeout(addSmallCicleOpacity, 7600)
+  setTimeout(addBigCicleOpacity, 4500)
+  setTimeout(addSmallCicleOpacity, 7600)
 
-  })
+  // owl.hover( function(){
+  // 	owl.trigger('play.owl.autoplay',[800]);
+  // 	// $('.big-circle').css('opacity', 1);
+  // 	function addBigCicleOpacity() {
+		// $('.big-circle').addClass('active')
+  // 	}
+  // 	function addSmallCicleOpacity() {
+		// $('.small-circle').addClass('active')
+  // 	}
+  	
+
+  // })
 });
 
 // ADVNTAGES SLIDER
@@ -95,12 +105,9 @@ $(document).ready(function(){
 $(document).ready(function(){
 	$('.advantages__works-slider.owl-carousel').owlCarousel({
 		nav: true,
+		items:1,
   		navText: ["<div  class='advantages-arrow advantages-prevArrow'><img src='assets/img/icons/6.svg'></div>","<div  class='advantages-arrow advantages-nextArrow'><img src='assets/img/icons/6.svg'></div>"],
 	  	responsive:{
-	        0:{
-	            items:1,
-	            nav:true
-	        },
 	        600:{
 	            items:2,
 	        },
@@ -117,12 +124,9 @@ $(document).ready(function(){
 		dots: true,
 		center:true,
 		loop: true,
+		items:1,
   		navText: ["<div  class='advantages-arrow advantages-prevArrow'><img src='assets/img/icons/6.svg'></div>","<div  class='advantages-arrow advantages-nextArrow'><img src='assets/img/icons/6.svg'></div>"],
 	  	responsive:{
-	        0:{
-	            items:1,
-	            nav:true
-	        },
 	   //      404:{
 	   //      	items:1,
 	   //          nav:true,
@@ -224,7 +228,8 @@ $(document).ready(function(){
 
 		const scene = new ScrollMagic.Scene({
 		  triggerElement: ".sticky",
-		            triggerHook: "0.28",
+		            // triggerHook: "0.28",
+		            triggerHook: "0",
 		            duration: "100%",
 		            offset: "0%"
 		})

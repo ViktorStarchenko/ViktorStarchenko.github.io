@@ -713,7 +713,7 @@ a.text-14-123965-unbold:hover {
 
 /************************************************************************HEADER*******************************************************************/
 
-.header.sticky { /*header fixed top on scroll*/
+.header.fixed { /*header fixed top on scroll*/
   position: fixed;
   top: 0;
   width: 100%;
@@ -2285,13 +2285,17 @@ footer .socials-list, footer .header-logo, footer .header__contacts, footer .nav
 	border: unset;
 }
 
+
 .footer__copyright {
-	display: none;
 	opacity: .5;
 }
 
+footer .header-logo .footer__copyright {
+	display: none;
+	}
+
 @media screen and (max-width: 611px) {
-	.footer__copyright {
+	footer .header-logo .footer__copyright {
 		display: block;
 	}
 
@@ -2300,6 +2304,10 @@ footer .socials-list, footer .header-logo, footer .header__contacts, footer .nav
 		align-items: center;
 	}
 	footer .nav-menu {
+		display: none;
+	}
+
+	footer .header__contacts .footer__copyright {
 		display: none;
 	}
 }
