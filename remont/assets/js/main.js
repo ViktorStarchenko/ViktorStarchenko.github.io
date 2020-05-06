@@ -140,13 +140,13 @@ $(document).ready(function(){
 	        	items:1,
 	            nav:true,
 	            center:true,
-				stagePadding: 40,
+				stagePadding: 80,
 	        },
 	        500:{
 	        	items:1,
 	            nav:true,
 	            center:true,
-				stagePadding: 80,
+				stagePadding: 100,
 	        },
 	        600:{
 	        	center: false,
