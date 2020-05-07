@@ -452,9 +452,10 @@ $(document).ready(function(){
         }
 
       })
-
+	
      if (btn_href == 'online_camera') {
-
+     	var count = 0;
+     	console.log('count ' + count)
      	var date = new Date();
 		var current_hour = date.getHours();
 
@@ -502,22 +503,39 @@ $(document).ready(function(){
 	        vid2: 'assets/video/2-2.mp4',
 	        vid3: 'assets/video/4-1.mp4',
 	        vid4: 'assets/video/4-2.mp4',
-	        vid5: 'assets/video/15671060875951.webm',
+	        vid5: 'assets/video/5-1.mp4',
+	        vid6: 'assets/video/5-2.mp4',
+	        vid7: 'assets/video/7.mp4',
 	    }
 	    
 	    
-     	videoCount= Object.keys(vidSRC).length - 1
-     	let videoNumber = selfRandom(0, videoCount);
-     	if (videoNumber == localStorage['prevSrc']) {
-     		videoNumber = selfRandom(0, videoCount)
+     	videoCount= Object.keys(vidSRC).length - 1;
+     	if (localStorage['prevSrc'] >= videoCount) {
+     		localStorage.clear()
      	}
-     	localStorage['prevSrc'] = videoNumber;
-     	let videoKey = Object.values( vidSRC )[videoNumber];
+     	// let videoNumber = selfRandom(0, videoCount);
+     	let prevSrc = localStorage['prevSrc']
+     	if (!localStorage['prevSrc']) {
+     		var videoKey = Object.values( vidSRC )[count];
+     		localStorage['prevSrc'] = count;
+     	} else if (localStorage['prevSrc']) {
+     		let prevSrc = localStorage['prevSrc'];
+     		prevSrc++;
+     		var videoKey = Object.values( vidSRC )[prevSrc];
+     		localStorage['prevSrc'] = prevSrc;
+     		
+
+     	}
+     	console.log('videokey is ' +  videoKey)
+     	// localStorage['prevSrc'] = count;
+     	// let videoKey = Object.values( vidSRC )[count];
 
 	      console.log(localStorage['prevSrc'])
 
 		$('.online-camera')[0].src = videoKey
      	$('.online-camera').get(0).play();
+
+     	count++;
      }
 
      function selfRandom(min, max) {
