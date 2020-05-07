@@ -225,6 +225,29 @@ $(document).ready(function(){
   })
 })
 
+// LAZY LOAD
+$(document).ready(function(){
+  // Lazy load
+  lazyLoadWebP = el => {
+    const scrollTop = $(window).scrollTop()
+    const winHeight = $(window).height()
+    const offset = $(el).offset().top
+    const schemeHeight = $(el).height()
+
+    if (scrollTop + winHeight >= offset && scrollTop <= offset + schemeHeight) {
+      const src = $(el).attr('data-src')
+      $(el).attr('srcset', src)
+    }
+  }
+
+   $(window).on('load scroll', () => {
+
+    $('.lazy-webp').each((idx, item) => {
+      lazyLoadWebP(item)
+    })
+  })
+})
+
 window.onload=function(){
 	var header = $(".header").offset().top;
 	var sticky = header.offsetTop;
@@ -478,7 +501,7 @@ $(document).ready(function(){
 	        vid1: 'assets/video/2-1.mp4',
 	        vid2: 'assets/video/2-2.mp4',
 	        vid3: 'assets/video/4-1.mp4',
-	        vid4: 'assets/video/15670758394400.webm',
+	        vid4: 'assets/video/4-2.mp4',
 	        vid5: 'assets/video/15671060875951.webm',
 	    }
 	    
