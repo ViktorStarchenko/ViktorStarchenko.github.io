@@ -235,7 +235,7 @@ $(document).ready(function(){
     const schemeHeight = $(el).height()
 
     if (scrollTop + winHeight >= offset && scrollTop <= offset + schemeHeight) {
-      const src = $(el).attr('data-src')
+      const src = $(el).attr('data-srcset')
       $(el).attr('srcset', src)
     }
   }
