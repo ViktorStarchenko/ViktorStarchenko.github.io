@@ -8,20 +8,35 @@ $(document).ready(function(){
 	})
 })
 
+
+
+
+// Open modal
+
+function openModal() {
+	var btn_href = $(this).attr('href')
+    console.log(btn_href)
+  	btn_href = btn_href.slice(1)
+	console.log(btn_href)
+    var modal_wrap = $('.modal__wrap')
+
+     modal_wrap.each(function(elem){
+
+        if ($(modal_wrap[elem]).attr('id') ==  btn_href) {     
+        
+          console.log($(this))   
+         
+          $(this).addClass('showModal')
+          $('.screen-shadow').addClass('show');
+          $('html').addClass('modal-open');
+          closeModal()
+          return false
+        }
+
+    })
+}
+
 // Close modal
-$(document).ready(function() {
-	function closeModal() {
-		$('.close-button').on('click', function(){
-			$('.screen-shadow').removeClass('show');
-			$('.nav-list').removeClass('active');
-			$('html').removeClass('modal-open');
-		})
-
-		
-	}
-})
-
-// MOBILE MENU
 function closeModal() {
 
 	console.log('closeModal')
@@ -30,6 +45,7 @@ function closeModal() {
 			$('.nav-list').removeClass('active');
 			$('html').removeClass('modal-open');
 			$('.modal__wrap').removeClass('showModal');
+			$('.online-camera').get(0).pause();
 		})
 
 		$('.screen-shadow.show').on('click', function(e){
@@ -37,16 +53,18 @@ function closeModal() {
 			$('.nav-list').removeClass('active');
 			$('html').removeClass('modal-open');
 			$('.modal__wrap').removeClass('showModal');
+			$('.online-camera').get(0).pause();
 		})
 		$('header .nav-link.crane').on('click', function(){
 			$('.screen-shadow').removeClass('show');
 			$('.nav-list').removeClass('active');
 			$('html').removeClass('modal-open');
 			$('.modal__wrap').removeClass('showModal');
+			$('.online-camera').get(0).pause();
 		})
 
 	}
-
+// MOBILE MENU
 $(document).ready(function(){
 	$('.navbar-toggler').on('click', function(){
 		$('.nav-list').addClass('active');
@@ -396,17 +414,13 @@ $(document).ready(function(){
 $(document).ready(function(){
   $('a').on('click', function(){
     var btn_href = $(this).attr('href')
-    console.log(btn_href)
   	btn_href = btn_href.slice(1)
-	console.log(btn_href)
     var modal_wrap = $('.modal__wrap')
 
      modal_wrap.each(function(elem){
 
         if ($(modal_wrap[elem]).attr('id') ==  btn_href) {     
         
-          console.log($(this))   
-         
           $(this).addClass('showModal')
           $('.screen-shadow').addClass('show');
           $('html').addClass('modal-open');
@@ -415,6 +429,78 @@ $(document).ready(function(){
         }
 
       })
+
+     if (btn_href == 'online_camera') {
+
+     	var date = new Date();
+		var current_hour = date.getHours();
+
+		if (current_hour < 11 || current_hour >= 19 ) {
+			$('.online-camera')[0].poster = 'assets/img/hqdefault.jpg'
+		} else {
+			startOnlineCamera();
+		}
+     	// startOnlineCamera()
+     }
+
+     function startOnlineCamera() {
+     	
+		// console.log(date);
+
+
+		function getDateTime() {
+
+		    var date = new Date();
+
+		    var hour = date.getHours();
+		    hour = (hour < 10 ? "0" : "") + hour;
+
+		    var min  = date.getMinutes();
+		    min = (min < 10 ? "0" : "") + min;
+
+		    var sec  = date.getSeconds();
+		    sec = (sec < 10 ? "0" : "") + sec;
+
+		    var year = date.getFullYear();
+
+		    var month = date.getMonth() + 1;
+		    month = (month < 10 ? "0" : "") + month;
+
+		    var day  = date.getDate();
+		    day = (day < 10 ? "0" : "") + day;
+
+		    return year + ":" + month + ":" + day + ":" + hour + ":" + min + ":" + sec;
+
+		}
+
+
+     	let vidSRC = {
+	        vid1: 'assets/video/2-1.mp4',
+	        vid2: 'assets/video/2-2.mp4',
+	        vid3: 'assets/video/4-1.mp4',
+	        vid4: 'assets/video/15670758394400.webm',
+	        vid5: 'assets/video/15671060875951.webm',
+	    }
+	    
+	    
+     	videoCount= Object.keys(vidSRC).length - 1
+     	let videoNumber = selfRandom(0, videoCount);
+     	if (videoNumber == localStorage['prevSrc']) {
+     		videoNumber = selfRandom(0, videoCount)
+     	}
+     	localStorage['prevSrc'] = videoNumber;
+     	let videoKey = Object.values( vidSRC )[videoNumber];
+
+	      console.log(localStorage['prevSrc'])
+
+		$('.online-camera')[0].src = videoKey
+     	$('.online-camera').get(0).play();
+     }
+
+     function selfRandom(min, max) {
+
+	  return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
       
   })
 })
