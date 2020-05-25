@@ -358,8 +358,10 @@ $document.ready(function () {
    * @description  check the element whas been scrolled into the view
    */
   function isScrolledIntoView(elem) {
+    console.log($(elem[0]).offset().top )
     if (!isNoviBuilder) {
-      return elem.offset().top + elem.outerHeight() >= $window.scrollTop() && elem.offset().top <= $window.scrollTop() + $window.height();
+      // return elem.offset().top + elem.outerHeight() >= $window.scrollTop() && elem.offset().top <= $window.scrollTop() + $window.height();
+      return $(elem[0]).offset().top + $(elem[0]).outerHeight() >= $window.scrollTop() && $(elem[0]).offset().top <= $window.scrollTop() + $window.height();
     }
     else {
       return true;
@@ -1269,9 +1271,11 @@ $document.ready(function () {
    * @description  Enable Slick carousel plugin
    */
   if (plugins.slick.length) {
+    
     var i;
     for (i = 0; i < plugins.slick.length; i++) {
       var $slickItem = $(plugins.slick[i]);
+      console.log($slickItem)
 
       $slickItem.slick({
         slidesToScroll: parseInt($slickItem.attr('data-slide-to-scroll')) || 1,
