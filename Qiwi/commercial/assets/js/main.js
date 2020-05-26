@@ -104,3 +104,43 @@ $(document).ready(function(){
         $('body,html').animate({scrollTop: top-100}, 1500);
     });
 });
+
+function closeBtn() {
+  $('.screen-shadow.show, .modal-wrap .close-button, .modal__login .close-button').on('click', function() {
+
+      $('.modal-wrap').removeClass('showModal');
+      $('.modal__login').removeClass('showModal');
+      $('.screen-shadow').removeClass('show');
+      $('body').removeClass('hidden');
+      return false;
+
+    })
+}
+
+// показать модальное 
+
+$(document).ready(function(){
+  $('.open-modal').on('click', function(){
+    var btn_href = $(this).attr('href')
+    console.log(btn_href)
+  btn_href = btn_href.slice(1)
+    var modal_wrap = $('.modal-wrap')
+
+     modal_wrap.each(function(elem){
+
+
+        if ($(modal_wrap[elem]).attr('id') ==  btn_href) {     
+        
+          console.log($(this))   
+         
+          $(this).addClass('showModal')
+          $('.screen-shadow').addClass('show');
+          $('body').addClass('hidden');
+          closeBtn()
+          return false
+        }
+
+      })
+      
+  })
+})
