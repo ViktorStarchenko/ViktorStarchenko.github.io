@@ -2049,8 +2049,8 @@ $document.ready(function () {
       }
     };
 
-  d3Charts.push(c3.generate(lineChartObject));  
-  d3Charts.push(c3.generate(lineChartObject2));
+  // d3Charts.push(c3.generate(lineChartObject));  
+  // d3Charts.push(c3.generate(lineChartObject2));
 
   /**
    * lightGallery
@@ -2185,4 +2185,60 @@ $('.news-wrap').owlCarousel({
             items:4,
           }
       }
+})
+
+
+
+// LAZY LOAD
+$(document).ready(function(){
+
+  function lazyLoad(el){
+    const scrollTop = $(window).scrollTop()
+    const winHeight = $(window).height()
+    const offset = $(el).offset().top
+    const schemeHeight = $(el).height()
+
+    if (scrollTop + winHeight >= offset && scrollTop <= offset + schemeHeight) {
+      const src = $(el).attr('data-src')
+      $(el).attr('src', src)
+    }
+  }
+  // Lazy load
+  // lazyLoad = el => {
+    
+  // }
+
+   $(window).on('load scroll', () => {
+
+    $('.lazy').each((idx, item) => {
+      lazyLoad(item)
+    })
+  })
+})
+
+// LAZY LOAD
+$(document).ready(function(){
+
+  function lazyLoadWebP(el) {
+    const scrollTop = $(window).scrollTop()
+    const winHeight = $(window).height()
+    const offset = $(el).offset().top
+    const schemeHeight = $(el).height()
+
+    if (scrollTop + winHeight >= offset && scrollTop <= offset + schemeHeight) {
+      const src = $(el).attr('data-srcset')
+      $(el).attr('srcset', src)
+    }
+  }
+  // Lazy load
+  // lazyLoadWebP = el => {
+    
+  // }
+
+   $(window).on('load scroll', () => {
+
+    $('.lazy-webp').each((idx, item) => {
+      lazyLoadWebP(item)
+    })
+  })
 })
