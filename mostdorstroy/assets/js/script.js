@@ -2242,3 +2242,30 @@ $(document).ready(function(){
     })
   })
 })
+
+
+// Карты
+$(document).ready(function(){
+
+    let mapsSrc = {
+        map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2545.7015633158753!2d30.557352615727883!3d50.35347147946205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c64535743661%3A0x1aaec969c6693d10!2z0YPQuy4g0J3QvtCy0L7Qv9C40YDQvtCz0L7QstGB0LrQsNGPLCA1Niwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1590405094519!5m2!1sru!2sua",
+      }
+
+    $('.contacts__map-box').on('click', function(){
+        var data_map = $(this).attr('data-map');
+        for (var key in mapsSrc) {
+            console.log(mapsSrc[key])
+            if ( key == data_map ) {
+                
+                $('.contacts__map-shadow[data-map='+ data_map +']').hide()
+                $('.contacts__map-img[data-map='+ data_map +']').hide()
+                $('.contacts__map-box[data-map='+ data_map +']').children('iframe').attr('src', mapsSrc[key])
+                break
+            } else {
+                console.log('НЕТ НЕ СВПАДАЕТ')
+            }
+            
+        }
+    })
+})
+

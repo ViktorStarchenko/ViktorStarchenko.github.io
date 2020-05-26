@@ -36653,3 +36653,40 @@ yx-axis
 .thumb-janez-title-top h5 a {
   color: #151515
 }
+
+
+
+/*MAP BLOCK*/
+
+.full-width-inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.contacts__map-box {
+  position: relative;
+}
+
+.contacts__map-shadow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #00000073;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+  text-align: center;
+}
+
+.contacts__map-img {
+  object-fit: cover;
+}
