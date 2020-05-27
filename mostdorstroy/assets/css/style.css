@@ -7113,7 +7113,7 @@ ul.post-modern__meta [class*='fl-justicons'] {
 
 .single-product__title {
   /*max-width: 40%;*/
-  max-width: 51%;
+  max-width: 100%;
   font-size: 20px;
 }
 
@@ -7142,6 +7142,11 @@ ul.post-modern__meta [class*='fl-justicons'] {
 }
 
 @media (min-width: 768px) {
+  .single-product__title {
+    /*max-width: 40%;*/
+    max-width: 51%;
+    font-size: 20px;
+  }
   .single-product__price {
     /*font-size: 36px;*/
     font-size: 30px;
@@ -7150,6 +7155,8 @@ ul.post-modern__meta [class*='fl-justicons'] {
     margin-top: 35px;
   }
 }
+
+
 
 /*
 *
