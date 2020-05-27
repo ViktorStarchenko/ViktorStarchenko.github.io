@@ -1201,63 +1201,63 @@ $document.ready(function () {
    * Isotope
    * @description Enables Isotope plugin
    */
-  if (plugins.isotope.length) {
-    var i, j, isogroup = [];
-    for (i = 0; i < plugins.isotope.length; i++) {
-      var isotopeItem = plugins.isotope[i],
-        filterItems = $(isotopeItem).closest('.isotope-wrap').find('[data-isotope-filter]'),
-        iso;
+  // if (plugins.isotope.length) {
+  //   var i, j, isogroup = [];
+  //   for (i = 0; i < plugins.isotope.length; i++) {
+  //     var isotopeItem = plugins.isotope[i],
+  //       filterItems = $(isotopeItem).closest('.isotope-wrap').find('[data-isotope-filter]'),
+  //       iso;
 
-      iso = new Isotope(isotopeItem, {
-        itemSelector: '.isotope-item',
-        layoutMode: isotopeItem.getAttribute('data-isotope-layout') ? isotopeItem.getAttribute('data-isotope-layout') : 'masonry',
-        filter: '*',
-        masonry: {
-          columnWidth: 0.25
-        }
-      });
+  //     iso = new Isotope(isotopeItem, {
+  //       itemSelector: '.isotope-item',
+  //       layoutMode: isotopeItem.getAttribute('data-isotope-layout') ? isotopeItem.getAttribute('data-isotope-layout') : 'masonry',
+  //       filter: '*',
+  //       masonry: {
+  //         columnWidth: 0.25
+  //       }
+  //     });
 
-      isogroup.push(iso);
+  //     isogroup.push(iso);
 
-      filterItems.on("click", function (e) {
-        e.preventDefault();
-        var filter = $(this),
-          iso = $('.isotope[data-isotope-group="' + this.getAttribute("data-isotope-group") + '"]'),
-          filtersContainer = filter.closest(".isotope-filters");
+  //     filterItems.on("click", function (e) {
+  //       e.preventDefault();
+  //       var filter = $(this),
+  //         iso = $('.isotope[data-isotope-group="' + this.getAttribute("data-isotope-group") + '"]'),
+  //         filtersContainer = filter.closest(".isotope-filters");
 
-        filtersContainer
-          .find('.active')
-          .removeClass("active");
-        filter.addClass("active");
+  //       filtersContainer
+  //         .find('.active')
+  //         .removeClass("active");
+  //       filter.addClass("active");
 
-        iso.isotope({
-          itemSelector: '.isotope-item',
-          layoutMode: iso.attr('data-isotope-layout') ? iso.attr('data-isotope-layout') : 'masonry',
-          filter: this.getAttribute("data-isotope-filter") == '*' ? '*' : '[data-filter*="' + this.getAttribute("data-isotope-filter") + '"]',
-          masonry: {
-            columnWidth: 0.42
-          }
-        });
+  //       iso.isotope({
+  //         itemSelector: '.isotope-item',
+  //         layoutMode: iso.attr('data-isotope-layout') ? iso.attr('data-isotope-layout') : 'masonry',
+  //         filter: this.getAttribute("data-isotope-filter") == '*' ? '*' : '[data-filter*="' + this.getAttribute("data-isotope-filter") + '"]',
+  //         masonry: {
+  //           columnWidth: 0.42
+  //         }
+  //       });
 
-        $window.trigger('resize');
+  //       $window.trigger('resize');
 
-      }).eq(0).trigger("click");
-    }
+  //     }).eq(0).trigger("click");
+  //   }
 
-    $(window).on('load', function () {
-      setTimeout(function () {
-        var i;
-        for (i = 0; i < isogroup.length; i++) {
-          isogroup[i].element.className += " isotope--loaded";
-          isogroup[i].layout();
-        }
-      }, 600);
+  //   $(window).on('load', function () {
+  //     setTimeout(function () {
+  //       var i;
+  //       for (i = 0; i < isogroup.length; i++) {
+  //         isogroup[i].element.className += " isotope--loaded";
+  //         isogroup[i].layout();
+  //       }
+  //     }, 600);
 
-      setTimeout(function () {
-        $window.trigger('resize');
-      }, 800);
-    });
-  }
+  //     setTimeout(function () {
+  //       $window.trigger('resize');
+  //     }, 800);
+  //   });
+  // }
   /**
    * WOW
    * @description Enables Wow animation plugin
