@@ -839,7 +839,7 @@
                                 <div class="quote-creative__header">
                                     <div class="quote-creative__image-wrap">
                                     	<img class="quote-creative__image lazy" data-src="assets/img/komfort.svg"  src="assets/img/placeholder.png" alt="" width="88" height="88" />
-                                    	<!-- <img class="quote-creative__image" src="assets/img/komfort.svg" alt="" width="88" height="88" /> -->
+                                    	<!-- <img class="quote-creative__image" src="assets/img/komfort.svg" al="" width="88" height="88" /> -->
                                     </div>
                                 </div>
                                 <div class="quote-creative__main">
@@ -1045,7 +1045,10 @@
 
             <section class="section parallax-container bg-gray-dark">
               
-                <div class="material-parallax parallax"><img src="assets/img/parallax-1.jpg" alt="" style="display: block;" /></div>
+                <div class="material-parallax parallax">
+                	<!-- <img src="assets/img/parallax-1.jpg" alt="" style="display: block;" /> -->
+                	<img class="lazy" data-src="assets/img/parallax-1.jpg" src="assets/img/placeholder.jpg" alt="footer" style="display: block;" />
+                </div>
                 <div class="parallax-content">
                     <div class="section-sm owl-outer-navigation-wrap">
                         <div class="shell">
@@ -1216,7 +1219,11 @@
                   <div class="full-width-inner contacts__map-shadow" data-map="map" data-map="map">
 						<span class="text-14px-white">Нажмите для просмотра интерактивной карты</span>
 					</div>
-					<img class="full-width-inner contacts__map-img" src="assets/img/znak-map.jpg" alt="map" data-map="map" title="" data-map="map">
+					<picture>
+					    <source data-srcset="assets/img/znak-map.webp" srcset="assets/img/placeholder.png" type="image/webp" class="lazy-webp">
+					    <img class="lazy full-width-inner contacts__map-img" data-src="assets/img/znak-map.jpg" src="assets/img/placeholder.png" alt="map" data-map="map" title="" data-map="map">
+					</picture>
+					<!-- <img class="full-width-inner contacts__map-img" src="assets/img/znak-map.jpg" alt="map" data-map="map" title="" data-map="map"> -->
                     <!-- <ul class="map_locations">
                         <li data-y="52.6323723" data-x="-1.4732496">
                             <p>Украина Киев ул. Новопироговская, 56</p>
@@ -1235,7 +1242,10 @@
             </section>
             <!-- Page Footer-->
             <footer class="section footer-modern parallax-container bg-gray-3">
-                <div class="material-parallax parallax"><img src="assets/img/footer.jpg" alt="" style="display: block;" /></div>
+                <div class="material-parallax parallax">
+                	<!-- <img src="assets/img/footer.jpg" alt="" style="display: block;" /> -->
+                	<img class="lazy" data-src="assets/img/footer.jpg" src="assets/img/placeholder.jpg" alt="footer" style="display: block;" />
+                </div>
                 <div class="parallax-content">
                     <div class="footer-modern__inner">
                         <div class="shell">
