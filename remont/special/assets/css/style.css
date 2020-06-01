@@ -9442,6 +9442,10 @@ width: 12px;
 	border-radius: 11px;
 }
 
+.advantages.landing .modal__online-camera-wrap {
+	width: 536px;
+}
+
 .advantages.landing .advantages__control-inner {
 	align-items: flex-start;
 }
@@ -9486,6 +9490,10 @@ width: 12px;
   .advantages.landing .advantages__control-desc {
   	justify-content: flex-start;
   }
+
+  .advantages.landing .modal__online-camera-wrap {
+		width: 100%;
+	}
 }
 
 @media screen and (max-width: 767px) {
@@ -9496,6 +9504,8 @@ width: 12px;
 	.advantages.landing  {
 		padding: 0;
 	}
+
+	
 }
 
 @media screen and (max-width: 500px) {
