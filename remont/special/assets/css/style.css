@@ -8078,6 +8078,10 @@ background-image: linear-gradient(12deg, #9ccfff 0%, #c6d5ff 100%);
   top: 281px;
 }
 
+.rate.landing .tube-img {
+  left: 46%;
+}
+
 .tube-img.add-animate {
   -webkit-animation-name: animate_tube;
           animation-name: animate_tube;
@@ -8445,6 +8449,9 @@ background-image: linear-gradient(12deg, #9ccfff 0%, #c6d5ff 100%);
   .rate__tabs-nav-item {
     /*padding: 28.8px 50px;*/
   }
+  .rate.landing .tube-img {
+  	left: 40%;
+  }
 }
 
 @media screen and (max-width: 1058px) {
@@ -8547,18 +8554,21 @@ background-image: linear-gradient(12deg, #9ccfff 0%, #c6d5ff 100%);
   .rate__tabs-nav-item {
     height: 138px;
   }
+
+  .rate.landing .tube-img {
+  	left: 35%;
+  }
 }
 
 @media screen and (max-width: 892px) {
   .tube-img {
     left: calc(40% - 106px);
   }
-}
 
-@media screen and (max-width: 815px) {
-  .rate__tabs-nav-item {
-    /*padding: 44px 50px*/
+  .rate.landing .tube-img {
+  	left: 30%;
   }
+
 }
 
 @media screen and (max-width: 963px) {
@@ -8606,7 +8616,19 @@ background-image: linear-gradient(12deg, #9ccfff 0%, #c6d5ff 100%);
   }
 
   
+
+  
 }
+
+@media screen and (max-width: 815px) {
+  .rate.landing .install-camera {
+  	display: none;
+  }
+
+  .rate.landing .tube-img {
+  	left: 45%;
+  }
+} 
 
 @media screen and (max-width: 767px) {
 	.rate.landing	{
@@ -9542,4 +9564,11 @@ width: 12px;
 		line-height: 35px;
 		margin-bottom: 15px;
 	}
+}
+
+
+/********************************************RATE LANDING**********************************************/
+
+.rate.landing .install-camera {
+	margin-left: 40px;
 }

@@ -621,6 +621,8 @@ $(document).ready(function(){
 
 // ТАЙМЕР АКЦИИ
 function getTimeRemaining(endtime) {
+// console.log(Date.parse(endtime))
+
   var t = Date.parse(endtime) - Date.parse(new Date());
   var seconds = parseInt(Math.floor((t / 1000) % 60));
   var minutes =  parseInt(Math.floor((t / 1000 / 60) % 60));
@@ -657,7 +659,7 @@ function initializeClock(id, endtime) {
     hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
     minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
     secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
- 	console.log(t.seconds)
+ 	// console.log(t.seconds)
     if (t.total <= 0) {
       clearInterval(timeinterval);
     }
@@ -666,10 +668,18 @@ function initializeClock(id, endtime) {
   updateClock();
   var timeinterval = setInterval(updateClock, 1000);
 }
- 
-// var deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000); // for endless timer
-// var deadline = new Date(Date.parse(new Date()) + 72* 60 * 60 * 24 * 1000);
-var deadline = new Date(Date.parse(new Date('2020, 07, 01')) ); //КОНЕЧНАЯ ДАТА
+
+// var deadline = new Date(Date.parse(new Date('2020, 07, 01')) ); //КОНЕЧНАЯ ДАТА
+var deadline = new Date('2020, 07, 01'); //КОНЕЧНАЯ ДАТА
+var d = new Date("2020-02-15 00:00:00");
+console.log(d.getDate() + '. ' + d.getMonth() + ' ' + d.getFullYear());
+
+var date_string = "2020-02-15 00:00:00";
+console.log(date_string)
+console.log(date_string.replace(' ', 'T'))
+
+var result = new Date(date_string.replace(' ', 'T'));
+console.log(result)
 
 
 initializeClock('countdown1', deadline);
@@ -702,14 +712,16 @@ $(document).ready(function(){
  	var date = new Date();
 	var current_hour = date.getHours();
 	var current_day = date.getDay();
-	console.log('day is ' + current_day)
+	console.log('hour is ' + current_hour)
 
-	if (current_hour <= 7 || current_hour >= 20 ) {
-		$('.online-camera')[0].poster = 'assets/img/hqdefault.jpg';
+	if (current_hour <= 7 || current_hour >= 22 ) {
+		console.log('поздно')
+		$('.online-camera-standalone')[0].poster = 'assets/img/hqdefault.jpg';
 		$('.online-camera__rec').hide();
 		$('.online-camera__nowork').show();
 		$('.online-camera__ended').hide();
 	} else {
+		console.log('еще рано')
 		startOnlineCamera();
 		$('.online-camera__rec').show();
 		$('.online-camera__nowork').hide();
@@ -744,10 +756,10 @@ $(document).ready(function(){
 		}
 
 	    let vidSRC = {
-	        vid1: 'assets/video/2-1.mp4',
-	        vid2: 'assets/video/MVI_0506-1.mp4',
-	        vid3: 'assets/video/MVI_0505-2.mp4',
-	        vid4: 'assets/video/MVI_0500-1.mp4',
+	        // vid1: 'assets/video/2-1.mp4',
+	        // vid2: 'assets/video/MVI_0506-1.mp4',
+	        // vid3: 'assets/video/MVI_0505-2.mp4',
+	        // vid4: 'assets/video/MVI_0500-1.mp4',
 	        vid5: 'assets/video/2-2.mp4',
 	    } 
 
