@@ -621,7 +621,7 @@ $(document).ready(function(){
 
 // ТАЙМЕР АКЦИИ
 function getTimeRemaining(endtime) {
-// console.log(Date.parse(endtime))
+console.log(deadline)
 
   var t = Date.parse(endtime) - Date.parse(new Date());
   var seconds = parseInt(Math.floor((t / 1000) % 60));
@@ -670,16 +670,13 @@ function initializeClock(id, endtime) {
 }
 
 // var deadline = new Date(Date.parse(new Date('2020, 07, 01')) ); //КОНЕЧНАЯ ДАТА
-var deadline = new Date('2020, 07, 01'); //КОНЕЧНАЯ ДАТА
-var d = new Date("2020-02-15 00:00:00");
-console.log(d.getDate() + '. ' + d.getMonth() + ' ' + d.getFullYear());
+// var deadline = new Date('2020, 07, 01'); //КОНЕЧНАЯ ДАТА
+// var d = new Date("2020-02-15 00:00:00");
+// console.log(d.getDate() + '. ' + d.getMonth() + ' ' + d.getFullYear());
 
-var date_string = "2020-02-15 00:00:00";
-console.log(date_string)
-console.log(date_string.replace(' ', 'T'))
 
-var result = new Date(date_string.replace(' ', 'T'));
-console.log(result)
+var dateString = "2020-07-01 00:00:00";
+var deadline = new Date(dateString.replace(' ', 'T'));
 
 
 initializeClock('countdown1', deadline);
