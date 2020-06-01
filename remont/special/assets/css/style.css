@@ -7036,8 +7036,8 @@ a.text-14-123965-unbold:hover {
 
 .hero {
 	/*height: 700px;*/
-	background-image: url('../img/hero-back.jpg');
 	background-image: url('../img/hero-back.webp');
+	background-image: url('../img/hero-back.jpg');
 	background-size: cover;
 	background-repeat: repeat-x;
     background-position: bottom;
