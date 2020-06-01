@@ -6404,7 +6404,7 @@ a.text-14-123965-unbold:hover {
 }
 
 .header__phones.standalone .header__phones-item {
-  font-size: 30px;
+  font-size: 26px;
 }
 
 .header__phones.standalone .header__phones-item.dropdown-item.has-child {
@@ -6421,7 +6421,7 @@ a.text-14-123965-unbold:hover {
 }
 
 .header__phones.standalone .header__phones-item.icon-28-link:after {
-  right: 5px;
+  right: 10px;
   top: 7px;
   width: 18px;
   height: 18px;
