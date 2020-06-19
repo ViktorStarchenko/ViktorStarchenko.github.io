@@ -1,0 +1,160 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+/*admin Table style*/
+
+.admin-table-wrap .ui-jqgrid-bootstrap.ui-jqgrid, .admin-table-wrap .card.ui-jqgrid-view, .ui-jqgrid-hdiv, .ui-jqgrid-htable, .ui-jqgrid-btable, .ui-jqgrid-bdiv, .ui-jqgrid-pager {
+	width: 100%!important;
+	min-width: 978px;
+}
+
+.ui-jqgrid-pager {
+	display: none;
+}
+
+.admin-table-wrap .ui-jqgrid .ui-jqgrid-caption {
+	/*text-align: center;*/
+	padding: 10px 40px;
+    /*background: #417690;*/
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-image: -webkit-gradient(linear, left top, right top, from(#00a1a8), color-stop(25%, #19b4bc), color-stop(50%, #00a1a8), color-stop(75%, #19b4bc), to(#00a1a8));
+    background-image: -o-linear-gradient(left, #00a1a8 0%, #19b4bc 25%, #00a1a8 50%, #19b4bc 75%, #00a1a8 100%);
+    background-image: linear-gradient(to right, #00a1a8 0%, #19b4bc 25%, #00a1a8 50%, #19b4bc 75%, #00a1a8 100%);
+}
+
+.admin-table-wrap .ui-jqgrid .ui-jqgrid-htable th div {
+	color: #334150;
+    font-family: Roboto;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 16px;
+    text-transform: uppercase;
+    height: unset;
+    padding-left: 34px;
+}
+
+.admin-table-wrap .ui-jqgrid tr.ui-row-ltr td {
+	background-color: #fafafc;
+    text-align: center;
+    border: 3px solid #fff;
+    color: #585858;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 28px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+
+.admin__statistic-wrap .admin__statistic-body {
+	margin-bottom: 40px;
+}
+
+.admin-table-wrap {
+	margin-bottom: 30px;
+}
+
+.my-table-paginator {
+	margin-bottom: 35px;
+}
+
+.pagination-box {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+.pagination-item {
+	height: 35px;
+    width: 35px;
+    border-radius: 4px;
+    border: 1px solid #a4aab0;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 5px;
+}
+
+.pagination-item.active {
+	/*background-color: #417690;*/
+	background-image: -webkit-gradient(linear, left bottom, left top, from(#d15645), to(#fd8f81));
+	background-image: -o-linear-gradient(bottom, #d15645 0%, #fd8f81 100%);
+	background-image: linear-gradient(to top, #d15645 0%, #fd8f81 100%);
+}
+
+.pagination-item.active a {
+	color: #fff;
+}
+
+.pagination-item.last, .pagination-item.first {
+	border: none;
+    width: unset;
+}
+
+.pagination-item a {
+	color: #a4aab0;
+}
+
+
+.admin__statistic-wrap {
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+}
+
+@media screen and (max-width: 767px) {
+	.admin__statistic-wrap {
+		height: 80vh;
+	}
+}
+
+
+.nav-tabs.admin-tabs {
+	background: #0eacb37a;
+    padding: 10px 40px;
+    border: none;
+    font-size: 14px;
+    color: transparent;
+    text-align: left;
+    list-style: none;
+}
+
+.nav-tabs.admin-tabs li {
+	padding: 4px 10px;
+}
+
+.nav-tabs.admin-tabs a {
+	color: #fff;
+}
+
+.nav-tabs.admin-tabs a.active {
+	color: #ffc;
+	text-decoration: none;
+}
+
+.nav-tabs.admin-tabs a:focus, .nav-tabs.admin-tabs a:active, .nav-tabs.admin-tabs a:hover {
+	text-decoration: none;
+}
