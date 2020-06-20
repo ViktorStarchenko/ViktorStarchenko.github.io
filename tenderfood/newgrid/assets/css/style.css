@@ -3791,8 +3791,16 @@ li.list-item-heading {
 
 /*******************************************18.60.2020*****************************************/
 
+/*for version 4.7*/
+body .jqgrow.ui-row-ltr.active  {
+    background-color: #00a1a852!important;
+}
 
-.table-success, .table-success>td, .table-success>th {
+body .jqgrow.ui-row-ltr.active td {
+    background-color:unset;
+}
+
+body .table-success, .table-success>td, .table-success>th {
     background-color: #00a1a852!important;
 }
 
@@ -3804,6 +3812,9 @@ body .ui-jqgrid .ui-pg-button:hover {
      padding: 0 8px;
 }
 
+
+
+/*for version 5.4*/
 body .jqgrow.ui-row-ltr.ui-widget-content.ui-state-highlight {
     background: #00a1a852!important;
 }

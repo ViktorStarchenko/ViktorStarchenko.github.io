@@ -7,22 +7,23 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/normalize.css">
-    <!-- Главные стили -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    
 	<!-- bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
 
+    <link rel="stylesheet" href="assets/css/ui.jqgrid.min.css">
     <link rel="stylesheet" href="assets/css/ui.jqgrid-bootstrap4.css">
     <!-- Карусель slick -->
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/slick-theme.css">
 	<!-- font awesome -->
-    <!-- <link rel="stylesheet" href="assets/css/fontawesome/all.css"> -->
-    <link rel="stylesheet" href="assets/css/fontawesome/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome/all.css">
+    <!-- <link rel="stylesheet" href="assets/css/fontawesome/font-awesome.min.css"> -->
     <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
 
-
+	<!-- Главные стили -->
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/css/flick/jquery-ui.theme.min.css" /> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/themes/redmond/jquery-ui.min.css"> -->
     <!-- <link rel="stylesheet" type="text/css" href="themes/redmond/jquery-ui-1.7.1.custom.css" /> -->
@@ -2080,7 +2081,7 @@ $(document).ready(function ()  {
         searchOnEnter: false,
         autosearch: true,
         guiStyle: 'bootstrap4',
-        iconSet: "fontAwesome",
+        iconSet: "fontAwesomeSVG",
         sortname: "invid",
         sortorder: "desc",
         viewrecords: true,
@@ -2152,7 +2153,7 @@ $(document).ready(function ()  {
     // Пагинация для таблицы
 function initPaginatorTrades() {
 		var last_page = $('#sp_1_account-trades-gridpager').html();
-	 	var current_page = $('#account-trades-table-wrap .ui-pg-input.ui-corner-all').val();
+	 	var current_page = $('#account-trades-table-wrap .form-control.ui-pg-input').val();
 
 	 	$('#account-trades-table-paginator .pagination-item.active a').text(current_page);
 		$('#account-trades-table-paginator .pagination-item.last a').text('...' + last_page);
@@ -2208,7 +2209,7 @@ function initPaginatorTrades() {
 	 })
 
 	 $(document).ready(function() {
-	 	$('#gs_lot_send, #gs_lot_created').datepicker({
+	 	$('#gs_account-trades_send, #gs_account-trades_created').datepicker({
 	 		locale: 'ru',
 	 		showButtonPanel: true,
 	 		dateFormat: 'd-mm-y'
