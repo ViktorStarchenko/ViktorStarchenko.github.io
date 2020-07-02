@@ -150,7 +150,8 @@
     }
 
     .wrep_project_slider {
-        max-width: 673px;
+        /* max-width: 673px; */
+        max-width: 600px;
         margin-right: 82px;
         /* margin-left: 40px; */
         margin-right: 68px;
