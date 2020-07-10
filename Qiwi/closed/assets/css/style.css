@@ -243,6 +243,15 @@ box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
     opacity: 1;
 }
 
+.main-title {
+    margin-top: 80px;
+}
+
+@media screen and (max-width: 767px) {
+    .main-title {
+        margin-top: 0px;
+    }
+}
 
 
 /* TIMER */
@@ -265,4 +274,11 @@ box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.75);
     /* width: 50%; */
     background-color: #4c9bcd;
     transition-duration: 1s;
+}
+
+body.closed .advantages-item .t-btn {
+    max-width: 165px;
+    max-height: 140px;
+    min-height: unset;
+    margin: auto
 }

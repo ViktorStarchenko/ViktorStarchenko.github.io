@@ -4,14 +4,16 @@
   --birds-medium-dark: #AFAFAF;
   --birds-medium-light: #D3D3D3;
   --birds-light: #E2E2E2;
-  --birds-bright: #FF5629;
+  /* --birds-bright: #FF5629; */
+  --birds-bright: #ff8c00;
   --birds-shadow: #DDDDDD;
 }
 
 .birds {
   position: relative;
   overflow: hidden;
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   height: 500px;
   margin: auto;
 }

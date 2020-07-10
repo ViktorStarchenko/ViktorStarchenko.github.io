@@ -195,15 +195,15 @@ function getTimeRemaining(endtime) {
       var t = getTimeRemaining(endtime);
 
       // ПРОГРЕСС БАР
-      // var allDay = 31 - Указываем общее количество дней. Это мы сами должны знать.
-      // t.days - это у нас уже есть, Это оставшееся количество дней
-      // var percent = (t.days * 100) / allDay - Узнаем какой процент составляют оставшниеся днит от общего количества дней
+      var allDay = 31 //-  Указываем общее количество дней. Это мы сами должны знать.
+      t.days //- это у нас уже есть, Это оставшееся количество дней
+      var percent = (t.days * 100) / allDay //- Узнаем какой процент составляют оставшниеся днит от общего количества дней
 
 
       // Тоже самое но в секундах
-      var allDay = 60
-      var percent = (t.seconds * 100) / allDay
-      var timerBarInner = parseInt(t.days) * 0.1
+      // var allDay = 60
+      // var percent = (t.seconds * 100) / allDay
+      // var timerBarInner = parseInt(t.days) * 0.1
 
 
       // console.log( 'дни ' + t.days )
