@@ -7,6 +7,7 @@
   /* --birds-bright: #FF5629; */
   --birds-bright: #ff8c00;
   --birds-shadow: #DDDDDD;
+  --birds-blue: #4c9bcd
 }
 
 .birds {
@@ -51,7 +52,8 @@
   width: 84px;
   height: 22px;
   border-radius: 5px;
-  background: #1D1D1B;
+  /* background: #1D1D1B; */
+  background: #4c9bcd;
   transform: rotate(20deg);
 }
 .birds__hatdove-hat:after {
@@ -62,7 +64,8 @@
   width: 76px;
   height: 36px;
   border-radius: 34px 34px 0 0;
-  background: #1D1D1B;
+  /* background: #1D1D1B; */
+  background: #4c9bcd;
 }
 .birds__hatdove-hat:before {
   content: "";
@@ -165,7 +168,8 @@
   left: 91px;
   width: 0;
   height: 0;
-  border-bottom: 70px solid #1D1D1B;
+  /* border-bottom: 70px solid #1D1D1B; */
+  border-bottom: 70px solid #4c9bcd;
   border-right: 100px solid transparent;
   border-radius: 0 0 12px 0/0 0 70px 0;
 }
@@ -381,8 +385,9 @@
   width: 170px;
   height: 170px;
   border-radius: 100%;
-  border: 8px solid var(--birds-dark);
-  box-shadow: inset 0 0 0 6px var(--birds-light), inset 0 0 0 14px var(--birds-dark);
+  /* border: 8px solid var(--birds-dark); */
+  border: 8px solid var(--birds-blue);
+  box-shadow: inset 0 0 0 6px var(--birds-light), inset 0 0 0 14px var(--birds-blue);
 }
 .birds__hatdove .birds__circles-1 {
   position: absolute;
@@ -403,8 +408,10 @@
   width: 170px;
   height: 170px;
   border-radius: 100%;
-  border: 8px solid var(--birds-dark);
-  box-shadow: inset 0 0 0 6px var(--birds-medium-light), inset 0 0 0 14px var(--birds-dark);
+  /* border: 8px solid var(--birds-dark); */
+  border: 8px solid var(--birds-blue);
+  /* box-shadow: inset 0 0 0 6px var(--birds-medium-light), inset 0 0 0 14px var(--birds-dark); */
+  box-shadow: inset 0 0 0 6px var(--birds-medium-light), inset 0 0 0 14px var(--birds-blue);
 }
 .birds__hatdove-frontwing-finger {
   position: absolute;
@@ -555,7 +562,8 @@
   left: -100px;
   width: 0;
   height: 0;
-  border-bottom: 70px solid #1D1D1B;
+  /* border-bottom: 70px solid #1D1D1B; */
+  border-bottom: 70px solid #4c9bcd;
   border-left: 100px solid transparent;
   border-radius: 0 0 0 12px/0 0 0 70px;
   transform-origin: right bottom;
@@ -719,7 +727,8 @@
   width: 20px;
   height: 50px;
   transform: rotate(95deg);
-  background: var(--birds-dark);
+  /* background: var(--birds-dark); */
+  background: var(--birds-blue);
   border-radius: 100% 0;
   transform-origin: 5px 5px;
 }
@@ -730,7 +739,8 @@
   width: 20px;
   height: 50px;
   transform: rotate(165deg);
-  background: var(--birds-dark);
+  /* background: var(--birds-dark); */
+  background: var(--birds-blue);
   border-radius: 0 100%;
   transform-origin: 5px 5px;
   z-index: 22;
@@ -742,7 +752,8 @@
   width: 15px;
   height: 50px;
   transform: rotate(135deg);
-  background: var(--birds-dark);
+  /* background: var(--birds-dark); */
+  background: var(--birds-blue);
   border-radius: 100%;
   transform-origin: 5px 5px;
 }
@@ -761,8 +772,10 @@
   width: 150px;
   height: 150px;
   border-radius: 100%;
-  border: 8px solid var(--birds-dark);
-  box-shadow: 0 0 0 7px var(--birds-light), 0 0 0 60px var(--birds-dark);
+  /* border: 8px solid var(--birds-dark); */
+  border: 8px solid var(--birds-blue);
+  /* box-shadow: 0 0 0 7px var(--birds-light), 0 0 0 60px var(--birds-dark); */
+  box-shadow: 0 0 0 7px var(--birds-light), 0 0 0 60px var(--birds-blue);
 }
 .birds__rundove-frontwing {
   position: absolute;
@@ -792,8 +805,10 @@
   width: 150px;
   height: 150px;
   border-radius: 100%;
-  border: 8px solid var(--birds-dark);
-  box-shadow: 0 0 0 7px var(--birds-light), 0 0 0 60px var(--birds-dark);
+  /* border: 8px solid var(--birds-dark); */
+  border: 8px solid var(--birds-blue);
+  /* box-shadow: 0 0 0 7px var(--birds-light), 0 0 0 60px var(--birds-dark); */
+  box-shadow: 0 0 0 7px var(--birds-light), 0 0 0 60px var(--birds-blue);
 }
 .birds__rundove-frontwing .birds__finger:nth-child(1) {
   position: absolute;
@@ -802,7 +817,8 @@
   width: 20px;
   height: 50px;
   transform: rotate(85deg);
-  background: var(--birds-dark);
+  /* background: var(--birds-dark); */
+  background: var(--birds-blue);
   border-radius: 100% 0;
   transform-origin: 5px 5px;
   animation: rundove-front-finger-1 2.75s linear infinite;
@@ -814,7 +830,8 @@
   width: 20px;
   height: 50px;
   transform: rotate(185deg);
-  background: var(--birds-dark);
+  /* background: var(--birds-dark); */
+  background: var(--birds-blue);
   border-radius: 0 100%;
   transform-origin: 5px 5px;
   animation: rundove-front-finger-2 2.75s linear infinite;
@@ -826,7 +843,8 @@
   width: 20px;
   height: 50px;
   transform: rotate(140deg);
-  background: var(--birds-dark);
+  /* background: var(--birds-dark); */
+  background: var(--birds-blue);
   border-radius: 100%;
   transform-origin: 5px 5px;
   animation: rundove-front-finger-3 2.75s linear infinite;
