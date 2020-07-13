@@ -286,3 +286,6 @@ body.closed .advantages-item .t-btn {
     min-height: unset;
     margin: auto
 }
+body {
+    word-break: normal!important;
+}
