@@ -252,4 +252,9 @@ function getTimeRemaining(endtime) {
   // );
   
 })   
+$(document).ready(function(){
+  $('div#about-us.r.t-rec.t-rec_pb_0').css('word-break', 'normal')
+  $('body').css('background', 'red')
+})
+
 
