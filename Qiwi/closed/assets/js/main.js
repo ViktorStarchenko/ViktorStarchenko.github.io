@@ -233,7 +233,7 @@ function getTimeRemaining(endtime) {
   // console.log(d.getDate() + '. ' + d.getMonth() + ' ' + d.getFullYear());
   
   
-  var dateString = "2020-08-09 15:00:00"; //Задаем конечную дату
+  var dateString = "2020-08-10 15:00:00"; //Задаем конечную дату
   var deadline = new Date(dateString.replace(' ', 'T')); //Это что бы на айфонах работало
   
   
