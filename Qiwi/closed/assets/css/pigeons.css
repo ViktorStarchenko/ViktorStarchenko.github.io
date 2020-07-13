@@ -1591,3 +1591,20 @@
     z-index: 0;
   }
 }
+
+
+@media screen and (max-width: 450px) {
+  .birds__hatdove {
+    left: 121px;
+  }
+  .birds__table {
+    left: 10px;
+    width: 398px;
+  }
+  .birds__laptop:nth-child(3) {
+    left: 149px;
+  }
+  .birds__laptop:nth-child(4) {
+    left: 141px;
+  }
+}
