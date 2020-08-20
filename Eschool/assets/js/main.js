@@ -153,9 +153,64 @@ function normalizeWidth(data) {
 // ВЫЗОВ ФУНКЦИИ ВЫРАВНИВАНИЯ ВЫСОТЫ ОДНОТИПНЫХ БЛОКОВ. СПИСОК АТРИБУТОВ
   $(document).ready(function() {
     // Одинаковая высота всех блоков
-    let data_arr = [];
+    let data_arr = ['contuctUsLabel'];
 
     for(i=0; i<=data_arr.length; i++) {
       normalizeWidth(data_arr[i])
     }
   })
+
+///////////////////////////////////////////////// SLIDERS
+
+// $(document).ready(function(){
+// 	var mySwiper = new Swiper('.partners__slider', {
+//       slidesPerView: 5,
+//       spaceBetween: 30,
+//       loop: true,
+//        autoplay: {
+//         delay: 2500,
+//         disableOnInteraction: false,
+//       },
+//     })
+// })
+
+$(document).ready(function(){
+	$('.partners__slider').slick({
+	  infinite: true,
+	  slidesToShow: 5,
+	  slidesToScroll: 1,
+	  autoplay: true,
+  	autoplaySpeed: 2000,
+	  responsive: [
+	    {
+	      breakpoint: 1025,
+	      settings: {
+	        slidesToShow: 3,
+	        slidesToScroll: 3,
+	        infinite: true
+	      }
+	    },
+	    {
+	      breakpoint: 600,
+	      settings: {
+	        slidesToShow: 2,
+	        slidesToScroll: 2
+	      }
+	    },
+	    {
+	      breakpoint: 480,
+	      settings: {
+	        slidesToShow: 1,
+	        slidesToScroll: 1
+	      }
+	    }
+	    // You can unslick at a given breakpoint now by adding:
+	    // settings: "unslick"
+	    // instead of a settings object
+	  ]
+	})
+})
+
+
+
+
