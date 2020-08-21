@@ -1431,7 +1431,7 @@ ol {
 .input-box {
 	display: flex;
 	flex-direction: row;
-	align-items: center;
+	align-items: flex-start;
 	margin-bottom: 20px;
 	position: relative;
 }
@@ -1463,7 +1463,7 @@ ol {
 	color: #b0b3b4;
 	margin-right: 20px;
 	margin-bottom: 0;
-	width: 100px;
+	width: 130px;
 }
 .agreement-checkbox  {
 	text-align: right;
@@ -1517,6 +1517,9 @@ ol {
 	}
 	.contact-us {
 		padding: 20px 0;
+	}
+	.input-box {
+		flex-direction: column;
 	}
 }
 
