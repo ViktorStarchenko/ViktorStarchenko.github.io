@@ -212,5 +212,62 @@ $(document).ready(function(){
 })
 
 
+///////////////////////////////////// TELEPHONE MASK///////////////////
+$(".tel-mask").mask("+38 (999) 999-99-99",{
+      completed:function(){ 
+        $(this).parent().removeClass('incorrect').addClass('correct');
+      }, autoclear: true
+    });
 
 
+
+
+////////////////////////////////// VALIDATE MAIL INPUT //////////////
+function validateEmail(email) {
+  var re = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+  return re.test(String(email).toLowerCase());
+}
+
+function validate() {
+  // var $result = $("#result");
+  var email = $("input[type=mail]").val();
+  // $result.text("");
+
+  if (validateEmail(email)) {
+    $("input[type=mail]").parent().removeClass('incorrect').addClass('correct');
+    console.log('да')
+  } else {
+  	$("input[type=mail]").parent().removeClass('correct').addClass('incorrect');
+    console.log('нет')
+  }
+}
+
+$("input[type=mail]").keypress(validate);
+
+
+///////////////////////////////// VALIDATE TEXT INPUT ////////////////
+function validateInput() {
+	let text_input = $(this).val();
+	if ( text_input.length > 3 ) {
+		 $(this).parent().removeClass('incorrect').addClass('correct');
+	} else {
+		$(this).parent().removeClass('correct').addClass('incorrect');
+	}
+	console.log(text_input)
+}
+$("input[type=text]").keypress(validateInput)
+$("input[type=text]").change(validateInput)
+
+///////////////////////////////// CONTACT FORM VALIDATION
+
+
+
+$(document).ready(function(){
+	$('body').on('keypress', '#input', function() {
+		  var preg = $(this).val().replace(/[^.\d]+/g,"").replace( /^([^\.]*\.)|\./g, '$1' );
+		  $(this).val(preg);
+		});
+})
+
+// var preg = $(this).val().replace(/[^\d.]/ig, '');
+// $(this).val(parseFloat(preg));
