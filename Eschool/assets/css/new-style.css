@@ -1351,6 +1351,9 @@ ol {
 	}
 }
 @media screen and (max-width: 767px) {
+	.blog {
+		padding-bottom: 40px;
+	}
 	.blog__item {
 		padding: 30px 35px;
 		width: 100%;
