@@ -849,6 +849,12 @@ ol {
 	.demo__content.btn-block-col .btn-body:not(:last-child) {
 		margin-bottom: 15px;
 	}
+	.demo__content-img {
+		margin-top: 30px;
+	}
+	.demo__content {
+		flex-direction: column-reverse;
+	}
 
 }
 
@@ -988,6 +994,9 @@ ol {
 }
 
 @media screen and (max-width: 768px) {
+	.advantages {
+		padding-top: 60px;
+	}
 	.advantages__img img {
 		max-width: 100%;
 	}
