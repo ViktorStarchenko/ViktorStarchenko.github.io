@@ -709,7 +709,7 @@ ol {
 @media screen and (max-width: 991px) {
 	.navbar-collapse {
 		position: fixed;
-		top: 72px;
+		top: 97px;
 		left: 0;
 		width: 100%;
 		padding: 0 10px 20px;
@@ -721,6 +721,9 @@ ol {
 	}
 	.header__socials {
 		margin: auto;
+	}
+	.header-container .collapse {
+		margin-top: 0;
 	}
 }
 
@@ -1384,7 +1387,7 @@ ol {
 		margin-bottom: 10px;
 	}
 	.blog {
-		
+
 	}
 }
 
