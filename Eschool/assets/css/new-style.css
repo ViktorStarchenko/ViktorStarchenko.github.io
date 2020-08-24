@@ -439,6 +439,11 @@ ol {
     padding-left: 10px;
 }
 
+.text-12 {
+	font-size: 12px;
+	line-height: 1;
+}
+
 .text-18 {
 	font-size: 18px;
 }
@@ -1610,7 +1615,7 @@ input[type="checkbox"]:checked + label:after {
 
 .footer {
 	background-color: #0e3cac;
-	padding: 40px 0 80px;
+	padding: 40px 0 20px;
 }
 .footer__logo {
 	margin-bottom: 25px;

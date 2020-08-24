@@ -243,6 +243,7 @@ function validate() {
 }
 
 $("input[type=mail]").keypress(validate);
+$("input[type=mail]").on('change', validate);
 
 
 ///////////////////////////////// VALIDATE TEXT INPUT ////////////////
