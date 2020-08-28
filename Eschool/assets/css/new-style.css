@@ -1496,6 +1496,7 @@ ol {
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
+	flex-wrap: wrap;
 	margin-bottom: 20px;
 	position: relative;
 }
@@ -1528,6 +1529,7 @@ ol {
 	margin-right: 20px;
 	margin-bottom: 0;
 	width: 130px;
+	text-align: left;
 }
 .agreement-checkbox  {
 	text-align: right;
@@ -1541,13 +1543,40 @@ ol {
 	background: none;
 	border: unset;
 	border-bottom: 1px solid #b0b3b4;
-	width: 100%;
+	width: calc(100% - 160px);
 }
 .form-input:focus {
 	outline: none;
 }
 .input-box.submit-box {
 	justify-content: flex-end;
+}
+.form-anotation {
+	display: block;
+	width: 70%;
+	margin-left: auto;
+	font-size: 12px;
+	font-weight: 300;
+	color: #b0b3b4;
+}
+.input-autocomplete {
+	color: #03a9f4;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 520px) {
+	.form-input {
+		width: 100%;
+	}
+	.form-anotation {
+		width: 100%;
+	}
+	.input-box.input-site {
+		flex-direction: row;
+	}
+	.form-label {
+		width: unset;
+	}
 }
 /*****************************************FORM STYLEs END*********************************/
 @media screen and (max-width: 1368px) {
@@ -1732,5 +1761,15 @@ input[type="checkbox"]:checked + label:after {
 @media screen and (max-width: 992px) {
 	#main_content {
 		overflow: hidden;
+	}
+}
+
+/***********************************Request PAGE**************************/ 
+.polls-form-wrap label {
+	width: 50%;
+}
+@media screen and (max-width: 520px) {
+	.polls-form-wrap label {
+		width: 80%;
 	}
 }

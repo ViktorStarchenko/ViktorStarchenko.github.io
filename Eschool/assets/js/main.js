@@ -270,6 +270,14 @@ $(document).ready(function(){
 		});
 })
 
+// form autocomplete 
+
+$('.input-autocomplete').on('click', function(){
+	let data_autocomplete = $(this).attr('data-autocomplete');
+	console.log($(this).parent().siblings('.form-input').val(data_autocomplete))
+	// $(this).parent().sibling('.form-input').val(data_autocomplete)
+})
+
 // var preg = $(this).val().replace(/[^\d.]/ig, '');
 // $(this).val(parseFloat(preg));
 
