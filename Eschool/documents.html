@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Awemare</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/swiper.min.css" />
+
+
+    <!-- <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" /> -->
+
+    <link rel="stylesheet" href="assets/css/fontawesome/all.css" />
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css" />
+
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/slick-theme.css" />
+
+    <link rel="stylesheet" href="assets/css/new-style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <div class="wrapper-1290">
+          <nav class="navbar navbar-expand-lg header-inner">
+            <a class="navbar-brand" href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="187" height="72" viewBox="0 0 187 72">
+                  <image id="logo-восстановлено" width="187" height="72" xlink:href="data:img/png;base64,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"/>
+              </svg>
+
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <!-- <span class="navbar-toggler-icon"></span> -->
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="30"
+                height="22"
+                viewBox="0 0 30 22"
+              >
+                <metadata>
+                  <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+                  <x:xmpmeta
+                    xmlns:x="adobe:ns:meta/"
+                    x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        "
+                  >
+                    <rdf:RDF
+                      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                    >
+                      <rdf:Description rdf:about="" />
+                    </rdf:RDF>
+                  </x:xmpmeta>
+                  <?xpacket end="w"?>
+                </metadata>
+                <image
+                  id="MENU"
+                  width="30"
+                  height="22"
+                  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAWCAQAAAB9auREAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAALiMAAC4jAXilP3YAAAAHdElNRQfkBhMOMBPdi6TCAAAAV0lEQVQ4y2NkyGZwZGBkIB38ZzjEyPCFgZsMrQwMDAx/GBlCGLzJtHkHmZaOArIAI4MAgx4DExk6/zNcZmC4xfCfTHifHDup5exRQD9AUWFAYTFEQQEIAKLIL0xKb7NkAAAAAElFTkSuQmCC"
+                />
+              </svg>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-end navbar-fixed"
+              id="navbarNavDropdown"
+            >
+
+              <ul class="navbar-nav menu-body">
+                <li class="nav-item dropdown menu-item">
+                  <a class="nav-link menu-link menu-link crane" href="#about">Про проект</a>
+                </li>
+
+                <li class="nav-item active menu-item">
+                  <a class="nav-link menu-link menu-link crane" href="#blog"
+                    >Новини</a
+                  >
+                </li>
+                <li class="nav-item dropdown menu-item">
+                  <a class="nav-link menu-link menu-link" href="https://e-schools.info/training">Навчання</a>
+                </li>
+
+                <li class="nav-item active menu-item">
+                  <a class="nav-link menu-link crane" href="#partners">Партнери</a>
+                </li>
+
+                <li class="nav-item active menu-item">
+                  <a class="nav-link menu-link" href="https://e-schools.info/contacts">Контакти</a>
+                </li>
+              </ul>
+
+              <ul class="header__socials">
+                <!-- <li class="header__socials-item">
+                  <a class="header__socials-link" href="#">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li> -->
+                <li class="header__socials-item">
+                  <a class="header__socials-link" href="https://www.youtube.com/channel/UC1fN9OJC7LnRnh8w98jyCsw" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                  </a>
+                </li>
+                <li class="header__socials-item">
+                  <a class="header__socials-link" href="https://www.facebook.com/groups/181438502356131/?ref=br_tf&epa=SEARCH_BOX" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li class="header__socials-item">
+                  <a class="header__socials-link" href="#">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+      
+    </header>
+    <section class="demo overflow-hidden">
+        <div class="container-fluid">
+          <div class="row wrapper-1450">
+            <div class="col-12">
+              <div class="demo__wrap">
+                <div class="demo__content">
+                  <div class="demo__content-img left">
+                    <img class="animation-floating1 demo__content-img-floating" src="assets/img/tri.png" alt="tri">
+                    <img src="assets/img/demo1.png" alt="demo">
+                  </div>
+                  <a href="https://demo.e-schools.info/director/104631" class="btn-body btn-orange btn-md"><span class="btn-inner">демо для шкіл</span></a>
+                  <a href="https://demo.e-schools.info/parent/105190" class="btn-body btn-orange btn-md d-sm-block d-sm-block d-md-none"><span class="btn-inner">демо для батьків</span></a>
+                </div>
+                <div class="demo__content btn-block-col">
+                  <a href="https://e-schools.info/request" class="btn-body btn-white btn-md"><span class="btn-inner">пiдключити школу</span></a>
+                  <a href="https://e-schools.info/registration" class="btn-body btn-white btn-sm"><span class="btn-inner">реєстрацІя</span></a>
+                  <a href="#" class="btn-body btn-white btn-sm"><span class="btn-inner">вхiд</span></a>
+                  
+                </div>
+                <div class="demo__content right">
+                  <div class="demo__content-img">
+                    <img class="animation-floating2 demo__content-img-floating" src="assets/img/tri2.png" alt="tri">
+                    <img src="assets/img/demo2.png" alt="demo">
+                  </div>
+                  <a href="https://demo.e-schools.info/parent/105190" class="btn-body btn-orange btn-md"><span class="btn-inner">демо для батьків</span></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <main>
+      
+
+      <div id="main_content" class="">
+      	<div class="container-fluid p-0">
+      		<div class="row wrapper-1290 p-0">
+      			<div class="col-12 col-md-3">
+      				<div></div>
+      				<div class="sidebar">
+      					<div class="blog__item">
+      						<ul class="styled_list">
+      							<li><a href="https://e-schools.info/e-service">Електронні щоденники та журнали</a></li>
+      							<li><a href="https://e-schools.info/sites">Сайт для школи</a></li>
+      							<li><a href="https://e-schools.info/documents">Документи</a></li>
+      							<li><a href="https://e-schools.info/eapplications">Електронні звернення</a></li>
+      							<li><a href="https://e-schools.info/partners">Партнери проекту</a></li>
+      							<li><a href="https://e-schools.info/demo">Демонстраційна версія</a></li>
+      							<li><a href="https://e-schools.info/request">Підключити школу</a></li>
+      							<li><a href="https://e-schools.info/help">Допомога</a></li>
+      							<li><a href="https://e-schools.info/news/general">Новини</a></li>
+      							<li><a href="https://e-schools.info/opinions">Відгуки</a></li>
+      							<li><a href="https://e-schools.info/polls">Голосування</a></li>
+      							<li><a href="https://e-schools.info/contacts">Контакти</a></li>
+      						</ul>
+      					</div>
+      				</div>
+      			</div>
+
+		            
+      			<div class="col-12 col-md-9 p-0">
+
+	              <section>
+	                <div class="row">   
+	                  <div class="col-12 col-md-6">
+	                      <div class="blog__item">
+	                        <span class="blog__item-title">Схвалено для використання</span>
+	                        <div class="blog__item-content text-12" data-height="blogContent">
+	                            <a data-fancybox="gallery" href="assets/img/documents/doc1.jpg"><img class="lazy img-fluid" data-src="assets/img/documents/doc1.jpg" src="assets/img/documents/doc1.jpg" alt="doc1"></a>
+	                       </div>
+	                    </div>
+                      </div>
+
+                      <div class="col-12 col-md-6">
+	                      <div class="blog__item">
+	                        <span class="blog__item-title">Про результати науково-методичної експертизи</span>
+	                        <div class="blog__item-content text-12" data-height="blogContent">
+	                            <a data-fancybox="gallery" href="assets/img/documents/ch_L38TLhy.jpg"><img class="lazy img-fluid" data-src="assets/img/documents/ch_L38TLhy.jpg" src="assets/img/documents/ch_L38TLhy.jpg" alt="ch_L38TLhy"></a>
+	                       </div>
+	                    </div>
+                      </div>
+
+	                </div>
+	              </section>
+
+	              <section class="bgFigure-dotsBottobRightTopLeft">
+			        <div class="container-fluid">
+			          <div class="row wrapper-1290 overflow-hidden">
+			            <div class="col-12 col-sm-5 text-center p-0">
+			              <div class="partners__img-box">
+			                <picture>
+			                    <img class="lazy partners__img to-animate add-animate animated" data-src="assets/img/eye_glasses_for_edit.png" src="assets/img/eye_glasses_for_edit.png" alt="about">
+			                  </picture>
+			                  <img class="partners__img-dots to-animate lazy add-animate animated" data-src="assets/img/dotsBlue-horisontal.png" src="assets/img/dotsBlue-horisontal.png" alt="dots">
+			              </div>
+			            </div>
+			            <div class="col-12 text-center">
+			              <div class="block-heading h-100">
+			                <div class="title-nubmerBg">
+			                  <p class="text-18 text-700 colorLtBlue">Меморандум між Міністерством освіти і науки України та Київською енергетичною агенцією про взаєморозуміння і співробітництво у впровадженні в системі освіти сучасних технологій енергоефективності та енергозбереження</p>
+			                </div>
+			              </div>
+			            </div>
+			          </div>
+			          <div class="row">   
+		                  <div class="col-12 col-md-6">
+		                      <div class="blog__item">
+		                        <div class="blog__item-content text-12" data-height="blogContent">
+		                            <a data-fancybox="gallery" href="assets/img/documents/KEEU_Page_1.jpg"><img class="lazy img-fluid" data-src="assets/img/documents/KEEU_Page_1.jpg" src="assets/img/documents/KEEU_Page_1.jpg" alt="KEEU_Page_1"></a>
+		                       </div>
+		                    </div>
+	                      </div>
+
+	                      <div class="col-12 col-md-6">
+		                      <div class="blog__item">
+		                        <div class="blog__item-content text-12" data-height="blogContent">
+		                            <a data-fancybox="gallery" href="assets/img/documents/KEEU_Page_2.jpg"><img class="lazy img-fluid" data-src="assets/img/documents/KEEU_Page_2.jpg" src="assets/img/documents/KEEU_Page_2.jpg" alt="KEEU_Page_2"></a>
+		                       </div>
+		                    </div>
+	                      </div>
+	                      <div class="col-12 col-md-6">
+		                      <div class="blog__item">
+		                        <div class="blog__item-content text-12" data-height="blogContent">
+		                            <a data-fancybox="gallery" href="assets/img/documents/KEEU_Page_3.jpg"><img class="lazy img-fluid" data-src="assets/img/documents/KEEU_Page_3.jpg" src="assets/img/documents/KEEU_Page_3.jpg" alt="KEEU_Page_3"></a>
+		                       </div>
+		                    </div>
+	                      </div>
+
+		                </div>
+
+			        </div>
+			      </section>
+
+	              <section class="contact-us">
+	                <div class="container-fluid">
+	                  <div class="row wrapper-1290">
+	                    <div class="col-12 col-lg-7">
+	                      <div class="contact-us-text align-items-start flex-column"> 
+	                        <div class="contact-us__title ">
+	                          <h2 class="title-h2 text-700 text-uppercase">ЗАЛИШИЛИСЯ<br> ПИТАННЯ? <span class="color-Ltblue d-block">Напишіть<br> нам!</span></h2>
+	                        </div>
+	                        <div class="contact-us__img-box">
+	                          <picture>
+	                              <img class="lazy contact-us__img to-animate" data-src="assets/img/pen.png" src="assets/img/placeholder.png" alt="pen"
+	                              />
+	                            </picture>
+	                            <img class="contact-us__img-dots to-animate lazy"  data-src="assets/img/dotsBlue-pen.png" src="assets/img/placeholder.png" alt="dots">
+	                        </div>
+	                      </div>
+	                    </div>
+	                    <div class="col-12 col-lg-5">
+	                      <div class="contact-us-form-wrap">
+	                        <form action="">
+	                          <div class="input-box incorrect">
+	                            <label class="form-label" for="">Ім'я</label>
+	                            <input class="form-input " type="text" placeholder="">
+	                          </div>
+	                          <div class="input-box incorrect">
+	                            <label class="form-label" for="">Телефон</label>
+	                            <input class="form-input tel-mask" type="phone" placeholder="">
+	                          </div>
+	                          <div class="input-box incorrect">
+	                            <label class="form-label" for="">E-mail</label>
+	                            <input class="form-input" type="mail" placeholder="">
+	                          </div>
+	                          <div class="input-box">
+	                            <label class="form-label" for="">Повідомлення</label>
+	                            <textarea class="form-input" name="" id="" cols="30" rows="3"></textarea>
+	                          </div>
+	                          <div class="agreement-checkbox">
+	                              <input type="checkbox" name="" value="agreement" id="contact_us" required>
+	                              <label for="ui-ux">Я згоден <a href="#">на обробку персональних даниx</a> </label>
+	                          </div>
+	                          <div class="input-box submit-box">
+	                            <button class="btn-body btn-orange btn-md" type="submit">НАДІСЛАТИ</button>
+	                          </div>
+	                        </form>
+	                      </div>
+	                    </div>
+	                  </div>
+	                </div>
+	              </section>
+			      				
+
+			      			</div>
+			      		</div>
+			      	</div>
+			      </div>
+
+
+    </main>
+
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="row wrapper-1290 pb-5">
+          <div class="col-12 col-md-12 col-lg-3">
+            <div>
+              <div class="footer__logo">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="227" height="87" viewBox="0 0 227 87">
+                    <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+                      <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+                         <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                            <rdf:Description rdf:about=""/>
+                         </rdf:RDF>
+                      </x:xmpmeta>                  
+                      <?xpacket end="w"?></metadata>
+                      <image id="logo-восстановлено_копия" data-name="logo-восстановлено копия" width="227" height="87" xlink:href="data:img/png;base64,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"/>
+                  </svg>
+              </div>
+              
+                <p class="text-white">Портал e-schools розроблений українськими спеціалістами відповідно до вимог МОН України та знаходиться виключно на території України.</p>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="footer__list text-white">
+              <div class="footer__list-heading text-white">
+                <p>ДОКУМЕНТИ</p>
+              </div>
+              <ul>
+                <li><a class="text-white" href="https://e-schools.info/agreement">Угода користувача</a></li>
+                <li><a class="text-white"  href="https://e-schools.info/oferta">Публічна оферта</a></li>
+                <li><a  class="text-white"  href="https://e-schools.info/documents">Документи</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="footer__list text-white">
+              <div class="footer__list-heading text-white">
+                <p>Контакти</p>
+              </div>
+              <ul>
+                <li><a class="text-white" href="https://e-schools.info/contacts">Контакти</a></li>
+                <li><a class="text-white"  href="https://e-schools.info/advertising">Розміщення реклами</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="footer__list text-white">
+              <div class="footer__list-heading text-white">
+                <p>СПІВРОБІТНИЦТВО</p>
+              </div>
+              <ul>
+                <!-- <li><a class="text-white" href="">Стати партнером</a></li>
+                <li><a class="text-white"  href="">Допомога проекту</a></li> -->
+                <li><a class="text-white"  href="https://e-schools.info/e-service">Електронні щоденники та журнали</a></li>
+                <li><a class="text-white"  href="https://e-schools.info/sites">Сайт для школи</a></li>
+                <li><a class="text-white"  href="https://e-schools.info/news/general">Новини</a></li>
+                <li><a class="text-white"  href="https://e-schools.info/opinions">Відгуки</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="row wrapper-1290">
+          <div class="col-12 text-center">
+            <a class="text-white text-12" href="https://skybuss.com.ua/">Skybuss Studio 2020</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <script src="assets/js/jquery-2.1.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.spincrement.min.js"></script>
+    <script src="assets/js/jquery.maskedinput.js"></script>
+    <script src="assets/js/jquery.fancybox.min.js"></script>
+    <!-- <script src="assets/js/owl.carousel.min.js"></script> -->
+
+    <script src="assets/js/all.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
+

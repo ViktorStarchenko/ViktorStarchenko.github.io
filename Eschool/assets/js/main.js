@@ -286,3 +286,28 @@ $(document).ready(function(){
 	        $('body,html').animate({scrollTop: top-100}, 1500);
 	    });
 })
+
+
+///////////////////////////////////////////// ВЫРОВНЯТЬ ВЫСОТУ ОДНОТИПНЫХ БЛОКОВ //////////////////////////
+function normalizeHeigh(data) {
+  let data_height = $('[data-height=' +  data + ']')
+
+  let data_allHeight = [];
+  data_height.each(function(elem){
+    // console.log($(this).height())
+    data_allHeight.push(parseInt($(this).height()));
+  })
+  slider1_maxHeight = Math.max.apply(Math, data_allHeight);
+  $('[data-height=' +  data + ']').height(slider1_maxHeight)
+  // console.log(data_height);
+} 
+
+// ВЫЗОВ ФУНКЦИИ ВЫРАВНИВАНИЯ ВЫСОТЫ ОДНОТИПНЫХ БЛОКОВ. СПИСОК АТРИБУТОВ
+  $(document).ready(function() {
+    // Одинаковая высота всех блоков
+    let data_arr = ['blogContent'];
+
+    for(i=0; i<=data_arr.length; i++) {
+      normalizeHeigh(data_arr[i])
+    }
+  })

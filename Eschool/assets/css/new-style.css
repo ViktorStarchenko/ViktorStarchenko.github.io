@@ -441,7 +441,7 @@ ol {
 
 .text-12 {
 	font-size: 12px;
-	line-height: 1;
+	line-height: 1.2;
 }
 
 .text-18 {
@@ -454,6 +454,10 @@ ol {
 
 .text-700 {
 	font-weight: 700;
+}
+
+.colorLtBlue {
+	color: #03a9f4;
 }
 
 @media screen and (max-width: 1440px) {
@@ -638,7 +642,9 @@ ol {
 
 /************************************************************FIGURES BG***************************************/
 
-.bgFigure-dotsRight {
+.bgFigure-dotsRight,
+.bgFigure-dotsBottobRightTopLeft,
+.bgFigure-dotsBottobRightTopLeft {
 	position: relative;
 }
 .bgFigure-dotsBottobRightTopLeft:before {
@@ -661,12 +667,47 @@ ol {
     background-repeat: no-repeat;
     position: absolute;
     left: -15px;
+    right: unset;
     top: 0;
     display: block;
     /* z-index: 2222; */
     background-size: contain;
     width: 80px;
     height: 100px;
+
+    z-index: -1;
+}
+.bgFigure-dotsBottobRightTopLeft.reversed:before {
+	content: '';
+    background-image: url(../img/figure1.png);
+    background-repeat: no-repeat;
+    position: absolute;
+   	left: 15px;
+    bottom: 20%;
+    display: block;
+    /* z-index: 2222; */
+    background-size: contain;
+    width: 106px;
+    height: 136px;
+
+    z-index: -1;
+}
+
+.bgFigure-dotsBottobRightTopLeft.reversed:after {
+	content: '';
+    background-image: url(../img/figure1.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 15px;
+    left: unset;
+    top: 0;
+    display: block;
+    /* z-index: 2222; */
+    background-size: contain;
+    width: 80px;
+    height: 100px;
+
+    z-index: -1;
 }
 
 .bg-dkBlue {
@@ -948,6 +989,9 @@ ol {
 }
 .advantages__img {
 	opacity: 0;
+}
+.advantages__img img {
+	width: 100%;
 }
 .advantages__img.add-animate,
 .advantages__item-img.add-animate {
@@ -1289,13 +1333,17 @@ ol {
 	padding: 20px 30px;
 	box-shadow: 0px 10px 76.5px 13.5px rgba(42, 45, 46, 0.1);
 	border-radius: 15px;
+	margin-bottom: 25px;
 }
 .blog__item-img {
 	position: relative;
 	margin-bottom: 45px;
+	height: 196px;
 }
 .blog__item-img img {
 	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 .content-icon{
 	width: 50px;
@@ -1330,6 +1378,13 @@ ol {
 .pubDate {
 	color: #03a9f4;
 	font-size: 14px;
+}
+.pin-img {
+	position: absolute;
+	width: 40px!important;
+	height: auto!important;
+	top: 5px;
+    right: 10px;
 }
 
 @media screen and (max-width: 1440px) {
@@ -1416,6 +1471,7 @@ ol {
 .contact-us__img-box {
 	width: 233px;
 	/*overflow: hidden;*/
+	position: relative;
 }
 
 .contact-us__img {
@@ -1643,4 +1699,38 @@ input[type="checkbox"]:checked + label:after {
 	}
 }
 
+/******************************************LIST STYLES******************************/
 
+.styled_list li {
+	position: relative;
+	padding-left: 10px;
+}
+.styled_list li:before {
+	color:#000;
+    content: '\f08d'; /* You should use \ and not /*/
+    font-family: "Font Awesome 5 Free"; /* This is the correct font-family*/
+    font-style: normal;
+    font-weight: normal;
+    font-size:12px;
+    font-weight: 900;
+    color: #03a9f4;
+    left: -10px;
+    top: 2px;
+    position: absolute;
+    transform: rotate(-90deg);
+}
+
+.sidebar {
+	position: sticky;
+	top: 20px;
+}
+
+.sidebar .blog__item {
+	max-width: unset;
+}
+
+@media screen and (max-width: 992px) {
+	#main_content {
+		overflow: hidden;
+	}
+}
