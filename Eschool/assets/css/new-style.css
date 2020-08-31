@@ -1773,3 +1773,23 @@ input[type="checkbox"]:checked + label:after {
 		width: 80%;
 	}
 }
+
+/*OPINIONS*/
+
+.opinions__item {
+	max-width: 100%;
+}
+.opinios__heading,
+.opinions__info {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.opinios__heading p,
+.opinions__info p { 
+	margin-right: 10px;
+	margin-bottom: 8px;
+}
+.opinios__heading {
+	margin-bottom: 8px;
+}
