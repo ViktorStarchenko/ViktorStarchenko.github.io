@@ -37,10 +37,11 @@ body {
     background-color: var(--color-beige);
     font-family: "Gotham";
     font-style: normal;
-    font-display: swap;
     font-stretch: normal;
     font-weight: normal;
     font-size: 14px;
+    line-height: 1.4;
+    color: var(--color-green);
 }
 
 /************************************** TEXT STYLES *******************************/
@@ -106,7 +107,7 @@ body {
 }
 
 /**************************************WRAPPER STYLES ***************************/
-.wrapper-1366 {
+.wrapper-1360 {
     width: 100%;
     max-width: 1360px;
     margin: auto;
@@ -131,6 +132,17 @@ body {
     height: 50%;
     z-index: 1;
 }
+
+
+.default-pb-70 {
+    padding-bottom: 70px;
+}
+
+@media screen and (max-width: 767px) {
+    .default-pb-70 {
+        padding-bottom: 50px;
+    }
+}
 /*************************************** BTN STYLES ***************************************/
 
 .btn-body {
@@ -150,6 +162,10 @@ body {
 }
 .btn-beige {
     background-color: var(--color-beige);
+    color: var(--color-green);
+}
+.btn-beige.bordered {
+    border: solid 1px var(--color-green);
     color: var(--color-green);
 }
 .btn-beige:hover {
@@ -218,13 +234,29 @@ header.fixed {
     color: var(--color-white);
     text-transform: uppercase;
     text-align: center;
+    position: relative;
+}
+.navbar_wrap .menu_link:before {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    bottom: 0px;
+    left: -100%;
+    border-bottom: 2px solid var(--color-white);
+    opacity: 0;
+    transition: 0.3s ease;
+}
+.navbar_wrap .menu_link:hover:before {
+    left: 0;
+    opacity: 1;
 }
 .navbar_inner {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding-top: 22px;
+    padding-bottom: 22px;
 }
 .menu_list_wrap {
     justify-content: flex-end;
@@ -268,6 +300,21 @@ header.fixed {
     }
     .whereToFindUs:hover .whereToFindUs__icon svg path {
         fill: var(--color-lt_beige);
+    }
+    .menu_list_wrap {
+        position: absolute;
+        left: -100%;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: var(--color-green);
+        transition-duration: .2s;
+        display: block;
+        padding: 20px;
+    }
+    .menu_list_wrap.show {
+        left: 0;
+        transition-duration: .2s;
     }
 }
 @media screen and (max-width: 580px) {
@@ -368,3 +415,32 @@ header.fixed {
     }
 }
 
+
+/*********************************** VIDEO BLOCK **************8**************/
+
+.block_heading {
+    max-width: 900px;
+}
+.block_heading.center {
+    margin: auto;
+}
+.block_heading .green_logo_icon {
+    margin-bottom: 25px;
+}
+.block_heading .heading_title {
+    margin-bottom: 25px;
+}
+.block_heading .heading_text {
+    margin-bottom: 50px;
+}
+
+.about__video-wrap {
+    height: calc(100vh - 120px);
+    min-height: 900px;
+}
+
+@media screen and (max-width: 1440px) {
+    .about__video-wrap {
+        min-height: unset;
+    }
+}
