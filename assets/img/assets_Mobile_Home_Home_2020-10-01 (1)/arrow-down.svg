@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>2A78EAF0-C240-4B17-93F9-578B8FB40379</title>
+    <g id="01---Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile/Home/Home" transform="translate(-335.000000, -5380.000000)" fill="#FFFFFF" fill-rule="nonzero">
+            <g id="mOBILE/footer" transform="translate(0.000000, 5182.000000)">
+                <g id="icon/control/arrow-down" transform="translate(335.000000, 198.000000)">
+                    <path d="M16.3396654,9.95146219 C16.5339369,9.75036496 16.5284035,9.42985529 16.3273063,9.23558382 C16.126209,9.04131234 15.8056994,9.04684571 15.6114279,9.24794294 L10.3921591,14.6505914 C10.2025543,14.8468581 10.202622,15.1580849 10.3923122,15.3542691 L15.611581,20.7522155 C15.8059399,20.9532282 16.126452,20.9586221 16.3274647,20.7642631 C16.5284773,20.5699042 16.5338713,20.2493921 16.3395123,20.0483794 L11.4603646,15.0021979 L16.3396654,9.95146219 Z" id="down-arrow" transform="translate(13.365912, 15.000000) scale(1, -1) rotate(-270.000000) translate(-13.365912, -15.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

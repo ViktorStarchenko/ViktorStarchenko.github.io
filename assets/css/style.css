@@ -1,0 +1,367 @@
+:root {
+    --color-beige: #faf8f3;
+    --color-lt_beige: #fafaf4;
+    --color-green: #173d32;
+    --color-dk_green: #183d32;
+    --color-grey: #d8d8d8;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-transp_076_black: rgba(0, 0, 0, 0.76);
+    --color-transp_06_black: rgba(26, 26, 26, 0.6);
+    --color-transp_all: rgba(0, 0, 0, 0);
+    --color-transp_06_white: rgba(255, 255, 255, 0.6);
+}
+@font-face {
+    font-family: "Gotham";
+    font-style: normal;
+    font-display: swap;
+    font-stretch: normal;
+    font-weight: 300;
+    src: url(../fonts/gotham/GothamBook.ttf);
+}
+@font-face {
+    font-family: "Gotham";
+    font-display: swap;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    src: url(../fonts/gotham/GothamMedium.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--color-beige);
+    font-family: "Gotham";
+    font-style: normal;
+    font-display: swap;
+    font-stretch: normal;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+/************************************** TEXT STYLES *******************************/
+
+.title-h1 {
+    font-size: 70px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.7;
+    letter-spacing: -2.06px;
+    text-transform: uppercase;
+}
+.title-h2 {
+    font-size: 40px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-transform: uppercase;
+}
+.title-h3 {
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+    text-transform: uppercase;
+}
+.title-h4 {
+    font-size: 15px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px) {
+    .title-h1 {
+        font-size: 70px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.7;
+        letter-spacing: -2.06px;
+    }
+    .title-h2 {
+        font-size: 30px;
+        line-height: normal;
+    }
+    .title-h4 {
+        font-size: 15px;
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.33;
+        letter-spacing: normal;
+    }
+}
+
+/**************************************WRAPPER STYLES ***************************/
+.wrapper-1366 {
+    width: 100%;
+    max-width: 1360px;
+    margin: auto;
+}
+
+/*************************************** SERVISE STYLES ***************************/
+
+.full-width-inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+.shadow-gradient {
+    opacity: 0.55;
+    background-image: linear-gradient(to bottom, #000000 17%, rgba(0, 0, 0, 0.76) 42%, rgba(0, 0, 0, 0));
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    z-index: 1;
+}
+/*************************************** BTN STYLES ***************************************/
+
+.btn-body {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    width: 288px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .2s;
+}
+.btn-body:hover {
+    text-decoration: none;
+}
+.btn-beige {
+    background-color: var(--color-beige);
+    color: var(--color-green);
+}
+.btn-beige:hover {
+    background-color: var(--color-green);
+    color: var(--color-beige);
+    border: solid 1px var(--color-beige);
+}
+.btn-green {
+    background-color: var(--color-green);
+    color: var(--color-beige);
+    border: solid 1px var(--color-beige);
+}
+.btn-green:hover {
+    background-color: var(--color-beige);
+    color: var(--color-green);
+}
+.btn-transp {
+    background-color: var(--color-transp);
+    color: var(--color-white);
+    border: solid 1px var(--color-white);
+}
+.btn-transp:hover {
+    color: var(--color-green);
+    /*border: solid 2px var(--color-white);*/
+    background-color: var(--color-transp_06_white);
+}
+
+@media screen and (max-width: 500px) {
+    .btn-body {
+        width: 235px;
+    }
+}
+
+/****************************************HEADER *********************************/
+header.fixed {
+    background-color: var(--color-green);
+}
+.menu_logo {
+    width: 317px;
+    background-color: red;
+}
+.whereToFindUs .btn-body {
+    width: 226px;
+}
+.whereToFindUs .whereToFindUs__icon {
+    display: none;
+}
+.header_fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 440;
+}
+.navbar_wrap {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.navbar_wrap .menu_logo {
+    color: var(--color-white);
+}
+.navbar_wrap .menu_link {
+    font-size: 16px;
+    line-height: 1.19;
+    font-weight: 500;
+    color: var(--color-white);
+    text-transform: uppercase;
+    text-align: center;
+}
+.navbar_inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+.menu_list_wrap {
+    justify-content: flex-end;
+}
+.menu_logo-wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.navbar-toggler:focus {
+    outline: none;
+}
+
+@media screen and (max-width: 1290px) {
+    .menu_logo {
+        width: 226px;
+        background-color: red;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .navbar_wrap .menu_link {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .menu_logo {
+        width: 226px;
+    }
+    .navbar_inner {
+        justify-content: space-between;
+    }
+    .whereToFindUs .btn-body {
+        display: none;
+    }
+    .whereToFindUs .whereToFindUs__icon {
+        display: block;
+    }
+    .whereToFindUs .whereToFindUs__icon svg {
+        width: 40px;
+        height: 40px;
+    }
+    .whereToFindUs:hover .whereToFindUs__icon svg path {
+        fill: var(--color-lt_beige);
+    }
+}
+@media screen and (max-width: 580px) {
+    .menu_logo {
+        width: 191px;
+    }
+}
+
+/*************************************************************************************/
+/***************************************** MAIN PAGE *********************************/
+
+/**************************************** HERO BLOCK *********************************/
+.hero2col {
+    overflow: hidden;
+}
+.hero2col .hero2col__item-box:first-child {
+    padding: 0 5px 0 0;
+}
+.hero2col .hero2col__item-box:last-child {
+    padding: 0 0 0 5px;
+}
+.hero2col__item {
+    height: 800px;
+    max-height: 100vh;
+    position: relative;
+}
+.hero2col__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero2col__item-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 70px 100px;
+    max-width: 800px;
+    color: var(--color-white);
+    z-index: 10;
+}
+.hero2col__item-title {
+    margin-bottom: 22px;
+}
+.hero2col__item-text {
+    margin-bottom: 54px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.38;
+    max-width: 440px;
+}
+
+@media screen and (min-width: 1600px) {
+    .hero2col__item {
+        height: 90vh;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .hero2col__item-content {
+        padding:  70px 47px;
+    }
+    .hero2col__item {
+        height: 95vh;
+    }
+    .hero2col__item-text {
+        margin-bottom: 35px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .hero2col .hero2col__item-box:first-child {
+        padding: 0;
+        margin-bottom: 10px;
+    }
+    .hero2col__item {
+        height: 457px;
+    }
+    .hero2col .hero2col__item-box:last-child {
+        padding: 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    .hero2col__item-content {
+        padding:  40px 7px 40px 20px;
+    }
+    .hero2col__item {
+        height: 457px;
+    }
+    .hero2col__item-text {
+        font-size: 14px;
+        line-height: 1.29;
+    }
+    .navbar_wrap {
+        padding: 0 20px;
+    }
+}
+
