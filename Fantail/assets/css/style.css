@@ -9,7 +9,7 @@
     --color-transp_076_black: rgba(0, 0, 0, 0.76);
     --color-transp_06_black: rgba(26, 26, 26, 0.6);
     --color-transp_all: rgba(0, 0, 0, 0);
-    --color-transp_06_white: rgba(255, 255, 255, 0.6);
+    --color-transp_06_white: rgba(255, 255, 255, 0.4);
 }
 @font-face {
     font-family: "Gotham";
@@ -273,6 +273,9 @@ header.fixed {
 @media screen and (max-width: 580px) {
     .menu_logo {
         width: 191px;
+    }
+    .navbar-toggler {
+        padding: 0;
     }
 }
 
