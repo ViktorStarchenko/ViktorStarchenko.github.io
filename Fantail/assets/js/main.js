@@ -20,3 +20,14 @@ window.onload = function () {
         headerFixed();
     };
 };
+
+
+///////////////////////////////////////// CLOSE MENU
+closeButton();
+function closeButton() {
+    $('.close_btn').on('click', function(){
+        console.log('HELLO')
+        $('.menu_list_wrap').removeClass('show');
+        $('body').removeClass('overflow-hidden');
+    })
+}

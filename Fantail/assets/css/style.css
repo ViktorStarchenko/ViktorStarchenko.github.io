@@ -9,7 +9,7 @@
     --color-transp_076_black: rgba(0, 0, 0, 0.76);
     --color-transp_06_black: rgba(26, 26, 26, 0.6);
     --color-transp_all: rgba(0, 0, 0, 0);
-    --color-transp_06_white: rgba(255, 255, 255, 0.4);
+    --color-transp_06_white: rgba(255, 255, 255, 0.2);
 }
 @font-face {
     font-family: "Gotham";
@@ -113,6 +113,17 @@ body {
     margin: auto;
 }
 
+@media screen and (max-width: 1400px) {
+    .wrapper-1360 {
+        padding: 0 20px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .wrapper-1360.full_width {
+        padding: 0;
+    }
+}
+
 /*************************************** SERVISE STYLES ***************************/
 
 .full-width-inner {
@@ -188,7 +199,7 @@ body {
     border: solid 1px var(--color-white);
 }
 .btn-transp:hover {
-    color: var(--color-green);
+    color: var(--color-white);
     /*border: solid 2px var(--color-white);*/
     background-color: var(--color-transp_06_white);
 }
@@ -269,6 +280,27 @@ header.fixed {
 .navbar-toggler:focus {
     outline: none;
 }
+.whereToFindUs .whereToFindUs__icon svg {
+    width: 40px;
+    height: 40px;
+}
+.whereToFindUs:hover .whereToFindUs__icon svg path {
+    fill: var(--color-lt_beige);
+}
+.close_btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 450;
+    display: none;
+}
+.close_btn svg {
+    height: 30px;
+    width: 30px!important;
+}
+.close_btn svg path {
+    fill: var(--color-beige);
+}
 
 @media screen and (max-width: 1290px) {
     .menu_logo {
@@ -280,26 +312,20 @@ header.fixed {
     .navbar_wrap .menu_link {
         font-size: 14px;
     }
+    .navbar_inner {
+         justify-content: space-between;
+     }
+    .whereToFindUs .btn-body {
+          display: none;
+      }
+    .whereToFindUs .whereToFindUs__icon {
+        display: block;
+    }
 }
 @media screen and (max-width: 991px) {
     .menu_logo {
         width: 226px;
-    }
-    .navbar_inner {
-        justify-content: space-between;
-    }
-    .whereToFindUs .btn-body {
-        display: none;
-    }
-    .whereToFindUs .whereToFindUs__icon {
-        display: block;
-    }
-    .whereToFindUs .whereToFindUs__icon svg {
-        width: 40px;
-        height: 40px;
-    }
-    .whereToFindUs:hover .whereToFindUs__icon svg path {
-        fill: var(--color-lt_beige);
+        margin: auto;
     }
     .menu_list_wrap {
         position: absolute;
@@ -315,6 +341,12 @@ header.fixed {
     .menu_list_wrap.show {
         left: 0;
         transition-duration: .2s;
+    }
+    .menu_list {
+        align-items: flex-start;
+    }
+    .close_btn {
+        display: block;
     }
 }
 @media screen and (max-width: 580px) {
@@ -381,7 +413,7 @@ header.fixed {
         padding:  70px 47px;
     }
     .hero2col__item {
-        height: 95vh;
+        height: 800px;
     }
     .hero2col__item-text {
         margin-bottom: 35px;
@@ -433,14 +465,35 @@ header.fixed {
 .block_heading .heading_text {
     margin-bottom: 50px;
 }
-
 .about__video-wrap {
-    height: calc(100vh - 120px);
-    min-height: 900px;
+    height: 750px;
+}
+.facebook-responsive {
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.facebook-responsive iframe {
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
 }
 
 @media screen and (max-width: 1440px) {
     .about__video-wrap {
         min-height: unset;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .about__video-wrap {
+        height: 700px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .about__video-wrap {
+        height: 600px;
     }
 }
