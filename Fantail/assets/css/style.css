@@ -10,7 +10,20 @@
     --color-transp_06_black: rgba(26, 26, 26, 0.6);
     --color-transp_all: rgba(0, 0, 0, 0);
     --color-transp_06_white: rgba(255, 255, 255, 0.2);
+    --default-mb_sm: 25px;
+    --default-pb-desk: 70px;
+    --default-pt: 70px;
+    --default-pb: 70px;
+
 }
+@media screen and (max-width: 768px) {
+    :root {
+        --default-pt: 50px;
+        --default-pb: 50px;
+    }
+
+}
+
 @font-face {
     font-family: "Gotham";
     font-style: normal;
@@ -83,6 +96,21 @@ body {
     text-transform: uppercase;
 }
 
+.text_underlined {
+    position: relative;
+}
+.text_underlined:before {
+    content: '';
+    position: absolute;
+    bottom: -13px;
+    left: 0;
+    height: 2px;
+    width: calc(100vw - 40px);
+    max-width: 850px;
+    background-color: var(--color-beige);
+}
+
+
 @media screen and (max-width: 767px) {
     .title-h1 {
         font-size: 70px;
@@ -112,17 +140,62 @@ body {
     max-width: 1360px;
     margin: auto;
 }
+.wrapper-1343 {
+    width: 100%;
+    max-width: 1343px;
+    margin-left: auto;
+}
 
+
+@media screen and (min-width: 1920px) {
+    .wrapper-1343 {
+        max-width: 1534px;
+    }
+}
+@media screen and (min-width: 2500px) {
+    .wrapper-1343 {
+        max-width: 1800px;
+    }
+}
 @media screen and (max-width: 1400px) {
     .wrapper-1360 {
         padding: 0 20px;
     }
+    .wrapper-1343 {
+        max-width: 1270px;
+    }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1024px) {
+    .wrapper-1343 {
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width: 768px) {
     .wrapper-1360.full_width {
         padding: 0;
     }
 }
+@media screen and (max-width: 1300px) {
+    .wrapper-1343 {
+        max-width: 1144px;
+    }
+}
+
+/*************************************** COLOR STYLES *****************************/
+
+.bg_green {
+    background-color: var(--color-green);
+    color: var(--color-beige);
+}
+.bg_green a {
+    color: var(--color-beige);
+    transition-duration: .2s;
+}
+.bg_green a:hover {
+    text-decoration: none;
+}
+
+
 
 /*************************************** SERVISE STYLES ***************************/
 
@@ -143,14 +216,27 @@ body {
     height: 50%;
     z-index: 1;
 }
-
-
+.default-pt-70 {
+    padding-top: 70px;
+}
 .default-pb-70 {
     padding-bottom: 70px;
 }
+.default-pt {
+    padding-top: var(--default-pt);
+}
+.default-pb {
+    padding-bottom: var(--default-pb);
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
 
 @media screen and (max-width: 767px) {
-    .default-pb-70 {
+    .default-pt-70 {
+        padding-top: 50px;
+    }.default-pb-70 {
         padding-bottom: 50px;
     }
 }
@@ -211,6 +297,9 @@ body {
 }
 
 /****************************************HEADER *********************************/
+.header_fixed {
+    transition-duration: .2s;
+}
 header.fixed {
     background-color: var(--color-green);
 }
@@ -443,7 +532,7 @@ header.fixed {
         line-height: 1.29;
     }
     .navbar_wrap {
-        padding: 0 20px;
+        padding: 0px;
     }
 }
 
@@ -497,3 +586,126 @@ header.fixed {
         height: 600px;
     }
 }
+
+
+/***********************************************WHATS ON BLOCK **************************************/
+
+.whats_on {
+}
+
+
+/************************************** BIG SLIDER STICK RIGHT ********************************/
+
+.big_slider_r .swiper-button-next::after,
+.big_slider_r .swiper-button-prev::after {
+    color: var(--color-beige);
+    font-size: 15px;
+}
+.big_slider_r .swiper-button-next,
+.big_slider_r .swiper-button-prev {
+    width: 45px;
+    height: 45px;
+    background-color: var(--color-green);
+    top: 200px;
+    transition-duration: .2s;
+}
+.big_slider_r .swiper-button-prev {
+    left: -2px;
+}
+.big_slider_r .swiper-button-prev.swiper-button-disabled,
+.big_slider_r .swiper-button-next.swiper-button-disabled {
+    opacity: 0;
+}
+
+.big_slider_r {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.big_slider_r .swiper-scrollbar {
+    display: none;
+}
+.big_slider_r__item {
+    width: 399px;
+    margin-bottom: 50px;
+}
+.big_slider_r__img {
+    width: 399px;
+    height: 399px;
+    background-color: red;
+    margin-bottom: 25px;
+}
+.bg_green a {
+    color: var(--color-beige);
+    transition-duration: .2s;
+}
+.bg_green .big_slider_r a:hover {
+    text-decoration: none;
+    color: var(--color-grey);
+}
+
+@media screen and (max-width: 1300px) {
+    .big_slider_r__item {
+        width: 300px;
+    }
+    .big_slider_r__img {
+        width: 300px;
+        height: 300px;
+    }
+    .big_slider_r .swiper-button-next,
+    .big_slider_r .swiper-button-prev {
+        top: 150px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .big_slider_r__item {
+        width: 254px;
+        margin-bottom: 25px;
+    }
+    .big_slider_r__img {
+        width: 254px;
+        height: 254px;
+    }
+    .big_slider_r .swiper-button-next,
+    .big_slider_r .swiper-button-prev {
+        top: 127px;
+    }
+}
+
+/****************************** BREWERIES & TOURS BLOCK ***************************/
+
+
+/********************************* INFO ON IMAGE BLOCK { REUSABLE } ***************************/
+.block_infoOnImage {
+    overflow: hidden;
+}
+.block_infoOnImage__inner {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    height: 616px;
+}
+.block_infoOnImage__content {
+    width: 585px;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 60px;
+    position: absolute;
+    left: 0;
+    top: 10%;
+}
+.block_infoOnImage__title {
+    margin-bottom: 25px;
+}
+.block_infoOnImage__img {
+    width: 80%;
+}
+.block_infoOnImage__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
