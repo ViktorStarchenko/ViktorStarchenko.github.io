@@ -33,7 +33,7 @@ function closeButton() {
 }
 
 
-var mySwiper = new Swiper('.big_slider_r', {
+var mySwiper = new Swiper('.slider_r', {
     // Optional parameters
     slidesPerView: 'auto',
     spaceBetween: 12,

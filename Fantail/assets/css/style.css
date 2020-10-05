@@ -107,6 +107,16 @@ a:hover {
     text-transform: uppercase;
 }
 
+.text-20 {
+    font-family: Gotham;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+}
+
 .text_underlined {
     position: relative;
 }
@@ -116,10 +126,15 @@ a:hover {
     bottom: -13px;
     left: 0;
     height: 2px;
-    width: calc(100vw - 40px);
+    /*width: calc(100vw - 40px);*/
+    width: calc(100% - 40px);
     max-width: 850px;
     background-color: var(--color-beige);
 }
+.text_underlined.green:before {
+    background-color: var(--color-green);
+}
+
 
 
 @media screen and (max-width: 767px) {
@@ -628,24 +643,24 @@ header.fixed {
 
 /************************************** BIG SLIDER STICK RIGHT ********************************/
 
-.big_slider_r .swiper-button-next::after,
-.big_slider_r .swiper-button-prev::after {
+.slider_r .swiper-button-next::after,
+.slider_r .swiper-button-prev::after {
     color: var(--color-beige);
     font-size: 15px;
 }
-.big_slider_r .swiper-button-next,
-.big_slider_r .swiper-button-prev {
+.slider_r .swiper-button-next,
+.slider_r .swiper-button-prev {
     width: 45px;
     height: 45px;
     background-color: var(--color-green);
     top: 200px;
     transition-duration: .2s;
 }
-.big_slider_r .swiper-button-prev {
+.slider_r .swiper-button-prev {
     left: -2px;
 }
-.big_slider_r .swiper-button-prev.swiper-button-disabled,
-.big_slider_r .swiper-button-next.swiper-button-disabled {
+.slider_r .swiper-button-prev.swiper-button-disabled,
+.slider_r .swiper-button-next.swiper-button-disabled {
     opacity: 0;
 }
 
@@ -654,7 +669,7 @@ header.fixed {
     height: auto;
     overflow: hidden;
 }
-.big_slider_r .swiper-scrollbar {
+.slider_r .swiper-scrollbar {
     display: none;
 }
 .big_slider_r__item {
@@ -702,6 +717,54 @@ header.fixed {
     .big_slider_r .swiper-button-prev {
         top: 127px;
     }
+}
+
+/************************************* SMALL SLIDER STICK RIGHT ****************************/
+.small_slider_r {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.small_slider_r__item {
+    width: 254px;
+    margin-bottom: 50px;
+}
+.small_slider_r__img {
+    width: 254px;
+    height: 254px;
+    background-color: red;
+    margin-bottom: 25px;
+}
+.bg_green a {
+    color: var(--color-beige);
+    transition-duration: .2s;
+}
+.bg_green .small_slider_r a:hover {
+    text-decoration: none;
+    color: var(--color-grey);
+}
+.keep_up .swiper-button-next,
+.keep_up .swiper-button-prev {
+    display: none;
+}
+@media screen and (max-width: 1300px) {
+    /*.small_slider_r__item {*/
+    /*    width: 300px;*/
+    /*}*/
+    /*.small_slider_r__img {*/
+    /*    width: 300px;*/
+    /*    height: 300px;*/
+    /*}*/
+    /*.big_slider_r .swiper-button-next,*/
+    /*.big_slider_r .swiper-button-prev {*/
+    /*    top: 150px;*/
+    /*}*/
+}
+@media screen and (max-width: 991px) {
+    /*.big_slider_r .swiper-button-next,*/
+    /*.big_slider_r .swiper-button-prev {*/
+    /*    top: 127px;*/
+    /*}*/
 }
 
 /****************************** BREWERIES & TOURS BLOCK ***************************/
@@ -781,6 +844,7 @@ header.fixed {
     align-items: flex-start;
     justify-content: center;
     padding-right: 10px;
+    margin-left: 40px;
 }
 .come_visit__content p {
     margin-bottom: 0;
@@ -802,6 +866,11 @@ header.fixed {
     height: 766px;
 }
 
+@media screen and (max-width: 1024px) {
+    .come_visit__content {
+        margin-left: 0;
+    }
+}
 @media screen and (max-width: 767px) {
     .come_visit__map {
         height: 340px;
@@ -810,5 +879,33 @@ header.fixed {
 @media screen and (max-width: 600px) {
     .come_visit__content {
         padding: 0 20px;
+    }
+}
+
+
+/************************************ KEEP UP WITH US BLOCK **************************/
+
+.keep_up__btn {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+}
+.keep_up__btn-mob {
+    display: none;
+}
+
+
+.keep_up .small_slider_r__img {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 991px) {
+    .keep_up__btn {
+        display: none;
+    }
+    .keep_up__btn-mob {
+        display: flex;
     }
 }
