@@ -171,16 +171,27 @@ a:hover {
     max-width: 1343px;
     margin-left: auto;
 }
+.wrapper-1248 {
+    width: 100%;
+    max-width: 1233px;
+    margin: auto;
+}
 
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1500px) {
     .wrapper-1343 {
-        max-width: 1534px;
+        max-width: 1440px;
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    .wrapper-1343 {
+        max-width: 1584px;
     }
 }
 @media screen and (min-width: 2500px) {
     .wrapper-1343 {
-        max-width: 1800px;
+        max-width: 1913px;
     }
 }
 @media screen and (max-width: 1400px) {
@@ -190,10 +201,25 @@ a:hover {
     .wrapper-1343 {
         max-width: 1270px;
     }
+    .wrapper-1248 {
+        width: 100%;
+        max-width: 1166px;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .wrapper-1248 {
+        width: 100%;
+        max-width: 1040px;
+        margin: auto;
+    }
 }
 @media screen and (max-width: 1024px) {
     .wrapper-1343 {
         margin-left: 20px;
+    }
+    .wrapper-1248 {
+        padding: 0 20px;
     }
 }
 @media screen and (max-width: 768px) {
@@ -343,7 +369,20 @@ a:hover {
     }
 }
 
-/****************************************HEADER *********************************/
+/**************************************** FORM STYLES **********************************/
+
+.form-input {
+    height: 52px;
+    border-radius: 2px;
+    border: solid 1px rgba(23, 61, 50, 0.32);
+    background-color: transparent;
+}
+.form-input:focus {
+    outline: none;
+}
+
+
+/**************************************** HEADER *********************************/
 .header_fixed {
     transition-duration: .2s;
 }
@@ -352,7 +391,7 @@ header.fixed {
 }
 .menu_logo {
     width: 317px;
-    background-color: red;
+    background-color: grey;
 }
 .whereToFindUs .btn-body {
     width: 226px;
@@ -441,7 +480,6 @@ header.fixed {
 @media screen and (max-width: 1290px) {
     .menu_logo {
         width: 226px;
-        background-color: red;
     }
 }
 @media screen and (max-width: 1200px) {
@@ -679,7 +717,7 @@ header.fixed {
 .big_slider_r__img {
     width: 399px;
     height: 399px;
-    background-color: red;
+    background-color: beige;
     margin-bottom: 25px;
 }
 .bg_green a {
@@ -732,7 +770,7 @@ header.fixed {
 .small_slider_r__img {
     width: 254px;
     height: 254px;
-    background-color: red;
+    background-color: var(--color-dk_green);
     margin-bottom: 25px;
 }
 .bg_green a {
@@ -895,8 +933,9 @@ header.fixed {
 .keep_up__btn-mob {
     display: none;
 }
-
-
+.small_slider_r__item {
+    margin-bottom: 0;
+}
 .keep_up .small_slider_r__img {
     margin-bottom: 0;
 }
@@ -907,5 +946,65 @@ header.fixed {
     }
     .keep_up__btn-mob {
         display: flex;
+    }
+    .small_slider_r__item {
+        margin-bottom: 50px;
+    }
+}
+
+
+/************************************** SIGN UP NEWSLETTER ********************************/
+
+.signup_newsletter__form {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.signup_newsletter__form form {
+    width: 100%;
+}
+.signup_newsletter__gorm-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.signup_newsletter__form .btn-body {
+    width: 217px;
+    cursor: pointer;
+    border: unset;
+}
+.signup_newsletter__form .btn-body:focus {
+    outline: none;
+}
+.signup_newsletter__form .btn-green:hover {
+    background-color: var(--color-dk_green);
+    color: var(--color-lt_beige);
+}
+
+.signup_newsletter__form .form-input {
+    width: 100%;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border-right-width: 0;
+    padding: 10px;
+}
+
+@media screen and (max-width: 991px) {
+    .signup_newsletter .block_heading {
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .signup_newsletter__gorm-group {
+        flex-direction: column;
+    }
+    .signup_newsletter__gorm-group .form-input {
+        margin-bottom: 12px;
+        border: solid 1px rgba(23, 61, 50, 0.32);
+    }
+    .signup_newsletter__form .btn-body {
+        width: 100%;
     }
 }
