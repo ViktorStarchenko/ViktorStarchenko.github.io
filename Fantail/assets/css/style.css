@@ -14,6 +14,10 @@
     --default-pb-desk: 70px;
     --default-pt: 70px;
     --default-pb: 70px;
+    --default-pt50: 50px;
+    --default-pb50: 50px;
+    --default-mb50: 50px;
+    --default-mt50: 50px;
 
 }
 @media screen and (max-width: 768px) {
@@ -55,6 +59,13 @@ body {
     font-size: 14px;
     line-height: 1.4;
     color: var(--color-green);
+}
+
+a {
+    color: var(--color-green);
+}
+a:hover {
+    color: var(--color-dk_green);
 }
 
 /************************************** TEXT STYLES *******************************/
@@ -223,6 +234,14 @@ body {
     height: 50%;
     z-index: 1;
 }
+
+.default-mt50 {
+    margin-top: var(--default-mt50);
+}
+.default-mb50 {
+    margin-bottom: var(--default-mb50);
+}
+
 .default-pt-70 {
     padding-top: 70px;
 }
@@ -234,6 +253,12 @@ body {
 }
 .default-pb {
     padding-bottom: var(--default-pb);
+}
+.default-pt50 {
+    padding-top: var(--default-pt50);
+}
+.default-pb50 {
+    padding-bottom: var(--default-pb50);
 }
 
 .overflow-hidden {
@@ -735,5 +760,55 @@ header.fixed {
     .block_infoOnImage__img {
         width: 100%;
         height: 75%;
+    }
+}
+
+/*********************************************** COME AND VISIT US ************************************/
+/*.come_visit a {*/
+/*    color: var(--color-green);*/
+/*}*/
+/*.come_visit a:hover {*/
+/*    color: var(--color-dk_green);*/
+/*}*/
+.come_visit {
+    overflow: hidden;
+}
+.come_visit__content {
+    height: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-right: 10px;
+}
+.come_visit__content p {
+    margin-bottom: 0;
+}
+.come_visit__info {
+    width: 100%;
+}
+.come_visit__info-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 288px;
+    margin-bottom: 30px;
+}
+.come_visit__info-block-row .come_visit__info-block {
+    margin-bottom: 0;
+}
+.come_visit__map {
+    height: 766px;
+}
+
+@media screen and (max-width: 767px) {
+    .come_visit__map {
+        height: 340px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .come_visit__content {
+        padding: 0 20px;
     }
 }

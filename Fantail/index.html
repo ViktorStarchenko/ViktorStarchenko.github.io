@@ -1,279 +1,470 @@
 <html>
-<head >
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Fantail DEV</title>
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/fontawesome/all.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-
-<header class="header_fixed">
-    <nav class="navbar navbar-expand-lg navbar_wrap">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/fontawesome/all.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="header_fixed">
+      <nav class="navbar navbar-expand-lg navbar_wrap">
         <div class="navbar_inner wrapper-1360">
-<!--            <div class="menu_logo-wrap">-->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <?xml version="1.0" encoding="UTF-8"?>
-                    <svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <title>4EF6642F-E795-459C-A95B-C1A8474CAD05</title>
-                        <g id="01---Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g id="Mobile/Home/Home" transform="translate(-15.000000, -15.000000)" fill="#FFFFFF" fill-rule="nonzero">
-                                <g id="Group-4" transform="translate(0.000000, 3.000000)">
-                                    <g id="icon/header/hamburger-(menu)" transform="translate(15.000000, 12.000000)">
-                                        <path d="M25.5961538,21.7807692 C25.9827532,21.7807692 26.2961538,22.0941699 26.2961538,22.4807692 C26.2961538,22.8673686 25.9827532,23.1807692 25.5961538,23.1807692 L5.40384615,23.1807692 C5.01724683,23.1807692 4.70384615,22.8673686 4.70384615,22.4807692 C4.70384615,22.0941699 5.01724683,21.7807692 5.40384615,21.7807692 L25.5961538,21.7807692 Z M25.5961538,14.3769231 C25.9827532,14.3769231 26.2961538,14.6903238 26.2961538,15.0769231 C26.2961538,15.4635224 25.9827532,15.7769231 25.5961538,15.7769231 L5.40384615,15.7769231 C5.01724683,15.7769231 4.70384615,15.4635224 4.70384615,15.0769231 C4.70384615,14.6903238 5.01724683,14.3769231 5.40384615,14.3769231 L25.5961538,14.3769231 Z M25.5961538,6.97307692 C25.9827532,6.97307692 26.2961538,7.2864776 26.2961538,7.67307692 C26.2961538,8.05967625 25.9827532,8.37307692 25.5961538,8.37307692 L5.40384615,8.37307692 C5.01724683,8.37307692 4.70384615,8.05967625 4.70384615,7.67307692 C4.70384615,7.2864776 5.01724683,6.97307692 5.40384615,6.97307692 L25.5961538,6.97307692 Z" id="menu-icon"></path>
-                                    </g>
-                                </g>
-                            </g>
-                        </g>
-                    </svg>
-                </button>
-                <a class="navbar-brand menu_logo" href="#">FANTAIL & TURTLE</a>
-<!--            </div>-->
+          <!--            <div class="menu_logo-wrap">-->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <?xml version="1.0" encoding="UTF-8"?>
+            <svg
+              width="30px"
+              height="30px"
+              viewBox="0 0 30 30"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <title>4EF6642F-E795-459C-A95B-C1A8474CAD05</title>
+              <g
+                id="01---Home"
+                stroke="none"
+                stroke-width="1"
+                fill="none"
+                fill-rule="evenodd"
+              >
+                <g
+                  id="Mobile/Home/Home"
+                  transform="translate(-15.000000, -15.000000)"
+                  fill="#FFFFFF"
+                  fill-rule="nonzero"
+                >
+                  <g id="Group-4" transform="translate(0.000000, 3.000000)">
+                    <g
+                      id="icon/header/hamburger-(menu)"
+                      transform="translate(15.000000, 12.000000)"
+                    >
+                      <path
+                        d="M25.5961538,21.7807692 C25.9827532,21.7807692 26.2961538,22.0941699 26.2961538,22.4807692 C26.2961538,22.8673686 25.9827532,23.1807692 25.5961538,23.1807692 L5.40384615,23.1807692 C5.01724683,23.1807692 4.70384615,22.8673686 4.70384615,22.4807692 C4.70384615,22.0941699 5.01724683,21.7807692 5.40384615,21.7807692 L25.5961538,21.7807692 Z M25.5961538,14.3769231 C25.9827532,14.3769231 26.2961538,14.6903238 26.2961538,15.0769231 C26.2961538,15.4635224 25.9827532,15.7769231 25.5961538,15.7769231 L5.40384615,15.7769231 C5.01724683,15.7769231 4.70384615,15.4635224 4.70384615,15.0769231 C4.70384615,14.6903238 5.01724683,14.3769231 5.40384615,14.3769231 L25.5961538,14.3769231 Z M25.5961538,6.97307692 C25.9827532,6.97307692 26.2961538,7.2864776 26.2961538,7.67307692 C26.2961538,8.05967625 25.9827532,8.37307692 25.5961538,8.37307692 L5.40384615,8.37307692 C5.01724683,8.37307692 4.70384615,8.05967625 4.70384615,7.67307692 C4.70384615,7.2864776 5.01724683,6.97307692 5.40384615,6.97307692 L25.5961538,6.97307692 Z"
+                        id="menu-icon"
+                      ></path>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </button>
+          <a class="navbar-brand menu_logo" href="#">FANTAIL & TURTLE</a>
+          <!--            </div>-->
 
-
-
-            <div class="collapse navbar-collapse menu_list_wrap" id="navbarSupportedContent">
-                <div class="close_btn">
-                    <i class="fas fa-times-circle"></i>
-                </div>
-                <ul class="navbar-nav menu_list">
-                    <li class="nav-item active">
-                        <a class="nav-link menu_link" href="#">menu <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link menu_link" href="#">events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link menu_link" href="#">breweries & tours</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link  menu_link" href="#">our story</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link  menu_link" href="#">breweries & tours</a>
-                    </li>
-                </ul>
+          <div
+            class="collapse navbar-collapse menu_list_wrap"
+            id="navbarSupportedContent"
+          >
+            <div class="close_btn">
+              <i class="fas fa-times-circle"></i>
             </div>
-            <div class="whereToFindUs">
-                <a href="#" class="whereToFindUs__icon">
-                    <?xml version="1.0" encoding="UTF-8"?>
-                    <svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <title>BBDDF347-48C4-4E22-AA0B-A8C4D17C44A3</title>
-                        <g id="01---Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                            <g id="Mobile/Home/Home" transform="translate(-327.000000, -17.000000)" fill="#FFFFFF" fill-rule="nonzero">
-                                <g id="Group-4" transform="translate(0.000000, 3.000000)">
-                                    <g id="Group-3" transform="translate(15.000000, 12.000000)">
-                                        <g id="Group-2" transform="translate(310.000000, 0.000000)">
-                                            <g id="icon/general/location-(store-locator)" transform="translate(2.000000, 2.000000)">
-                                                <path d="M20.0054105,10.8831594 L20.0055548,10.8979045 C20.0036245,12.1333608 19.652274,13.3430738 18.9819536,14.4028631 L14.6178608,20.8887759 C14.4772698,21.0977222 14.2975354,21.2774566 14.0885892,21.4180475 C13.1950693,22.0192587 11.9833504,21.7822958 11.3821392,20.8887759 L7.00792179,14.3873427 C6.34772602,13.3430738 5.99637554,12.1333608 5.99458946,10.8831594 C6.07481576,7.08581856 9.21534339,4.07091203 12.9872044,4.14568151 C16.7846566,4.07091203 19.9251842,7.08581856 20.0054105,10.8831594 Z M13.2079058,5.44533119 L12.9872044,5.4454296 C9.90685392,5.38477941 7.35937598,7.83035822 7.29444365,10.8958733 C7.29599078,11.8860913 7.57759812,12.855676 8.09662027,13.6771369 L12.4607131,20.1630498 C12.6611168,20.4608898 13.0650231,20.5398774 13.3628631,20.3394737 C13.4325118,20.29261 13.4924233,20.2326985 13.5392869,20.1630498 L17.8932551,13.6926573 C18.4210913,12.857749 18.7026128,11.8908933 18.7055397,10.9032305 C18.6381922,7.89970546 16.2104911,5.50145563 13.2079058,5.44533119 Z M13,7.62377778 C14.6092418,7.62377778 15.9264444,8.87746051 15.9264444,10.4404444 C15.9264444,12.0034284 14.6092418,13.2571111 13,13.2571111 C11.3907582,13.2571111 10.0735556,12.0034284 10.0735556,10.4404444 C10.0735556,8.87746051 11.3907582,7.62377778 13,7.62377778 Z M13,8.92377778 C12.0947507,8.92377778 11.3735556,9.61019446 11.3735556,10.4404444 C11.3735556,11.2706944 12.0947507,11.9571111 13,11.9571111 C13.9052493,11.9571111 14.6264444,11.2706944 14.6264444,10.4404444 C14.6264444,9.61019446 13.9052493,8.92377778 13,8.92377778 Z" id="pin-icon"></path>
-                                            </g>
-                                        </g>
-                                    </g>
-                                </g>
-                            </g>
+            <ul class="navbar-nav menu_list">
+              <li class="nav-item active">
+                <a class="nav-link menu_link" href="#"
+                  >menu <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link menu_link" href="#">events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link menu_link" href="#">breweries & tours</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link menu_link" href="#">our story</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link menu_link" href="#">breweries & tours</a>
+              </li>
+            </ul>
+          </div>
+          <div class="whereToFindUs">
+            <a href="#" class="whereToFindUs__icon">
+              <?xml version="1.0" encoding="UTF-8"?>
+              <svg
+                width="26px"
+                height="26px"
+                viewBox="0 0 26 26"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <title>BBDDF347-48C4-4E22-AA0B-A8C4D17C44A3</title>
+                <g
+                  id="01---Home"
+                  stroke="none"
+                  stroke-width="1"
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <g
+                    id="Mobile/Home/Home"
+                    transform="translate(-327.000000, -17.000000)"
+                    fill="#FFFFFF"
+                    fill-rule="nonzero"
+                  >
+                    <g id="Group-4" transform="translate(0.000000, 3.000000)">
+                      <g
+                        id="Group-3"
+                        transform="translate(15.000000, 12.000000)"
+                      >
+                        <g
+                          id="Group-2"
+                          transform="translate(310.000000, 0.000000)"
+                        >
+                          <g
+                            id="icon/general/location-(store-locator)"
+                            transform="translate(2.000000, 2.000000)"
+                          >
+                            <path
+                              d="M20.0054105,10.8831594 L20.0055548,10.8979045 C20.0036245,12.1333608 19.652274,13.3430738 18.9819536,14.4028631 L14.6178608,20.8887759 C14.4772698,21.0977222 14.2975354,21.2774566 14.0885892,21.4180475 C13.1950693,22.0192587 11.9833504,21.7822958 11.3821392,20.8887759 L7.00792179,14.3873427 C6.34772602,13.3430738 5.99637554,12.1333608 5.99458946,10.8831594 C6.07481576,7.08581856 9.21534339,4.07091203 12.9872044,4.14568151 C16.7846566,4.07091203 19.9251842,7.08581856 20.0054105,10.8831594 Z M13.2079058,5.44533119 L12.9872044,5.4454296 C9.90685392,5.38477941 7.35937598,7.83035822 7.29444365,10.8958733 C7.29599078,11.8860913 7.57759812,12.855676 8.09662027,13.6771369 L12.4607131,20.1630498 C12.6611168,20.4608898 13.0650231,20.5398774 13.3628631,20.3394737 C13.4325118,20.29261 13.4924233,20.2326985 13.5392869,20.1630498 L17.8932551,13.6926573 C18.4210913,12.857749 18.7026128,11.8908933 18.7055397,10.9032305 C18.6381922,7.89970546 16.2104911,5.50145563 13.2079058,5.44533119 Z M13,7.62377778 C14.6092418,7.62377778 15.9264444,8.87746051 15.9264444,10.4404444 C15.9264444,12.0034284 14.6092418,13.2571111 13,13.2571111 C11.3907582,13.2571111 10.0735556,12.0034284 10.0735556,10.4404444 C10.0735556,8.87746051 11.3907582,7.62377778 13,7.62377778 Z M13,8.92377778 C12.0947507,8.92377778 11.3735556,9.61019446 11.3735556,10.4404444 C11.3735556,11.2706944 12.0947507,11.9571111 13,11.9571111 C13.9052493,11.9571111 14.6264444,11.2706944 14.6264444,10.4404444 C14.6264444,9.61019446 13.9052493,8.92377778 13,8.92377778 Z"
+                              id="pin-icon"
+                            ></path>
+                          </g>
                         </g>
-                    </svg>
-                </a>
-                <a href="#" class="btn-body btn-transp">
-                    <span class="btn-inner">Where to find us</span>
-                </a>
-            </div>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </a>
+            <a href="#" class="btn-body btn-transp">
+              <span class="btn-inner">Where to find us</span>
+            </a>
+          </div>
         </div>
+      </nav>
+    </header>
 
-    </nav>
-</header>
-
-<main>
-    <section class="hero2col default-pb">
+    <main>
+      <section class="hero2col default-pb">
         <div class="shadow-gradient"></div>
         <div class="container-fluid overflow-hidden">
-            <div class="row">
-                <div class="col-12 col-lg-6 hero2col__item-box">
-                    <div class="hero2col__item ">
-                        <img src="assets/img/home/bitmap_6@3x.png" alt="hero">
-                        <div class="full-width-inner hero2col__item-content">
-                            <span class="title-h2 hero2col__item-title">functions</span>
-                            <p class="hero2col__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vulputate vel ex id ultricies. Nam gravida risus non erat feugiat dapibus. Nunc rhoncus ut enim sit amet tempus.  In lobortis justo tempus consequat mollis.</p>
-                            <a href="" class="btn-body btn-beige"> <span class="btn-body-inner">learn more</span></a>
-                        </div>
-                    </div>
+          <div class="row">
+            <div class="col-12 col-lg-6 hero2col__item-box">
+              <div class="hero2col__item">
+                <img src="assets/img/home/bitmap_6@3x.png" alt="hero" />
+                <div class="full-width-inner hero2col__item-content">
+                  <span class="title-h2 hero2col__item-title">functions</span>
+                  <p class="hero2col__item-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque vulputate vel ex id ultricies. Nam gravida risus non
+                    erat feugiat dapibus. Nunc rhoncus ut enim sit amet tempus.
+                    In lobortis justo tempus consequat mollis.
+                  </p>
+                  <a href="" class="btn-body btn-beige">
+                    <span class="btn-body-inner">learn more</span></a
+                  >
                 </div>
-                <div class="col-12 col-lg-6 hero2col__item-box">
-                    <div class="hero2col__item">
-                        <img src="assets/img/home/bitmap_7@3x.png" alt="hero">
-                        <div class="full-width-inner hero2col__item-content">
-                            <span class="title-h2 hero2col__item-title">EAT AND DRINK</span>
-                            <p class="hero2col__item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vulputate vel ex id ultricies. Nam gravida risus non erat feugiat dapibus. Nunc rhoncus ut enim sit amet tempus.  In lobortis justo tempus consequat mollis.</p>
-                            <a href="" class="btn-body btn-beige"> <span class="btn-body-inner">view our menu</span></a>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
+            <div class="col-12 col-lg-6 hero2col__item-box">
+              <div class="hero2col__item">
+                <img src="assets/img/home/bitmap_7@3x.png" alt="hero" />
+                <div class="full-width-inner hero2col__item-content">
+                  <span class="title-h2 hero2col__item-title"
+                    >EAT AND DRINK</span
+                  >
+                  <p class="hero2col__item-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Quisque vulputate vel ex id ultricies. Nam gravida risus non
+                    erat feugiat dapibus. Nunc rhoncus ut enim sit amet tempus.
+                    In lobortis justo tempus consequat mollis.
+                  </p>
+                  <a href="" class="btn-body btn-beige">
+                    <span class="btn-body-inner">view our menu</span></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section class="about_block default-pb">
-        <div class="container-fluid p-0" >
-            <div class="row wrapper-1360 default-pb">
-                <div class="col-12">
-                    <div class="block_heading center text-center">
-                        <div class="green_logo_icon">
-                            <?xml version="1.0" encoding="UTF-8"?>
-                            <svg width="56px" height="87px" viewBox="0 0 56 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <title>714BA8E6-5402-411B-9EE5-F3CC70DEC354</title>
-                                <g id="01---Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                    <g id="Mobile/Home/Home" transform="translate(-160.000000, -971.000000)" fill="#183D32">
-                                        <g id="Asset-1-Copy" transform="translate(160.000000, 971.000000)">
-                                            <path d="M48.9472267,40.9420762 C47.6309931,38.9411592 43.0767013,35.0191164 38.2597807,30.8669067 C37.2092656,29.9462394 36.1556608,29.0531921 35.1175048,28.1509381 C36.6191233,25.8953031 40.9200556,20.4296081 41.6924932,17.9100485 C44.5906789,7.92694572 39.0569363,2.47966401 32.9052436,0.7242583 C31.2696133,0.246567132 29.5738205,0.00269886202 27.8689508,0 C23.8646345,0 20.221819,1.34110541 17.6109801,3.77473606 C13.4645353,7.64767663 12.4325588,14.5158549 15.1577185,20.122719 C16.1958745,22.2709427 17.9384936,24.6524022 19.974639,27.2026507 C17.0053891,29.4122523 8.00803649,36.974 3.5093602,46.2297756 C-0.655623072,54.785844 -1.10981635,62.8785098 2.12824186,70.9681067 C5.8977371,80.401878 16.4214263,87 27.705194,87 C29.8727241,87.0010009 32.0332086,86.7549021 34.1442334,86.2665289 C46.0583102,83.5045269 52.9917097,76.7805865 55.3615481,65.7356474 C57.2061289,57.1151323 55.0494833,48.7953685 48.9472267,40.9420762 Z M37.1443809,77.6828405 C33.9346654,79.1362747 30.4509875,79.8967148 26.9234872,79.9139243 C22.906812,79.9139243 18.7294697,78.4776833 14.4563452,75.638959 C8.40352452,71.6217805 4.75452953,65.0052513 4.94300429,58.3672399 C5.26742806,46.8466227 19.2516375,33.2943996 22.4927854,30.2623352 L23.7904805,31.7967807 L23.8121088,31.8213318 L23.8121088,31.8397452 L23.8121088,31.8397452 C21.6925401,33.8007666 7.40862495,47.1504429 6.97914967,58.1217286 C6.74123891,64.394542 9.58380909,69.5533479 15.4636037,73.4661841 C19.34433,76.0409837 23.4444285,77.3514002 27.6372195,77.3514002 C30.7430953,77.3241623 33.8077436,76.6421482 36.6283926,75.3504832 C42.5792515,72.7112369 51.13168,64.7106378 45.4867064,51.4653038 C41.7790062,42.7373775 30.2758662,31.6556117 30.1800839,31.5666139 C30.0843017,31.477616 18.3123534,21.6939912 17.5460954,13.9695923 C17.3122748,11.6866998 18.0101365,9.4060468 19.4833687,7.63846995 C21.5120602,5.12285247 24.5868847,3.66589791 27.8318738,3.6825261 C29.6772847,3.70024832 31.4987691,4.09950285 33.1802314,4.85498572 C37.6449204,6.85283383 39.5698348,11.5881328 38.7819485,14.8288818 C37.7623309,19.0455382 33.1895006,24.4007532 32.2718448,25.6313785 L32.2996526,25.6559296 L32.2996526,25.6559296 C31.799113,25.2078715 31.3109325,24.7690201 30.835111,24.3332376 L30.835111,24.3332376 C31.7187795,23.1916101 35.8899423,18.7447869 36.8045084,14.9547063 C37.6202024,11.5789261 35.7972498,8.13256142 32.3707168,6.57663363 C30.9238772,5.88219891 29.3427295,5.50737931 27.7360915,5.47797062 C25.1592399,5.47797062 22.8728247,6.63187367 20.9757181,8.89671531 C19.739818,10.3483008 19.3381505,11.9656064 19.6347665,14.1598635 C20.5987686,21.1968308 30.6775337,29.4091834 30.7949442,29.5043191 C30.9123547,29.5994547 44.0623316,42.3752483 47.8380063,51.3640304 C49.6362409,55.6389957 54.1534557,70.1333684 37.1443809,77.6828405 Z M28.7062731,37.7872561 C28.7062731,37.7872561 28.7062731,37.7872561 28.7062731,37.7872561 L28.7062731,37.7872561 L28.7062731,37.7872561 C28.7062731,37.7872561 28.7062731,37.7872561 28.7062731,37.7872561 C31.9999468,41.991637 34.7652732,46.1683977 35.707647,50.0628206 C36.6716491,54.0339656 35.732365,57.3268858 33.0504619,59.3400784 C29.9984932,61.6341708 25.7774912,61.6127933 22.7492347,59.2879072 C19.6594845,56.9187233 18.7140209,53.1163672 20.2001908,49.8971004 C22.3028094,45.3977404 25.1815458,41.2983346 28.7062731,37.7841873 L28.7062731,37.7872561 Z M27.705194,21.3778954 L27.705194,21.3778954 C27.705194,21.3778954 27.705194,21.3778954 27.705194,21.3778954 C25.5979844,19.2695672 24.068558,17.443577 23.5834673,16.1392983 C22.6565422,13.6320143 23.2744922,11.5359617 25.1963169,10.6490521 C26.0703922,10.2858363 27.0112633,10.1081313 27.9585535,10.1273406 C28.8574669,10.1118907 29.7507289,10.2714047 30.587931,10.596881 C31.4826383,10.9652084 32.1861935,11.6817613 32.5344736,12.5793846 C32.9310174,13.7358924 32.8510494,15.0012272 32.3120116,16.0994027 C31.762036,17.2962703 28.4251058,20.8684595 27.705194,21.3748265 L27.705194,21.3778954 Z" id="Shape"></path>
-                                        </g>
-                                    </g>
-                                </g>
-                            </svg>
-                        </div>
-                        <h2 class="title-h2 heading_title">Fantail & Turtle<br>
-                                is a place to find genuine company. </h2>
-                        <p class="heading_text">A bar and eatery founded on core values of friendship, community, manaakitanga, kaitiakitanga, and whanaungatanga, with a food and beverage offering that acknowledges our independence and our appreciation of quality.</p>
-
-                        <a href="" class="btn-body btn-beige bordered m-auto"> <span class="btn-body-inner">WHERE TO FIND US</span></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row wrapper-1360 full_width">
-                <div class="col-12 p-0">
-                    <div class=" facebook-responsive">
-<!--                        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ffantailandturtle%2Fvideos%2F2475825105833240%2F&show_text=0&width=560" width="100%" height="100%" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>-->
-                        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ffantailandturtle%2Fvideos%2F2475825105833240%2F&show_text=0&width=560" width="560" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="default-pb default-pt whats_on bg_green overflow-hidden">
+      <section class="about_block default-pb">
         <div class="container-fluid p-0">
-            <div class="row wrapper-1343">
-                <div class="col-12 p-0">
-                    <div class="block_heading default-pb">
-                        <h2 class="title-h2 text_underlined">WHAT'S ON</h2>
-                    </div>
+          <div class="row wrapper-1360 default-pb">
+            <div class="col-12">
+              <div class="block_heading center text-center">
+                <div class="green_logo_icon">
+                  <?xml version="1.0" encoding="UTF-8"?>
+                  <svg
+                    width="56px"
+                    height="87px"
+                    viewBox="0 0 56 87"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <title>714BA8E6-5402-411B-9EE5-F3CC70DEC354</title>
+                    <g
+                      id="01---Home"
+                      stroke="none"
+                      stroke-width="1"
+                      fill="none"
+                      fill-rule="evenodd"
+                    >
+                      <g
+                        id="Mobile/Home/Home"
+                        transform="translate(-160.000000, -971.000000)"
+                        fill="#183D32"
+                      >
+                        <g
+                          id="Asset-1-Copy"
+                          transform="translate(160.000000, 971.000000)"
+                        >
+                          <path
+                            d="M48.9472267,40.9420762 C47.6309931,38.9411592 43.0767013,35.0191164 38.2597807,30.8669067 C37.2092656,29.9462394 36.1556608,29.0531921 35.1175048,28.1509381 C36.6191233,25.8953031 40.9200556,20.4296081 41.6924932,17.9100485 C44.5906789,7.92694572 39.0569363,2.47966401 32.9052436,0.7242583 C31.2696133,0.246567132 29.5738205,0.00269886202 27.8689508,0 C23.8646345,0 20.221819,1.34110541 17.6109801,3.77473606 C13.4645353,7.64767663 12.4325588,14.5158549 15.1577185,20.122719 C16.1958745,22.2709427 17.9384936,24.6524022 19.974639,27.2026507 C17.0053891,29.4122523 8.00803649,36.974 3.5093602,46.2297756 C-0.655623072,54.785844 -1.10981635,62.8785098 2.12824186,70.9681067 C5.8977371,80.401878 16.4214263,87 27.705194,87 C29.8727241,87.0010009 32.0332086,86.7549021 34.1442334,86.2665289 C46.0583102,83.5045269 52.9917097,76.7805865 55.3615481,65.7356474 C57.2061289,57.1151323 55.0494833,48.7953685 48.9472267,40.9420762 Z M37.1443809,77.6828405 C33.9346654,79.1362747 30.4509875,79.8967148 26.9234872,79.9139243 C22.906812,79.9139243 18.7294697,78.4776833 14.4563452,75.638959 C8.40352452,71.6217805 4.75452953,65.0052513 4.94300429,58.3672399 C5.26742806,46.8466227 19.2516375,33.2943996 22.4927854,30.2623352 L23.7904805,31.7967807 L23.8121088,31.8213318 L23.8121088,31.8397452 L23.8121088,31.8397452 C21.6925401,33.8007666 7.40862495,47.1504429 6.97914967,58.1217286 C6.74123891,64.394542 9.58380909,69.5533479 15.4636037,73.4661841 C19.34433,76.0409837 23.4444285,77.3514002 27.6372195,77.3514002 C30.7430953,77.3241623 33.8077436,76.6421482 36.6283926,75.3504832 C42.5792515,72.7112369 51.13168,64.7106378 45.4867064,51.4653038 C41.7790062,42.7373775 30.2758662,31.6556117 30.1800839,31.5666139 C30.0843017,31.477616 18.3123534,21.6939912 17.5460954,13.9695923 C17.3122748,11.6866998 18.0101365,9.4060468 19.4833687,7.63846995 C21.5120602,5.12285247 24.5868847,3.66589791 27.8318738,3.6825261 C29.6772847,3.70024832 31.4987691,4.09950285 33.1802314,4.85498572 C37.6449204,6.85283383 39.5698348,11.5881328 38.7819485,14.8288818 C37.7623309,19.0455382 33.1895006,24.4007532 32.2718448,25.6313785 L32.2996526,25.6559296 L32.2996526,25.6559296 C31.799113,25.2078715 31.3109325,24.7690201 30.835111,24.3332376 L30.835111,24.3332376 C31.7187795,23.1916101 35.8899423,18.7447869 36.8045084,14.9547063 C37.6202024,11.5789261 35.7972498,8.13256142 32.3707168,6.57663363 C30.9238772,5.88219891 29.3427295,5.50737931 27.7360915,5.47797062 C25.1592399,5.47797062 22.8728247,6.63187367 20.9757181,8.89671531 C19.739818,10.3483008 19.3381505,11.9656064 19.6347665,14.1598635 C20.5987686,21.1968308 30.6775337,29.4091834 30.7949442,29.5043191 C30.9123547,29.5994547 44.0623316,42.3752483 47.8380063,51.3640304 C49.6362409,55.6389957 54.1534557,70.1333684 37.1443809,77.6828405 Z M28.7062731,37.7872561 C28.7062731,37.7872561 28.7062731,37.7872561 28.7062731,37.7872561 L28.7062731,37.7872561 L28.7062731,37.7872561 C28.7062731,37.7872561 28.7062731,37.7872561 28.7062731,37.7872561 C31.9999468,41.991637 34.7652732,46.1683977 35.707647,50.0628206 C36.6716491,54.0339656 35.732365,57.3268858 33.0504619,59.3400784 C29.9984932,61.6341708 25.7774912,61.6127933 22.7492347,59.2879072 C19.6594845,56.9187233 18.7140209,53.1163672 20.2001908,49.8971004 C22.3028094,45.3977404 25.1815458,41.2983346 28.7062731,37.7841873 L28.7062731,37.7872561 Z M27.705194,21.3778954 L27.705194,21.3778954 C27.705194,21.3778954 27.705194,21.3778954 27.705194,21.3778954 C25.5979844,19.2695672 24.068558,17.443577 23.5834673,16.1392983 C22.6565422,13.6320143 23.2744922,11.5359617 25.1963169,10.6490521 C26.0703922,10.2858363 27.0112633,10.1081313 27.9585535,10.1273406 C28.8574669,10.1118907 29.7507289,10.2714047 30.587931,10.596881 C31.4826383,10.9652084 32.1861935,11.6817613 32.5344736,12.5793846 C32.9310174,13.7358924 32.8510494,15.0012272 32.3120116,16.0994027 C31.762036,17.2962703 28.4251058,20.8684595 27.705194,21.3748265 L27.705194,21.3778954 Z"
+                            id="Shape"
+                          ></path>
+                        </g>
+                      </g>
+                    </g>
+                  </svg>
                 </div>
-                <div class="col-12 p-0">
-                    <!-- Slider main container -->
-                    <div class="big_slider_r" >
-                        <!-- Additional required wrapper -->
-                        <div class="swiper-wrapper big_slider_r__wrapper">
-                            <!-- Slides -->
-                            <a href="#" class="swiper-slide big_slider_r__item">
-                                <div class="big_slider_r__img"></div>
-                                <div class="big_slider_r__info">
-                                    <h4 class="big_slider_r__title title-20">SUPER BOWL LUNCH SPECIAL SUPER BOWL LUNCH SPECIAL SUPER BOWL LUNCH SPECIAL</h4>
-                                    <p>Monday 18th January - 3p till late</p>
-                                </div>
-                            </a>
-                            <a href="#" class="swiper-slide big_slider_r__item">
-                                <div class="big_slider_r__img"></div>
-                                <div class="big_slider_r__info">
-                                    <h4 class="big_slider_r__title title-20">amy b.</h4>
-                                    <p>Monday 18th January - 3pm till late</p>
-                                </div>
-                            </a>
-                            <a href="#" class="swiper-slide big_slider_r__item">
-                                <div class="big_slider_r__img"></div>
-                                <div class="big_slider_r__info">
-                                    <h4 class="big_slider_r__title title-20">Good bitches baking trivia</h4>
-                                    <p>Tuesday 18th Jan - 6pm</p>
-                                </div>
-                            </a>
-                            <a href="#" class="swiper-slide big_slider_r__item">
-                                <div class="big_slider_r__img"></div>
-                                <div class="big_slider_r__info">
-                                    <h4 class="big_slider_r__title title-20">SUPER BOWL LUNCH SPECIAL</h4>
-                                    <p>Monday 18th January - 3p till late</p>
-                                </div>
-                            </a>
-                            <a href="#" class="swiper-slide big_slider_r__item">
-                                <div class="big_slider_r__img"></div>
-                                <div class="big_slider_r__info">
-                                    <h4 class="big_slider_r__title title-20">amy b.</h4>
-                                    <p>Monday 18th January - 3pm till late</p>
-                                </div>
-                            </a>
-                            <a href="#" class="swiper-slide big_slider_r__item">
-                                <div class="big_slider_r__img"></div>
-                                <div class="big_slider_r__info">
-                                    <h4 class="big_slider_r__title title-20">Good bitches baking trivia</h4>
-                                    <p>Tuesday 18th Jan - 6pm</p>
-                                </div>
-                            </a>
+                <h2 class="title-h2 heading_title">
+                  Fantail & Turtle<br />
+                  is a place to find genuine company.
+                </h2>
+                <p class="heading_text">
+                  A bar and eatery founded on core values of friendship,
+                  community, manaakitanga, kaitiakitanga, and whanaungatanga,
+                  with a food and beverage offering that acknowledges our
+                  independence and our appreciation of quality.
+                </p>
 
-<!--                            ...-->
-                        </div>
-                        <!-- If we need pagination -->
-                        <div class="swiper-pagination"></div>
-
-                        <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-
-                        <!-- If we need scrollbar -->
-                        <div class="swiper-scrollbar"></div>
-                    </div>
-
-                </div>
-                <div class="col-12 p-0">
-                    <a href="" class="btn-body btn-green"> <span class="btn-body-inner">SEE ALL EVENTS</span></a>
-                </div>
+                <a href="" class="btn-body btn-beige bordered m-auto">
+                  <span class="btn-body-inner">WHERE TO FIND US</span></a
+                >
+              </div>
             </div>
+          </div>
+
+          <div class="row wrapper-1360 full_width">
+            <div class="col-12 p-0">
+              <div class="facebook-responsive">
+                <!--                        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ffantailandturtle%2Fvideos%2F2475825105833240%2F&show_text=0&width=560" width="100%" height="100%" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>-->
+                <iframe
+                  src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ffantailandturtle%2Fvideos%2F2475825105833240%2F&show_text=0&width=560"
+                  width="560"
+                  height="315"
+                  style="border: none; overflow: hidden"
+                  scrolling="no"
+                  frameborder="0"
+                  allowTransparency="true"
+                  allowfullscreen="true"
+                ></iframe>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-    </section>
-
-    <section class="breweries_tours default-pb default-pt block_infoOnImage ">
+      <section class="default-pb default-pt whats_on bg_green overflow-hidden">
         <div class="container-fluid p-0">
-            <div class="row wrapper-1343 full_width">
-                <div class="col-12 p-0">
-                    <div class="block_infoOnImage__inner">
-                        <div class="block_infoOnImage__content bg_green">
-                            <h2 class="title-h2 block_infoOnImage__title">
-                                breweries & tours
-                            </h2>
-                            <div class="block_infoOnImage__text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vulputate vel ex id ultricies. Nam gravida risus non erat feugiat dapibus. Nunc rhoncus ut enim sit amet tempus. In lobortis justo tempus consequat mollis. Praesent rhoncus dapibus sagittis. Vestibulum sed fermentum nisl, at venenatis lacus.</p> 
-                                <p>Vivamus quis leo at nisl commodo gravida. Integer et arcu leo. Integer est leo, ullamcorper id tristique vel, dignissim et velit. </p>
-                            </div>
-                            
-                            <a href="" class="btn-body btn-green"> <span class="btn-body-inner">LEARN MORE</span></a>
-                        </div>
-                        <div class="block_infoOnImage__img">
-                            <img src="assets/img/home/bitmap.jpg" alt="breweries_tours">
+          <div class="row wrapper-1343">
+            <div class="col-12 p-0">
+              <div class="block_heading default-pb">
+                <h2 class="title-h2 text_underlined">WHAT'S ON</h2>
+              </div>
+            </div>
+            <div class="col-12 p-0">
+              <!-- Slider main container -->
+              <div class="big_slider_r">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper big_slider_r__wrapper">
+                  <!-- Slides -->
+                  <a href="#" class="swiper-slide big_slider_r__item">
+                    <div class="big_slider_r__img"></div>
+                    <div class="big_slider_r__info">
+                      <h4 class="big_slider_r__title title-20">
+                        SUPER BOWL LUNCH SPECIAL SUPER BOWL LUNCH SPECIAL SUPER
+                        BOWL LUNCH SPECIAL
+                      </h4>
+                      <p>Monday 18th January - 3p till late</p>
+                    </div>
+                  </a>
+                  <a href="#" class="swiper-slide big_slider_r__item">
+                    <div class="big_slider_r__img"></div>
+                    <div class="big_slider_r__info">
+                      <h4 class="big_slider_r__title title-20">amy b.</h4>
+                      <p>Monday 18th January - 3pm till late</p>
+                    </div>
+                  </a>
+                  <a href="#" class="swiper-slide big_slider_r__item">
+                    <div class="big_slider_r__img"></div>
+                    <div class="big_slider_r__info">
+                      <h4 class="big_slider_r__title title-20">
+                        Good bitches baking trivia
+                      </h4>
+                      <p>Tuesday 18th Jan - 6pm</p>
+                    </div>
+                  </a>
+                  <a href="#" class="swiper-slide big_slider_r__item">
+                    <div class="big_slider_r__img"></div>
+                    <div class="big_slider_r__info">
+                      <h4 class="big_slider_r__title title-20">
+                        SUPER BOWL LUNCH SPECIAL
+                      </h4>
+                      <p>Monday 18th January - 3p till late</p>
+                    </div>
+                  </a>
+                  <a href="#" class="swiper-slide big_slider_r__item">
+                    <div class="big_slider_r__img"></div>
+                    <div class="big_slider_r__info">
+                      <h4 class="big_slider_r__title title-20">amy b.</h4>
+                      <p>Monday 18th January - 3pm till late</p>
+                    </div>
+                  </a>
+                  <a href="#" class="swiper-slide big_slider_r__item">
+                    <div class="big_slider_r__img"></div>
+                    <div class="big_slider_r__info">
+                      <h4 class="big_slider_r__title title-20">
+                        Good bitches baking trivia
+                      </h4>
+                      <p>Tuesday 18th Jan - 6pm</p>
+                    </div>
+                  </a>
+
+                  <!--                            ...-->
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+              </div>
+            </div>
+            <div class="col-12 p-0">
+              <a href="" class="btn-body btn-green">
+                <span class="btn-body-inner">SEE ALL EVENTS</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="breweries_tours default-pb default-pt block_infoOnImage">
+        <div class="container-fluid p-0">
+          <div class="row wrapper-1343 full_width">
+            <div class="col-12 p-0">
+              <div class="block_infoOnImage__inner">
+                <div class="block_infoOnImage__content bg_green">
+                  <h2 class="title-h2 block_infoOnImage__title">
+                    breweries & tours
+                  </h2>
+                  <div class="block_infoOnImage__text">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Quisque vulputate vel ex id ultricies. Nam gravida risus
+                      non erat feugiat dapibus. Nunc rhoncus ut enim sit amet
+                      tempus. In lobortis justo tempus consequat mollis.
+                      Praesent rhoncus dapibus sagittis. Vestibulum sed
+                      fermentum nisl, at venenatis lacus.
+                    </p>
+                    <p>
+                      Vivamus quis leo at nisl commodo gravida. Integer et arcu
+                      leo. Integer est leo, ullamcorper id tristique vel,
+                      dignissim et velit.
+                    </p>
+                  </div>
+
+                  <a href="" class="btn-body btn-green">
+                    <span class="btn-body-inner">LEARN MORE</span></a
+                  >
+                </div>
+                <div class="block_infoOnImage__img">
+                  <img src="assets/img/home/bitmap.jpg" alt="breweries_tours" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="come_visit default-pb">
+        <div class="container-fluid p-0">
+          <div class="row wrapper-1343 full_width">
+            <div class="col-12 col-md-6 p-0">
+                <div class="come_visit__content">
+                    <div class="come_visit__desc default-pb50">
+                        <h2 class="title-h2">COME AND VISIT US</h2>
+                        <div class="come_visit__text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vulputate vel ex id ultricies. Nam gravida risus </p>
                         </div>
                     </div>
 
+                    <div class="come_visit__info default-pb50">
+                      <div class="come_visit__info-block">
+                        <span class="title-h4">LOCATION</span>
+                        <p>Goodside, Smales Farm, The Boulevard, Takapuna, Auckland 0622</p>
+                      </div>
+                      <div class="come_visit__info-block ">
+                        <span class="title-h4">opening hours</span>
+                        <span>Mon – Fri  8am-late,</span>
+                        <span>Sat – Sun  11am-late</span>
+                      </div>
+                      <div class="d-flex flex-row flex-wrap justify-content-between align-items-start come_visit__info-block-row">
+                        <div class="come_visit__info-block">
+                          <span class="title-h4">phone </span>
+                          <a href="tel:09 215 BEER">09 215 BEER</a>
+                        </div>
+                        <div class="come_visit__info-block">
+                          <span class="title-h4">email </span>
+                          <a href="mailto:hello@fantailandturtle.co.nz">hello@fantailandturtle.co.nz</a>
+                        </div>
+                      </div>
+                    </div>
+                  <a href="" class="btn-body btn-beige bordered default-mb50">
+                    <span class="btn-body-inner">CONTACT US</span></a>
+
                 </div>
             </div>
+
+            <div class="col-12 col-md-6 p-0">
+              <div id="map" class="come_visit__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51119.70787676688!2d174.73603783254538!3d-36.79498814291169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d39d015854ae1%3A0x500ef6143a30800!2z0KLQsNC60LDQv9GD0L3QsCwg0J7QutC70LXQvdC0LCDQndC-0LLQsNGPINCX0LXQu9Cw0L3QtNC40Y8!5e0!3m2!1sru!2sua!4v1598098011961!5m2!1sru!2sua" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
-</main>
+      </section>
+    </main>
 
-<footer style="height: 800px"></footer>
+    <footer style="height: 800px"></footer>
 
+    <script src="assets/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
 
-<script src="assets/js/jquery-3.2.1.slim.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-<script src="assets/js/all.js"></script>
-<script src="assets/js/main.js"></script>
-
-
-</body>
+    <script src="assets/js/all.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
