@@ -1328,3 +1328,29 @@ header.fixed {
         height: 488px;
     }
 }
+
+/************************************** MENU CONTENT ***************************/
+.menu_list__title {
+    margin-bottom: 25px;
+    opacity: .6;
+}
+.menu_list__item.active .menu_list__title {
+    opacity: 1;
+}
+.menu_list__title.text_underlined:before {
+    bottom: -8px;
+    opacity: .6;
+}
+.menu_list__item.active .menu_list__title.text_underlined:before {
+    opacity: 1;
+}
+.menu_list__item-name {
+    font-size: 16px;
+    opacity: .6;
+    font-weight: 300;
+    text-transform: lowercase;
+}
+.menu_list__item.active .menu_list__item-name.active {
+    opacity: 1;
+    font-weight: 500;
+}
