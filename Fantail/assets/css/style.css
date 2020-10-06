@@ -928,7 +928,7 @@ header.fixed {
 .accordion_btn.active:before {
     /*transform: rotate(180deg);*/
     background-image: url("../img/minus.svg");
-    width: 18px;
+    width: 15px;
     height: 13px;
     right: 8px;
     top: 4px;
