@@ -23,12 +23,18 @@ window.onload = function () {
 
 
 ///////////////////////////////////////// CLOSE MENU
+$('.navbar-toggler').on('click', function() {
+    $('body').addClass('hidden');
+    // $('.shadow-screen').addClass('active');
+})
 closeButton();
 function closeButton() {
     $('.close_btn').on('click', function(){
         console.log('HELLO')
         $('.menu_list_wrap').removeClass('show');
-        $('body').removeClass('overflow-hidden');
+        // $('.shadow-screen').removeClass('active');
+        $('body').removeClass('hidden');
+
     })
 }
 
@@ -91,3 +97,31 @@ for (i = 0; i < acc.length; i++) {
         }
     });
 }
+
+//////////////////////////////////// ANIMATION ///////////////////////////
+
+
+$(document).ready(function(){
+    // Animation
+    animate = el => {
+        const scrollTop = $(window).scrollTop()
+        const winHeight = $(window).height()
+        const offset = $(el).offset().top
+        const schemeHeight = $(el).height()
+
+        if (scrollTop + winHeight >= offset && scrollTop <= offset + schemeHeight) {
+            $(el).addClass('add-animation')
+            $(el).addClass('animated')
+        } else {
+            $(el).removeClass('add-animation')
+            $(el).removeClass('animated')
+        }
+    }
+
+    $(window).on('load scroll', () => {
+
+        $('.to-animate').each((idx, item) => {
+            animate(item)
+        })
+    })
+})
