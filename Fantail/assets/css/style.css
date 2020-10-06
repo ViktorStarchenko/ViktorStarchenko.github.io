@@ -199,7 +199,7 @@ ul, ol {
 
 @media screen and (max-width: 767px) {
     .title-h1 {
-        font-size: 70px;
+        font-size: 46px;
         font-weight: 500;
         font-stretch: normal;
         font-style: normal;
@@ -648,11 +648,12 @@ header.fixed {
 }
 
 /*************************************************************************************/
-/***************************************** MAIN PAGE *********************************/
+/***************************************** HOME PAGE *********************************/
 
 /**************************************** HERO BLOCK *********************************/
 .hero2col {
     overflow: hidden;
+    position: relative;
 }
 .hero2col .hero2col__item-box:first-child {
     padding: 0 5px 0 0;
@@ -1258,3 +1259,72 @@ header.fixed {
     }
 }
 
+
+/************************************* HERO BLOCK *******************************/
+.hero {
+    /*height: 611px;*/
+    color: var(--color-white);
+    font-size: 22px;
+}
+.hero .shadow-gradient {
+    height: 90%;
+}
+.hero__inner {
+    height: 611px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    z-index: 10;
+    position: relative;
+}
+.hero .block_heading {
+    max-width: 790px;
+    margin: auto;
+}
+.hero .block_heading .heading_text {
+    margin-bottom: 0;
+}
+.hero .heading_title {
+    /*color: var(--color-beige);*/
+    margin-bottom: 45px;
+}
+@media screen and (max-width: 1024px) {
+    .hero.hero__inner {
+        height: 70vh;
+    }
+}
+@media screen and (max-width: 580px) {
+    .hero {
+        font-size: 15px;
+    }
+    .hero .hero__inner {
+         height: 488px;
+     }
+}
+
+
+/*************************************************************************************/
+/***************************************** MENU PAGE *********************************/
+
+.hero.menu-hero {
+}
+.hero.menu-hero .hero__inner {
+    height: 770px;
+}
+
+@media screen and (max-width: 1366px) {
+    .hero.menu-hero .hero__inner {
+        height: 90vh;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .hero.menu-hero .hero__inner {
+        height: 70vh;
+    }
+}
+@media screen and (max-width: 580px) {
+    .hero.menu-hero .hero__inner {
+        height: 488px;
+    }
+}
