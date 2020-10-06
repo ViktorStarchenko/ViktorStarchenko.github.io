@@ -926,7 +926,12 @@ header.fixed {
     transition-duration: 0.2s;
 }
 .accordion_btn.active:before {
-    transform: rotate(180deg);
+    /*transform: rotate(180deg);*/
+    background-image: url("../img/minus.svg");
+    width: 18px;
+    height: 13px;
+    right: 8px;
+    top: 4px;
 }
 /****************************** BREWERIES & TOURS BLOCK ***************************/
 
