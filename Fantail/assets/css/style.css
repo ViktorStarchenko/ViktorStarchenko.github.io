@@ -1353,4 +1353,17 @@ header.fixed {
 .menu_list__item.active .menu_list__item-name.active {
     opacity: 1;
     font-weight: 500;
+    position: relative;
+    width: 100%;
+    display: inline-block;
+}
+.menu_list__item-name.active:before {
+    content: '';
+    position: absolute;
+    background-image: url("../img/arrow-right.svg");
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+    right: 33px;
+    top: 0;
 }
