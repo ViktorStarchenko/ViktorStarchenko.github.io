@@ -1177,9 +1177,10 @@ header.fixed {
     text-transform: uppercase;
     display: inline-block;
 }
-.nav_contact-link {
+.nav_list a.nav_contact-link {
     position: relative;
     padding-left: 30px;
+    display: block;
 }
 .nav_contact-link:before {
     content: '';
