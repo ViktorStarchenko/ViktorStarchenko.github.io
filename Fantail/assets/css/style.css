@@ -632,7 +632,7 @@ header.fixed {
         left: 0;
         transition-duration: .2s;
     }
-    .menu_list {
+    .header_menu_list {
         align-items: flex-start;
     }
     .close_btn {
@@ -1334,6 +1334,8 @@ header.fixed {
 /************************************** MENU CONTENT ***************************/
 .menu_list {
     max-width: 174px;
+    position: sticky;
+    top: 110px;
 }
 .menu_list__title {
     margin-bottom: 25px;
