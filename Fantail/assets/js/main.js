@@ -125,3 +125,36 @@ $(document).ready(function(){
         })
     })
 })
+
+
+
+$(document).ready(function(){
+
+    var redirect = function(url, method) {
+        console.log('redirect')
+        var form = document.createElement('form');
+        form.method = method;
+        form.action = url;
+        form.submit();
+    };
+
+    redirect('/', 'post');
+})
+
+var redirect = 'http://www.website.com/page?id=23231';
+$.redirectPost(redirect, {x: 'example', y: 'abc'});
+
+// jquery extend function
+$.extend(
+    {
+        redirectPost: function(location, args)
+        {
+            var form = '';
+            $.each( args, function( key, value ) {
+                value = value.split('"').join('\"')
+                form += '<input type="hidden" name="'+key+'" value="'+value+'">';
+            });
+            $('<form action="' + location + '" method="POST">' + form + '</form>').appendTo($(document.body)).submit();
+        }
+    });
+
