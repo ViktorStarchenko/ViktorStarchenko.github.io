@@ -547,6 +547,7 @@ header.fixed {
     align-items: center;
     padding-top: 22px;
     padding-bottom: 22px;
+    transition-duration: .2s;
 }
 .menu_list_wrap {
     justify-content: flex-end;
