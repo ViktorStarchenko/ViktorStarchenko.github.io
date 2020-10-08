@@ -61,7 +61,7 @@ var mySwiper = new Swiper('.slider_r', {
     //     el: '.swiper-scrollbar',
     // },
 })
-
+// SWIPER SLIDER SIMPLE SLIDER
 var mySwiper = new Swiper('.simple_slider', {
     // Optional parameters
     slidesPerView: 'auto',
@@ -85,7 +85,35 @@ var mySwiper = new Swiper('.simple_slider', {
     //     el: '.swiper-scrollbar',
     // },
 })
-// SWIPER SLIDER SIMPLE SLIDER
+
+// SWIPER SLIDER BACKGROUND SLIDER
+var mySwiper = new Swiper('.background_slider', {
+    // Optional parameters
+    slidesPerView: 'auto',
+    effect: 'fade',
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+    },
+    // If we need pagination
+    // pagination: {
+    //     el: '.swiper-pagination',
+    //     dynamicBullets: true,
+    //     clickable: true
+    // },
+
+    // Navigation arrows
+    // navigation: {
+    //     nextEl: '.swiper-button-next',
+    //     prevEl: '.swiper-button-prev',
+    // },
+
+    // And if we need scrollbar
+    // scrollbar: {
+    //     el: '.swiper-scrollbar',
+    // },
+})
+
 
 ///////////////////////// INFO ON IMAGE BLOCK
 // alignInfoOnImageContent()

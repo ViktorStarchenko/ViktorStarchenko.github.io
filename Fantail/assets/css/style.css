@@ -954,6 +954,10 @@ header.fixed {
     top: calc(50% - 23px);
     transition-duration: .2s;
 }
+.simple_slider .swiper-button-next:focus,
+.simple_slider .swiper-button-prev:focus {
+    outline: none;
+}
 .simple_slider .swiper-button-next:hover,
 .simple_slider .swiper-button-prev:hover {
     background-color: var(--color-transp_06_black);
@@ -1001,7 +1005,27 @@ header.fixed {
     }
 }
 
+/****************************** BACKGROUND SLIDER ***********************/
+.background_slider {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.background_slider__img {
+    width: 100%;
+    height: 100%;
+}
+.background_slider__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
+.background_slider .swiper-button-next,
+.background_slider .swiper-button-prev {
+    display: none;
+}
 
 /****************************** ACCORDION ****************************/
 .accordion_btn:before {
@@ -1349,7 +1373,7 @@ header.fixed {
     position: relative;
 }
 .hero .shadow-gradient {
-    height: 90%;
+    height: 100%;
 }
 .hero__inner {
     height: 611px;
