@@ -39,6 +39,7 @@ function closeButton() {
 }
 
 
+// SWIPER SLIDER STICK RIGHT
 var mySwiper = new Swiper('.slider_r', {
     // Optional parameters
     slidesPerView: 'auto',
@@ -61,6 +62,30 @@ var mySwiper = new Swiper('.slider_r', {
     // },
 })
 
+var mySwiper = new Swiper('.simple_slider', {
+    // Optional parameters
+    slidesPerView: 'auto',
+    spaceBetween: 12,
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+        clickable: true
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    // scrollbar: {
+    //     el: '.swiper-scrollbar',
+    // },
+})
+// SWIPER SLIDER SIMPLE SLIDER
 
 ///////////////////////// INFO ON IMAGE BLOCK
 // alignInfoOnImageContent()
@@ -135,10 +160,24 @@ $(document).ready(function(){
             //узнаем высоту от начала страницы до блока на который ссылается якорь
             top = $(id).offset().top;
         //анимируем переход на расстояние - top за 1500 мс
-        $('body,html').animate({scrollTop: top-100}, 1500);
+        $('body,html').animate({scrollTop: top-100}, 600);
     });
 })
 
+
+// Menu sidebar
+$('.menu_list__item-name').on('click', function() {
+
+    // let offsetTop = $(this).offset().top
+    // let data_scroll = $(this).data('scroll')
+    // let elemOffsetTop = $('#' + data_scroll + '').offset().top
+    // console.log('button ' + offsetTop)
+    // console.log('item ' + elemOffsetTop)
+    $('.menu_list__item-name').removeClass('active')
+    $('.menu_list__item').removeClass('active')
+    $(this).closest('.menu_list__item').addClass('active')
+    $(this).addClass('active')
+})
 
 
 
