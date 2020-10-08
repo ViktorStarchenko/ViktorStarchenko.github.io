@@ -1007,6 +1007,9 @@ header.fixed {
 .simple_slider .swiper-pagination-bullet-active {
     background-color: var(--color-beige);
 }
+.simple_slider .swiper-scrollbar {
+    display: none;
+}
 
 @media screen and (max-width: 1024px) {
     .simple_slider__img {
@@ -1042,6 +1045,9 @@ header.fixed {
 
 .background_slider .swiper-button-next,
 .background_slider .swiper-button-prev {
+    display: none;
+}
+.background_slider .swiper-scrollbar {
     display: none;
 }
 
