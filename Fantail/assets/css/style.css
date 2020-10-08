@@ -1027,6 +1027,110 @@ header.fixed {
     display: none;
 }
 
+/****************************** TAB PANEL *********************************/
+.fant_tab__nav {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 56px;
+}
+
+.fant_tab__nav-item .fant_tab__nav-link {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    opacity: .6;
+}
+.fant_tab__nav-item .fant_tab__nav-link.active {
+    background-color: transparent;
+    color: var(--color-green);
+    opacity: 1;
+    position: relative;
+    transition-duration: -2s.;
+}
+.fant_tab__nav-item .fant_tab__nav-link.active:before {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: var(--color-green);
+    transition-duration: -2s.;
+}
+.fant_tab__controls {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.05);
+}
+.tab-content.fant_tab__content>.active {
+    display: flex;
+}
+.fant_tab__content-box {
+    padding: 0;
+}
+.fant_tab__content-title {
+    font-size: 60px;
+    font-weight: 500;
+    max-width: 430px;
+    text-transform: uppercase;
+}
+.fant_tab__content-title.text_underlined:before {
+    width: 100%;
+    background-color: var(--color-green);
+    bottom: -30px;
+}
+.fant_tab__content-box:nth-child(2) {
+    padding-bottom: var(--default-pb);
+}
+.fant_tab__content-text {
+    margin-bottom: var(--default-mb50);
+}
+.fant_tab__content-img{
+    height: 100%;
+    width: 100%;
+}
+.fant_tab__content-box:nth-child(3) .fant_tab__content-img {
+    padding-right: 18px;
+}
+
+.fant_tab__content-img img {
+    width: 100%;
+    height: 511px;
+    object-fit: cover;
+}
+@media screen and (max-width: 1300px) {
+    .fant_tab__content-title {
+        max-width: 90%;
+    }
+}
+@media screen and (max-width: 991px) {
+    .fant_tab__content-title {
+        font-size: 48px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .fant_tab__content-title {
+        font-size: 30px;
+    }
+    .fant_tab__content-title {
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+    .fant_tab__content-title.text_underlined:before {
+        bottom: -10px;
+    }
+    .fant_tab__nav {
+        justify-content: flex-start;
+        overflow-x: auto;
+    }
+    .fant_tab__controls {
+        /*overflow-x: auto;*/
+    }
+    .fant_tab__nav-item .fant_tab__nav-link {
+        font-size: 14px;
+        min-width: 170px;
+    }
+}
 /****************************** ACCORDION ****************************/
 .accordion_btn:before {
     transition-duration: 0.2s;
