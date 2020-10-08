@@ -319,18 +319,20 @@ ul, ol {
 }
 @media screen and (max-width: 768px) {
     .wrapper-1360.full_width {
-        padding: 0;
+        padding-left: 0;
+        padding-right: 0;
         margin: 0;
     }
 }
 @media screen and (max-width: 767px) {
     .wrapper-1246.full_width {
-        padding: 0;
-    }
+        padding-left: 0;
+        padding-right: 0;    }
 }
 @media screen and (max-width: 600px) {
     .wrapper-1343.full_width {
-        padding: 0;
+        padding-left: 0;
+        padding-right: 0;
         margin: 0;
     }
 }
